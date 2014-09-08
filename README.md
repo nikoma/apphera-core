@@ -21,6 +21,8 @@ Apphera remains the premier open source social media monitoring and engagement p
 
 ## Contributing
 
+To get started, <a href="https://www.clahub.com/agreements/nikoma/apphera-core">sign the Contributor License Agreement</a>.
+
 1. Fork it
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Added some feature'`)
