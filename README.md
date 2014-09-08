@@ -6,6 +6,9 @@ For installation service, database seeds & development please contact us at http
 
 Documentation at https://git.apphera.com/root/apphera-documentation/wikis/home
 
+## To use it via Dashboard add Apphera Sense at:
+https://github.com/nikoma/apphera-sense
+
 
 ## Licensing
 
