@@ -4,7 +4,7 @@ This API provides all methods (will provide) of Apphera. The API returns by defa
 
 For installation service, database seeds & development please contact us at http://www.apphera.com or send me an email at manek -> at <- apphera.com
 
-Documentation at http://www.apphera.com/home/documentation
+Documentation at https://git.apphera.com/root/apphera-documentation/wikis/home
 
 
 ## Licensing

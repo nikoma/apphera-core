@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="4e374769-fa0b-416d-9102-3e07bd45548b" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="apphera-core.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -85,8 +84,8 @@
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.43396226" vertical-offset="0" max-vertical-offset="795">
-              <caret line="23" column="123" selection-start-line="23" selection-start-column="123" selection-end-line="23" selection-end-column="123" />
+            <state vertical-scroll-proportion="0.11320755" vertical-offset="0" max-vertical-offset="795">
+              <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -815,8 +814,8 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.43396226" vertical-offset="0" max-vertical-offset="795">
-          <caret line="23" column="123" selection-start-line="23" selection-start-column="123" selection-end-line="23" selection-end-column="123" />
+        <state vertical-scroll-proportion="0.11320755" vertical-offset="0" max-vertical-offset="795">
+          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
           <folding />
         </state>
       </provider>
