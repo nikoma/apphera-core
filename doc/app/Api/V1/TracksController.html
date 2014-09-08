@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8">
+
+<title>class Api::V1::TracksController - Rails Application Documentation</title>
+
+<link href="../../fonts.css" rel="stylesheet">
+<link href="../../rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../../";
+</script>
+
+<script src="../../js/jquery.js"></script>
+<script src="../../js/navigation.js"></script>
+<script src="../../js/search_index.js"></script>
+<script src="../../js/search.js"></script>
+<script src="../../js/searcher.js"></script>
+<script src="../../js/darkfish.js"></script>
+
+
+<body id="top" role="document" class="class">
+<nav role="navigation">
+  <div id="project-navigation">
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2>
+    <a href="../../index.html" rel="home">Home</a>
+  </h2>
+
+  <div id="table-of-contents-navigation">
+    <a href="../../table_of_contents.html#pages">Pages</a>
+    <a href="../../table_of_contents.html#classes">Classes</a>
+    <a href="../../table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+    <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+  </div>
+
+  
+
+  <div id="class-metadata">
+    
+    <div id="parent-class-section" class="nav-section">
+  <h3>Parent</h3>
+
+  
+  <p class="link"><a href="../../ApplicationController.html">ApplicationController</a>
+  
+</div>
+
+    
+    
+    <!-- Method Quickref -->
+<div id="method-list-section" class="nav-section">
+  <h3>Methods</h3>
+
+  <ul class="link-list" role="directory">
+    
+    <li ><a href="#method-i-facebook">#facebook</a>
+    
+    <li ><a href="#method-i-index">#index</a>
+    
+    <li ><a href="#method-i-instagram">#instagram</a>
+    
+    <li ><a href="#method-i-search">#search</a>
+    
+    <li ><a href="#method-i-twitter">#twitter</a>
+    
+    <li ><a href="#method-i-youtube">#youtube</a>
+    
+  </ul>
+</div>
+
+  </div>
+</nav>
+
+<main role="main" aria-labelledby="class-Api::V1::TracksController">
+  <h1 id="class-Api::V1::TracksController" class="class">
+    class Api::V1::TracksController
+  </h1>
+
+  <section class="description">
+    
+  </section>
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+
+    
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section">
+       <header>
+         <h3>Public Instance Methods</h3>
+       </header>
+
+    
+      <div id="method-i-facebook" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">facebook</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="facebook-source">
+            <pre><span class="ruby-comment"># File app/controllers/api/v1/tracks_controller.rb, line 13</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">facebook</span>
+  <span class="ruby-identifier">max_per_page</span> = <span class="ruby-value">100</span>
+  <span class="ruby-identifier">paginate</span> <span class="ruby-constant">Keyword</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:keyword_id</span>]).<span class="ruby-identifier">facebook_items</span>.<span class="ruby-identifier">count</span>, <span class="ruby-identifier">max_per_page</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">limit</span>, <span class="ruby-identifier">offset</span><span class="ruby-operator">|</span>
+    <span class="ruby-ivar">@facebook_items</span> = <span class="ruby-constant">Keyword</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:keyword_id</span>]).<span class="ruby-identifier">facebook_items</span>.<span class="ruby-identifier">limit</span>(<span class="ruby-identifier">limit</span>).<span class="ruby-identifier">offset</span>(<span class="ruby-identifier">offset</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-index" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">index</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>paginate Bla.count, max_per_page do |limit, offset|</p>
+
+<pre>render json: Bla.limit(limit).offset(offset)</pre>
+
+<p>end</p>
+          
+          
+
+          
+          <div class="method-source-code" id="index-source">
+            <pre><span class="ruby-comment"># File app/controllers/api/v1/tracks_controller.rb, line 9</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">index</span>
+  <span class="ruby-ivar">@tracks</span> = <span class="ruby-constant">Track</span>.<span class="ruby-identifier">all</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-instagram" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">instagram</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="instagram-source">
+            <pre><span class="ruby-comment"># File app/controllers/api/v1/tracks_controller.rb, line 36</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">instagram</span>
+  <span class="ruby-identifier">max_per_page</span> = <span class="ruby-value">100</span>
+  <span class="ruby-identifier">paginate</span> <span class="ruby-constant">InstagramItem</span>.<span class="ruby-identifier">where</span>(<span class="ruby-identifier">keyword_id</span><span class="ruby-operator">:</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:keyword_id</span>]).<span class="ruby-identifier">count</span>, <span class="ruby-identifier">max_per_page</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">limit</span>, <span class="ruby-identifier">offset</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">render</span> <span class="ruby-value">:json</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">InstagramItem</span>.<span class="ruby-identifier">where</span>(<span class="ruby-identifier">keyword_id</span><span class="ruby-operator">:</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:keyword_id</span>]).<span class="ruby-identifier">all_json</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-search" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">search</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="search-source">
+            <pre><span class="ruby-comment"># File app/controllers/api/v1/tracks_controller.rb, line 43</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">search</span>
+   <span class="ruby-identifier">market</span> = <span class="ruby-constant">Market</span>.<span class="ruby-identifier">where</span>(<span class="ruby-identifier">name</span><span class="ruby-operator">:</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:market</span>]).<span class="ruby-identifier">first</span>
+  <span class="ruby-identifier">render</span> <span class="ruby-value">:json</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">Keyword</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:keyword_id</span>]).<span class="ruby-identifier">rankings</span>.<span class="ruby-identifier">where</span>(<span class="ruby-identifier">market</span><span class="ruby-operator">:</span> <span class="ruby-identifier">market</span>).<span class="ruby-identifier">first</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-twitter" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">twitter</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="twitter-source">
+            <pre><span class="ruby-comment"># File app/controllers/api/v1/tracks_controller.rb, line 27</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">twitter</span>
+  <span class="ruby-identifier">max_per_page</span> = <span class="ruby-value">100</span>
+  <span class="ruby-identifier">kw</span> = <span class="ruby-constant">Keyword</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:keyword_id</span>])
+  <span class="ruby-ivar">@kw</span> = <span class="ruby-identifier">kw</span>.<span class="ruby-identifier">name</span>.<span class="ruby-identifier">gsub!</span>(<span class="ruby-string">&#39; &#39;</span>, <span class="ruby-string">&#39; &amp; &#39;</span>)
+  <span class="ruby-identifier">paginate</span> <span class="ruby-constant">Tweet</span>.<span class="ruby-identifier">where</span>(<span class="ruby-node">&quot;to_tsvector(&#39;english&#39;, body-&gt;&gt;&#39;text&#39;) @@ to_tsquery(&#39;english&#39;, &#39;#{@kw}&#39;)&quot;</span>).<span class="ruby-identifier">count</span>, <span class="ruby-identifier">max_per_page</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">limit</span>, <span class="ruby-identifier">offset</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">render</span> <span class="ruby-value">:json</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">Tweet</span>.<span class="ruby-identifier">where</span>(<span class="ruby-node">&quot;to_tsvector(&#39;english&#39;, body-&gt;&gt;&#39;text&#39;) @@ to_tsquery(&#39;english&#39;, &#39;#{@kw}&#39;)&quot;</span>).<span class="ruby-identifier">limit</span>(<span class="ruby-identifier">limit</span>).<span class="ruby-identifier">offset</span>(<span class="ruby-identifier">offset</span>).<span class="ruby-identifier">all_json</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-youtube" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">youtube</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="youtube-source">
+            <pre><span class="ruby-comment"># File app/controllers/api/v1/tracks_controller.rb, line 20</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">youtube</span>
+  <span class="ruby-identifier">max_per_page</span> = <span class="ruby-value">100</span>
+  <span class="ruby-identifier">paginate</span> <span class="ruby-constant">YoutubeVideo</span>.<span class="ruby-identifier">where</span>(<span class="ruby-identifier">keyword_id</span><span class="ruby-operator">:</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:keyword_id</span>]).<span class="ruby-identifier">count</span>, <span class="ruby-identifier">max_per_page</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">limit</span>, <span class="ruby-identifier">offset</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">render</span> <span class="ruby-value">:json</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">YoutubeVideo</span>.<span class="ruby-identifier">where</span>(<span class="ruby-identifier">keyword_id</span><span class="ruby-operator">:</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:keyword_id</span>]).<span class="ruby-identifier">limit</span>(<span class="ruby-identifier">limit</span>).<span class="ruby-identifier">offset</span>(<span class="ruby-identifier">offset</span>).<span class="ruby-identifier">all_json</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+    </section>
+  
+  </section>
+</main>
+
+
+<footer id="validator-badges" role="contentinfo">
+  <p><a href="http://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="http://rdoc.rubyforge.org">RDoc</a> 4.1.0.
+  <p>Based on <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
+</footer>
+

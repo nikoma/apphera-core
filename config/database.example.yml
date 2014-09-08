@@ -1,0 +1,8 @@
+production:
+  adapter: postgresql
+  encoding: utf8
+  database: apphera_europe
+  pool: 40
+  username:
+  password:
+  host: someserver_in_apphera_land.com

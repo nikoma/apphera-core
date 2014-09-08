@@ -1,0 +1,14 @@
+# Add application configuration variables here, as shown below.
+#
+STRIPE_API_KEY: ksdjfhksdjhfksdjhfksj
+STRIPE_PUBLIC_KEY: lkjsdfljksdflkjslfk
+BING_KEY: kjsdhfksjhdfk
+GOOGLE_PLUS: llksdjflksjflksjldfkls
+FOURSQUARE_ID: lksdjflksjdflksdjfl
+FOURSQUARE_SECRET: lkdfjlskdjflskdjflkjsl
+APPHERA_TWITTER_API: http://local twitter apphera server
+INSTAGRAM_CLIENT_ID: lsdfkjlskdflkjl
+INSTAGRAM_CLIENT_SECRET: sdkfjksjdfhksjdhfk
+FB_KEY: lsdjflksdjflksjdflksjldfkjsdf
+INSTAGRAM_KEY: skdjfhksjdhfksjhfksjhfksdjf
+YOUTUBE_TOKEN: owierowiuroiweurowiuroiwri

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8">
+
+<title>class OrganizationLink - Rails Application Documentation</title>
+
+<link href="./fonts.css" rel="stylesheet">
+<link href="./rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+</script>
+
+<script src="./js/jquery.js"></script>
+<script src="./js/navigation.js"></script>
+<script src="./js/search_index.js"></script>
+<script src="./js/search.js"></script>
+<script src="./js/searcher.js"></script>
+<script src="./js/darkfish.js"></script>
+
+
+<body id="top" role="document" class="class">
+<nav role="navigation">
+  <div id="project-navigation">
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2>
+    <a href="./index.html" rel="home">Home</a>
+  </h2>
+
+  <div id="table-of-contents-navigation">
+    <a href="./table_of_contents.html#pages">Pages</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+    <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+  </div>
+
+  
+
+  <div id="class-metadata">
+    
+    <div id="parent-class-section" class="nav-section">
+  <h3>Parent</h3>
+
+  
+  <p class="link">ActiveRecord::Base
+  
+</div>
+
+    
+    
+    <!-- Method Quickref -->
+<div id="method-list-section" class="nav-section">
+  <h3>Methods</h3>
+
+  <ul class="link-list" role="directory">
+    
+    <li ><a href="#method-i-extract_slugs">#extract_slugs</a>
+    
+  </ul>
+</div>
+
+  </div>
+</nav>
+
+<main role="main" aria-labelledby="class-OrganizationLink">
+  <h1 id="class-OrganizationLink" class="class">
+    class OrganizationLink
+  </h1>
+
+  <section class="description">
+    
+  </section>
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+
+    
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section">
+       <header>
+         <h3>Public Instance Methods</h3>
+       </header>
+
+    
+      <div id="method-i-extract_slugs" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">extract_slugs</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>TODO: load slug keys from db</p>
+          
+          
+
+          
+          <div class="method-source-code" id="extract_slugs-source">
+            <pre><span class="ruby-comment"># File app/models/organization_link.rb, line 11</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">extract_slugs</span>
+  <span class="ruby-ivar">@cp</span> = {<span class="ruby-value">:google_germany</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">8</span>, <span class="ruby-value">:kennstdueinen</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">12</span>, <span class="ruby-value">:tripadvisor</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">7</span>, <span class="ruby-value">:bing</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">6</span>, <span class="ruby-value">:pointoo</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">13</span>, <span class="ruby-value">:qype</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">10</span>, <span class="ruby-value">:golocal</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">14</span>, <span class="ruby-value">:hotels</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">15</span>, <span class="ruby-value">:meinestadt</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">16</span>, <span class="ruby-value">:restaurantkritik</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">17</span>, <span class="ruby-value">:wowarstdu</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">18</span>, <span class="ruby-value">:yahoo</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">32</span>, <span class="ruby-value">:urbanspoon</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">3</span>, <span class="ruby-value">:yellowpages</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">4</span>, <span class="ruby-value">:yelp</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">5</span>, <span class="ruby-value">:cars</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">19</span>, <span class="ruby-value">:superpages</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">20</span>, <span class="ruby-value">:zillow</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">21</span>, <span class="ruby-value">:resellerrating</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">22</span>, <span class="ruby-value">:kudzu</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">23</span>, <span class="ruby-value">:merchantcircle</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">24</span>, <span class="ruby-value">:insiderpages</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">25</span>, <span class="ruby-value">:zocdoc</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">26</span>}
+  <span class="ruby-ivar">@cp_urls</span> = {<span class="ruby-value">:kennstdueinen</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;kennstdueinen.de&quot;</span>, <span class="ruby-value">:tripadvisor</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;tripadvisor.com&quot;</span>, <span class="ruby-value">:pointoo</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;pointoo.de&quot;</span>, <span class="ruby-value">:qype</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;qype.com&quot;</span>, <span class="ruby-value">:golocal</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;golocal.com&quot;</span>, <span class="ruby-value">:hotels</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;hotels.com&quot;</span>, <span class="ruby-value">:meinestadt</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;meinestadt.de&quot;</span>, <span class="ruby-value">:yahoo</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;local.yahoo.com&quot;</span>, <span class="ruby-value">:restaurantkritik</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;restaurant-kritik.de&quot;</span>, <span class="ruby-value">:wowarstdu</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;wowarstdu.de&quot;</span>, <span class="ruby-value">:urbanspoon</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;urbanspoon.com&quot;</span>, <span class="ruby-value">:yellowpages</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;yellowpages.com&quot;</span>, <span class="ruby-value">:yelp</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;yelp.com&quot;</span>, <span class="ruby-value">:cars</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;cars.com&quot;</span>, <span class="ruby-value">:superpages</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;superpages.com&quot;</span>, <span class="ruby-value">:zillow</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;zillow.com&quot;</span>, <span class="ruby-value">:resellerrating</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;resellerrating.com&quot;</span>, <span class="ruby-value">:kudzu</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;kudzu.com&quot;</span>, <span class="ruby-value">:merchantcircle</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;merchantcircle.com&quot;</span>, <span class="ruby-value">:insiderpages</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;insiderpages.com&quot;</span>, <span class="ruby-value">:zocdoc</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;zocdoc.com&quot;</span>}
+  <span class="ruby-ivar">@cp_urls</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">k</span>, <span class="ruby-identifier">v</span><span class="ruby-operator">|</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">url</span>.<span class="ruby-identifier">include?</span> <span class="ruby-identifier">v</span>
+      <span class="ruby-constant">ProviderSlug</span>.<span class="ruby-identifier">create!</span>(<span class="ruby-identifier">organization_id</span><span class="ruby-operator">:</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">organization_id</span>, <span class="ruby-identifier">content_provider_id</span><span class="ruby-operator">:</span> <span class="ruby-ivar">@cp</span>[<span class="ruby-identifier">k</span>], <span class="ruby-identifier">slug</span><span class="ruby-operator">:</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">url</span>, <span class="ruby-identifier">bad</span><span class="ruby-operator">:</span> <span class="ruby-keyword">false</span>)
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+    </section>
+  
+  </section>
+</main>
+
+
+<footer id="validator-badges" role="contentinfo">
+  <p><a href="http://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="http://rdoc.rubyforge.org">RDoc</a> 4.1.0.
+  <p>Based on <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
+</footer>
+

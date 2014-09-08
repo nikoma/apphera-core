@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8">
+
+<title>class Review - Rails Application Documentation</title>
+
+<link href="./fonts.css" rel="stylesheet">
+<link href="./rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+</script>
+
+<script src="./js/jquery.js"></script>
+<script src="./js/navigation.js"></script>
+<script src="./js/search_index.js"></script>
+<script src="./js/search.js"></script>
+<script src="./js/searcher.js"></script>
+<script src="./js/darkfish.js"></script>
+
+
+<body id="top" role="document" class="class">
+<nav role="navigation">
+  <div id="project-navigation">
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2>
+    <a href="./index.html" rel="home">Home</a>
+  </h2>
+
+  <div id="table-of-contents-navigation">
+    <a href="./table_of_contents.html#pages">Pages</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+    <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+  </div>
+
+  
+
+  <div id="class-metadata">
+    
+    <div id="parent-class-section" class="nav-section">
+  <h3>Parent</h3>
+
+  
+  <p class="link">ActiveRecord::Base
+  
+</div>
+
+    <div id="includes-section" class="nav-section">
+  <h3>Included Modules</h3>
+
+  <ul class="link-list">
+  
+  
+    <li><span class="include">PgSearch</span>
+  
+  
+  </ul>
+</div>
+
+    
+    <!-- Method Quickref -->
+<div id="method-list-section" class="nav-section">
+  <h3>Methods</h3>
+
+  <ul class="link-list" role="directory">
+    
+    <li ><a href="#method-c-all_reviews">::all_reviews</a>
+    
+    <li ><a href="#method-c-paginate">::paginate</a>
+    
+    <li ><a href="#method-c-text_search">::text_search</a>
+    
+    <li ><a href="#method-i-calculate_reviewer_stats">#calculate_reviewer_stats</a>
+    
+    <li ><a href="#method-i-create_item">#create_item</a>
+    
+    <li ><a href="#method-i-organization_name">#organization_name</a>
+    
+    <li ><a href="#method-i-reviewer_name">#reviewer_name</a>
+    
+    <li ><a href="#method-i-update_org_reviewers_list">#update_org_reviewers_list</a>
+    
+  </ul>
+</div>
+
+  </div>
+</nav>
+
+<main role="main" aria-labelledby="class-Review">
+  <h1 id="class-Review" class="class">
+    class Review
+  </h1>
+
+  <section class="description">
+    
+  </section>
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+
+    
+     <section id="public-class-5Buntitled-5D-method-details" class="method-section">
+       <header>
+         <h3>Public Class Methods</h3>
+       </header>
+
+    
+      <div id="method-c-all_reviews" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">all_reviews</span><span
+            class="method-args">(params, org_id)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="all_reviews-source">
+            <pre><span class="ruby-comment"># File app/models/review.rb, line 58</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">all_reviews</span>(<span class="ruby-identifier">params</span>, <span class="ruby-identifier">org_id</span>)
+
+  <span class="ruby-identifier">where</span>(<span class="ruby-node">&quot;organization_id = #{org_id}&quot;</span>)
+
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-c-paginate" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">paginate</span><span
+            class="method-args">(options = {})</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>define_index do</p>
+
+<pre>  indexes body
+  indexes title
+  indexes organization.id, :as :organization_id
+  indexes content_provider.name, :as :content_provider_name
+  indexes reviewer.name, :as :reviewer_name
+end</pre>
+          
+          
+
+          
+          <div class="method-source-code" id="paginate-source">
+            <pre><span class="ruby-comment"># File app/models/review.rb, line 46</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">paginate</span>(<span class="ruby-identifier">options</span> = {})
+  <span class="ruby-identifier">page</span>(<span class="ruby-identifier">options</span>[<span class="ruby-value">:page</span>]).<span class="ruby-identifier">per</span>(<span class="ruby-identifier">options</span>[<span class="ruby-value">:per_page</span>])
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-c-text_search" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">text_search</span><span
+            class="method-args">(query, org_id)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="text_search-source">
+            <pre><span class="ruby-comment"># File app/models/review.rb, line 50</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">text_search</span>(<span class="ruby-identifier">query</span>, <span class="ruby-identifier">org_id</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">query</span>.<span class="ruby-identifier">present?</span>
+    <span class="ruby-identifier">where</span>(<span class="ruby-string">&quot;body @@ :q&quot;</span>, <span class="ruby-identifier">q</span><span class="ruby-operator">:</span> <span class="ruby-identifier">query</span>).<span class="ruby-identifier">where</span>(<span class="ruby-node">&quot;organization_id = #{org_id}&quot;</span>) <span class="ruby-comment">#.where(&quot;body @@ :q&quot;, q: params[&quot;query&quot;])</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">where</span>(<span class="ruby-node">&quot;organization_id = #{org_id}&quot;</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+    </section>
+  
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section">
+       <header>
+         <h3>Public Instance Methods</h3>
+       </header>
+
+    
+      <div id="method-i-calculate_reviewer_stats" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">calculate_reviewer_stats</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="calculate_reviewer_stats-source">
+            <pre><span class="ruby-comment"># File app/models/review.rb, line 118</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">calculate_reviewer_stats</span>
+  <span class="ruby-identifier">reviewer</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">reviewer</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">reviewer</span>.<span class="ruby-identifier">average_review</span> <span class="ruby-operator">==</span> <span class="ruby-keyword">nil</span>
+    <span class="ruby-identifier">reviewer</span>.<span class="ruby-identifier">average_review</span> = <span class="ruby-value">0.0</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">reviewer</span>.<span class="ruby-identifier">review_count</span> <span class="ruby-operator">==</span> <span class="ruby-keyword">nil</span>
+    <span class="ruby-identifier">reviewer</span>.<span class="ruby-identifier">review_count</span> = <span class="ruby-value">0</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">old_avg</span> = <span class="ruby-identifier">reviewer</span>.<span class="ruby-identifier">average_review</span> <span class="ruby-comment">#* reviewer.review_count</span>
+  <span class="ruby-identifier">reviewer</span>.<span class="ruby-identifier">review_count</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+  <span class="ruby-identifier">reviewer</span>.<span class="ruby-identifier">average_review</span> = <span class="ruby-identifier">old_avg</span> <span class="ruby-operator">+</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">rating</span> <span class="ruby-operator">/</span> <span class="ruby-identifier">reviewer</span>.<span class="ruby-identifier">review_count</span>
+  <span class="ruby-identifier">reviewer</span>.<span class="ruby-identifier">save</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-create_item" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">create_item</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Items - The inbox with “news”</p>
+          
+          
+
+          
+          <div class="method-source-code" id="create_item-source">
+            <pre><span class="ruby-comment"># File app/models/review.rb, line 110</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">create_item</span>
+  <span class="ruby-constant">Item</span>.<span class="ruby-identifier">create!</span>(<span class="ruby-identifier">subject</span><span class="ruby-operator">:</span> <span class="ruby-node">&quot;You have a new review from #{self.content_provider.name}&quot;</span>, <span class="ruby-identifier">body</span><span class="ruby-operator">:</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">body</span>, <span class="ruby-identifier">organization_id</span><span class="ruby-operator">:</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">organization_id</span>, <span class="ruby-identifier">rating</span><span class="ruby-operator">:</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">rating</span>, <span class="ruby-identifier">reviewer_id</span><span class="ruby-operator">:</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">reviewer_id</span>, <span class="ruby-identifier">visible</span><span class="ruby-operator">:</span> <span class="ruby-keyword">true</span>, <span class="ruby-identifier">folder</span><span class="ruby-operator">:</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">completed</span><span class="ruby-operator">:</span> <span class="ruby-keyword">false</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-organization_name" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">organization_name</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="organization_name-source">
+            <pre><span class="ruby-comment"># File app/models/review.rb, line 114</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">organization_name</span>
+  <span class="ruby-identifier">organization</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-reviewer_name" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">reviewer_name</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>def to_index_json</p>
+
+<pre>to_json(methods: [:reviewer_name, :organization_name])</pre>
+
+<p>end</p>
+          
+          
+
+          
+          <div class="method-source-code" id="reviewer_name-source">
+            <pre><span class="ruby-comment"># File app/models/review.rb, line 101</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">reviewer_name</span>
+  <span class="ruby-identifier">reviewer</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-update_org_reviewers_list" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">update_org_reviewers_list</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="update_org_reviewers_list-source">
+            <pre><span class="ruby-comment"># File app/models/review.rb, line 132</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">update_org_reviewers_list</span>
+  <span class="ruby-identifier">lr</span> = <span class="ruby-identifier">organization</span>.<span class="ruby-identifier">list_of_reviewers</span>
+  <span class="ruby-identifier">organization</span>.<span class="ruby-identifier">reviewers_list</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">reviewer_id</span>
+  <span class="ruby-identifier">organization</span>.<span class="ruby-identifier">save</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+    </section>
+  
+  </section>
+</main>
+
+
+<footer id="validator-badges" role="contentinfo">
+  <p><a href="http://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="http://rdoc.rubyforge.org">RDoc</a> 4.1.0.
+  <p>Based on <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
+</footer>
+

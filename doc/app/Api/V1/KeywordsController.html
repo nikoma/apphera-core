@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8">
+
+<title>class Api::V1::KeywordsController - Rails Application Documentation</title>
+
+<link href="../../fonts.css" rel="stylesheet">
+<link href="../../rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../../";
+</script>
+
+<script src="../../js/jquery.js"></script>
+<script src="../../js/navigation.js"></script>
+<script src="../../js/search_index.js"></script>
+<script src="../../js/search.js"></script>
+<script src="../../js/searcher.js"></script>
+<script src="../../js/darkfish.js"></script>
+
+
+<body id="top" role="document" class="class">
+<nav role="navigation">
+  <div id="project-navigation">
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2>
+    <a href="../../index.html" rel="home">Home</a>
+  </h2>
+
+  <div id="table-of-contents-navigation">
+    <a href="../../table_of_contents.html#pages">Pages</a>
+    <a href="../../table_of_contents.html#classes">Classes</a>
+    <a href="../../table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+    <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+  </div>
+
+  
+
+  <div id="class-metadata">
+    
+    <div id="parent-class-section" class="nav-section">
+  <h3>Parent</h3>
+
+  
+  <p class="link"><a href="../../ApplicationController.html">ApplicationController</a>
+  
+</div>
+
+    
+    
+    <!-- Method Quickref -->
+<div id="method-list-section" class="nav-section">
+  <h3>Methods</h3>
+
+  <ul class="link-list" role="directory">
+    
+    <li ><a href="#method-i-create_for_account">#create_for_account</a>
+    
+    <li ><a href="#method-i-delete_association">#delete_association</a>
+    
+    <li ><a href="#method-i-index">#index</a>
+    
+    <li ><a href="#method-i-keywords_by_account">#keywords_by_account</a>
+    
+    <li ><a href="#method-i-rankings">#rankings</a>
+    
+    <li ><a href="#method-i-refresh_aggregates">#refresh_aggregates</a>
+    
+  </ul>
+</div>
+
+  </div>
+</nav>
+
+<main role="main" aria-labelledby="class-Api::V1::KeywordsController">
+  <h1 id="class-Api::V1::KeywordsController" class="class">
+    class Api::V1::KeywordsController
+  </h1>
+
+  <section class="description">
+    
+  </section>
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+
+    
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section">
+       <header>
+         <h3>Public Instance Methods</h3>
+       </header>
+
+    
+      <div id="method-i-create_for_account" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">create_for_account</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>TODO: validate uniqueness of many to many of keywords to organizations in
+@kw.organizations &lt;&lt; @org def create</p>
+
+<pre class="ruby"><span class="ruby-ivar">@org</span> = <span class="ruby-identifier">current_user</span>.<span class="ruby-identifier">accounts</span>.<span class="ruby-identifier">where</span>(<span class="ruby-identifier">id</span><span class="ruby-operator">:</span> <span class="ruby-identifier">params</span>[:<span class="ruby-identifier">acc</span>]).<span class="ruby-identifier">first</span>.<span class="ruby-identifier">organizations</span>.<span class="ruby-identifier">where</span>(<span class="ruby-identifier">id</span><span class="ruby-operator">:</span> <span class="ruby-identifier">params</span>[:<span class="ruby-identifier">org</span>]).<span class="ruby-identifier">first</span>
+<span class="ruby-ivar">@kw</span> = <span class="ruby-constant">Keyword</span>.<span class="ruby-identifier">find_or_create_by</span>(<span class="ruby-identifier">name</span><span class="ruby-operator">:</span> <span class="ruby-identifier">params</span>[:<span class="ruby-identifier">keyword</span>])
+<span class="ruby-ivar">@kw</span>.<span class="ruby-identifier">organizations</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-ivar">@org</span>
+<span class="ruby-ivar">@kw</span>.<span class="ruby-identifier">save</span>
+<span class="ruby-constant">BingKeywords</span>.<span class="ruby-identifier">perform_async</span>(<span class="ruby-ivar">@kw</span>.<span class="ruby-identifier">id</span>)
+<span class="ruby-identifier">render</span> :<span class="ruby-identifier">json</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@kw</span>.<span class="ruby-identifier">id</span>
+</pre>
+
+<p>end</p>
+          
+          
+
+          
+          <div class="method-source-code" id="create_for_account-source">
+            <pre><span class="ruby-comment"># File app/controllers/api/v1/keywords_controller.rb, line 31</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">create_for_account</span>
+  <span class="ruby-ivar">@acc</span> = <span class="ruby-identifier">current_user</span>.<span class="ruby-identifier">accounts</span>.<span class="ruby-identifier">where</span>(<span class="ruby-identifier">id</span><span class="ruby-operator">:</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:account_id</span>]).<span class="ruby-identifier">first</span>
+  <span class="ruby-comment">#name = params[:keyword]</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:keyword</span>][<span class="ruby-value">:tracks</span>].<span class="ruby-identifier">nil?</span>
+    <span class="ruby-identifier">render</span> <span class="ruby-value">:status</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">422</span>, <span class="ruby-value">:json</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&#39;{&quot;error&quot; : &quot;please specify at least on value for tracks&quot;}&#39;</span>
+    <span class="ruby-keyword">return</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:keyword</span>][<span class="ruby-value">:markets</span>].<span class="ruby-identifier">nil?</span>
+    <span class="ruby-identifier">render</span> <span class="ruby-value">:status</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">422</span>, <span class="ruby-value">:json</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&#39;{&quot;error&quot; : &quot;please specify at least one market - available markets are at the markets endpoint&quot;}&#39;</span>
+    <span class="ruby-keyword">return</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">k</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value">:keyword</span>][<span class="ruby-value">:name</span>]
+  <span class="ruby-ivar">@kw</span> = <span class="ruby-constant">Keyword</span>.<span class="ruby-identifier">find_or_create_by</span>(<span class="ruby-identifier">name</span><span class="ruby-operator">:</span> <span class="ruby-identifier">k</span>.<span class="ruby-identifier">downcase</span>)
+  <span class="ruby-ivar">@kw</span>.<span class="ruby-identifier">markets</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value">:keyword</span>][<span class="ruby-value">:markets</span>]
+  <span class="ruby-ivar">@kw</span>.<span class="ruby-identifier">tracks</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value">:keyword</span>][<span class="ruby-value">:tracks</span>]
+
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:keyword</span>][<span class="ruby-value">:organization_id</span>]
+    <span class="ruby-ivar">@org</span> = <span class="ruby-ivar">@acc</span>.<span class="ruby-identifier">organizations</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:keyword</span>][<span class="ruby-value">:organization_id</span>])
+    <span class="ruby-ivar">@kw</span>.<span class="ruby-identifier">organizations</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-ivar">@org</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-ivar">@kw</span>.<span class="ruby-identifier">accounts</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-ivar">@acc</span>
+  <span class="ruby-ivar">@kw</span>.<span class="ruby-identifier">save</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@kw</span>.<span class="ruby-identifier">tracks</span>.<span class="ruby-identifier">include?</span> <span class="ruby-string">&#39;facebook&#39;</span>
+    <span class="ruby-constant">FacebookSearchWorker</span>.<span class="ruby-identifier">perform_async</span>(<span class="ruby-ivar">@kw</span>.<span class="ruby-identifier">id</span>)
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@kw</span>.<span class="ruby-identifier">tracks</span>.<span class="ruby-identifier">include?</span> <span class="ruby-string">&#39;search&#39;</span>
+    <span class="ruby-ivar">@kw</span>.<span class="ruby-identifier">markets</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">m</span><span class="ruby-operator">|</span>
+      <span class="ruby-constant">BingKeywords</span>.<span class="ruby-identifier">perform_async</span>(<span class="ruby-ivar">@kw</span>.<span class="ruby-identifier">id</span>, <span class="ruby-identifier">m</span>)
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@kw</span>.<span class="ruby-identifier">tracks</span>.<span class="ruby-identifier">include?</span> <span class="ruby-string">&#39;youtube&#39;</span>
+    <span class="ruby-constant">YoutubeSearchWorker</span>.<span class="ruby-identifier">perform_async</span>(<span class="ruby-ivar">@kw</span>.<span class="ruby-identifier">id</span>)
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@kw</span>.<span class="ruby-identifier">tracks</span>.<span class="ruby-identifier">include?</span> <span class="ruby-string">&#39;instagram&#39;</span>
+    <span class="ruby-constant">InstagramSearchWorker</span>.<span class="ruby-identifier">perform_async</span>(<span class="ruby-ivar">@kw</span>.<span class="ruby-identifier">id</span>)
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">render</span> <span class="ruby-value">:json</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@kw</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-delete_association" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">delete_association</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="delete_association-source">
+            <pre><span class="ruby-comment"># File app/controllers/api/v1/keywords_controller.rb, line 74</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">delete_association</span>
+  <span class="ruby-ivar">@org</span> = <span class="ruby-identifier">current_user</span>.<span class="ruby-identifier">accounts</span>.<span class="ruby-identifier">where</span>(<span class="ruby-identifier">id</span><span class="ruby-operator">:</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:acc</span>]).<span class="ruby-identifier">first</span>.<span class="ruby-identifier">organizations</span>.<span class="ruby-identifier">where</span>(<span class="ruby-identifier">id</span><span class="ruby-operator">:</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:org</span>]).<span class="ruby-identifier">first</span>
+  <span class="ruby-ivar">@kw</span> = <span class="ruby-ivar">@org</span>.<span class="ruby-identifier">keywords</span>.<span class="ruby-identifier">find</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:keyword_id</span>]
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@kw</span>
+    <span class="ruby-ivar">@org</span>.<span class="ruby-identifier">keywords</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-ivar">@kw</span>)
+    <span class="ruby-identifier">render</span> <span class="ruby-value">:json</span> =<span class="ruby-operator">&gt;</span> {<span class="ruby-identifier">message</span><span class="ruby-operator">:</span> <span class="ruby-string">&quot;deleted association&quot;</span>}
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">render</span> <span class="ruby-identifier">status</span><span class="ruby-operator">:</span> <span class="ruby-value">:unprocessable_entity</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-index" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">index</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="index-source">
+            <pre><span class="ruby-comment"># File app/controllers/api/v1/keywords_controller.rb, line 16</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">index</span>
+  <span class="ruby-identifier">items</span> = <span class="ruby-identifier">current_user</span>.<span class="ruby-identifier">accounts</span>.<span class="ruby-identifier">where</span>(<span class="ruby-identifier">id</span><span class="ruby-operator">:</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:acc</span>]).<span class="ruby-identifier">first</span>.<span class="ruby-identifier">organizations</span>.<span class="ruby-identifier">where</span>(<span class="ruby-identifier">id</span><span class="ruby-operator">:</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:org</span>]).<span class="ruby-identifier">first</span>.<span class="ruby-identifier">keywords</span>
+  <span class="ruby-identifier">render</span> <span class="ruby-value">:json</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">items</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-keywords_by_account" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">keywords_by_account</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Get all Items for the current user</p>
+          
+          
+
+          
+          <div class="method-source-code" id="keywords_by_account-source">
+            <pre><span class="ruby-comment"># File app/controllers/api/v1/keywords_controller.rb, line 5</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">keywords_by_account</span>
+  <span class="ruby-ivar">@items</span> = <span class="ruby-identifier">current_user</span>.<span class="ruby-identifier">accounts</span>.<span class="ruby-identifier">where</span>(<span class="ruby-identifier">id</span><span class="ruby-operator">:</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:acc</span>]).<span class="ruby-identifier">first</span>.<span class="ruby-identifier">keywords</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-rankings" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">rankings</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="rankings-source">
+            <pre><span class="ruby-comment"># File app/controllers/api/v1/keywords_controller.rb, line 70</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">rankings</span>
+
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-refresh_aggregates" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">refresh_aggregates</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="refresh_aggregates-source">
+            <pre><span class="ruby-comment"># File app/controllers/api/v1/keywords_controller.rb, line 9</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">refresh_aggregates</span>
+  <span class="ruby-identifier">kw</span> = <span class="ruby-constant">Keyword</span>.<span class="ruby-identifier">find</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:keyword_id</span>]
+  <span class="ruby-constant">KeywordAggregateWorker</span>.<span class="ruby-identifier">perform_async</span>(<span class="ruby-identifier">kw</span>.<span class="ruby-identifier">id</span>) <span class="ruby-keyword">if</span> <span class="ruby-identifier">kw</span>
+  <span class="ruby-identifier">render</span> <span class="ruby-value">:status</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">200</span>, <span class="ruby-value">:json</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&#39;{&quot;status&quot; : &quot;Many CPUs hard at work now...&quot;}&#39;</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+    </section>
+  
+  </section>
+</main>
+
+
+<footer id="validator-badges" role="contentinfo">
+  <p><a href="http://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="http://rdoc.rubyforge.org">RDoc</a> 4.1.0.
+  <p>Based on <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
+</footer>
+

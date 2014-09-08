@@ -1,0 +1,116 @@
+"ar-XA" =>
+"Arabic – Arabia",
+"bg-BG" =>
+"Bulgarian – Bulgaria",
+"cs-CZ" =>
+"Czech – Czech Republic",
+"da-DK" =>
+"Danish – Denmark",
+"de-AT" =>
+"German – Austria",
+"de-CH" =>
+"German – Switzerland",
+"de-DE" =>
+"German – Germany",
+"el-GR" =>
+"Greek – Greece",
+"en-AU" =>
+"English – Australia",
+"en-CA" =>
+"English – Canada",
+"en-GB" =>
+"English – United Kingdom",
+"en-ID" =>
+"English – Indonesia",
+"en-IE" =>
+"English – Ireland",
+"en-IN" =>
+"English – India",
+"en-MY" =>
+"English – Malaysia",
+"en-NZ" =>
+"English – New Zealand",
+"en-PH" =>
+"English – Philippines",
+"en-SG" =>
+"English – Singapore",
+"en-US" =>
+"English – United States",
+"en-XA" =>
+"English – Arabia",
+"en-ZA" =>
+"English – South Africa",
+"es-AR" =>
+"Spanish – Argentina",
+"es-CL" =>
+"Spanish – Chile",
+"es-ES" =>
+"Spanish – Spain",
+"es-MX" =>
+"Spanish – Mexico",
+"es-US" =>
+"Spanish – United States",
+"es-XL" =>
+"Spanish – Latin America",
+"et-EE" =>
+"Estonian – Estonia",
+"fi-FI" =>
+"Finnish – Finland",
+"fr-BE" =>
+"French – Belgium",
+"fr-CA" =>
+"French – Canada",
+"fr-CH" =>
+"French – Switzerland",
+"fr-FR" =>
+"French – France",
+"he-IL" =>
+"Hebrew – Israel",
+"hr-HR" =>
+"Croatian – Croatia",
+"hu-HU" =>
+"Hungarian – Hungary",
+"it-IT" =>
+"Italian – Italy",
+"ja-JP" =>
+"Japanese – Japan",
+"ko-KR" =>
+"Korean – Korea",
+"lt-LT" =>
+"Lithuanian – Lithuania",
+"lv-LV" =>
+"Latvian – Latvia",
+"nb-NO" =>
+"Norwegian – Norway",
+"nl-BE" =>
+"Dutch – Belgium",
+"nl-NL" =>
+"Dutch – Netherlands",
+"pl-PL" =>
+"Polish – Poland",
+"pt-BR" =>
+"Portuguese – Brazil",
+"pt-PT" =>
+"Portuguese – Portugal",
+"ro-RO" =>
+"Romanian – Romania",
+"ru-RU" =>
+"Russian – Russia",
+"sk-SK" =>
+"Slovak – Slovak Republic",
+"sl-SL" =>
+"Slovenian – Slovenia",
+"sv-SE" =>
+"Swedish – Sweden",
+"th-TH" =>
+"Thai – Thailand",
+"tr-TR" =>
+"Turkish – Turkey",
+"uk-UA" =>
+"Ukrainian – Ukraine",
+"zh-CN" =>
+"Chinese – China",
+"zh-HK" =>
+"Chinese – Hong Kong SAR",
+"zh-TW" =>
+"Chinese – Taiwan"
