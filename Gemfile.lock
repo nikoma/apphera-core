@@ -135,6 +135,10 @@ GEM
       multi_json (~> 1.0, >= 1.0.3)
     json (1.8.1)
     jwt (1.0.0)
+    klout (3.0.2)
+      hashie
+      httparty
+      json
     koala (1.10.0)
       addressable
       faraday
@@ -396,6 +400,7 @@ DEPENDENCIES
   guard
   httparty
   instagram
+  klout
   koala
   logstash-logger
   mechanize

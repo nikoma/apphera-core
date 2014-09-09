@@ -49,6 +49,7 @@ gem 'clean_pagination'
 gem 'surus'
 gem 'oj'
 gem "koala"
+gem 'klout'
 gem 'fb_graph'
 gem 'logstash-logger'
 gem 'mechanize'

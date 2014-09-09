@@ -49,23 +49,24 @@ module Api
 
       def set_credentials
         # organization_id = params[:organization_id] || nil
-        @account = current_user.accounts.where(id: params[:twitter_credential][:account_id]).first
-        @credential = TwitterCredential.new(params[:twitter_credential])
+        @account = current_user.accounts.where(id: params[:facebook_credential][:account_id]).first
+        @credential = FacebookCredential.new(params[:facebook_credential])
         @credential.account_id= @account.id
         @credential.save
-        render :json => {:message => 'stored twitter credentials credentials for account: ' + @account.id.to_s}
+        render :json => {:message => 'stored facebook credentials for account: ' + @account.id.to_s}
       end
 
       def get_credentials
         account_id = params[:account_id]
         @account = current_user.accounts.where(id: account_id).first
-        render :json => @account.twitter_credentials
+        @fb_credentials = @account.facebook_credentials.where(c_user_id: params[:c_user_id]).first
+        render :json => @fb_credentials.to_json
       end
 
       def delete_credentials
         @account = current_user.accounts.where(id: params[:account_id]).first
         begin
-          @credentials = @account.twitter_credentials.where(c_user_id: params[:id]).first
+          @credentials = @account.facebook_credentials.where(c_user_id: params[:c_user_id]).first
           @credentials.destroy
         rescue
           render :status => 404, :json => {:message => 'record not found'}

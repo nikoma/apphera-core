@@ -9,6 +9,7 @@ class Account < ActiveRecord::Base
   has_many :facebook_items
   has_many :facebook_page_credentials
   has_many :twitter_credentials
+  has_many :facebook_credentials
   has_many :campaigns
   has_many :named_queries
   #belongs_to :country
