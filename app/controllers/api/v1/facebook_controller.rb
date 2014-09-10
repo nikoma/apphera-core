@@ -23,7 +23,6 @@ module Api
         end
 
         fp = FacebookPagePost.create!(params[:facebook_page_post].merge(:api_partner_id => current_user.id))
-        # @page_graph.put_connections(page_id, 'feed', :message => message, :picture => picture_url, :link => link_url)
 
         if fp.post_date != nil and fp.post_date > DateTime.now
           render :json => {:message => 'Scheduled for: ' + fp.post_date.to_s}
