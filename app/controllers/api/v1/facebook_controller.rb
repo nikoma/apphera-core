@@ -31,8 +31,8 @@ module Api
       def set_page_credentials_short_token
         user_access_token = params[:user_access_token]
         account_id = params[:account_id]
-        app_id = [:app_id]
-        app_secret = [:app_secret]
+        app_id = params[:app_id]
+        app_secret = params[:app_secret]
         fb_auth = FbGraph::Auth.new(app_id, app_secret)
         fb_auth.exchange_token! user_access_token
         user_access_token = fb_auth.access_token
