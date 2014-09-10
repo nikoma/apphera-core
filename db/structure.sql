@@ -901,6 +901,47 @@ ALTER SEQUENCE facebook_page_credentials_id_seq OWNED BY facebook_page_credentia
 
 
 --
+-- Name: facebook_page_posts; Type: TABLE; Schema: public; Owner: -; Tablespace: 
+--
+
+CREATE TABLE facebook_page_posts (
+    id integer NOT NULL,
+    api_partner_id integer,
+    page_id character varying(255),
+    account_id integer,
+    organization_id integer,
+    post_date timestamp without time zone,
+    body character varying(255),
+    picture character varying(255),
+    link character varying(255),
+    description character varying(255),
+    post_as_user boolean,
+    c_user_id character varying(255),
+    created_at timestamp without time zone,
+    updated_at timestamp without time zone
+);
+
+
+--
+-- Name: facebook_page_posts_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+--
+
+CREATE SEQUENCE facebook_page_posts_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: facebook_page_posts_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+--
+
+ALTER SEQUENCE facebook_page_posts_id_seq OWNED BY facebook_page_posts.id;
+
+
+--
 -- Name: facebook_posts; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -3529,6 +3570,13 @@ ALTER TABLE ONLY facebook_page_credentials ALTER COLUMN id SET DEFAULT nextval('
 -- Name: id; Type: DEFAULT; Schema: public; Owner: -
 --
 
+ALTER TABLE ONLY facebook_page_posts ALTER COLUMN id SET DEFAULT nextval('facebook_page_posts_id_seq'::regclass);
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: -
+--
+
 ALTER TABLE ONLY facebook_posts ALTER COLUMN id SET DEFAULT nextval('facebook_posts_id_seq'::regclass);
 
 
@@ -4153,6 +4201,14 @@ ALTER TABLE ONLY facebook_items
 
 ALTER TABLE ONLY facebook_page_credentials
     ADD CONSTRAINT facebook_page_credentials_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: facebook_page_posts_pkey; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
+--
+
+ALTER TABLE ONLY facebook_page_posts
+    ADD CONSTRAINT facebook_page_posts_pkey PRIMARY KEY (id);
 
 
 --
@@ -4935,6 +4991,34 @@ CREATE INDEX index_facebook_page_credentials_on_name ON facebook_page_credential
 --
 
 CREATE INDEX index_facebook_page_credentials_on_organization_id ON facebook_page_credentials USING btree (organization_id);
+
+
+--
+-- Name: index_facebook_page_posts_on_account_id; Type: INDEX; Schema: public; Owner: -; Tablespace: 
+--
+
+CREATE INDEX index_facebook_page_posts_on_account_id ON facebook_page_posts USING btree (account_id);
+
+
+--
+-- Name: index_facebook_page_posts_on_api_partner_id; Type: INDEX; Schema: public; Owner: -; Tablespace: 
+--
+
+CREATE INDEX index_facebook_page_posts_on_api_partner_id ON facebook_page_posts USING btree (api_partner_id);
+
+
+--
+-- Name: index_facebook_page_posts_on_organization_id; Type: INDEX; Schema: public; Owner: -; Tablespace: 
+--
+
+CREATE INDEX index_facebook_page_posts_on_organization_id ON facebook_page_posts USING btree (organization_id);
+
+
+--
+-- Name: index_facebook_page_posts_on_page_id; Type: INDEX; Schema: public; Owner: -; Tablespace: 
+--
+
+CREATE INDEX index_facebook_page_posts_on_page_id ON facebook_page_posts USING btree (page_id);
 
 
 --
@@ -6332,4 +6416,6 @@ INSERT INTO schema_migrations (version) VALUES ('20140902073632');
 INSERT INTO schema_migrations (version) VALUES ('20140902215432');
 
 INSERT INTO schema_migrations (version) VALUES ('20140905194534');
+
+INSERT INTO schema_migrations (version) VALUES ('20140910014019');
 

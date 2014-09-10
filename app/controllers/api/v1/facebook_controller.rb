@@ -13,10 +13,29 @@ module Api
         end
       end
 
+      def page_post
+
+        begin
+        account = @current_user.accounts.find(params[:facebook_page_post][:account_id])
+        rescue
+          render :status => 404, :json => {:message => 'Please provide a valid account_id'}
+          return
+        end
+
+        fp = FacebookPagePost.create!(params[:facebook_page_post].merge(:api_partner_id => current_user.id))
+        # @page_graph.put_connections(page_id, 'feed', :message => message, :picture => picture_url, :link => link_url)
+
+        if fp.post_date != nil and fp.post_date > DateTime.now
+          render :json => {:message => 'Scheduled for: ' + fp.post_date.to_s}
+        else
+          FacebookPagePostWorker.perform_async(fp.id)
+          render :json => {:message => 'queued massage: ' + fp.to_json}
+        end
+      end
       # TODO: persist? yes/no?
       def read_wall
         @account = current_user.accounts.where(id: params[:account_id]).first
-        page_token = FacebookPageCredential.where(fb_id: params[:fb_id]).first.access_token
+        page_token = @account.facebook_page_credentials.where(fb_id: params[:fb_id]).first.access_token
         @page_graph = Koala::Facebook::API.new(page_token)
         render :json => @page_graph.get_connection('me', 'feed')
       end

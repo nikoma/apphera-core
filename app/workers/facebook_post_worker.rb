@@ -18,13 +18,6 @@ class FacebookPostWorker
       )
     end
 
-    # Older alternative way
-    # begin
-    #   @graph = Koala::Facebook::API.new(token)
-    #   profile = @graph.get_object("me")
-    #   @graph.put_connections("me", "feed", :message => body)
-    # rescue Exception => e
-    #   puts e.message
-    # end
+
   end
 end
