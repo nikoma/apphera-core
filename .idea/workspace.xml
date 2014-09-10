@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="4e374769-fa0b-416d-9102-3e07bd45548b" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/api/v1/facebook_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/api/v1/facebook_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/workers/facebook_page_post_worker.rb" afterPath="$PROJECT_DIR$/app/workers/facebook_page_post_worker.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="apphera-core.iws" />
@@ -16,7 +16,7 @@
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/apphera-core@Development__apphera_core.coverage" NAME="Development: apphera-core Coverage Results" MODIFIED="1410320725795" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="apphera-core" />
+    <SUITE FILE_PATH="coverage/apphera-core@Development__apphera_core.coverage" NAME="Development: apphera-core Coverage Results" MODIFIED="1410326697197" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="apphera-core" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -30,11 +30,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="routes.rb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="routes.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/config/routes.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.6153846" vertical-offset="353" max-vertical-offset="1545">
-              <caret line="35" column="57" selection-start-line="35" selection-start-column="57" selection-end-line="35" selection-end-column="57" />
+            <state vertical-scroll-proportion="0.71555555" vertical-offset="353" max-vertical-offset="1605">
+              <caret line="45" column="99" selection-start-line="45" selection-start-column="99" selection-end-line="45" selection-end-column="99" />
               <folding />
             </state>
           </provider>
@@ -43,9 +43,20 @@
       <file leaf-file-name="facebook_controller.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/api/v1/facebook_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.807693" vertical-offset="90" max-vertical-offset="2535">
-              <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-              <folding />
+            <state vertical-scroll-proportion="-10.461538" vertical-offset="868" max-vertical-offset="2070">
+              <caret line="159" column="53" selection-start-line="159" selection-start-column="53" selection-end-line="159" selection-end-column="53" />
+              <folding>
+                <element signature="e#137#552#0" expanded="false" />
+                <element signature="e#560#1227#0" expanded="false" />
+                <element signature="e#1266#1595#0" expanded="false" />
+                <element signature="e#1603#1987#0" expanded="false" />
+                <element signature="e#1995#2620#0" expanded="false" />
+                <element signature="e#2628#2831#0" expanded="false" />
+                <element signature="e#2839#3268#0" expanded="false" />
+                <element signature="e#3276#3710#0" expanded="false" />
+                <element signature="e#3718#4004#0" expanded="false" />
+                <element signature="e#4012#4439#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -60,10 +71,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="facebook_page_post_worker.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="facebook_page_post_worker.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/workers/facebook_page_post_worker.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.44117647" vertical-offset="0" max-vertical-offset="540">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="540">
               <caret line="14" column="23" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
               <folding />
             </state>
@@ -157,9 +168,9 @@
         <option value="$PROJECT_DIR$/app/models/account.rb" />
         <option value="$PROJECT_DIR$/app/workers/facebook_post_worker.rb" />
         <option value="$PROJECT_DIR$/app/models/facebook_page_post.rb" />
-        <option value="$PROJECT_DIR$/config/routes.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/api/v1/facebook_controller.rb" />
         <option value="$PROJECT_DIR$/app/workers/facebook_page_post_worker.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/api/v1/facebook_controller.rb" />
+        <option value="$PROJECT_DIR$/config/routes.rb" />
       </list>
     </option>
   </component>
@@ -622,7 +633,11 @@
       <created>1410319767864</created>
       <updated>1410319767864</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary=" FB page post as page">
+      <created>1410320917777</created>
+      <updated>1410320917777</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -697,7 +712,8 @@
     <MESSAGE value="Facebook set_page_credentials_short_token" />
     <MESSAGE value="fixed typo" />
     <MESSAGE value="Scope changes, FB page post" />
-    <option name="LAST_COMMIT_MESSAGE" value="Scope changes, FB page post" />
+    <MESSAGE value=" FB page post as page" />
+    <option name="LAST_COMMIT_MESSAGE" value=" FB page post as page" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -760,7 +776,18 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="435" max-vertical-offset="2085">
           <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#137#552#0" expanded="false" />
+            <element signature="e#560#1227#0" expanded="false" />
+            <element signature="e#1266#1595#0" expanded="false" />
+            <element signature="e#1603#1987#0" expanded="false" />
+            <element signature="e#1995#2620#0" expanded="false" />
+            <element signature="e#2628#2831#0" expanded="false" />
+            <element signature="e#2839#3268#0" expanded="false" />
+            <element signature="e#3276#3710#0" expanded="false" />
+            <element signature="e#3718#4004#0" expanded="false" />
+            <element signature="e#4012#4439#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1048,14 +1075,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/workers/facebook_post_worker.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="420">
-          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/models/facebook_page_post.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="240">
@@ -1072,26 +1091,45 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/routes.rb">
+    <entry file="file://$PROJECT_DIR$/app/workers/facebook_page_post_worker.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.6153846" vertical-offset="353" max-vertical-offset="1545">
-          <caret line="35" column="57" selection-start-line="35" selection-start-column="57" selection-end-line="35" selection-end-column="57" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="540">
+          <caret line="14" column="23" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/workers/facebook_post_worker.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="420">
+          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/api/v1/facebook_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.807693" vertical-offset="90" max-vertical-offset="2535">
-          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-          <folding />
+        <state vertical-scroll-proportion="-10.461538" vertical-offset="868" max-vertical-offset="2070">
+          <caret line="159" column="53" selection-start-line="159" selection-start-column="53" selection-end-line="159" selection-end-column="53" />
+          <folding>
+            <element signature="e#137#552#0" expanded="false" />
+            <element signature="e#560#1227#0" expanded="false" />
+            <element signature="e#1266#1595#0" expanded="false" />
+            <element signature="e#1603#1987#0" expanded="false" />
+            <element signature="e#1995#2620#0" expanded="false" />
+            <element signature="e#2628#2831#0" expanded="false" />
+            <element signature="e#2839#3268#0" expanded="false" />
+            <element signature="e#3276#3710#0" expanded="false" />
+            <element signature="e#3718#4004#0" expanded="false" />
+            <element signature="e#4012#4439#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/workers/facebook_page_post_worker.rb">
+    <entry file="file://$PROJECT_DIR$/config/routes.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.44117647" vertical-offset="0" max-vertical-offset="540">
-          <caret line="14" column="23" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
+        <state vertical-scroll-proportion="0.71555555" vertical-offset="353" max-vertical-offset="1605">
+          <caret line="45" column="99" selection-start-line="45" selection-start-column="99" selection-end-line="45" selection-end-column="99" />
           <folding />
         </state>
       </provider>

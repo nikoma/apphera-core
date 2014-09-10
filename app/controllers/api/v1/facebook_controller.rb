@@ -8,15 +8,15 @@ module Api
         if fp.post_date != nil and fp.post_date > DateTime.now
           render :json => {:message => 'Scheduled for: ' + fp.post_date.to_s}
         else
-        FacebookPostWorker.perform_async(fp.id)
-        render :json => {:message => 'queued massage: ' + fp.to_json}
+          FacebookPostWorker.perform_async(fp.id)
+          render :json => {:message => 'queued massage: ' + fp.to_json}
         end
       end
 
       def page_post
 
         begin
-        account = @current_user.accounts.find(params[:facebook_page_post][:account_id])
+          account = @current_user.accounts.find(params[:facebook_page_post][:account_id])
         rescue
           render :status => 404, :json => {:message => 'Please provide a valid account_id'}
           return
@@ -31,6 +31,7 @@ module Api
           render :json => {:message => 'queued massage: ' + fp.to_json}
         end
       end
+
       # TODO: persist? yes/no?
       def read_wall
         @account = current_user.accounts.where(id: params[:account_id]).first
@@ -46,6 +47,7 @@ module Api
         FacebookCredentialsWorker.perform_async(@account.id, user_access_token)
         render :json => {:message => 'requesting facebook credentials for account: ' + @account.id.to_s}
       end
+
       def set_page_credentials_short_token
         user_access_token = params[:user_access_token]
         account_id = params[:account_id]
@@ -58,6 +60,7 @@ module Api
         FacebookCredentialsWorker.perform_async(@account.id, user_access_token)
         render :json => {:message => 'requesting facebook credentials for account: ' + @account.id.to_s}
       end
+
       def get_page_credentials
         account_id = params[:account_id]
         @account = current_user.accounts.where(id: account_id).first
@@ -102,6 +105,60 @@ module Api
           return
         end
         render :json => {:message => 'Record deleted'}
+      end
+
+      def delete_post
+        access_token = current_user.accounts.find(params[:account_id]).facebook_page_credentials.where(fb_id: params[:fb_id]).first.access_token
+        begin
+          FbGraph::Post.new(params[:post_id], :access_token => access_token).destroy
+        rescue
+          render :status => 422, :json => {:message => 'post could not be deleted'}
+          return
+        end
+        render :json => {:message => 'Post deleted'}
+
+      end
+
+      def post_comment
+        access_token = current_user.accounts.find(params[:facebook_comment][:account_id]).facebook_page_credentials.where(fb_id: params[:facebook_comment][:fb_id]).first.access_token
+
+        post = FbGraph::Post.new(params[:facebook_comment][:post_id], :access_token => access_token)
+        begin
+        post.comment!(
+            :message => params[:facebook_comment][:body]
+        )
+        rescue
+          render :status => 422, :json => {:message => 'could not comment'}
+          return
+          end
+        render :json => {:message => 'Commented on post'}
+
+      end
+
+      def reply_to_comment
+        access_token = current_user.accounts.find(params[:facebook_comment_reply][:account_id]).facebook_page_credentials.where(fb_id: params[:facebook_comment_reply][:fb_id]).first.access_token
+
+        comment = FbGraph::Comment.fetch(params[:facebook_comment_reply][:comment_id], :access_token => access_token, :fields => "can_comment")
+        if comment.commentable?
+          comment.reply!(
+              :message => params[:facebook_comment_reply][:body],
+              :access_token => access_token
+          )
+        end
+        render :json => {:message => 'replied to comment'}
+
+      end
+
+      def delete_comment
+        access_token = current_user.accounts.find(params[:account_id]).facebook_page_credentials.where(fb_id: params[:fb_id]).first.access_token
+        begin
+        FbGraph::Comment.new(params[:comment_id], :access_token => access_token).destroy
+        rescue
+          render :status => 422, :json => {:message => 'could not delete comment'}
+          return
+        end
+        render :json => {:message => 'deleted comment'}
+
       end
 
       # TODO: Move into worker with callback
@@ -153,12 +210,7 @@ module Api
         end
 
 
-        def unknown
-          render :json => {:message => 'unknown method'}
-        end
-
-
+      end
     end
-  end
   end
 end
