@@ -1,3 +1,5 @@
+# encoding: utf-8
+
 module Api
   module V1
     class SentimentsController < ApplicationController
@@ -8,7 +10,7 @@ module Api
 
       def complex
         @lang = params[:lang]
-        @sentence = params[:body].split(/\W+/)
+        @sentence = params[:body].scan /[[:alpha:]]+/
 
         res = 0.0
         score = 0.0
@@ -32,7 +34,7 @@ module Api
 
       def show
         @lang = params[:lang]
-        @sentence = params[:body].split(/\W+/)
+        @sentence = params[:body].scan /[[:alpha:]]+/
 
         res = 0.0
         score = 0.0
