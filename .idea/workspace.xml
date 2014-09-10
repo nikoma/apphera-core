@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4e374769-fa0b-416d-9102-3e07bd45548b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/api/v1/facebook_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/api/v1/facebook_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="apphera-core.iws" />
@@ -33,7 +31,7 @@
       <file leaf-file-name="routes.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/config/routes.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.71555555" vertical-offset="353" max-vertical-offset="1605">
+            <state vertical-scroll-proportion="1.5" vertical-offset="0" max-vertical-offset="1605">
               <caret line="45" column="99" selection-start-line="45" selection-start-column="99" selection-end-line="45" selection-end-column="99" />
               <folding />
             </state>
@@ -637,7 +635,11 @@
       <created>1410320917777</created>
       <updated>1410320917777</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="multiple db methods">
+      <created>1410327181254</created>
+      <updated>1410327181254</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -713,7 +715,8 @@
     <MESSAGE value="fixed typo" />
     <MESSAGE value="Scope changes, FB page post" />
     <MESSAGE value=" FB page post as page" />
-    <option name="LAST_COMMIT_MESSAGE" value=" FB page post as page" />
+    <MESSAGE value="multiple db methods" />
+    <option name="LAST_COMMIT_MESSAGE" value="multiple db methods" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1128,7 +1131,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/config/routes.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.71555555" vertical-offset="353" max-vertical-offset="1605">
+        <state vertical-scroll-proportion="1.5" vertical-offset="0" max-vertical-offset="1605">
           <caret line="45" column="99" selection-start-line="45" selection-start-column="99" selection-end-line="45" selection-end-column="99" />
           <folding />
         </state>
