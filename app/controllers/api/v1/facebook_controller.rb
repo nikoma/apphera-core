@@ -25,10 +25,10 @@ module Api
         fp = FacebookPagePost.create!(params[:facebook_page_post].merge(:api_partner_id => current_user.id))
 
         if fp.post_date != nil and fp.post_date > DateTime.now
-          render :json => {:message => 'Scheduled for: ' + fp.post_date.to_s}
+          render :json => {:message => 'queued message '}
         else
           FacebookPagePostWorker.perform_async(fp.id)
-          render :json => {:message => 'queued massage: ' + fp.to_json}
+          render :json => {:message => 'queued massage'}
         end
       end
 
