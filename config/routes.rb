@@ -52,6 +52,8 @@ Api::Application.routes.draw do
       resources :geocomps
       get 'sentiments/languages' => 'sentiments#languages'
       get 'sentiments/:lang/:body' => 'sentiments#show'
+      get 'senti/positive' => 'senti#positive'
+      get 'senti/negative' => 'senti#negative'
       post 'sentiments' => 'sentiments#complex'
       get 'tracks' => 'tracks#index'
       get 'tracks/:keyword_id/facebook' => 'tracks#facebook'
