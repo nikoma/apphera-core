@@ -71,8 +71,8 @@ module Api
       def get_page_credentials_by_user
         account_id = params[:account_id]
         c_user_id = params[:c_user_id]
-        @account = current_user.accounts.where(id: account_id).first
-        render :json => @account.facebook_page_credentials.where(c_user_id: c_user_id)
+        @credentials = current_user.accounts.where(id: account_id).first.facebook_credentials.where(c_user_id: c_user_id).first.facebook_page_credentials
+        render :json => @credentials.to_json
       end
 
       def delete_page_credentials
@@ -94,14 +94,14 @@ module Api
         app_id = params[:facebook_credential][:app_id]
         app_secret = params[:facebook_credential][:app_secret]
         fb_auth = FbGraph::Auth.new(app_id, app_secret)
-        fb_auth.exchange_token! fb_auth.access_token
-        user_access_token = fb_auth.access_token
+        fb_auth.exchange_token! user_access_token
+        user_access_token = fb_auth.access_token.to_s
         # organization_id = params[:organization_id] || nil
         @account = current_user.accounts.where(id: params[:facebook_credential][:account_id]).first
-        @credential = FacebookCredential.new(params[:facebook_credential])
-        @credential.account_id= @account.id
-        @credential.access_token= user_access_token
-        @credential.save
+        @fb = FacebookCredential.find_or_initialize_by(c_user_id: c_user_id)
+        @fb.update(account_id: @account.id)
+        @fb.update(access_token: user_access_token)
+        @fb.save
         render :json => {:message => 'stored facebook credentials for account: ' + @account.id.to_s}
       end
 

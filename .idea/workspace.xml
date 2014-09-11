@@ -3,6 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="4e374769-fa0b-416d-9102-3e07bd45548b" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/api/v1/facebook_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/api/v1/facebook_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/facebook_credential.rb" afterPath="$PROJECT_DIR$/app/models/facebook_credential.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/facebook_page_credential.rb" afterPath="$PROJECT_DIR$/app/models/facebook_page_credential.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/structure.sql" afterPath="$PROJECT_DIR$/db/structure.sql" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="apphera-core.iws" />
@@ -15,7 +18,7 @@
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/apphera-core@Development__apphera_core.coverage" NAME="Development: apphera-core Coverage Results" MODIFIED="1410393463403" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="apphera-core" />
+    <SUITE FILE_PATH="coverage/apphera-core@Development__apphera_core.coverage" NAME="Development: apphera-core Coverage Results" MODIFIED="1410411952123" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="apphera-core" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -52,8 +55,8 @@
       <file leaf-file-name="facebook_controller.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/api/v1/facebook_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5912409" vertical-offset="504" max-vertical-offset="3195">
-              <caret line="96" column="40" selection-start-line="96" selection-start-column="40" selection-end-line="96" selection-end-column="40" />
+            <state vertical-scroll-proportion="0.5204545" vertical-offset="416" max-vertical-offset="3195">
+              <caret line="73" column="141" selection-start-line="73" selection-start-column="141" selection-end-line="73" selection-end-column="141" />
               <folding>
                 <element signature="e#137#552#0" expanded="false" />
                 <element signature="e#560#1227#0" expanded="false" />
@@ -77,7 +80,17 @@
         <entry file="file://$PROJECT_DIR$/app/models/facebook_credential.rb">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="180">
-              <caret line="4" column="31" selection-start-line="4" selection-start-column="31" selection-end-line="4" selection-end-column="41" />
+              <caret line="3" column="116" selection-start-line="3" selection-start-column="116" selection-end-line="3" selection-end-column="116" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="20140911043955_change_names_in_facebook_credentials_facebook_page_credentials.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/db/migrate/20140911043955_change_names_in_facebook_credentials_facebook_page_credentials.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="180">
+              <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -87,7 +100,7 @@
         <entry file="file://$PROJECT_DIR$/app/models/facebook_page_credential.rb">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="195">
-              <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+              <caret line="3" column="35" selection-start-line="3" selection-start-column="35" selection-end-line="3" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -107,7 +120,7 @@
         <entry file="file://$PROJECT_DIR$/app/workers/facebook_pages_credentials_worker.rb">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="555">
-              <caret line="20" column="39" selection-start-line="20" selection-start-column="39" selection-end-line="20" selection-end-column="39" />
+              <caret line="21" column="46" selection-start-line="15" selection-start-column="8" selection-end-line="21" selection-end-column="46" />
               <folding />
             </state>
           </provider>
@@ -153,12 +166,13 @@
         <option value="$PROJECT_DIR$/app/controllers/api/v1/senti_controller.rb" />
         <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/app/workers/facebook_credentials_worker.rb" />
-        <option value="$PROJECT_DIR$/app/models/facebook_credential.rb" />
-        <option value="$PROJECT_DIR$/app/models/facebook_page_credential.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20140911032048_change_facebook_credentials_facebook_page_credentials.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20140911031214_create_table_facebook_credentials_facebook_page_credentials.rb" />
         <option value="$PROJECT_DIR$/app/workers/facebook_pages_credentials_worker.rb" />
         <option value="$PROJECT_DIR$/config/routes.rb" />
+        <option value="$PROJECT_DIR$/app/models/facebook_credential.rb" />
+        <option value="$PROJECT_DIR$/db/migrate/20140911043955_change_names_in_facebook_credentials_facebook_page_credentials.rb" />
+        <option value="$PROJECT_DIR$/app/models/facebook_page_credential.rb" />
         <option value="$PROJECT_DIR$/app/controllers/api/v1/facebook_controller.rb" />
       </list>
     </option>
@@ -646,7 +660,11 @@
       <created>1410407716288</created>
       <updated>1410407716288</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="typo">
+      <created>1410408695991</created>
+      <updated>1410408695992</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -664,7 +682,7 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295711" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.40519187" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.40519187" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -726,14 +744,22 @@
     <MESSAGE value="regex change" />
     <MESSAGE value="more c_user_id + relations back to pages" />
     <MESSAGE value="many to many for fb users and pages" />
-    <option name="LAST_COMMIT_MESSAGE" value="many to many for fb users and pages" />
+    <MESSAGE value="typo" />
+    <option name="LAST_COMMIT_MESSAGE" value="typo" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="ruby-line">
+          <url>file://$PROJECT_DIR$/app/controllers/api/v1/facebook_controller.rb</url>
+          <line>103</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+      </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="8" />
+      <option name="time" value="11" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -1093,10 +1119,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/facebook_page_credential.rb">
+    <entry file="file://$PROJECT_DIR$/config/routes.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="195">
-          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="390" max-vertical-offset="1665">
+          <caret line="39" column="29" selection-start-line="39" selection-start-column="29" selection-end-line="39" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/workers/facebook_pages_credentials_worker.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="555">
+          <caret line="21" column="46" selection-start-line="15" selection-start-column="8" selection-end-line="21" selection-end-column="46" />
           <folding />
         </state>
       </provider>
@@ -1109,18 +1143,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/routes.rb">
+    <entry file="file://$PROJECT_DIR$/db/migrate/20140911043955_change_names_in_facebook_credentials_facebook_page_credentials.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="390" max-vertical-offset="1665">
-          <caret line="39" column="29" selection-start-line="39" selection-start-column="29" selection-end-line="39" selection-end-column="29" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="180">
+          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/workers/facebook_pages_credentials_worker.rb">
+    <entry file="file://$PROJECT_DIR$/app/models/facebook_page_credential.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="555">
-          <caret line="20" column="39" selection-start-line="20" selection-start-column="39" selection-end-line="20" selection-end-column="39" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="195">
+          <caret line="3" column="35" selection-start-line="3" selection-start-column="35" selection-end-line="3" selection-end-column="35" />
           <folding />
         </state>
       </provider>
@@ -1128,15 +1162,15 @@
     <entry file="file://$PROJECT_DIR$/app/models/facebook_credential.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="180">
-          <caret line="4" column="31" selection-start-line="4" selection-start-column="31" selection-end-line="4" selection-end-column="41" />
+          <caret line="3" column="116" selection-start-line="3" selection-start-column="116" selection-end-line="3" selection-end-column="116" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/api/v1/facebook_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5912409" vertical-offset="504" max-vertical-offset="3195">
-          <caret line="96" column="40" selection-start-line="96" selection-start-column="40" selection-end-line="96" selection-end-column="40" />
+        <state vertical-scroll-proportion="0.5204545" vertical-offset="416" max-vertical-offset="3195">
+          <caret line="73" column="141" selection-start-line="73" selection-start-column="141" selection-end-line="73" selection-end-column="141" />
           <folding>
             <element signature="e#137#552#0" expanded="false" />
             <element signature="e#560#1227#0" expanded="false" />

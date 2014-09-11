@@ -816,8 +816,8 @@ CREATE TABLE facebook_credentials (
 --
 
 CREATE TABLE facebook_credentials_facebook_page_credentials (
-    facebook_credentials_id integer,
-    facebook_page_credentials_id integer
+    facebook_credential_id integer,
+    facebook_page_credential_id integer
 );
 
 
@@ -6440,4 +6440,6 @@ INSERT INTO schema_migrations (version) VALUES ('20140910014019');
 INSERT INTO schema_migrations (version) VALUES ('20140911002908');
 
 INSERT INTO schema_migrations (version) VALUES ('20140911031214');
+
+INSERT INTO schema_migrations (version) VALUES ('20140911043955');
 
