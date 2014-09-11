@@ -33,6 +33,7 @@ Api::Application.routes.draw do
       post 'facebook/post', to: 'facebook#facebook_post'
       post 'facebook/pages/credentials', to: 'facebook#set_page_credentials'
       post 'facebook/pages/credentials_short', to: 'facebook#set_page_credentials_short_token'
+      post 'facebook/pages/credentials/:account_id/:c_user_id', to: 'facebook#set_page_credentials_from_c_user'
       post 'facebook/pages/post', to: 'facebook#page_post'
       post 'facebook/users/credentials', to: 'facebook#set_credentials'
       get 'facebook/users/credentials/:account_id', to: 'facebook#get_all_credentials'

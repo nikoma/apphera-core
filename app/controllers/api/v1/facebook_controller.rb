@@ -49,6 +49,19 @@ module Api
         render :json => {:message => 'requesting facebook credentials for account: ' + @account.id.to_s}
       end
 
+      #:account_id/:c_user_id
+      def set_page_credentials_from_c_user
+        c_user_id = params[:c_user_id]
+        account_id = params[:account_id]
+        fbc = current_user.accounts.where(id: account_id).first.facebook_credentials.where(c_user_id: c_user_id).first
+        FacebookPagesCredentialsWorker.perform_async(account_id, fbc.access_token, c_user_id)
+        render :json => {:message => 'requesting facebook credentials for account: ' + @account.id.to_s}
+
+
+      end
+
+
+
       def set_page_credentials_short_token
         user_access_token = params[:user_access_token]
         account_id = params[:account_id]
