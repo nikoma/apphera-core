@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4e374769-fa0b-416d-9102-3e07bd45548b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/migrate/20140911002908_add_c_user_id_to_facebook_page_credentials.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/apphera-core.iml" afterPath="$PROJECT_DIR$/.idea/apphera-core.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/api/v1/facebook_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/api/v1/facebook_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/workers/facebook_credentials_worker.rb" afterPath="$PROJECT_DIR$/app/workers/facebook_credentials_worker.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/structure.sql" afterPath="$PROJECT_DIR$/db/structure.sql" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="apphera-core.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -101,16 +95,15 @@
       <file leaf-file-name="facebook_controller.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/api/v1/facebook_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.64362854" vertical-offset="122" max-vertical-offset="2475">
-              <caret line="69" column="38" selection-start-line="69" selection-start-column="10" selection-end-line="69" selection-end-column="38" />
+            <state vertical-scroll-proportion="0.6825054" vertical-offset="149" max-vertical-offset="2655">
+              <caret line="61" column="89" selection-start-line="61" selection-start-column="89" selection-end-line="61" selection-end-column="89" />
               <folding>
                 <element signature="e#137#552#0" expanded="false" />
                 <element signature="e#560#1227#0" expanded="false" />
                 <element signature="e#1266#1595#0" expanded="false" />
-                <element signature="e#2051#2676#0" expanded="false" />
-                <element signature="e#3617#4051#0" expanded="false" />
-                <element signature="e#4059#4345#0" expanded="false" />
-                <element signature="e#4353#4780#0" expanded="false" />
+                <element signature="e#3673#4107#0" expanded="false" />
+                <element signature="e#4115#4401#0" expanded="false" />
+                <element signature="e#4409#4836#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -177,8 +170,8 @@
         <option value="$PROJECT_DIR$/app/controllers/api/v1/senti_controller.rb" />
         <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/app/workers/facebook_credentials_worker.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/api/v1/facebook_controller.rb" />
         <option value="$PROJECT_DIR$/config/routes.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/api/v1/facebook_controller.rb" />
       </list>
     </option>
   </component>
@@ -764,10 +757,9 @@
             <element signature="e#137#552#0" expanded="false" />
             <element signature="e#560#1227#0" expanded="false" />
             <element signature="e#1266#1595#0" expanded="false" />
-            <element signature="e#2051#2676#0" expanded="false" />
-            <element signature="e#3617#4051#0" expanded="false" />
-            <element signature="e#4059#4345#0" expanded="false" />
-            <element signature="e#4353#4780#0" expanded="false" />
+            <element signature="e#3673#4107#0" expanded="false" />
+            <element signature="e#4115#4401#0" expanded="false" />
+            <element signature="e#4409#4836#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1124,14 +1116,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/workers/facebook_credentials_worker.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="30" max-vertical-offset="525">
-          <caret line="16" column="39" selection-start-line="16" selection-start-column="39" selection-end-line="16" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/routes.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="480" max-vertical-offset="1650">
@@ -1140,18 +1124,25 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/workers/facebook_credentials_worker.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="30" max-vertical-offset="525">
+          <caret line="16" column="39" selection-start-line="16" selection-start-column="39" selection-end-line="16" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/api/v1/facebook_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.64362854" vertical-offset="122" max-vertical-offset="2475">
-          <caret line="69" column="38" selection-start-line="69" selection-start-column="10" selection-end-line="69" selection-end-column="38" />
+        <state vertical-scroll-proportion="0.6825054" vertical-offset="149" max-vertical-offset="2655">
+          <caret line="61" column="89" selection-start-line="61" selection-start-column="89" selection-end-line="61" selection-end-column="89" />
           <folding>
             <element signature="e#137#552#0" expanded="false" />
             <element signature="e#560#1227#0" expanded="false" />
             <element signature="e#1266#1595#0" expanded="false" />
-            <element signature="e#2051#2676#0" expanded="false" />
-            <element signature="e#3617#4051#0" expanded="false" />
-            <element signature="e#4059#4345#0" expanded="false" />
-            <element signature="e#4353#4780#0" expanded="false" />
+            <element signature="e#3673#4107#0" expanded="false" />
+            <element signature="e#4115#4401#0" expanded="false" />
+            <element signature="e#4409#4836#0" expanded="false" />
           </folding>
         </state>
       </provider>
