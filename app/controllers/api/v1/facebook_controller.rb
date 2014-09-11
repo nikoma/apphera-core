@@ -45,7 +45,7 @@ module Api
         account_id = params[:account_id]
         c_user_id = params[:c_user_id] || ''
         @account = current_user.accounts.where(id: account_id).first
-        FacebookCredentialsWorker.perform_async(@account.id, user_access_token, c_user_id)
+        FacebookPagesCredentialsWorker.perform_async(@account.id, user_access_token, c_user_id)
         render :json => {:message => 'requesting facebook credentials for account: ' + @account.id.to_s}
       end
 
@@ -59,7 +59,7 @@ module Api
         fb_auth.exchange_token! user_access_token
         user_access_token = fb_auth.access_token
         @account = current_user.accounts.where(id: account_id).first
-        FacebookCredentialsWorker.perform_async(@account.id, user_access_token, c_user_id)
+        FacebookPagesCredentialsWorker.perform_async(@account.id, user_access_token, c_user_id)
         render :json => {:message => 'requesting facebook credentials for account: ' + @account.id.to_s}
       end
 
@@ -88,14 +88,28 @@ module Api
       end
 
       def set_credentials
+        user_access_token = params[:facebook_credential][:user_access_token]
+        account_id = params[:facebook_credential][:account_id]
+        c_user_id = params[:facebook_credential][:c_user_id]
+        app_id = params[:facebook_credential][:app_id]
+        app_secret = params[:facebook_credential][:app_secret]
+        fb_auth = FbGraph::Auth.new(app_id, app_secret)
+        fb_auth.exchange_token! user_access_token
+        user_access_token = fb_auth.access_token
         # organization_id = params[:organization_id] || nil
         @account = current_user.accounts.where(id: params[:facebook_credential][:account_id]).first
         @credential = FacebookCredential.new(params[:facebook_credential])
         @credential.account_id= @account.id
+        @credential.access_token= user_access_token
         @credential.save
         render :json => {:message => 'stored facebook credentials for account: ' + @account.id.to_s}
       end
 
+      def get_all_credentials
+        @account = current_user.accounts.where(id: params[:account_id]).first
+        credentials = @account.facebook_credentials
+        render :json => credentials.to_json
+      end
       def get_credentials
         account_id = params[:account_id]
         @account = current_user.accounts.where(id: account_id).first

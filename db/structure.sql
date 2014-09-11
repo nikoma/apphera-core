@@ -812,6 +812,16 @@ CREATE TABLE facebook_credentials (
 
 
 --
+-- Name: facebook_credentials_facebook_page_credentials; Type: TABLE; Schema: public; Owner: -; Tablespace: 
+--
+
+CREATE TABLE facebook_credentials_facebook_page_credentials (
+    facebook_credentials_id integer,
+    facebook_page_credentials_id integer
+);
+
+
+--
 -- Name: facebook_credentials_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
@@ -6428,4 +6438,6 @@ INSERT INTO schema_migrations (version) VALUES ('20140905194534');
 INSERT INTO schema_migrations (version) VALUES ('20140910014019');
 
 INSERT INTO schema_migrations (version) VALUES ('20140911002908');
+
+INSERT INTO schema_migrations (version) VALUES ('20140911031214');
 
