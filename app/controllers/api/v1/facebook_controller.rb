@@ -94,7 +94,7 @@ module Api
         app_id = params[:facebook_credential][:app_id]
         app_secret = params[:facebook_credential][:app_secret]
         fb_auth = FbGraph::Auth.new(app_id, app_secret)
-        fb_auth.exchange_token! user_access_token
+        fb_auth.exchange_token! fb_auth.access_token
         user_access_token = fb_auth.access_token
         # organization_id = params[:organization_id] || nil
         @account = current_user.accounts.where(id: params[:facebook_credential][:account_id]).first

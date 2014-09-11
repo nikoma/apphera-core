@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4e374769-fa0b-416d-9102-3e07bd45548b" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/workers/facebook_credentials_worker.rb" afterPath="$PROJECT_DIR$/app/workers/facebook_pages_credentials_worker.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/api/v1/facebook_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/api/v1/facebook_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/facebook_credential.rb" afterPath="$PROJECT_DIR$/app/models/facebook_credential.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/facebook_page_credential.rb" afterPath="$PROJECT_DIR$/app/models/facebook_page_credential.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/structure.sql" afterPath="$PROJECT_DIR$/db/structure.sql" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="apphera-core.iws" />
@@ -54,11 +49,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="facebook_controller.rb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="facebook_controller.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/api/v1/facebook_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="789" max-vertical-offset="3195">
-              <caret line="108" column="70" selection-start-line="108" selection-start-column="70" selection-end-line="108" selection-end-column="70" />
+            <state vertical-scroll-proportion="0.5912409" vertical-offset="504" max-vertical-offset="3195">
+              <caret line="96" column="40" selection-start-line="96" selection-start-column="40" selection-end-line="96" selection-end-column="40" />
               <folding>
                 <element signature="e#137#552#0" expanded="false" />
                 <element signature="e#560#1227#0" expanded="false" />
@@ -108,10 +103,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="facebook_pages_credentials_worker.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="facebook_pages_credentials_worker.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/workers/facebook_pages_credentials_worker.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.35928145" vertical-offset="0" max-vertical-offset="835">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="555">
               <caret line="20" column="39" selection-start-line="20" selection-start-column="39" selection-end-line="20" selection-end-column="39" />
               <folding />
             </state>
@@ -163,8 +158,8 @@
         <option value="$PROJECT_DIR$/db/migrate/20140911032048_change_facebook_credentials_facebook_page_credentials.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20140911031214_create_table_facebook_credentials_facebook_page_credentials.rb" />
         <option value="$PROJECT_DIR$/app/workers/facebook_pages_credentials_worker.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/api/v1/facebook_controller.rb" />
         <option value="$PROJECT_DIR$/config/routes.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/api/v1/facebook_controller.rb" />
       </list>
     </option>
   </component>
@@ -647,7 +642,11 @@
       <created>1410402117296</created>
       <updated>1410402117296</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="many to many for fb users and pages">
+      <created>1410407716288</created>
+      <updated>1410407716288</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -726,7 +725,8 @@
     <MESSAGE value="multiple db methods" />
     <MESSAGE value="regex change" />
     <MESSAGE value="more c_user_id + relations back to pages" />
-    <option name="LAST_COMMIT_MESSAGE" value="more c_user_id + relations back to pages" />
+    <MESSAGE value="many to many for fb users and pages" />
+    <option name="LAST_COMMIT_MESSAGE" value="many to many for fb users and pages" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1109,22 +1109,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/api/v1/facebook_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="789" max-vertical-offset="3195">
-          <caret line="108" column="70" selection-start-line="108" selection-start-column="70" selection-end-line="108" selection-end-column="70" />
-          <folding>
-            <element signature="e#137#552#0" expanded="false" />
-            <element signature="e#560#1227#0" expanded="false" />
-            <element signature="e#1266#1595#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/routes.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="390" max-vertical-offset="1665">
           <caret line="39" column="29" selection-start-line="39" selection-start-column="29" selection-end-line="39" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/workers/facebook_pages_credentials_worker.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="555">
+          <caret line="20" column="39" selection-start-line="20" selection-start-column="39" selection-end-line="20" selection-end-column="39" />
           <folding />
         </state>
       </provider>
@@ -1137,11 +1133,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/workers/facebook_pages_credentials_worker.rb">
+    <entry file="file://$PROJECT_DIR$/app/controllers/api/v1/facebook_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.35928145" vertical-offset="0" max-vertical-offset="835">
-          <caret line="20" column="39" selection-start-line="20" selection-start-column="39" selection-end-line="20" selection-end-column="39" />
-          <folding />
+        <state vertical-scroll-proportion="0.5912409" vertical-offset="504" max-vertical-offset="3195">
+          <caret line="96" column="40" selection-start-line="96" selection-start-column="40" selection-end-line="96" selection-end-column="40" />
+          <folding>
+            <element signature="e#137#552#0" expanded="false" />
+            <element signature="e#560#1227#0" expanded="false" />
+            <element signature="e#1266#1595#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
