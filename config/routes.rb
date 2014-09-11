@@ -38,6 +38,7 @@ Api::Application.routes.draw do
       get 'facebook/credentials/:account_id/:c_user_id', to: 'facebook#get_credentials'
       delete 'facebook/credentials/:account_id/:c_user_id', to: 'facebook#delete_credentials'
       get 'facebook/pages/credentials/:account_id', to: 'facebook#get_page_credentials'
+      get 'facebook/pages/credentials/:account_id/:c_user_id', to: 'facebook#get_page_credentials_by_user'
       delete 'facebook/pages/credentials/:account_id/:fb_id', to: 'facebook#delete_page_credentials'
       get 'facebook/pages/read_wall/:account_id/:fb_id', to: 'facebook#read_wall'
       delete 'facebook/pages/posts/:account_id/:fb_id/:post_id', to: 'facebook#delete_post'

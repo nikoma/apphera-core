@@ -877,7 +877,8 @@ CREATE TABLE facebook_page_credentials (
     has_token boolean,
     created_at timestamp without time zone,
     updated_at timestamp without time zone,
-    access_token character varying(255)
+    access_token character varying(255),
+    c_user_id character varying(255)
 );
 
 
@@ -4966,6 +4967,13 @@ CREATE INDEX index_facebook_page_credentials_on_account_id ON facebook_page_cred
 
 
 --
+-- Name: index_facebook_page_credentials_on_c_user_id; Type: INDEX; Schema: public; Owner: -; Tablespace: 
+--
+
+CREATE INDEX index_facebook_page_credentials_on_c_user_id ON facebook_page_credentials USING btree (c_user_id);
+
+
+--
 -- Name: index_facebook_page_credentials_on_category; Type: INDEX; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -6418,4 +6426,6 @@ INSERT INTO schema_migrations (version) VALUES ('20140902215432');
 INSERT INTO schema_migrations (version) VALUES ('20140905194534');
 
 INSERT INTO schema_migrations (version) VALUES ('20140910014019');
+
+INSERT INTO schema_migrations (version) VALUES ('20140911002908');
 
