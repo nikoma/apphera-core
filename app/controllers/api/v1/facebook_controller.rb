@@ -40,6 +40,13 @@ module Api
         render :json => @page_graph.get_connection('me', 'feed')
       end
 
+      def read_wall_comments
+        @account = current_user.accounts.where(id: params[:account_id]).first
+        page_token = @account.facebook_page_credentials.where(fb_id: params[:fb_id]).first.access_token
+        @page_graph = Koala::Facebook::API.new(page_token)
+        render :json => @page_graph.get_connections('me', 'feed', :fields=>"message,id,created_time, comments.fields(comments.fields(from,message),message,from),from")
+      end
+
       def set_page_credentials
         user_access_token = params[:user_access_token]
         account_id = params[:account_id]

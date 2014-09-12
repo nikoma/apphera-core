@@ -6,6 +6,7 @@ class Keyword < ActiveRecord::Base
   has_many :rankings
   has_many :facebook_items
   has_many :instagram_items
+  has_many :youtube_videos
   has_many :news_items
   has_many :keyword_aggregates
   attr_accessible :name, :tracks
