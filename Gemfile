@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '4.1.5'
+gem 'rails', '4.2.4'
 gem 'rails-api'
 gem 'activesupport'
 gem 'activerecord-postgis-adapter'
@@ -24,7 +24,7 @@ gem 'paper_trail'
 gem 'geocoder'
 gem 'foursquare2'
 gem 'gmaps4rails'
-gem "friendly_id", "~> 4.0.1"
+gem "friendly_id"
 gem 'pg_search'
 gem 'textacular'
 gem 'omniauth'
@@ -59,6 +59,6 @@ if RbConfig::CONFIG['target_os'] =~ /mswin|mingw|cygwin/i
   gem 'wdm', '>= 0.1.0'
 end
 
-gem 'capsule_crm'
+#gem 'capsule_crm'
 #gem 'annotate', :git => 'git://github.com/ctran/annotate_models.git'
 #gem 'apipie-rails'
