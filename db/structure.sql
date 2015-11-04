@@ -10,6 +10,13 @@ SET check_function_bodies = false;
 SET client_min_messages = warning;
 
 --
+-- Name: topology; Type: SCHEMA; Schema: -; Owner: -
+--
+
+CREATE SCHEMA topology;
+
+
+--
 -- Name: plpgsql; Type: EXTENSION; Schema: -; Owner: -
 --
 
@@ -24,17 +31,17 @@ COMMENT ON EXTENSION plpgsql IS 'PL/pgSQL procedural language';
 
 
 --
--- Name: hstore; Type: EXTENSION; Schema: -; Owner: -
+-- Name: plv8; Type: EXTENSION; Schema: -; Owner: -
 --
 
-CREATE EXTENSION IF NOT EXISTS hstore WITH SCHEMA public;
+CREATE EXTENSION IF NOT EXISTS plv8 WITH SCHEMA pg_catalog;
 
 
 --
--- Name: EXTENSION hstore; Type: COMMENT; Schema: -; Owner: -
+-- Name: EXTENSION plv8; Type: COMMENT; Schema: -; Owner: -
 --
 
-COMMENT ON EXTENSION hstore IS 'data type for storing sets of (key, value) pairs';
+COMMENT ON EXTENSION plv8 IS 'PL/JavaScript (v8) trusted procedural language';
 
 
 --
@@ -51,7 +58,94 @@ CREATE EXTENSION IF NOT EXISTS postgis WITH SCHEMA public;
 COMMENT ON EXTENSION postgis IS 'PostGIS geometry, geography, and raster spatial types and functions';
 
 
+--
+-- Name: postgis_topology; Type: EXTENSION; Schema: -; Owner: -
+--
+
+CREATE EXTENSION IF NOT EXISTS postgis_topology WITH SCHEMA topology;
+
+
+--
+-- Name: EXTENSION postgis_topology; Type: COMMENT; Schema: -; Owner: -
+--
+
+COMMENT ON EXTENSION postgis_topology IS 'PostGIS topology spatial types and functions';
+
+
 SET search_path = public, pg_catalog;
+
+--
+-- Name: tweets_dict; Type: TEXT SEARCH DICTIONARY; Schema: public; Owner: -
+--
+
+CREATE TEXT SEARCH DICTIONARY tweets_dict (
+    TEMPLATE = pg_catalog.simple );
+
+
+--
+-- Name: tweets_nostop; Type: TEXT SEARCH CONFIGURATION; Schema: public; Owner: -
+--
+
+CREATE TEXT SEARCH CONFIGURATION tweets_nostop (
+    PARSER = pg_catalog."default" );
+
+ALTER TEXT SEARCH CONFIGURATION tweets_nostop
+    ADD MAPPING FOR asciiword WITH tweets_dict;
+
+ALTER TEXT SEARCH CONFIGURATION tweets_nostop
+    ADD MAPPING FOR word WITH tweets_dict;
+
+ALTER TEXT SEARCH CONFIGURATION tweets_nostop
+    ADD MAPPING FOR numword WITH simple;
+
+ALTER TEXT SEARCH CONFIGURATION tweets_nostop
+    ADD MAPPING FOR email WITH simple;
+
+ALTER TEXT SEARCH CONFIGURATION tweets_nostop
+    ADD MAPPING FOR url WITH simple;
+
+ALTER TEXT SEARCH CONFIGURATION tweets_nostop
+    ADD MAPPING FOR host WITH simple;
+
+ALTER TEXT SEARCH CONFIGURATION tweets_nostop
+    ADD MAPPING FOR sfloat WITH simple;
+
+ALTER TEXT SEARCH CONFIGURATION tweets_nostop
+    ADD MAPPING FOR version WITH simple;
+
+ALTER TEXT SEARCH CONFIGURATION tweets_nostop
+    ADD MAPPING FOR hword_numpart WITH simple;
+
+ALTER TEXT SEARCH CONFIGURATION tweets_nostop
+    ADD MAPPING FOR hword_part WITH tweets_dict;
+
+ALTER TEXT SEARCH CONFIGURATION tweets_nostop
+    ADD MAPPING FOR hword_asciipart WITH tweets_dict;
+
+ALTER TEXT SEARCH CONFIGURATION tweets_nostop
+    ADD MAPPING FOR numhword WITH simple;
+
+ALTER TEXT SEARCH CONFIGURATION tweets_nostop
+    ADD MAPPING FOR asciihword WITH tweets_dict;
+
+ALTER TEXT SEARCH CONFIGURATION tweets_nostop
+    ADD MAPPING FOR hword WITH tweets_dict;
+
+ALTER TEXT SEARCH CONFIGURATION tweets_nostop
+    ADD MAPPING FOR url_path WITH simple;
+
+ALTER TEXT SEARCH CONFIGURATION tweets_nostop
+    ADD MAPPING FOR file WITH simple;
+
+ALTER TEXT SEARCH CONFIGURATION tweets_nostop
+    ADD MAPPING FOR "float" WITH simple;
+
+ALTER TEXT SEARCH CONFIGURATION tweets_nostop
+    ADD MAPPING FOR "int" WITH simple;
+
+ALTER TEXT SEARCH CONFIGURATION tweets_nostop
+    ADD MAPPING FOR uint WITH simple;
+
 
 SET default_tablespace = '';
 
@@ -287,6 +381,74 @@ CREATE SEQUENCE aggregate_results_id_seq
 --
 
 ALTER SEQUENCE aggregate_results_id_seq OWNED BY aggregate_results.id;
+
+
+--
+-- Name: analytics_ranges; Type: TABLE; Schema: public; Owner: -; Tablespace: 
+--
+
+CREATE TABLE analytics_ranges (
+    id integer NOT NULL,
+    name character varying(255),
+    api_partner_id integer,
+    "from" character varying(255),
+    "to" character varying(255),
+    created_at timestamp without time zone,
+    updated_at timestamp without time zone
+);
+
+
+--
+-- Name: analytics_ranges_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+--
+
+CREATE SEQUENCE analytics_ranges_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: analytics_ranges_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+--
+
+ALTER SEQUENCE analytics_ranges_id_seq OWNED BY analytics_ranges.id;
+
+
+--
+-- Name: analytics_results; Type: TABLE; Schema: public; Owner: -; Tablespace: 
+--
+
+CREATE TABLE analytics_results (
+    id integer NOT NULL,
+    account_id integer,
+    campaign_id integer,
+    date_range_id integer,
+    results json,
+    created_at timestamp without time zone,
+    updated_at timestamp without time zone
+);
+
+
+--
+-- Name: analytics_results_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+--
+
+CREATE SEQUENCE analytics_results_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: analytics_results_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+--
+
+ALTER SEQUENCE analytics_results_id_seq OWNED BY analytics_results.id;
 
 
 --
@@ -761,6 +923,40 @@ ALTER SEQUENCE database_counts_id_seq OWNED BY database_counts.id;
 
 
 --
+-- Name: date_ranges; Type: TABLE; Schema: public; Owner: -; Tablespace: 
+--
+
+CREATE TABLE date_ranges (
+    id integer NOT NULL,
+    name character varying(255),
+    description character varying(255),
+    "from" character varying(255),
+    "to" character varying(255),
+    created_at timestamp without time zone,
+    updated_at timestamp without time zone
+);
+
+
+--
+-- Name: date_ranges_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+--
+
+CREATE SEQUENCE date_ranges_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: date_ranges_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+--
+
+ALTER SEQUENCE date_ranges_id_seq OWNED BY date_ranges.id;
+
+
+--
 -- Name: divisions; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -849,7 +1045,8 @@ CREATE TABLE facebook_items (
     keyword_id integer,
     body json,
     created_at timestamp without time zone,
-    updated_at timestamp without time zone
+    updated_at timestamp without time zone,
+    sentiment double precision
 );
 
 
@@ -1298,30 +1495,6 @@ ALTER SEQUENCE geodata_id_seq OWNED BY geodata.id;
 
 
 --
--- Name: google_plus_people; Type: TABLE; Schema: public; Owner: -; Tablespace: 
---
-
-CREATE TABLE google_plus_people (
-    id integer NOT NULL,
-    kind character varying(255),
-    gid character varying(255),
-    image_url character varying(255),
-    object_type character varying(255),
-    display_name character varying(255),
-    created_at timestamp without time zone,
-    updated_at timestamp without time zone,
-    url character varying(255),
-    verified boolean,
-    circled_by_count integer,
-    given_name character varying(255),
-    family_name character varying(255),
-    gender character varying(255),
-    organizations hstore,
-    places_lived hstore
-);
-
-
---
 -- Name: google_plus_people_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
@@ -1334,32 +1507,6 @@ CREATE SEQUENCE google_plus_people_id_seq
 
 
 --
--- Name: google_plus_people_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
---
-
-ALTER SEQUENCE google_plus_people_id_seq OWNED BY google_plus_people.id;
-
-
---
--- Name: google_plus_users; Type: TABLE; Schema: public; Owner: -; Tablespace: 
---
-
-CREATE TABLE google_plus_users (
-    id integer NOT NULL,
-    display_name character varying(255),
-    gender character varying(255),
-    kind character varying(255),
-    url character varying(255),
-    image_url character varying(255),
-    places_lived hstore,
-    organizations hstore,
-    verified boolean,
-    created_at timestamp without time zone,
-    updated_at timestamp without time zone
-);
-
-
---
 -- Name: google_plus_users_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
@@ -1369,13 +1516,6 @@ CREATE SEQUENCE google_plus_users_id_seq
     NO MINVALUE
     NO MAXVALUE
     CACHE 1;
-
-
---
--- Name: google_plus_users_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
---
-
-ALTER SEQUENCE google_plus_users_id_seq OWNED BY google_plus_users.id;
 
 
 --
@@ -1457,31 +1597,6 @@ ALTER SEQUENCE instagram_items_id_seq OWNED BY instagram_items.id;
 
 
 --
--- Name: items; Type: TABLE; Schema: public; Owner: -; Tablespace: 
---
-
-CREATE TABLE items (
-    id integer NOT NULL,
-    subject character varying(255),
-    body text,
-    rating double precision,
-    kind_id integer,
-    folder integer,
-    visible boolean,
-    source integer,
-    reminder timestamp without time zone,
-    new boolean,
-    organization_id integer,
-    reviewer_id integer,
-    completed boolean,
-    created_at timestamp without time zone NOT NULL,
-    updated_at timestamp without time zone NOT NULL,
-    properties hstore,
-    account_id integer
-);
-
-
---
 -- Name: items_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
@@ -1491,13 +1606,6 @@ CREATE SEQUENCE items_id_seq
     NO MINVALUE
     NO MAXVALUE
     CACHE 1;
-
-
---
--- Name: items_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
---
-
-ALTER SEQUENCE items_id_seq OWNED BY items.id;
 
 
 --
@@ -2213,27 +2321,6 @@ ALTER SEQUENCE purchases_id_seq OWNED BY purchases.id;
 
 
 --
--- Name: rankings; Type: TABLE; Schema: public; Owner: -; Tablespace: 
---
-
-CREATE TABLE rankings (
-    id integer NOT NULL,
-    rank integer,
-    content_provider_id integer,
-    organization_id integer,
-    keyword_id integer,
-    created_at timestamp without time zone NOT NULL,
-    updated_at timestamp without time zone NOT NULL,
-    url character varying(255),
-    name character varying(255),
-    token character varying(255),
-    results hstore,
-    ranks json,
-    market_id integer
-);
-
-
---
 -- Name: rankings_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
@@ -2243,13 +2330,6 @@ CREATE SEQUENCE rankings_id_seq
     NO MINVALUE
     NO MAXVALUE
     CACHE 1;
-
-
---
--- Name: rankings_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
---
-
-ALTER SEQUENCE rankings_id_seq OWNED BY rankings.id;
 
 
 --
@@ -3012,8 +3092,49 @@ CREATE TABLE tweets (
     twitter_user_name character varying(255),
     body json,
     created_at timestamp without time zone,
+    updated_at timestamp without time zone,
+    followers_count integer,
+    favorite_count integer,
+    retweet_count integer,
+    sentiment numeric,
+    lang character varying(255)
+);
+
+
+--
+-- Name: twitter_analytics; Type: TABLE; Schema: public; Owner: -; Tablespace: 
+--
+
+CREATE TABLE twitter_analytics (
+    id integer NOT NULL,
+    api_partner_id integer,
+    campaign_id integer,
+    "from" timestamp without time zone,
+    "to" timestamp without time zone,
+    results json,
+    analytics_range_id integer,
+    created_at timestamp without time zone,
     updated_at timestamp without time zone
 );
+
+
+--
+-- Name: twitter_analytics_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+--
+
+CREATE SEQUENCE twitter_analytics_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: twitter_analytics_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+--
+
+ALTER SEQUENCE twitter_analytics_id_seq OWNED BY twitter_analytics.id;
 
 
 --
@@ -3310,6 +3431,23 @@ ALTER SEQUENCE versions_id_seq OWNED BY versions.id;
 
 
 --
+-- Name: view_index; Type: VIEW; Schema: public; Owner: -
+--
+
+CREATE VIEW view_index AS
+ SELECT n.nspname AS schema,
+    t.relname AS "table",
+    c.relname AS index,
+    pg_get_indexdef(i.indexrelid) AS def
+   FROM (((pg_class c
+     JOIN pg_namespace n ON ((n.oid = c.relnamespace)))
+     JOIN pg_index i ON ((i.indexrelid = c.oid)))
+     JOIN pg_class t ON ((i.indrelid = t.oid)))
+  WHERE (((c.relkind = 'i'::"char") AND (n.nspname <> ALL (ARRAY['pg_catalog'::name, 'pg_toast'::name]))) AND pg_table_is_visible(c.oid))
+  ORDER BY n.nspname, t.relname, c.relname;
+
+
+--
 -- Name: web_contents; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -3469,6 +3607,20 @@ ALTER TABLE ONLY aggregate_results ALTER COLUMN id SET DEFAULT nextval('aggregat
 -- Name: id; Type: DEFAULT; Schema: public; Owner: -
 --
 
+ALTER TABLE ONLY analytics_ranges ALTER COLUMN id SET DEFAULT nextval('analytics_ranges_id_seq'::regclass);
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY analytics_results ALTER COLUMN id SET DEFAULT nextval('analytics_results_id_seq'::regclass);
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: -
+--
+
 ALTER TABLE ONLY api_partners ALTER COLUMN id SET DEFAULT nextval('api_partners_id_seq'::regclass);
 
 
@@ -3547,6 +3699,13 @@ ALTER TABLE ONLY credit_cards ALTER COLUMN id SET DEFAULT nextval('credit_cards_
 --
 
 ALTER TABLE ONLY database_counts ALTER COLUMN id SET DEFAULT nextval('database_counts_id_seq'::regclass);
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY date_ranges ALTER COLUMN id SET DEFAULT nextval('date_ranges_id_seq'::regclass);
 
 
 --
@@ -3651,20 +3810,6 @@ ALTER TABLE ONLY geodata ALTER COLUMN id SET DEFAULT nextval('geodata_id_seq'::r
 -- Name: id; Type: DEFAULT; Schema: public; Owner: -
 --
 
-ALTER TABLE ONLY google_plus_people ALTER COLUMN id SET DEFAULT nextval('google_plus_people_id_seq'::regclass);
-
-
---
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
---
-
-ALTER TABLE ONLY google_plus_users ALTER COLUMN id SET DEFAULT nextval('google_plus_users_id_seq'::regclass);
-
-
---
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
---
-
 ALTER TABLE ONLY history_items ALTER COLUMN id SET DEFAULT nextval('history_items_id_seq'::regclass);
 
 
@@ -3673,13 +3818,6 @@ ALTER TABLE ONLY history_items ALTER COLUMN id SET DEFAULT nextval('history_item
 --
 
 ALTER TABLE ONLY instagram_items ALTER COLUMN id SET DEFAULT nextval('instagram_items_id_seq'::regclass);
-
-
---
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
---
-
-ALTER TABLE ONLY items ALTER COLUMN id SET DEFAULT nextval('items_id_seq'::regclass);
 
 
 --
@@ -3826,13 +3964,6 @@ ALTER TABLE ONLY purchases ALTER COLUMN id SET DEFAULT nextval('purchases_id_seq
 -- Name: id; Type: DEFAULT; Schema: public; Owner: -
 --
 
-ALTER TABLE ONLY rankings ALTER COLUMN id SET DEFAULT nextval('rankings_id_seq'::regclass);
-
-
---
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
---
-
 ALTER TABLE ONLY ratings ALTER COLUMN id SET DEFAULT nextval('ratings_id_seq'::regclass);
 
 
@@ -3973,6 +4104,13 @@ ALTER TABLE ONLY tracks ALTER COLUMN id SET DEFAULT nextval('tracks_id_seq'::reg
 -- Name: id; Type: DEFAULT; Schema: public; Owner: -
 --
 
+ALTER TABLE ONLY twitter_analytics ALTER COLUMN id SET DEFAULT nextval('twitter_analytics_id_seq'::regclass);
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: -
+--
+
 ALTER TABLE ONLY twitter_app_credentials ALTER COLUMN id SET DEFAULT nextval('twitter_app_credentials_id_seq'::regclass);
 
 
@@ -4087,6 +4225,22 @@ ALTER TABLE ONLY aggregate_results
 
 
 --
+-- Name: analytics_ranges_pkey; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
+--
+
+ALTER TABLE ONLY analytics_ranges
+    ADD CONSTRAINT analytics_ranges_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: analytics_results_pkey; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
+--
+
+ALTER TABLE ONLY analytics_results
+    ADD CONSTRAINT analytics_results_pkey PRIMARY KEY (id);
+
+
+--
 -- Name: api_partners_pkey; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -4180,6 +4334,14 @@ ALTER TABLE ONLY credit_cards
 
 ALTER TABLE ONLY database_counts
     ADD CONSTRAINT database_counts_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: date_ranges_pkey; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
+--
+
+ALTER TABLE ONLY date_ranges
+    ADD CONSTRAINT date_ranges_pkey PRIMARY KEY (id);
 
 
 --
@@ -4295,22 +4457,6 @@ ALTER TABLE ONLY geodata
 
 
 --
--- Name: google_plus_people_pkey; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
---
-
-ALTER TABLE ONLY google_plus_people
-    ADD CONSTRAINT google_plus_people_pkey PRIMARY KEY (id);
-
-
---
--- Name: google_plus_users_pkey; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
---
-
-ALTER TABLE ONLY google_plus_users
-    ADD CONSTRAINT google_plus_users_pkey PRIMARY KEY (id);
-
-
---
 -- Name: history_items_pkey; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -4324,14 +4470,6 @@ ALTER TABLE ONLY history_items
 
 ALTER TABLE ONLY instagram_items
     ADD CONSTRAINT instagram_items_pkey PRIMARY KEY (id);
-
-
---
--- Name: items_pkey; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
---
-
-ALTER TABLE ONLY items
-    ADD CONSTRAINT items_pkey PRIMARY KEY (id);
 
 
 --
@@ -4484,14 +4622,6 @@ ALTER TABLE ONLY public_keywords
 
 ALTER TABLE ONLY purchases
     ADD CONSTRAINT purchases_pkey PRIMARY KEY (id);
-
-
---
--- Name: rankings_pkey; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
---
-
-ALTER TABLE ONLY rankings
-    ADD CONSTRAINT rankings_pkey PRIMARY KEY (id);
 
 
 --
@@ -4671,6 +4801,14 @@ ALTER TABLE ONLY tweets
 
 
 --
+-- Name: twitter_analytics_pkey; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
+--
+
+ALTER TABLE ONLY twitter_analytics
+    ADD CONSTRAINT twitter_analytics_pkey PRIMARY KEY (id);
+
+
+--
 -- Name: twitter_app_credentials_pkey; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -4774,6 +4912,13 @@ CREATE INDEX account_id_idx ON organizations USING btree (account_id);
 
 
 --
+-- Name: created_at_idx_tw; Type: INDEX; Schema: public; Owner: -; Tablespace: 
+--
+
+CREATE INDEX created_at_idx_tw ON tweets USING btree (created_at);
+
+
+--
 -- Name: index_accounts_on_api_partner_id; Type: INDEX; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -4841,6 +4986,41 @@ CREATE UNIQUE INDEX index_admin_users_on_email ON admin_users USING btree (email
 --
 
 CREATE UNIQUE INDEX index_admin_users_on_reset_password_token ON admin_users USING btree (reset_password_token);
+
+
+--
+-- Name: index_analytics_ranges_on_api_partner_id; Type: INDEX; Schema: public; Owner: -; Tablespace: 
+--
+
+CREATE INDEX index_analytics_ranges_on_api_partner_id ON analytics_ranges USING btree (api_partner_id);
+
+
+--
+-- Name: index_analytics_ranges_on_name; Type: INDEX; Schema: public; Owner: -; Tablespace: 
+--
+
+CREATE INDEX index_analytics_ranges_on_name ON analytics_ranges USING btree (name);
+
+
+--
+-- Name: index_analytics_results_on_account_id; Type: INDEX; Schema: public; Owner: -; Tablespace: 
+--
+
+CREATE INDEX index_analytics_results_on_account_id ON analytics_results USING btree (account_id);
+
+
+--
+-- Name: index_analytics_results_on_campaign_id; Type: INDEX; Schema: public; Owner: -; Tablespace: 
+--
+
+CREATE INDEX index_analytics_results_on_campaign_id ON analytics_results USING btree (campaign_id);
+
+
+--
+-- Name: index_analytics_results_on_date_range_id; Type: INDEX; Schema: public; Owner: -; Tablespace: 
+--
+
+CREATE INDEX index_analytics_results_on_date_range_id ON analytics_results USING btree (date_range_id);
 
 
 --
@@ -5166,41 +5346,6 @@ CREATE INDEX index_geodata_on_region ON geodata USING btree (region);
 
 
 --
--- Name: index_google_plus_people_on_display_name; Type: INDEX; Schema: public; Owner: -; Tablespace: 
---
-
-CREATE INDEX index_google_plus_people_on_display_name ON google_plus_people USING btree (display_name);
-
-
---
--- Name: index_google_plus_people_on_family_name; Type: INDEX; Schema: public; Owner: -; Tablespace: 
---
-
-CREATE INDEX index_google_plus_people_on_family_name ON google_plus_people USING btree (family_name);
-
-
---
--- Name: index_google_plus_people_on_gid; Type: INDEX; Schema: public; Owner: -; Tablespace: 
---
-
-CREATE INDEX index_google_plus_people_on_gid ON google_plus_people USING btree (gid);
-
-
---
--- Name: index_google_plus_users_on_display_name; Type: INDEX; Schema: public; Owner: -; Tablespace: 
---
-
-CREATE INDEX index_google_plus_users_on_display_name ON google_plus_users USING btree (display_name);
-
-
---
--- Name: index_google_plus_users_on_gender; Type: INDEX; Schema: public; Owner: -; Tablespace: 
---
-
-CREATE INDEX index_google_plus_users_on_gender ON google_plus_users USING btree (gender);
-
-
---
 -- Name: index_history_items_on_organization_id; Type: INDEX; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -5219,62 +5364,6 @@ CREATE INDEX index_history_items_on_user_id ON history_items USING btree (user_i
 --
 
 CREATE INDEX index_instagram_items_on_keyword_id ON instagram_items USING btree (keyword_id);
-
-
---
--- Name: index_items_on_account_id; Type: INDEX; Schema: public; Owner: -; Tablespace: 
---
-
-CREATE INDEX index_items_on_account_id ON items USING btree (account_id);
-
-
---
--- Name: index_items_on_completed; Type: INDEX; Schema: public; Owner: -; Tablespace: 
---
-
-CREATE INDEX index_items_on_completed ON items USING btree (completed);
-
-
---
--- Name: index_items_on_folder; Type: INDEX; Schema: public; Owner: -; Tablespace: 
---
-
-CREATE INDEX index_items_on_folder ON items USING btree (folder);
-
-
---
--- Name: index_items_on_organization_id; Type: INDEX; Schema: public; Owner: -; Tablespace: 
---
-
-CREATE INDEX index_items_on_organization_id ON items USING btree (organization_id);
-
-
---
--- Name: index_items_on_reviewer_id; Type: INDEX; Schema: public; Owner: -; Tablespace: 
---
-
-CREATE INDEX index_items_on_reviewer_id ON items USING btree (reviewer_id);
-
-
---
--- Name: index_items_on_source; Type: INDEX; Schema: public; Owner: -; Tablespace: 
---
-
-CREATE INDEX index_items_on_source ON items USING btree (source);
-
-
---
--- Name: index_items_on_type; Type: INDEX; Schema: public; Owner: -; Tablespace: 
---
-
-CREATE INDEX index_items_on_type ON items USING btree (kind_id);
-
-
---
--- Name: index_items_on_visible; Type: INDEX; Schema: public; Owner: -; Tablespace: 
---
-
-CREATE INDEX index_items_on_visible ON items USING btree (visible);
 
 
 --
@@ -5450,13 +5539,6 @@ CREATE INDEX index_provider_slugs_on_content_provider_id ON provider_slugs USING
 --
 
 CREATE INDEX index_provider_slugs_on_organization_id ON provider_slugs USING btree (organization_id);
-
-
---
--- Name: index_rankings_on_market_id; Type: INDEX; Schema: public; Owner: -; Tablespace: 
---
-
-CREATE INDEX index_rankings_on_market_id ON rankings USING btree (market_id);
 
 
 --
@@ -5656,6 +5738,20 @@ CREATE INDEX index_tracks_on_name ON tracks USING btree (name);
 
 
 --
+-- Name: index_tweets_on_favorite_count; Type: INDEX; Schema: public; Owner: -; Tablespace: 
+--
+
+CREATE INDEX index_tweets_on_favorite_count ON tweets USING btree (favorite_count);
+
+
+--
+-- Name: index_tweets_on_followers_count; Type: INDEX; Schema: public; Owner: -; Tablespace: 
+--
+
+CREATE INDEX index_tweets_on_followers_count ON tweets USING btree (followers_count);
+
+
+--
 -- Name: index_tweets_on_keyword_id; Type: INDEX; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -5663,10 +5759,59 @@ CREATE INDEX index_tweets_on_keyword_id ON tweets USING btree (keyword_id);
 
 
 --
+-- Name: index_tweets_on_sentiment; Type: INDEX; Schema: public; Owner: -; Tablespace: 
+--
+
+CREATE INDEX index_tweets_on_sentiment ON tweets USING btree (sentiment);
+
+
+--
 -- Name: index_tweets_on_twitter_user_id; Type: INDEX; Schema: public; Owner: -; Tablespace: 
 --
 
 CREATE INDEX index_tweets_on_twitter_user_id ON tweets USING btree (twitter_user_id);
+
+
+--
+-- Name: index_tweets_on_twitter_user_name; Type: INDEX; Schema: public; Owner: -; Tablespace: 
+--
+
+CREATE INDEX index_tweets_on_twitter_user_name ON tweets USING btree (twitter_user_name);
+
+
+--
+-- Name: index_twitter_analytics_on_analytics_range_id; Type: INDEX; Schema: public; Owner: -; Tablespace: 
+--
+
+CREATE INDEX index_twitter_analytics_on_analytics_range_id ON twitter_analytics USING btree (analytics_range_id);
+
+
+--
+-- Name: index_twitter_analytics_on_api_partner_id; Type: INDEX; Schema: public; Owner: -; Tablespace: 
+--
+
+CREATE INDEX index_twitter_analytics_on_api_partner_id ON twitter_analytics USING btree (api_partner_id);
+
+
+--
+-- Name: index_twitter_analytics_on_campaign_id; Type: INDEX; Schema: public; Owner: -; Tablespace: 
+--
+
+CREATE INDEX index_twitter_analytics_on_campaign_id ON twitter_analytics USING btree (campaign_id);
+
+
+--
+-- Name: index_twitter_analytics_on_from; Type: INDEX; Schema: public; Owner: -; Tablespace: 
+--
+
+CREATE INDEX index_twitter_analytics_on_from ON twitter_analytics USING btree ("from");
+
+
+--
+-- Name: index_twitter_analytics_on_to; Type: INDEX; Schema: public; Owner: -; Tablespace: 
+--
+
+CREATE INDEX index_twitter_analytics_on_to ON twitter_analytics USING btree ("to");
 
 
 --
@@ -5845,24 +5990,10 @@ CREATE INDEX index_youtube_videos_on_video_id ON youtube_videos USING btree (vid
 
 
 --
--- Name: items_properties; Type: INDEX; Schema: public; Owner: -; Tablespace: 
---
-
-CREATE INDEX items_properties ON items USING gin (properties);
-
-
---
 -- Name: language_idx; Type: INDEX; Schema: public; Owner: -; Tablespace: 
 --
 
 CREATE INDEX language_idx ON sentiments USING btree (language);
-
-
---
--- Name: rankings_results; Type: INDEX; Schema: public; Owner: -; Tablespace: 
---
-
-CREATE INDEX rankings_results ON rankings USING gin (results);
 
 
 --
@@ -5883,7 +6014,7 @@ CREATE INDEX review_body ON reviews USING gin (to_tsvector('english'::regconfig,
 -- Name: tweets_body_search_idx; Type: INDEX; Schema: public; Owner: -; Tablespace: 
 --
 
-CREATE INDEX tweets_body_search_idx ON tweets USING gin (to_tsvector('english'::regconfig, (body ->> 'text'::text)));
+CREATE INDEX tweets_body_search_idx ON tweets USING gin (to_tsvector('simple'::regconfig, (body ->> 'text'::text)));
 
 
 --
@@ -5911,7 +6042,7 @@ CREATE UNIQUE INDEX word_language_mm_idx ON sentiments USING btree (word, langua
 -- PostgreSQL database dump complete
 --
 
-SET search_path TO "$user",public;
+SET search_path TO "$user", public, topology;
 
 INSERT INTO schema_migrations (version) VALUES ('20120109182603');
 
@@ -6442,4 +6573,32 @@ INSERT INTO schema_migrations (version) VALUES ('20140911002908');
 INSERT INTO schema_migrations (version) VALUES ('20140911031214');
 
 INSERT INTO schema_migrations (version) VALUES ('20140911043955');
+
+INSERT INTO schema_migrations (version) VALUES ('20140912203124');
+
+INSERT INTO schema_migrations (version) VALUES ('20140913171936');
+
+INSERT INTO schema_migrations (version) VALUES ('20140913195406');
+
+INSERT INTO schema_migrations (version) VALUES ('20140917232853');
+
+INSERT INTO schema_migrations (version) VALUES ('20140918000016');
+
+INSERT INTO schema_migrations (version) VALUES ('20140918011951');
+
+INSERT INTO schema_migrations (version) VALUES ('20140918012111');
+
+INSERT INTO schema_migrations (version) VALUES ('20140918025543');
+
+INSERT INTO schema_migrations (version) VALUES ('20140919200837');
+
+INSERT INTO schema_migrations (version) VALUES ('20140919202127');
+
+INSERT INTO schema_migrations (version) VALUES ('20141013222016');
+
+INSERT INTO schema_migrations (version) VALUES ('20141014000842');
+
+INSERT INTO schema_migrations (version) VALUES ('20141016015953');
+
+INSERT INTO schema_migrations (version) VALUES ('20141021023445');
 
