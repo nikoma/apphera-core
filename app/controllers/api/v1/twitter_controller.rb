@@ -30,8 +30,8 @@ module Api
         max_per_page = 100
         kw = params[:search]
         k = kw.gsub(' ', ' & ')
-        paginate Tweet.where("to_tsvector('english', body->>'text') @@ to_tsquery('english', '#{k}')").where('created_at > ? and created_at < ?', start, end_date).count, max_per_page do |limit, offset|
-          render :json => Tweet.where("to_tsvector('english', body->>'text') @@ to_tsquery('english', '#{k}')").where('created_at > ? and created_at < ?', start, end_date).limit(limit).offset(offset).all_json
+        paginate Tweet.where("to_tsvector('simple', body->>'text') @@ to_tsquery('simple', '#{k}')").where('created_at > ? and created_at < ?', start, end_date).count, max_per_page do |limit, offset|
+          render :json => Tweet.where("to_tsvector('simple', body->>'text') @@ to_tsquery('simple', '#{k}')").where('created_at > ? and created_at < ?', start, end_date).limit(limit).offset(offset).all_json
         end
       end
 

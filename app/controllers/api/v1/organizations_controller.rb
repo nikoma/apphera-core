@@ -51,7 +51,7 @@ module Api
           @organization.account_id = acc.id
           @organization.save!
           FoursquareWorker.perform_async(@organization.id)
-          return @organization
+          return @organization #test
         else
           @organization.account_id = acc.id
           @organization.yahooslug = SecureRandom.urlsafe_base64

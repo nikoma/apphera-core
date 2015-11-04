@@ -27,9 +27,9 @@ module Api
       def twitter
         max_per_page = 100
         kw = Keyword.find(params[:keyword_id])
-        @kw = kw.name.gsub!(' ', ' & ')
-        paginate Tweet.where("to_tsvector('english', body->>'text') @@ to_tsquery('english', '#{@kw}')").count, max_per_page do |limit, offset|
-          render :json => Tweet.where("to_tsvector('english', body->>'text') @@ to_tsquery('english', '#{@kw}')").limit(limit).offset(offset).all_json
+        @kw = kw.name.gsub(' ', ' & ')
+        paginate Tweet.where("to_tsvector('simple', body->>'text') @@ to_tsquery('simple', '#{@kw}')").count, max_per_page do |limit, offset|
+          render :json => Tweet.where("to_tsvector('simple', body->>'text') @@ to_tsquery('simple', '#{@kw}')").limit(limit).offset(offset).all_json
         end
       end
 

@@ -1,4 +1,5 @@
 class ContentProvider < ActiveRecord::Base
+  attr_accessible :id, :name, :description, :url, :created_at, :updated_at
   has_many :ratings
   has_many :reviewers
   has_many :reviews

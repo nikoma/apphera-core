@@ -9,51 +9,12 @@ module Api
       end
 
       def complex
-        @lang = params[:lang]
-        @sentence = params[:body].scan /[[:alpha:]]+/
 
-        res = 0.0
-        score = 0.0
-
-        @sentence.each do |i|
-          res = $redis.get("#{@lang}"+":"+"#{i}").to_f
-          if !res.nil?
-            score += res
-          end
-        end
-        senti = score.to_d
-        value = 0
-        if senti >= 0.03
-          value = 1
-        elsif senti <= -0.01
-          value = -1
-        end
-        @sentiment = {polarity: value, sentiment: senti}
-        render json: @sentiment
+        render json: DictionarySentiment.new.classify(params[:lang], params[:body])
       end
 
       def show
-        @lang = params[:lang]
-        @sentence = params[:body].scan /[[:alpha:]]+/
-
-        res = 0.0
-        score = 0.0
-
-        @sentence.each do |i|
-          res = $redis.get("#{@lang}"+":"+"#{i}").to_f
-          if !res.nil?
-            score += res
-          end
-        end
-        senti = score.to_d
-        value = 0
-        if senti >= 0.03
-          value = 1
-        elsif senti <= -0.01
-          value = -1
-        end
-        @sentiment = {polarity: value, sentiment: senti}
-        render json: @sentiment
+        render json: DictionarySentiment.new.classify(params[:lang], params[:body])
       end
     end
   end

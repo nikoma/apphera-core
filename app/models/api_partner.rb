@@ -1,5 +1,6 @@
 class ApiPartner < ActiveRecord::Base
   has_many :accounts
+  has_many :analytics_ranges
   has_many :named_queries, :through => :accounts
   has_one :twitter_app_credential
   attr_accessible :name, :token, :partner_token, :callback_url

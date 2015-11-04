@@ -12,6 +12,7 @@ class Account < ActiveRecord::Base
   has_many :facebook_credentials
   has_many :campaigns
   has_many :named_queries
+  has_many :analytics_results
   #belongs_to :country
   #has_and_belongs_to_many :resellers
   #has_many :keywords, :through => :organizations

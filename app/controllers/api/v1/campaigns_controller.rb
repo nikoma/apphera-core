@@ -4,8 +4,9 @@ module Api
       # Get all campaigns
       def index
         @campaigns = @current_user.accounts.where(id: params[:account_id]).first.campaigns
-
       end
+
+
 
       def create
         @account = @current_user.accounts.where(id: params[:account_id]).first
@@ -33,6 +34,7 @@ module Api
         end
         render :json => @campaign
       end
+
       def update_keywords
         @account = @current_user.accounts.where(id: params[:account_id]).first
         @campaign = @account.campaigns.find params[:campaign_id]
