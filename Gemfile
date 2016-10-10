@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '4.2.4'
+gem 'rails', '4.2.7'
 gem 'rails-api'
 gem 'activesupport'
 gem 'activerecord-postgis-adapter'
@@ -51,7 +51,7 @@ gem 'oj'
 gem "koala"
 gem 'klout'
 gem 'fb_graph'
-gem 'logstash-logger'
+#gem 'logstash-logger'
 gem 'mechanize'
 gem 'chronic'
 require 'rbconfig'
