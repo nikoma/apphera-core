@@ -4,7 +4,6 @@ This API provides all methods (will provide) of Apphera. The API returns by defa
 
 For installation service, database seeds & development please contact us at http://www.apphera.com or send me an email at manek -> at <- apphera.com
 
-Documentation at https://git.apphera.com/root/apphera-documentation/wikis/home
 
 ## To use it via Dashboard add Apphera Sense at:
 https://github.com/nikoma/apphera-sense
@@ -24,15 +23,4 @@ For other users, the AGPLv3 does not suit their use of Apphera. These users wish
 A commercial license to Apphera provides customers the legal means both to modify Apphera and to incorporate it into a product, without the obligation of providing the resulting code under the AGPLv3 license. License fees are priced competitively and offer tremendous value for the capabilities delivered. Fees vary depending on the application and the scale of its use. For more information about software licensing, please contact the Apphera Sales department.
 
 Apphera remains the premier open source social media monitoring and engagement project and development for both Apphera and its components follows the open source model. Apphera provides ongoing commitment and contributions to open source. Apphera's commercial licensing option provides customers with the best possible choice - the innovation and creativity of the open source model, and the protections and flexibility available with traditional, commercial software.
-
-## Contributing
-
-To get started, <a href="https://www.clahub.com/agreements/nikoma/apphera-core">sign the Contributor License Agreement</a>.
-
-1. Fork it
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Added some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create new Pull Request
-
 
