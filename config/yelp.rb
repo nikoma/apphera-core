@@ -1,9 +1,9 @@
 require 'yelp'
 
-client = Yelp::Client.new({ consumer_key: "He-mqmSHwW8rOiJvqxR1TQ",
-                            consumer_secret: "AzMDFqBkIOrOYt_a3WLJpWYU95U",
-                            token: "k-kS4D0hQuMOli0PvjB2RqA6Z9KtSxP",
-                            token_secret: "qeEruZ5HEup-j9VAYGrH7IPZxOg"
+client = Yelp::Client.new({ consumer_key: "TQ",
+                            consumer_secret: "AzM95U",
+                            token: "k-SxP",
+                            token_secret: "qg"
                           })
 
 

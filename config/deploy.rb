@@ -2,7 +2,6 @@
 lock "3.7.2"
 
 set :application, "chat"
-set :repo_url, "git@egithub.com:nikoma/chat.git"
 
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp

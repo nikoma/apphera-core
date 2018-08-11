@@ -7,8 +7,7 @@ Devise.setup do |config|
   # confirmation, reset password and unlock tokens in the database.
   # Devise will use the `secret_key_base` as its `secret_key`
   # by default. You can change it below and use your own secret key.
-  config.secret_key = '2094c29a99b114edc53e2dc135a34060712ca689a6bd29f83e5acdc3ba6a52e8464cbf9e58ba6f40e4a7bc34b9edec610994564a472683cfcd46e71bcda6fecf'
-
+  config.secret_key = '2094c29a99b114eausudyfoas76dfa76sdfo7asydf87a6sdf87asdf7asodf76asd8f76dc'
   # ==> Mailer Configuration
   # Configure the e-mail address which will be shown in Devise::Mailer,
   # note that it will be overwritten if you use your own mailer class
@@ -314,9 +313,9 @@ Devise.setup do |config|
   # When using OmniAuth, Devise cannot automatically set OmniAuth path,
   # so you need to do it manually. For the users scope, it would be:
   # config.omniauth_path_prefix = '/my_engine/users/auth'
-  config.omniauth :facebook, "2011209028907039", "7dd6d006d295e39522ab07e91150596a"
-  config.omniauth :twitter,  "bv7mJuqXD28tsX7oryXIOABsC",  "kDtoPGmPDBcXKWzFAJYY0hYX0VpfNYwpEKkM7Rw5ZA1T9gzi0g"
-  config.omniauth :google_oauth2,  "159904721675-bokt4ubjmgiot9d698tct2jaujgbeoul.apps.googleusercontent.com",  "lz0yL6j8lkXSs3tjIYybgnrs"
-  config.omniauth :microsoft_live,  "825d5b6f-915f-439f-b0a2-76656175e611",  "U2BfbbxAESEfANhaTE8bYbu"
+  config.omniauth :facebook, "207039", "7dd6d596a"
+  config.omniauth :twitter,  "bv7ABsC",  "kDtoT9gzi0g"
+  config.omniauth :google_oauth2,  "159t2jaujgbeoul.apps.googleusercontent.com",  "lz0gnrs"
+  config.omniauth :microsoft_live,  "81",  "U2Ybu"
 
 end

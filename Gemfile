@@ -76,7 +76,7 @@ gem 'carrierwave'
 gem 'pg'
 gem 'httparty'
 gem 'pg_search'
-gem 'merit'
+gem 'paper_trail'
 gem 'facebook-messenger'
 
 # Exception Notification - To get email while generating any error on server.
@@ -85,3 +85,5 @@ gem 'friendly_id', '~> 5.1.0' # Note: You MUST use 5.0.0 or greater for Rails 4.
 gem 'carrierwave-video'
 gem 'rabl'
 gem 'clean_pagination'
+gem 'devise-token_authenticatable'
+

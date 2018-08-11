@@ -91,7 +91,7 @@ Rails.application.configure do
                                                  'http://sitepoint-actioncable.herokuapp.com']
 
   config.action_cable.url = "wss://sitepoint-actioncable.herokuapp.com/cable"
-  config.action_mailer.default_url_options = { host: 'http://www.eqbotics.com' }
+  config.action_mailer.default_url_options = { host: 'https://dashboard.apphera.com' }
   config.action_mailer.perform_deliveries = true
   config.action_mailer.raise_delivery_errors = true
   config.action_mailer.delivery_method = :smtp
@@ -100,7 +100,7 @@ Rails.application.configure do
     port: 587,
     domain: 'gmail.com',
     user_name: 'info@manek.com',
-    password: 'Hallo12345!',
+    password: 'xxx123',
     authentication: 'plain',
     enable_starttls_auto: true
   }
