@@ -1,15 +1,17 @@
+## Apphera Social Media Monitoring and Engagement
+Apphera is the premiere suite of social media monitoring and engagement tools. It provides data minining as well as analytics tools to automate your social media engagement. 
+
+
 ## Apphera Main API
 
-This API provides all methods (will provide) of Apphera. The API returns by default JSON only, therefore calls to .json are not needed.
+The API returns by default JSON only, therefore calls to .json are not needed.
 
-For installation service, database seeds & development please contact us at http://www.apphera.com or send me an email at manek -> at <- apphera.com
+For installation service, database seeds & custom development please contact us at https://www.apphera.com or send me an email at manek -> at <- manek.com
 
 
-## To use it via Dashboard add Apphera Sense at:
-https://github.com/nikoma/apphera-sense
 
 ## Feature List at:
-http://www.apphera.com/
+https://www.apphera.com/
 
 
 ## Licensing

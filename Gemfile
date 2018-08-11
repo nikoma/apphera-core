@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '4.2.7'
+gem 'rails', '4.2.10'
 gem 'rails-api'
 gem 'activesupport'
 gem 'activerecord-postgis-adapter'
@@ -55,9 +55,9 @@ gem 'fb_graph'
 gem 'mechanize'
 gem 'chronic'
 require 'rbconfig'
-if RbConfig::CONFIG['target_os'] =~ /mswin|mingw|cygwin/i
-  gem 'wdm', '>= 0.1.0'
-end
+# if RbConfig::CONFIG['target_os'] =~ /mswin|mingw|cygwin/i
+#   gem 'wdm', '>= 0.1.0'
+# end
 
 #gem 'capsule_crm'
 #gem 'annotate', :git => 'git://github.com/ctran/annotate_models.git'
