@@ -1,0 +1,65 @@
+<div class="loginColumns animated fadeInDown">
+  <div class="row">
+    <div class="col-md-6">
+    <% if request.host.include? "hawkmatrix" %>
+      <h2 class="font-bold">HawkMatrix</h2>
+      <p>From Awareness To Action.</p>
+    <% else %>
+      <h2 class="font-bold">EQBotics</h2>
+      <p>From Awareness To Action.</p>
+    <% end %>
+      
+    </div>
+    <div class="col-md-6">
+      <div class="ibox-content">
+        <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+          <div class="form-group">
+            <%= f.email_field :email, autofocus: true, class: 'form-control', placeholder: 'Email Address', required: ''%>
+          </div>
+
+          <div class="form-group">
+            <%= f.password_field :password, autocomplete: "off", class: 'form-control', placeholder: 'Password', required: ''%>
+          </div>
+
+          <%= f.submit "Log in",class: 'btn btn-primary block full-width m-b'%>
+
+          <a href="password/new"><small>Forgot password?</small></a>
+
+          <p class="text-muted text-center">
+            <small>Do not have an account?</small>
+          </p>
+
+          <a class="btn btn-sm btn-white btn-block" href="sign_up">Create an account</a>
+
+          <!-- <a class="btn btn-block btn-social btn-facebook" href="auth/facebook">
+            <span class="fa fa-facebook"></span> Sign in with Facebook
+          </a> -->
+
+          <!-- <a class="btn btn-block btn-social btn-twitter" href="auth/twitter">
+            <span class="fa fa-twitter"></span> Sign in with Twitter
+          </a>
+
+          <a class="btn btn-block btn-social btn-google" href="auth/google_oauth2">
+            <span class="fa fa-google"></span> Sign in with Google
+          </a>
+
+          <a class="btn btn-block btn-social btn-microsoft" href="auth/microsoft_live">
+            <span class="fa fa-windows"></span> Sign in with Microsoft
+          </a> -->
+        <% end %>
+
+       <!--  <p class="m-t">
+          <small>By Manek Dynamics LLC &copy; 2017</small>
+        </p> -->
+      </div>
+    </div>
+  </div>
+  <hr />
+
+  <div class="row">
+    <div class="col-md-6">Copyright Manek Dynamics LLC</div>
+    <div class="col-md-6 text-right">
+      <small>© 2017</small>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,91 @@
+<div class="row">
+  <div class="col-lg-8">
+
+    <div class="ibox float-e-margins">
+     
+      <div class="ibox-content">
+        <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put, class: 'form-horizontal' }) do |f| %>
+         
+        </div><div class="form-group">
+        <%= f.label :firstname, class: 'control-label col-lg-4' %>
+        <div class="col-lg-8">
+          <%= f.text_field :firstname, class: 'form-control', placeholder: 'First Name', autofocus: true %>
+          <div class='error'><%= display_error_messages resource.errors, [:firstname] %></div>
+        </div>
+      </div><div class="form-group">
+      <%= f.label :lastname, class: 'control-label col-lg-4' %>
+      <div class="col-lg-8">
+        <%= f.text_field :lastname, class: 'form-control', placeholder: 'Last name', autofocus: true %>
+        <div class='error'><%= display_error_messages resource.errors, [:lastname] %></div>
+      </div>
+    </div>
+          <div class="form-group">
+            <%= f.label :email, class: 'control-label col-lg-4' %>
+            <div class="col-lg-8">
+              <%= f.email_field :email, class: 'form-control', placeholder: 'Email', autofocus: true %>
+              <div class='error'><%= display_error_messages resource.errors, [:email] %></div>
+            </div>
+          </div>
+
+          <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+            <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+          <% end %>
+
+          <div class="form-group">
+            <%= f.label :password, class: 'control-label col-lg-4' %>
+            <div class="col-lg-8">
+              <%= f.password_field :password, class: 'form-control', placeholder: 'Password', autofocus: 'off' %>
+              <i>(leave blank if you don't want to change it)</i>
+              <div class='error'><%= display_error_messages resource.errors, [:password] %></div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <%= f.label :password_confirmation, class: 'control-label col-lg-4' %>
+            <div class="col-lg-8">
+              <%= f.password_field :password_confirmation, class: 'form-control', placeholder: 'Password Confirmation', autofocus: 'off' %>
+              <div class='error'><%= display_error_messages resource.errors, [:password_confirmation] %></div>
+            </div>
+          </div>
+          <% unless f.object.uid? %>
+            <div class="form-group">
+              <%= f.label :current_password, class: 'control-label col-lg-4' %>
+              <div class="col-lg-8">
+                <%= f.password_field :current_password, class: 'form-control', placeholder: 'Current Password', autofocus: 'off' %>
+                <i>(we need your current password to confirm your changes)</i>
+                <div class='error'><%= display_error_messages resource.errors, [:current_password] %></div>
+              </div>
+            </div>
+          <% end %>
+          <div class="hr-line-dashed"></div>
+          <div class="form-group">
+            <div class="col-lg-offset-4 col-lg-10">
+              <%= f.submit 'Update Profile', class: 'btn btn-sm btn-white' %>
+              <%= link_to 'Cancel', dashboard_url, class: 'btn btn-sm btn-danger' %>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-4">
+    <div class="ibox float-e-margins">
+      <div class="ibox-title">
+        <h5>Cancel my account</h5>
+      </div>
+      <div class="ibox-content">
+          <% if current_user.uid.present? && current_user.provider.present? %>
+            <%= link_to "Disconnect with Facebook",revoke_login_path(current_user.uid,current_user.provider),class: 'btn btn-danger',id: 'revoke_login', data: {disable_with: 'Disconnect with Facebook...'} %>
+          <% else %>
+            <%= link_to 'Connect With Facebook', "/users/auth/facebook" ,class: 'btn btn-primary', data: {disable_with: 'Connect with Facebook...'} %>
+          <% end %>
+        <p>
+          Unhappy?
+          <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, class: 'btn btn-danger' %>
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="clearfix"></div>
+</div>
+

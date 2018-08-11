@@ -1,0 +1,66 @@
+<div class="middle-box text-center loginscreen   animated fadeInDown">
+  <div>
+    <div><h1 class="logo-name">EQBotics</h1></div>
+    <h3>Register for a free account and earn cool badges!</h3>
+    <p>Create free account.</p>
+
+    <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+
+      <%= f.fields_for :organization, f.object.build_organization do |o| %>
+        <div class="form-group">
+          <%= o.text_field :name, autofocus: true, class: 'form-control', placeholder: 'Organization Name if applicable' %>
+          <div class='error'><%= display_error_messages resource.errors, [:'organization.name'] %></div>
+        </div>
+      <% end %>
+      <div class="form-group">
+        <%= f.text_field :firstname, autofocus: true, class: 'form-control', placeholder: 'First name' %>
+        <div class='error'><%= display_error_messages resource.errors, [:firstname] %></div>
+      </div>
+      <div class="form-group">
+      <%= f.text_field :lastname, autofocus: true, class: 'form-control', placeholder: 'Last name' %>
+      <div class='error'><%= display_error_messages resource.errors, [:lastname] %></div>
+    </div>
+    <div class="form-group">
+        <%= f.email_field :email, autofocus: true, class: 'form-control', placeholder: 'Email Address' %>
+        <div class='error'><%= display_error_messages resource.errors, [:email] %></div>
+      </div>
+      <div class="form-group">
+        <%= f.password_field :password, autocomplete: "off", class: 'form-control', placeholder: 'Password' %>
+        <div class='error'><%= display_error_messages resource.errors, [:password] %></div>
+      </div>
+
+      <div class="form-group">
+        <%= f.password_field :password_confirmation, autocomplete: "off", class: 'form-control', placeholder: 'Password Confirmation'%>
+        <div class='error'><%= display_error_messages resource.errors, [:password_confirmation] %></div>
+      </div>
+
+     <!--  <div class="form-group ">
+        <div class="checkbox i-checks"><label> <input type="checkbox"><i></i> Agree the terms and policy </label></div>
+      </div> -->
+
+      <%= f.submit "Register",class: 'btn btn-primary block full-width m-b'%>
+
+      <p class="text-muted text-center"><small>Already have an account?</small></p>
+      <a class="btn btn-sm btn-white btn-block" href="sign_in">Login</a>
+
+      <a class="btn btn-block btn-social btn-facebook" href="auth/facebook">
+        <span class="fa fa-facebook"></span> Sign in with Facebook
+      </a>
+
+      <!-- <a class="btn btn-block btn-social btn-twitter" href="auth/twitter">
+        <span class="fa fa-twitter"></span> Sign in with Twitter
+      </a>
+
+      <a class="btn btn-block btn-social btn-google" href="auth/google_oauth2">
+        <span class="fa fa-google"></span> Sign in with Google
+      </a>
+
+      <a class="btn btn-block btn-social btn-microsoft" href="auth/microsoft_live">
+        <span class="fa fa-windows"></span> Sign in with Microsoft
+      </a> -->
+
+    <% end %>
+
+<!--     <p class="m-t"> <small>Hawkmatrix, by Nikolai Manek &copy; 2017</small> </p>
+ -->  </div>
+</div>

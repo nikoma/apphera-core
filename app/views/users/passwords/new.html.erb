@@ -1,0 +1,24 @@
+<div class="middle-box text-center loginscreen   animated fadeInDown">
+<div class="ibox-content">
+<h2>Forgot your password?</h2>
+
+<%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+  <%= devise_error_messages! %>
+
+  <div class="form-group">
+    <%= f.email_field :email, autofocus: true, class: 'form-control', placeholder: 'Email Address', required: ''%>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Send me reset password instructions",class: 'btn btn-primary block full-width m-b'%>
+  </div>
+<% end %>
+
+<a href="/users/sign_in" class="btn btn-primary block full-width">Log in</a><br>
+<a href="/users/sign_up" class="btn btn-primary block full-width">Sign up</a><br>
+<a class="btn btn-block btn-social btn-facebook" href="/users/auth/facebook">
+    <span class="fa fa-facebook"></span> Sign in with Facebook
+</a>
+
+</div>
+</div>

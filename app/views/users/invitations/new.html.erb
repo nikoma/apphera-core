@@ -1,0 +1,42 @@
+<div class="row wrapper border-bottom white-bg page-heading">
+  <div class="col-sm-4">
+    <h2><%= t "devise.invitations.new.header" %></h2>
+    <%= render_breadcrumbs %>
+  </div>
+</div>
+<div class="wrapper wrapper-content animated fadeInRight">
+  <div class="row">
+	  <div class="col-lg-8">
+
+	    <div class="ibox float-e-margins">
+	      <div class="ibox-title">
+	        <h5>Invitation Form</h5>
+	      </div>
+	      <div class="ibox-content">
+
+	        <%= form_for resource, as: resource_name, url: invitation_path(resource_name), html: {method: :post, class: 'form-horizontal'} do |f| %>
+
+	        	<% resource.class.invite_key_fields.each do |field| -%>
+		          <div class="form-group">
+		            <%= f.label field, class: 'control-label col-lg-4' %>
+		            <div class="col-lg-8">
+		              <%= f.text_field field, class: 'form-control', placeholder: field %>
+		              <div class='error'><%= display_error_messages resource.errors, [field.to_sym] %></div>
+		            </div>
+		          </div>
+		        <% end %>
+	          <div class="hr-line-dashed"></div>
+	          <div class="form-group">
+	            <div class="col-lg-offset-4 col-lg-10">
+	              <%= f.submit t("devise.invitations.new.submit_button"), class: 'btn btn-sm btn-white', data: {disable_with: 'Please Wait...'} %>
+	              <%= link_to 'Cancel', dashboard_url, class: 'btn btn-sm btn-danger', data: {disable_with: 'Please Wait...'} %>
+	            </div>
+	          </div>
+	        <% end %>
+
+	      </div>
+	    </div>
+	  </div>
+  	<div class="clearfix"></div>
+	</div>
+</div>

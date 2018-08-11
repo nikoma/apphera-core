@@ -1,0 +1,38 @@
+<div class="loginColumns animated fadeInDown">
+  <div class="row">
+    <div class="col-md-6">
+      <h2 class="font-bold">Hawkmatrix</h2>
+      <p>Intelligent Cyber Security Training.</p>
+    </div>
+    <div class="col-md-6">
+      <div class="ibox-content">
+        <h2><%= t 'devise.invitations.edit.header' %></h2>
+        <%= form_for resource, :as => resource_name, url: invitation_path(resource_name), html: { method: :put } do |f| %>
+          <%= f.hidden_field :invitation_token %>
+          <%= devise_error_messages! %>
+          <div class="form-group">
+            <%= f.password_field :password, autofocus: true, autocomplete: 'off', class: 'form-control', placeholder: 'New Password' %>
+            <div class='error'><%= display_error_messages resource.errors, [:password] %></div>
+          </div>
+          <div class="form-group">
+            <%= f.password_field :password_confirmation, autocomplete: 'off', class: 'form-control', placeholder: 'Confirm Password' %>
+            <div class='error'><%= display_error_messages resource.errors, [:password_confirmation] %></div>
+          </div>
+          <%= f.submit t("devise.invitations.edit.submit_button"), class: 'btn btn-primary block full-width m-b'%>
+        <% end %>
+
+        <p class="m-t">
+          <small>I am Gratitude - By Nikolai Manek &copy; 2017</small>
+        </p>
+      </div>
+    </div>
+  </div>
+  <hr />
+
+  <div class="row">
+    <div class="col-md-6">Copyright Nikolai Manek</div>
+    <div class="col-md-6 text-right">
+      <small>© 2017</small>
+    </div>
+  </div>
+</div>
