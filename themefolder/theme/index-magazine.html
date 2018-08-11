@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Magazine Homepage | AppStrap Bootstrap Theme by Themelize.me</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- @todo: fill with your company info or remove -->
+  <meta name="description" content="">
+  <meta name="author" content="Themelize.me">
+
+  <!-- Bootstrap v4.0.0-beta.3 CSS via CDN -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css">
+
+  <!-- Plugins required on all pages NOTE: Additional non-required plugins are loaded ondemand as of AppStrap 2.5 -->
+
+  <!-- Theme style -->
+  <link href="assets/css/theme-style.min.css" rel="stylesheet">
+
+  <!-- Orange colour scheme -->
+  <link href="assets/css/colour-orange.min.css" rel="stylesheet">
+
+  <!--Your custom colour override-->
+  <link href="#" id="colour-scheme" rel="stylesheet">
+
+  <!-- Your custom override -->
+  <link href="assets/css/custom-style.css" rel="stylesheet">
+
+
+
+  <!-- Optional: ICON SETS -->
+  <!-- Iconset: Font Awesome 4.7.0 via CDN -->
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <!-- Iconset: flag icons - http://lipis.github.io/flag-icon-css/ -->
+  <link href="assets/plugins/flag-icon-css/css/flag-icon.min.css" rel="stylesheet">
+  <!-- Iconset: ionicons - http://ionicons.com/ -->
+  <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet">
+  <!-- Iconset: Linearicons - https://linearicons.com/free -->
+  <link href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css" rel="stylesheet">
+
+
+  <!-- Le fav and touch icons - @todo: fill with your icons or remove, try https://realfavicongenerator.net -->
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicons/favicon-16x16.png">
+  <link rel="manifest" href="assets/favicons/manifest.json">
+  <link rel="shortcut icon" href="assets/favicons/favicon.ico">
+  <meta name="msapplication-config" content="assets/favicons/browserconfig.xml">
+  <meta name="theme-color" content="#ffffff">
+
+
+  <!-- Google fonts -->
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Rambla:400,700' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Calligraffitti' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,700' rel='stylesheet' type='text/css'>
+
+  <!--Plugin: Retina.js (high def image replacement) - @see: http://retinajs.com/-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/retina.js/1.3.0/retina.min.js"></script>
+</head>
+
+<!-- ======== @Region: body ======== -->
+
+<body class="page page-index-magazine navbar-layout-navbar-below" data-colour-scheme="orange">
+
+  <!-- @plugin: page loading indicator, delete to remove loader -->
+  <div class="page-loader" data-toggle="page-loader"></div>
+
+  <a id="#top" href="#content" class="sr-only">Skip to content</a>
+
+  <!-- ======== @Region: #header ======== -->
+  <div id="header">
+
+
+    <!--Header & Branding region-->
+    <div class="header py-3 d-none d-lg-flex">
+      <!-- all direct children of the .header-inner element will be vertically aligned with each other you can override all the behaviours using the flexbox utilities (flexbox.htm) All elements with .header-brand & .header-block-flex wrappers will automatically be aligned inline & vertically using flexbox, this can be overridden using the flexbox utilities (flexbox.htm) Use .header-block to stack elements within on small screen & "float" on larger screens use .order-first or/and .order-last classes to make an element show first or last within .header-inner or .headr-block elements -->
+      <div class="header-inner container">
+        <!--branding/logo -->
+        <div class="header-brand flex-column align-items-start">
+          <a class="header-brand-text" href="index.html" title="Home">
+            <h1 class="h2">
+              <span class="header-brand-text-alt">App</span>Strap<span class="header-brand-text-alt">.</span>
+            </h1>
+          </a>
+          <div class="header-slogan d-none d-lg-block text-xs font-weight-normal"><em>Daily Fresh News</em></div>
+        </div>
+        <!-- other header content -->
+        <div class="header-block d-flex order-12 align-items-center">
+          <a href="#search" class="btn btn-icon d-lg-none" data-toggle="class" data-target='{"#search-overlay":{"actions":{"toggle":"show"}}}'><i class="fa fa-search fa-flip-horizontal search-icon nav-link-icon"></i></a>
+
+          <!-- mobile collapse menu button - data-toggle="collapse" = default BS menu - data-toggle="jpanel-menu" = jPanel Menu - data-toggle="overlay" = Overlay Menu -->
+          <a href="#top" class="btn btn-icon btn-white order-12 d-lg-none" data-toggle="jpanel-menu" data-target=".navbar-main" data-direction="right"> <i class="fa fa-bars"></i> </a>
+          <div class="bg-light p-3 text-sm d-none d-lg-block text-center" data-css='{"width":480,"height":60}'>Ad space</div>
+        </div>
+      </div>
+    </div>
+
+    <div data-toggle="sticky">
+      <div class="navbar navbar-expand-md">
+        <div class="w-100 bg-primary navbar-dark">
+          <!-- Search form overlay -->
+
+          <!--Header search region - hidden by default using .fade class -->
+          <div class="header-search fade dur-fast pos-absolute pos-a w-100 pos-zindex-fixed overlay" id="search-overlay">
+            <form class="search-form d-flex align-items-center container">
+              <i class="fa fa-search fa-flip-horizontal icon-1x text-white"></i>
+              <input type="text" name="search" class="form-control search h-100 pl-2" value="" placeholder="Search">
+              <a href="#" class="text-white" data-toggle="class" data-target='{"#search-overlay":{"actions":{"remove":"show"}}}'> <span class="sr-only">Close </span><i class="fa fa-times icon-1x"></i> </a>
+            </form>
+          </div>
+          <!-- Mobile mini header -->
+          <div class="container d-flex d-lg-none align-items-center py-2">
+            <a href="#" class="h4 text-white my-0 py-2">App<span class="font-weight-normal">Strap</span></a>
+            <!-- Mobile menu items -->
+            <div class="ml-auto d-flex align-items-center">
+              <!-- Mobile menu toggler -->
+              <a href="#top" class="text-white op-8 px-1 order-2" data-toggle="jpanel-menu" data-target=".navbar-main" data-direction="right"> <i class="fa fa-bars icon-1x"></i> </a>
+              <!-- Search icon -->
+              <a href="#search" class="text-white op-8 px-1" data-toggle="class" data-target='{"#search-overlay":{"actions":{"add":"show"}}}'> <i class="fa fa-search fa-flip-horizontal search-icon icon-1x"></i> </a>
+            </div>
+          </div>
+          <!-- Desktop header -->
+          <div class="container d-none d-lg-flex align-items-center px-0 py-2 py-lg-0">
+
+            <!-- Fade in brand on sticky -->
+            <div class="sticky-effect-fade-in sticky-effect-expand-w d-flex align-items-center">
+              <a href="#" class="h4 text-white my-0 ml-3 mr-4 py-2">App<span class="font-weight-normal">Strap</span></a>
+            </div>
+            <!--everything within this div is collapsed on mobile-->
+            <div class="navbar-main collapse">
+              <!--main navigation-->
+              <ul class="nav navbar-nav container dropdown-effect-fade pos-static">
+
+                <li class="nav-item"> <a href="#" class="nav-link">Home</a> </li>
+
+                <!-- Fashion: megamenu with columns of links & feature item -->
+                <li class="nav-item dropdown dropdown-mega-menu">
+                  <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" data-hover="dropdown">Fashion</a>
+                  <!-- Dropdown Menu - mega menu-->
+                  <div class="dropdown-menu">
+                    <div class="container">
+                      <div class="row">
+                        <div class="col-lg-3"> <a href="#" class="dropdown-item">Trousers</a> <a href="#" class="dropdown-item">Sportswear</a> <a href="#" class="dropdown-item">Suits</a> <a href="#" class="dropdown-item">Shoes</a> <a href="#" class="dropdown-item">Shirts</a>                          </div>
+                        <div class="col-lg-3"> <a href="#" class="dropdown-item">T-shirts</a> <a href="#" class="dropdown-item">Shoes</a> <a href="#" class="dropdown-item">Swimwear</a> <a href="#" class="dropdown-item">Sportswear</a> <a href="#" class="dropdown-item">Suits</a>                          </div>
+                        <div class="col-lg-3"> <a href="#" class="dropdown-item">T-shirts</a> <a href="#" class="dropdown-item">Suits</a> <a href="#" class="dropdown-item">Shorts</a> <a href="#" class="dropdown-item">Sportswear</a> <a href="#" class="dropdown-item">Swimwear</a>                          </div>
+                        <div class="col-lg-3 d-none d-lg-flex">
+                          <a href="#" class="p-3 op-9 overlay overlay-gradient overlay-op-6 d-flex flex-valign-b flex-ew" data-toggle="blazy" data-src="https://source.unsplash.com/hiZ7wtdX-nI/285x185">
+                            <p class="my-0 text-white font-weight-bold text-primary text-sm">Featured</p>
+                            <p class="my-0 text-white font-weight-normal">The Ultimate Fashion Guide</p>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+
+                <!-- Tech: grid with image thumbnails -->
+                <li class="nav-item dropdown dropdown-mega-menu">
+                  <a href="#" class="nav-link dropdown-toggle" id="elements-drop" data-toggle="dropdown" data-hover="dropdown">Tech</a>
+                  <!-- Dropdown Menu - mega menu-->
+                  <div class="dropdown-menu">
+                    <div class="container">
+                      <div class="row">
+                        <div class="col-lg-3 d-flex">
+                          <a href="#" class="p-3 pt-6 op-9 overlay overlay-gradient overlay-op-9 d-flex flex-valign-b flex-ew" data-toggle="blazy" data-src="https://source.unsplash.com/e2dDvdH3lIY/540x320/">
+                            <p class="my-0 text-white font-weight-bold text-primary text-sm"><i class="fa fa-clock-o"></i> Oct 18 2017</p>
+                            <p class="my-0 text-white font-weight-normal">Esca Et Eum Hos Ideo Modo Pala Tego</p>
+                          </a>
+                        </div>
+                        <div class="col-lg-3 d-flex">
+                          <a href="#" class="p-3 pt-6 op-9 overlay overlay-gradient overlay-op-9 d-flex flex-valign-b flex-ew" data-toggle="blazy" data-src="https://source.unsplash.com/A5-Xr7WyktQ/540x320/">
+                            <p class="my-0 text-white font-weight-bold text-primary text-sm"><i class="fa fa-clock-o"></i> Oct 14 2017</p>
+                            <p class="my-0 text-white font-weight-normal">Cui Dolore Enim Erat Lenis Minim Molior Nobis</p>
+                          </a>
+                        </div>
+                        <div class="col-lg-3 d-flex">
+                          <a href="#" class="p-3 pt-6 op-9 overlay overlay-gradient overlay-op-9 d-flex flex-valign-b flex-ew" data-toggle="blazy" data-src="https://source.unsplash.com//540x320/">
+                            <p class="my-0 text-white font-weight-bold text-primary text-sm"><i class="fa fa-clock-o"></i> Nov 19 2017</p>
+                            <p class="my-0 text-white font-weight-normal">Caecus Humo Mos Natu Obruo Rusticus Suscipit Velit Ymo</p>
+                          </a>
+                        </div>
+                        <div class="col-lg-3 d-flex">
+                          <a href="#" class="p-3 pt-6 op-9 overlay overlay-gradient overlay-op-9 d-flex flex-valign-b flex-ew" data-toggle="blazy" data-src="https://source.unsplash.com//540x320/">
+                            <p class="my-0 text-white font-weight-bold text-primary text-sm"><i class="fa fa-clock-o"></i> Oct 15 2017</p>
+                            <p class="my-0 text-white font-weight-normal">Adipiscing Jus Laoreet Secundum Turpis Typicus Zelus</p>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+
+                <!-- Mega menu example -->
+                <li class="nav-item dropdown dropdown-mega-menu ">
+                  <a href="#" class="nav-link dropdown-toggle" id="news-drop" data-toggle="dropdown" data-hover="dropdown">News</a>
+                  <!-- Dropdown Menu - Mega Menu -->
+                  <div class="dropdown-menu">
+                    <div class="container">
+                      <div class="row">
+                        <div class="col-lg-3 py-2" data-url="#">
+                          <img data-toggle="blazy" data-src="https://source.unsplash.com/nrSzRUWqmoI/540x320/" class="img-fluid" />
+                          <h5 class="mt-2 mb-0">
+                            Duis Iriure Populus Vero Virtus Vulputate
+                          </h5>
+                          <p class="mb-0">Appellatio cui decet dolore melior oppeto tincidunt torqueo.</p>
+                        </div>
+                        <div class="col-lg-3 py-2" data-url="#">
+                          <img data-toggle="blazy" data-src="https://source.unsplash.com/6Xjl5-Xq4g4/540x320/" class="img-fluid" />
+                          <h5 class="mt-2 mb-0">
+                            Dolor Ea Iriure Usitas Valetudo
+                          </h5>
+                          <p class="mb-0">Blandit dolus jugis suscipere te.</p>
+                        </div>
+                        <div class="col-lg-3 py-2" data-url="#">
+                          <img data-toggle="blazy" data-src="https://source.unsplash.com/zAi2Is48-MA/540x320/" class="img-fluid" />
+                          <h5 class="mt-2 mb-0">
+                            Gemino Iaceo Quae Volutpat
+                          </h5>
+                          <p class="mb-0">Bene distineo praemitto tincidunt tum ullamcorper valde vulputate.</p>
+                        </div>
+                        <div class="col-lg-3 py-2" data-url="#">
+                          <img data-toggle="blazy" data-src="https://source.unsplash.com//540x320/" class="img-fluid" />
+                          <h5 class="mt-2 mb-0">
+                            Bene Ex Facilisis Feugiat Hos Importunus Veniam
+                          </h5>
+                          <p class="mb-0">Hos neque nibh pneum praesent.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+
+                <li class="nav-item dropdown dropdown-mega-menu"> <a href="#" class="nav-link">Blog</a> </li>
+              </ul>
+            </div>
+            <!--/.navbar-collapse -->
+            <!-- Search icon -->
+            <a href="#search" class="text-white ml-auto mr-3" data-toggle="class" data-target='{"#search-overlay":{"actions":{"add":"show"}}}'> <i class="fa fa-search fa-flip-horizontal search-icon icon-1x"></i> </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ======== @Region: #highlighted ======== -->
+  <div id="highlighted" class="bg-black">
+    <!-- Image Banner: Use the the data-bg-img functionality to create a simple image banner Use spacer classes to make the banner larger with padding, allows for easy responsive changes too see: elements-ctas.htm To make the banner full height add the attributes: data-toggle="full-height" data-offset="#header" -->
+    <div class="overlay overlay-gradient overlay-op-8 text-left py-5 pt-lg-10" data-animate="fadeIn" data-bg-img="https://source.unsplash.com/hiZ7wtdX-nI/1200x450" data-url="https://wrapbootstrap.com/theme/appstrap-responsive-website-template-WB0C6D0H4?ref=tme">
+      <div data-scroll="scrollax" class="container px-3" data-animate="fadeInUp" data-animate-delay="0.4">
+        <p class="text-xs mt-0 mb-1 mt-lg-10 text-white text-uppercase font-weight-bold"><span class="text-primary">Featured</span> <span class="px-1">/</span> <i class="fa fa-clock-o"></i> June 18th 2017</p>
+        <h2 class="display-4 text-white font-weight-bold">
+          The Ultimate Fashion Guide
+        </h2>
+        <h5 class="text-white font-weight-normal">
+          What's hot, what's not this winter, and we don't mean the weather!
+        </h5>
+      </div>
+    </div>
+  </div>
+
+  <!-- ======== @Region: #content ======== -->
+  <div id="content" class="p-0 bg-white">
+    <!-- News -->
+    <div class="container py-4 py-lg-5">
+      <h3 class="text-uppercase text-letter-spacing-sm my-0 text-primary font-weight-bold">
+        Latest News
+      </h3>
+      <hr class="mt-2 mb-3" />
+      <div class="row">
+        <div class="col-12 col-lg-4 mb-4 mb-lg-1">
+          <!-- data-url can be set to the page URL of the news item -->
+          <!-- News item 1 -->
+          <div class="card mb-4 border-0 flex-ew" data-url="https://wrapbootstrap.com/theme/appstrap-responsive-website-template-WB0C6D0H4?ref=tme">
+            <img class="card-img img-fluid" data-src="https://source.unsplash.com/A5-Xr7WyktQ/540x320/" data-toggle="blazy" alt="Adipiscing Cui Diam Duis Nisl Pneum Sagaciter">
+            <div class="card-img-overlay bg-dark bg-op-5 text-white flex-valign-b">
+              <div>
+                <h5 class="card-title mb-1">
+                  Adipiscing Cui Diam Duis Nisl Pneum Sagaciter
+                </h5>
+                <p class="card-text text-uppercase text-white text-xs"><span class="text-primary">web</span> <span class="px-1">/</span> <i class="fa fa-clock-o"></i> Oct 30 2017</p>
+              </div>
+            </div>
+          </div>
+          <!-- News subitem 1 -->
+          <div class="row row-hover py-1 py-lg-3 align-items-center" data-url="https://wrapbootstrap.com/theme/appstrap-responsive-website-template-WB0C6D0H4?ref=tme">
+            <div class="col-3">
+              <img class="img-fluid" data-src="https://source.unsplash.com/5ido2uN-7V0/100x100/" data-toggle="blazy" alt="Camur Causa Decet Ea Eros Jus Quia Veniam">
+            </div>
+            <div class="col-9 pl-0">
+              <h6 class="mb-1">
+                Camur Causa Decet Ea Eros Jus Quia Veniam
+              </h6>
+              <p class="text-uppercase text-xs mb-0"><span class="text-primary">web</span> <span class="px-1">/</span> <i class="fa fa-clock-o"></i> Oct 30 2017</p>
+            </div>
+          </div>
+          <hr class="my-1" />
+          <!-- News subitem 2 -->
+          <div class="row row-hover py-1 py-lg-3 align-items-center" data-url="https://wrapbootstrap.com/theme/appstrap-responsive-website-template-WB0C6D0H4?ref=tme">
+            <div class="col-3">
+              <img class="img-fluid" data-src="https://source.unsplash.com/1UY8UuUkids/100x100/" data-toggle="blazy" alt="Abbas Autem Defui Pala Praemitto Refero Sagaciter Velit">
+            </div>
+            <div class="col-9 pl-0">
+              <h6 class="mb-1">
+                Abbas Autem Defui Pala Praemitto Refero Sagaciter Velit
+              </h6>
+              <p class="text-uppercase text-xs mb-0"><span class="text-primary">web</span> <span class="px-1">/</span> <i class="fa fa-clock-o"></i> Oct 30 2017</p>
+            </div>
+          </div>
+          <hr class="my-1" />
+          <!-- News subitem 3 -->
+          <div class="row row-hover py-1 py-lg-3 align-items-center" data-url="https://wrapbootstrap.com/theme/appstrap-responsive-website-template-WB0C6D0H4?ref=tme">
+            <div class="col-3">
+              <img class="img-fluid" data-src="https://source.unsplash.com//100x100/" data-toggle="blazy" alt="Abbas Abigo Dignissim Nutus Pneum Singularis Tum">
+            </div>
+            <div class="col-9 pl-0">
+              <h6 class="mb-1">
+                Abbas Abigo Dignissim Nutus Pneum Singularis Tum
+              </h6>
+              <p class="text-uppercase text-xs mb-0"><span class="text-primary">web</span> <span class="px-1">/</span> <i class="fa fa-clock-o"></i> Oct 30 2017</p>
+            </div>
+          </div>
+          <hr class="my-1" />
+        </div>
+        <div class="col-12 col-lg-4 mb-4 mb-lg-1">
+          <!-- data-url can be set to the page URL of the news item -->
+          <!-- News item 2 -->
+          <div class="card mb-4 border-0 flex-ew" data-url="https://wrapbootstrap.com/theme/appstrap-responsive-website-template-WB0C6D0H4?ref=tme">
+            <img class="card-img img-fluid" data-src="https://source.unsplash.com/vLQzopDRSNI/540x320/" data-toggle="blazy" alt="Abigo Facilisis Iaceo Immitto In Nostrud Probo Tego Vero">
+            <div class="card-img-overlay bg-dark bg-op-5 text-white flex-valign-b">
+              <div>
+                <h5 class="card-title mb-1">
+                  Abigo Facilisis Iaceo Immitto In Nostrud Probo Tego Vero
+                </h5>
+                <p class="card-text text-uppercase text-white text-xs"><span class="text-primary">identity</span> <span class="px-1">/</span> <i class="fa fa-clock-o"></i> Dec 10 2017</p>
+              </div>
+            </div>
+          </div>
+          <!-- News subitem 1 -->
+          <div class="row row-hover py-1 py-lg-3 align-items-center" data-url="https://wrapbootstrap.com/theme/appstrap-responsive-website-template-WB0C6D0H4?ref=tme">
+            <div class="col-3">
+              <img class="img-fluid" data-src="https://source.unsplash.com/JN0SUcTOig0/100x100/" data-toggle="blazy" alt="Abdo Blandit Duis Lucidus Mos Nobis Quae Ymo">
+            </div>
+            <div class="col-9 pl-0">
+              <h6 class="mb-1">
+                Abdo Blandit Duis Lucidus Mos Nobis Quae Ymo
+              </h6>
+              <p class="text-uppercase text-xs mb-0"><span class="text-primary">identity</span> <span class="px-1">/</span> <i class="fa fa-clock-o"></i> Dec 10 2017</p>
+            </div>
+          </div>
+          <hr class="my-1" />
+          <!-- News subitem 2 -->
+          <div class="row row-hover py-1 py-lg-3 align-items-center" data-url="https://wrapbootstrap.com/theme/appstrap-responsive-website-template-WB0C6D0H4?ref=tme">
+            <div class="col-3">
+              <img class="img-fluid" data-src="https://source.unsplash.com/Edod-s9I1lA/100x100/" data-toggle="blazy" alt="Brevitas Cogo Dignissim Odio Sagaciter Veniam Voco">
+            </div>
+            <div class="col-9 pl-0">
+              <h6 class="mb-1">
+                Brevitas Cogo Dignissim Odio Sagaciter Veniam Voco
+              </h6>
+              <p class="text-uppercase text-xs mb-0"><span class="text-primary">identity</span> <span class="px-1">/</span> <i class="fa fa-clock-o"></i> Dec 10 2017</p>
+            </div>
+          </div>
+          <hr class="my-1" />
+          <!-- News subitem 3 -->
+          <div class="row row-hover py-1 py-lg-3 align-items-center" data-url="https://wrapbootstrap.com/theme/appstrap-responsive-website-template-WB0C6D0H4?ref=tme">
+            <div class="col-3">
+              <img class="img-fluid" data-src="https://source.unsplash.com/NDZQLKiaCSI/100x100/" data-toggle="blazy" alt="Augue Dolor Iusto Nostrud Pneum Probo Ulciscor">
+            </div>
+            <div class="col-9 pl-0">
+              <h6 class="mb-1">
+                Augue Dolor Iusto Nostrud Pneum Probo Ulciscor
+              </h6>
+              <p class="text-uppercase text-xs mb-0"><span class="text-primary">identity</span> <span class="px-1">/</span> <i class="fa fa-clock-o"></i> Dec 10 2017</p>
+            </div>
+          </div>
+          <hr class="my-1" />
+        </div>
+        <div class="col-12 col-lg-4 mb-4 mb-lg-1">
+          <!-- data-url can be set to the page URL of the news item -->
+          <!-- News item 3 -->
+          <div class="card mb-4 border-0 flex-ew" data-url="https://wrapbootstrap.com/theme/appstrap-responsive-website-template-WB0C6D0H4?ref=tme">
+            <img class="card-img img-fluid" data-src="https://source.unsplash.com/T6fDN60bMWY/540x320/" data-toggle="blazy" alt="Iriure Loquor Nimis Nutus Pagus Saepius Vulputate">
+            <div class="card-img-overlay bg-dark bg-op-5 text-white flex-valign-b">
+              <div>
+                <h5 class="card-title mb-1">
+                  Iriure Loquor Nimis Nutus Pagus Saepius Vulputate
+                </h5>
+                <p class="card-text text-uppercase text-white text-xs"><span class="text-primary">graphics</span> <span class="px-1">/</span> <i class="fa fa-clock-o"></i> Dec 22 2017</p>
+              </div>
+            </div>
+          </div>
+          <!-- News subitem 1 -->
+          <div class="row row-hover py-1 py-lg-3 align-items-center" data-url="https://wrapbootstrap.com/theme/appstrap-responsive-website-template-WB0C6D0H4?ref=tme">
+            <div class="col-3">
+              <img class="img-fluid" data-src="https://source.unsplash.com/zdIU7W5G5Ts/100x100/" data-toggle="blazy" alt="Comis Dolore Eros Nibh Paratus Saluto Secundum">
+            </div>
+            <div class="col-9 pl-0">
+              <h6 class="mb-1">
+                Comis Dolore Eros Nibh Paratus Saluto Secundum
+              </h6>
+              <p class="text-uppercase text-xs mb-0"><span class="text-primary">graphics</span> <span class="px-1">/</span> <i class="fa fa-clock-o"></i> Dec 22 2017</p>
+            </div>
+          </div>
+          <hr class="my-1" />
+          <!-- News subitem 2 -->
+          <div class="row row-hover py-1 py-lg-3 align-items-center" data-url="https://wrapbootstrap.com/theme/appstrap-responsive-website-template-WB0C6D0H4?ref=tme">
+            <div class="col-3">
+              <img class="img-fluid" data-src="https://source.unsplash.com/T6fDN60bMWY/100x100/" data-toggle="blazy" alt="Capto Importunus Nunc Qui Quis Singularis Vindico">
+            </div>
+            <div class="col-9 pl-0">
+              <h6 class="mb-1">
+                Capto Importunus Nunc Qui Quis Singularis Vindico
+              </h6>
+              <p class="text-uppercase text-xs mb-0"><span class="text-primary">graphics</span> <span class="px-1">/</span> <i class="fa fa-clock-o"></i> Dec 22 2017</p>
+            </div>
+          </div>
+          <hr class="my-1" />
+          <!-- News subitem 3 -->
+          <div class="row row-hover py-1 py-lg-3 align-items-center" data-url="https://wrapbootstrap.com/theme/appstrap-responsive-website-template-WB0C6D0H4?ref=tme">
+            <div class="col-3">
+              <img class="img-fluid" data-src="https://source.unsplash.com/1UY8UuUkids/100x100/" data-toggle="blazy" alt="Iustum Ludus Odio Ratis Sagaciter Saluto Veniam Ymo">
+            </div>
+            <div class="col-9 pl-0">
+              <h6 class="mb-1">
+                Iustum Ludus Odio Ratis Sagaciter Saluto Veniam Ymo
+              </h6>
+              <p class="text-uppercase text-xs mb-0"><span class="text-primary">graphics</span> <span class="px-1">/</span> <i class="fa fa-clock-o"></i> Dec 22 2017</p>
+            </div>
+          </div>
+          <hr class="my-1" />
+        </div>
+      </div>
+    </div>
+    <!-- Feature article MDR -->
+    <div class="mb-4 mb-lg-6 py-7 text-center bg-dark overlay overlay-op-8" data-url="https://wrapbootstrap.com/theme/appstrap-responsive-website-template-WB0C6D0H4?ref=tme" data-bg-img="https://images.unsplash.com/photo-1499334844006-d49df7788949?dpr=2&auto=format&fit=crop&w=1100&h=350&q=80&cs=tinysrgb&crop=">
+      <div class="container">
+        <p class="text-xs mt-0 mb-1 text-white text-uppercase font-weight-bold"><span class="text-primary">Featured</span> <span class="px-1">/</span> <i class="fa fa-clock-o"></i> June 18th 2017</p>
+        <h2 class="text-uppercase text-letter-spacing-sm my-0 text-white font-weight-bold">
+          Best productivity tips for 2017
+        </h2>
+        <a href="#" class="btn btn-primary btn-sm mt-3 text-uppercase font-weight-bold">Read More</a>
+
+      </div>
+    </div>
+    <!-- News section & sidebar -->
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-9">
+          <!-- News sections: Lifestyle -->
+          <h4 class="text-uppercase text-letter-spacing-sm my-0 text-primary font-weight-bold">
+            Lifestyle
+          </h4>
+          <hr class="mt-2 mb-3" />
+          <div class="row">
+            <div class="col-lg-7">
+              <!-- Main item -->
+              <!-- News item 1 -->
+              <div class="card card-silent mb-lg-4 border-0 flex-ew" data-url="https://wrapbootstrap.com/theme/appstrap-responsive-website-template-WB0C6D0H4?ref=tme">
+                <img class="card-img img-fluid" data-src="https://source.unsplash.com/JN0SUcTOig0/540x320/" alt="Ludus Modo Neque Nimis Paulatim Plaga Saepius Utinam Virtus" data-toggle="blazy">
+                <div class="card-body px-0">
+                  <h4 class="card-title mb-1">
+                    Ludus Modo Neque Nimis Paulatim Plaga Saepius Utinam Virtus
+                  </h4>
+                  <p class="card-text text-uppercase text-xs"><i class="fa fa-comment-o"></i> 153 <span class="px-1">/</span> <i class="fa fa-clock-o"></i> Nov 23 2017</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-5">
+              <!-- subitems -->
+              <!-- News subitem 1 -->
+              <div class="row row-hover py-1 py-lg-3 align-items-center" data-url="https://wrapbootstrap.com/theme/appstrap-responsive-website-template-WB0C6D0H4?ref=tme">
+                <div class="col-3">
+                  <img class="img-fluid" data-toggle="blazy" data-src="https://source.unsplash.com/0606MKTpyM8/100x100/" alt="Bene Distineo Luctus Odio Probo Sagaciter Ullamcorper Zelus">
+                </div>
+                <div class="col-9 pl-0">
+                  <h6 class="mb-1">
+                    Bene Distineo Luctus Odio Probo Sagaciter Ullamcorper Zelus
+                  </h6>
+                  <p class="text-uppercase text-xs mb-0"><span class="text-primary">travel</span> <span class="px-1">/</span> <i class="fa fa-clock-o"></i> Dec 22 2017</p>
+                </div>
+              </div>
+              <hr class="my-1" />
+              <!-- News subitem 2 -->
+              <div class="row row-hover py-1 py-lg-3 align-items-center" data-url="https://wrapbootstrap.com/theme/appstrap-responsive-website-template-WB0C6D0H4?ref=tme">
+                <div class="col-3">
+                  <img class="img-fluid" data-toggle="blazy" data-src="https://source.unsplash.com/zdIU7W5G5Ts/100x100/" alt="Abbas Dolus Esca Melior Neo Nobis Qui">
+                </div>
+                <div class="col-9 pl-0">
+                  <h6 class="mb-1">
+                    Abbas Dolus Esca Melior Neo Nobis Qui
+                  </h6>
+                  <p class="text-uppercase text-xs mb-0"><span class="text-primary">travel</span> <span class="px-1">/</span> <i class="fa fa-clock-o"></i> Dec 22 2017</p>
+                </div>
+              </div>
+              <hr class="my-1" />
+              <!-- News subitem 3 -->
+              <div class="row row-hover py-1 py-lg-3 align-items-center" data-url="https://wrapbootstrap.com/theme/appstrap-responsive-website-template-WB0C6D0H4?ref=tme">
+                <div class="col-3">
+                  <img class="img-fluid" data-toggle="blazy" data-src="https://source.unsplash.com//100x100/" alt="Augue Commodo Consequat Defui Enim Jus Letalis Pecus">
+                </div>
+                <div class="col-9 pl-0">
+                  <h6 class="mb-1">
+                    Augue Commodo Consequat Defui Enim Jus Letalis Pecus
+                  </h6>
+                  <p class="text-uppercase text-xs mb-0"><span class="text-primary">travel</span> <span class="px-1">/</span> <i class="fa fa-clock-o"></i> Dec 22 2017</p>
+                </div>
+              </div>
+              <hr class="my-1" />
+            </div>
+          </div>
+          <!-- end of News sections: Lifestyle -->
+          <!-- Advert -->
+          <div class="bg-light p-3 text-sm text-center mt-3 mb-5 mx-auto" data-css='{"width":"100%","height":80}'>Ad space</div>
+          <!-- News sections: Travel-->
+          <h4 class="text-uppercase text-letter-spacing-sm my-0 text-primary font-weight-bold">
+            Travel
+          </h4>
+          <hr class="mt-2 mb-3" />
+          <div class="row">
+            <div class="col-lg-7">
+              <!-- Main item -->
+              <!-- News item 1 -->
+              <div class="card card-silent mb-lg-4 border-0 flex-ew" data-url="https://wrapbootstrap.com/theme/appstrap-responsive-website-template-WB0C6D0H4?ref=tme">
+                <img class="card-img img-fluid" data-toggle="blazy" data-src="https://source.unsplash.com/_Zua2hyvTBk/540x320/" alt="In Natu Obruo Tation Torqueo Ulciscor Ullamcorper">
+                <div class="card-body px-0">
+                  <h4 class="card-title mb-1">
+                    In Natu Obruo Tation Torqueo Ulciscor Ullamcorper
+                  </h4>
+                  <p class="card-text text-uppercase text-xs"><i class="fa fa-comment-o"></i> 57 <span class="px-1">/</span> <i class="fa fa-clock-o"></i> Dec 22 2017</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-5">
+              <!-- subitems -->
+              <!-- News subitem 1 -->
+              <div class="row row-hover py-1 py-lg-3 align-items-center" data-url="https://wrapbootstrap.com/theme/appstrap-responsive-website-template-WB0C6D0H4?ref=tme">
+                <div class="col-3">
+                  <img class="img-fluid" data-toggle="blazy" data-src="https://source.unsplash.com/A9Vbvh_dMG0/100x100/" alt="At Autem Caecus Genitus Humo Iusto Proprius Sagaciter">
+                </div>
+                <div class="col-9 pl-0">
+                  <h6 class="mb-1">
+                    At Autem Caecus Genitus Humo Iusto Proprius Sagaciter
+                  </h6>
+                  <p class="text-uppercase text-xs mb-0"><span class="text-primary">travel</span> <span class="px-1">/</span> <i class="fa fa-clock-o"></i> Dec 22 2017</p>
+                </div>
+              </div>
+              <hr class="my-1" />
+              <!-- News subitem 2 -->
+              <div class="row row-hover py-1 py-lg-3 align-items-center" data-url="https://wrapbootstrap.com/theme/appstrap-responsive-website-template-WB0C6D0H4?ref=tme">
+                <div class="col-3">
+                  <img class="img-fluid" data-toggle="blazy" data-src="https://source.unsplash.com/Edod-s9I1lA/100x100/" alt="Capto Cui Metuo Nulla Rusticus Secundum Vel">
+                </div>
+                <div class="col-9 pl-0">
+                  <h6 class="mb-1">
+                    Capto Cui Metuo Nulla Rusticus Secundum Vel
+                  </h6>
+                  <p class="text-uppercase text-xs mb-0"><span class="text-primary">travel</span> <span class="px-1">/</span> <i class="fa fa-clock-o"></i> Dec 22 2017</p>
+                </div>
+              </div>
+              <hr class="my-1" />
+              <!-- News subitem 3 -->
+              <div class="row row-hover py-1 py-lg-3 align-items-center" data-url="https://wrapbootstrap.com/theme/appstrap-responsive-website-template-WB0C6D0H4?ref=tme">
+                <div class="col-3">
+                  <img class="img-fluid" data-toggle="blazy" data-src="https://source.unsplash.com/_Zua2hyvTBk/100x100/" alt="Diam Distineo Macto Obruo Occuro Pecus Secundum Singularis">
+                </div>
+                <div class="col-9 pl-0">
+                  <h6 class="mb-1">
+                    Diam Distineo Macto Obruo Occuro Pecus Secundum Singularis
+                  </h6>
+                  <p class="text-uppercase text-xs mb-0"><span class="text-primary">travel</span> <span class="px-1">/</span> <i class="fa fa-clock-o"></i> Dec 22 2017</p>
+                </div>
+              </div>
+              <hr class="my-1" />
+            </div>
+          </div>
+          <!-- end of News sections: Lifestyle -->
+        </div>
+        <div class="col-lg-3 mb-4 mb-lg-2">
+          <!-- Sidebar -->
+          <!-- Advert -->
+          <div class="bg-light p-3 text-sm text-center mt-4" data-css='{"width":"100%","height":240}'>Ad space</div>
+          <!-- Follow us-->
+          <h5 class="text-uppercase mt-4 mb-0 font-weight-bold">
+            Follow Us
+          </h5>
+          <hr class="mt-2 mb-3" />
+          <!--@todo: replace with company social media details-->
+          <div class="nav">
+            <a href="#" class="nav-link bg-brand-twitter text-white text-center py-4 flex-ew"> <i class="fa fa-twitter icon-1x"></i> <span class="sr-only">Twitter</span> <span class="d-block text-xs">2834</span> </a>
+            <a href="#" class="nav-link bg-brand-facebook text-white text-center py-4 flex-ew"> <i class="fa fa-facebook icon-1x"></i> <span class="sr-only">Facebook</span> <span class="d-block text-xs">2148</span> </a>
+            <a href="#" class="nav-link bg-brand-linkedin text-white text-center py-4 flex-ew"> <i class="fa fa-linkedin icon-1x"></i> <span class="sr-only">Linkedin</span> <span class="d-block text-xs">678</span> </a>
+            <a href="#" class="nav-link bg-brand-google-plus text-white text-center py-4 flex-ew"> <i class="fa fa-google-plus icon-1x"></i> <span class="sr-only">Google plus</span> <span class="d-block text-xs">3931</span> </a>
+          </div>
+          <!-- Popular news widget -->
+          <h5 class="text-uppercase mt-5 mb-0 font-weight-bold">
+            Popular
+          </h5>
+          <hr class="mt-2 mb-3" />
+          <!-- News subitem 1 -->
+          <div class="row py-1 py-lg-2 align-items-start" data-url="https://wrapbootstrap.com/theme/appstrap-responsive-website-template-WB0C6D0H4?ref=tme">
+            <div class="col-3">
+              <img class="img-fluid" data-toggle="blazy" data-src="https://source.unsplash.com/JN0SUcTOig0/100x100/" alt="Aptent Erat Esca Euismod Persto Premo Quidem">
+            </div>
+            <div class="col-9 pl-0">
+              <h6 class="mb-1">
+                Aptent Erat Esca Euismod Persto Premo Quidem
+              </h6>
+              <p class="text-uppercase text-xs mb-0"><i class="fa fa-comment-o"></i> 200 <span class="px-1">/</span> <i class="fa fa-clock-o"></i> Dec 22 2017</p>
+            </div>
+          </div>
+          <hr class="my-1" />
+          <!-- News subitem 2 -->
+          <div class="row py-1 py-lg-2 align-items-start" data-url="https://wrapbootstrap.com/theme/appstrap-responsive-website-template-WB0C6D0H4?ref=tme">
+            <div class="col-3">
+              <img class="img-fluid" data-toggle="blazy" data-src="https://source.unsplash.com/T6fDN60bMWY/100x100/" alt="Eros Facilisi Loquor Luctus Neque Nisl Refero Saepius Vindico">
+            </div>
+            <div class="col-9 pl-0">
+              <h6 class="mb-1">
+                Eros Facilisi Loquor Luctus Neque Nisl Refero Saepius Vindico
+              </h6>
+              <p class="text-uppercase text-xs mb-0"><i class="fa fa-comment-o"></i> 75 <span class="px-1">/</span> <i class="fa fa-clock-o"></i> Dec 22 2017</p>
+            </div>
+          </div>
+          <hr class="my-1" />
+          <!-- News subitem 3 -->
+          <div class="row py-1 py-lg-2 align-items-start" data-url="https://wrapbootstrap.com/theme/appstrap-responsive-website-template-WB0C6D0H4?ref=tme">
+            <div class="col-3">
+              <img class="img-fluid" data-toggle="blazy" data-src="https://source.unsplash.com/5ido2uN-7V0/100x100/" alt="Blandit Camur Diam Eros Ille Jus Singularis">
+            </div>
+            <div class="col-9 pl-0">
+              <h6 class="mb-1">
+                Blandit Camur Diam Eros Ille Jus Singularis
+              </h6>
+              <p class="text-uppercase text-xs mb-0"><i class="fa fa-comment-o"></i> 118 <span class="px-1">/</span> <i class="fa fa-clock-o"></i> Dec 22 2017</p>
+            </div>
+          </div>
+          <hr class="my-1" />
+        </div>
+      </div>
+    </div>
+    <!-- Gallery -->
+    <div id="gallery" class="bg-light">
+      <div class="container py-7">
+        <h2 class="text-uppercase text-letter-spacing-sm my-0 text-primary font-weight-bold">
+          News Gallery
+        </h2>
+        <hr class="mt-2 mb-3" />
+        <div class="row no-gutters" data-toggle="magnific-popup" data-magnific-popup-settings='{"delegate": "a.gallery-trigger", "gallery":{"enabled":true}}'>
+          <div class="col-6 col-lg-3">
+            <div class="card-effect card-effect-front-to-back">
+              <img data-src="https://source.unsplash.com/baRYCsjO6z4/300x200/" data-toggle="blazy" alt="Photo 91" class="img-fluid" />
+              <div class="card-back rounded bg-dark bg-op-8 flex-valign text-center p-3">
+                <h5 class="text-white">
+                  News item 1
+                </h5>
+                <a href="https://source.unsplash.com/baRYCsjO6z4/1000x1200/" class="text-white gallery-trigger"> <i class="ion-ios-plus icon-1x"></i> </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-lg-3">
+            <div class="card-effect card-effect-front-to-back">
+              <img data-src="https://source.unsplash.com/QxkBP3A9XmU/300x200/" data-toggle="blazy" alt="Photo 92" class="img-fluid" />
+              <div class="card-back rounded bg-dark bg-op-8 flex-valign text-center p-3">
+                <h5 class="text-white">
+                  News item 2
+                </h5>
+                <a href="https://source.unsplash.com/QxkBP3A9XmU/1000x1200/" class="text-white gallery-trigger"> <i class="ion-ios-plus icon-1x"></i> </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-lg-3">
+            <div class="card-effect card-effect-front-to-back">
+              <img data-src="https://source.unsplash.com/r1XwWjI4PyE/300x200/" data-toggle="blazy" alt="Photo 93" class="img-fluid" />
+              <div class="card-back rounded bg-dark bg-op-8 flex-valign text-center p-3">
+                <h5 class="text-white">
+                  News item 3
+                </h5>
+                <a href="https://source.unsplash.com/r1XwWjI4PyE/1000x1200/" class="text-white gallery-trigger"> <i class="ion-ios-plus icon-1x"></i> </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-lg-3">
+            <div class="card-effect card-effect-front-to-back">
+              <img data-src="https://source.unsplash.com/4yzPVohNuVI/300x200/" data-toggle="blazy" alt="Photo 94" class="img-fluid" />
+              <div class="card-back rounded bg-dark bg-op-8 flex-valign text-center p-3">
+                <h5 class="text-white">
+                  News item 4
+                </h5>
+                <a href="https://source.unsplash.com/4yzPVohNuVI/1000x1200/" class="text-white gallery-trigger"> <i class="ion-ios-plus icon-1x"></i> </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-lg-3">
+            <div class="card-effect card-effect-front-to-back">
+              <img data-src="https://source.unsplash.com/87TJNWkepvI/300x200/" data-toggle="blazy" alt="Photo 95" class="img-fluid" />
+              <div class="card-back rounded bg-dark bg-op-8 flex-valign text-center p-3">
+                <h5 class="text-white">
+                  News item 5
+                </h5>
+                <a href="https://source.unsplash.com/87TJNWkepvI/1000x1200/" class="text-white gallery-trigger"> <i class="ion-ios-plus icon-1x"></i> </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-lg-3">
+            <div class="card-effect card-effect-front-to-back">
+              <img data-src="https://source.unsplash.com/CuFYW1c97w8/300x200/" data-toggle="blazy" alt="Photo 96" class="img-fluid" />
+              <div class="card-back rounded bg-dark bg-op-8 flex-valign text-center p-3">
+                <h5 class="text-white">
+                  News item 6
+                </h5>
+                <a href="https://source.unsplash.com/CuFYW1c97w8/1000x1200/" class="text-white gallery-trigger"> <i class="ion-ios-plus icon-1x"></i> </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-lg-3">
+            <div class="card-effect card-effect-front-to-back">
+              <img data-src="https://source.unsplash.com/ThJIf6Q0b2s/300x200/" data-toggle="blazy" alt="Photo 98" class="img-fluid" />
+              <div class="card-back rounded bg-dark bg-op-8 flex-valign text-center p-3">
+                <h5 class="text-white">
+                  News item 7
+                </h5>
+                <a href="https://source.unsplash.com/ThJIf6Q0b2s/1000x1200/" class="text-white gallery-trigger"> <i class="ion-ios-plus icon-1x"></i> </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-lg-3">
+            <div class="card-effect card-effect-front-to-back">
+              <img data-src="https://source.unsplash.com/xyDQNmT6vSs/300x200/" data-toggle="blazy" alt="Photo 99" class="img-fluid" />
+              <div class="card-back rounded bg-dark bg-op-8 flex-valign text-center p-3">
+                <h5 class="text-white">
+                  News item 8
+                </h5>
+                <a href="https://source.unsplash.com/xyDQNmT6vSs/1000x1200/" class="text-white gallery-trigger"> <i class="ion-ios-plus icon-1x"></i> </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Fixed footer with Breaking news bar -->
+    <div class="w-100 pos-lg-fixed pos-zindex-20 pos-b pos-r bg-dark text-white" data-animate="fadeInUp">
+      <div class="container">
+        <div class="row align-items-center no-gutters">
+          <div class="col-12 col-lg-8">
+            <!--news ticker-->
+            <div class="row align-items-stretch align-items-lg-center">
+              <div class="col-3 col-lg-auto my-0 py-1 py-lg-3 bg-primary text-center">
+                <h5 class="text-uppercase text-sm font-weight-bold my-0">
+                  Breaking
+                </h5>
+              </div>
+              <div class="col-9 owl-carousel owl-equalheight" data-toggle="owl-carousel" data-owl-carousel-settings='{"items":1, "center":true, "autoplay":true, "loop":true, "nav":false, "dots":false, "margin":5}'>
+
+                <!--News item 1-->
+                <p class="my-0 text-sm font-weight-normal">Accumsan Bene Eros Ex Paulatim Praesent Tego</p>
+
+                <!--News item 2-->
+                <p class="my-0 text-sm font-weight-normal">Antehabeo Genitus Quadrum Validus</p>
+
+                <!--News item 3-->
+                <p class="my-0 text-sm font-weight-normal">Abdo Ad Jus Neque Venio Zelus</p>
+
+                <!--News item 4-->
+                <p class="my-0 text-sm font-weight-normal">Abluo Accumsan Ea Importunus Saluto</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-4 order-1 order-lg-2 py-1 py-lg-0">
+            <!--Copyright social media icons-->
+            <div class="d-flex justify-content-center justify-content-lg-end align-items-center">
+              <p class="my-0 ml-3 text-xs order-2">Copyright 2017</p>
+              <!--@todo: replace with company social media details-->
+              <a href="#" class="btn btn-icon btn-link btn-sm text-sm text-white"> <i class="fa fa-twitter"></i> <span class="sr-only">Twitter</span>
+</a>
+              <a href="#" class="btn btn-icon btn-link btn-sm text-sm text-white"> <i class="fa fa-facebook"></i> <span class="sr-only">Facebook</span>
+</a>
+              <a href="#" class="btn btn-icon btn-link btn-sm text-sm text-white"> <i class="fa fa-linkedin"></i> <span class="sr-only">Linkedin</span>
+</a>
+              <a href="#" class="btn btn-icon btn-link btn-sm text-sm text-white"> <i class="fa fa-google-plus"></i> <span class="sr-only">Google plus</span>
+</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- #Content -->
+  <!-- Style switcher - demo only - @todo: remove in production -->
+  <div class="colour-switcher">
+    <a href="#" class="colour-switcher-toggle" data-toggle="class" data-target=".colour-switcher"> <i class="fa fa-paint-brush"></i> </a>
+    <h5 class="text-uppercase my-0">
+      Theme Colours
+    </h5>
+    <hr />
+    <div class="theme-colours"> <a href="#green" class="green active" data-toggle="tooltip" data-placement="right" data-original-title="Green (Default)">Green</a> <a href="#red" class="red" data-toggle="tooltip" data-placement="right" data-original-title="Red">Red</a> <a href="#blue"
+        class="blue" data-toggle="tooltip" data-placement="right" data-original-title="Blue">Blue</a> <a href="#purple" class="purple" data-toggle="tooltip" data-placement="right" data-original-title="Purple">Purple</a> <a href="#pink" class="pink" data-toggle="tooltip"
+        data-placement="right" data-original-title="Pink">Pink</a> <a href="#orange" class="orange" data-toggle="tooltip" data-placement="right" data-original-title="Orange">Orange</a> <a href="#lime" class="lime" data-toggle="tooltip" data-placement="right"
+        data-original-title="Lime">Lime</a> <a href="#blue-dark" class="blue-dark" data-toggle="tooltip" data-placement="right" data-original-title="Blue-dark">Blue-dark</a> <a href="#red-dark" class="red-dark" data-toggle="tooltip" data-placement="right"
+        data-original-title="Red-dark">Red-dark</a> <a href="#brown" class="brown" data-toggle="tooltip" data-placement="right" data-original-title="Brown">Brown</a> <a href="#cyan-dark" class="cyan-dark" data-toggle="tooltip" data-placement="right" data-original-title="Cyan-dark">Cyan-dark</a>      <a href="#yellow" class="yellow" data-toggle="tooltip" data-placement="right" data-original-title="Yellow">Yellow</a> <a href="#slate" class="slate" data-toggle="tooltip" data-placement="right" data-original-title="Slate">Slate</a> <a href="#olive"
+        class="olive" data-toggle="tooltip" data-placement="right" data-original-title="Olive">Olive</a> <a href="#teal" class="teal" data-toggle="tooltip" data-placement="right" data-original-title="Teal">Teal</a> <a href="#green-bright" class="green-bright"
+        data-toggle="tooltip" data-placement="right" data-original-title="Green-bright">Green-bright</a> </div>
+    <hr />
+    <p class="text-xs text-muted">Cookies are NOT enabled so colour selection is not persistent.</p>
+    <p class="text-xs my-0"><a href="index.html">Back to main homepage</a></p>
+    <p class="text-xs my-0"><a href="intro.html">Back to intro page</a></p>
+  </div>
+  <!--Hidden elements - excluded from jPanel Menu on mobile-->
+  <div class="hidden-elements jpanel-menu-exclude"></div>
+
+
+  <!--jQuery 3.2.1 via CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <!-- Popper 1.12.3 via CDN, needed for Bootstrap Tooltips & Popovers -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"></script>
+
+  <!-- Bootstrap v4.0.0-beta.3 JS via CDN -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js"></script>
+
+
+  <!-- JS plugins required on all pages NOTE: Additional non-required plugins are loaded ondemand as of AppStrap 2.5 To disable this and load plugin assets manually simple add data-plugins-manual=true to the body tag -->
+
+  <!--Custom scripts & AppStrap API integration -->
+  <script src="assets/js/custom-script.js"></script>
+  <!--AppStrap scripts mainly used to trigger libraries/plugins -->
+  <script src="assets/js/script.min.js"></script>
+</body>
+
+</html>

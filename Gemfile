@@ -1,64 +1,86 @@
 source 'https://rubygems.org'
 
-gem 'rails', '4.2.10'
-gem 'rails-api'
-gem 'activesupport'
-gem 'activerecord-postgis-adapter'
-gem 'pg', '~> 0.18'
+# Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
+gem 'rails', '~> 5.2'
+# Use Puma as the app server
+gem 'puma', '~> 3.0'
+# Use SCSS for stylesheets
+gem 'sass-rails'
+# Use Uglifier as compressor for JavaScript assets
+gem 'uglifier'
+# Use CoffeeScript for .coffee assets and views
+gem 'coffee-rails'
+gem 'bootstrap-sass'
 
-#gem 'activerecord-jdbcpostgresql-adapter', :platform => 'jruby'
+gem 'font-awesome-rails'
+gem 'mongo'
+# Use jquery as the JavaScript library
+gem 'jquery-rails'
+# Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
+gem 'turbolinks'
+
+gem 'active_skin'
+gem 'summernote-rails'
+
+gem 'redis', '~> 3.2'
+gem 'sidekiq'
+
 gem 'devise'
-gem 'rabl'
-#gem 'ruby-debug19', :require => 'ruby-debug'
-#gem 'activerecord-postgres-hstore'
-group :test, :development do
-  gem 'rspec-rails'
-  gem 'factory_girl_rails', :require => false
-  gem 'guard'
-  # gem 'rails_helper'
-end
-gem 'twitter'
-gem 'bunny'
-gem 'redis'
-gem 'devise-token_authenticatable'
-gem 'paper_trail'
-gem 'geocoder'
-gem 'foursquare2'
-gem 'gmaps4rails'
-gem "friendly_id"
-gem 'pg_search'
-gem 'textacular'
+gem 'devise_invitable'
+
+gem 'rest-client'
+
 gem 'omniauth'
 gem 'omniauth-facebook'
-gem 'omniauth-twitter'
 gem 'omniauth-google-oauth2'
-gem 'oauth2'
-gem 'sidekiq'
-gem 'protected_attributes'
-gem 'puma'
-gem 'nokogiri'
-#gem 'jruby-openssl', :platform => 'jruby'
-gem 'tzinfo-data'
-gem 'httparty'
-gem 'instagram'
-gem 'figaro'
-gem 'redis-rails'
-gem 'google_plus'
-gem 'nested-hstore'
-gem 'youtube_it'
-gem 'clean_pagination'
-gem 'surus'
-gem 'oj'
-gem "koala"
-gem 'fb_graph'
-#gem 'logstash-logger'
-gem 'mechanize'
-gem 'chronic'
-require 'rbconfig'
-# if RbConfig::CONFIG['target_os'] =~ /mswin|mingw|cygwin/i
-#   gem 'wdm', '>= 0.1.0'
-# end
+gem 'omniauth-microsoft-live', github: '9peso/omniauth-microsoft-live'
+gem 'omniauth-twitter'
 
-#gem 'capsule_crm'
-#gem 'annotate', :git => 'git://github.com/ctran/annotate_models.git'
-#gem 'apipie-rails'
+group :development do
+  gem 'capistrano', '~> 3.6'
+  gem 'capistrano-rails', '~> 1.2'
+  gem 'letter_opener'
+  gem 'pry-rails'
+
+  ## For Code Improvement
+  gem 'rails_best_practices'
+  gem 'rubocop', require: false
+  gem 'rubycritic', require: false
+end
+
+group :production do
+  gem 'rails_12factor'
+end
+
+gem 'activeadmin', github: 'activeadmin'
+gem 'inherited_resources', github: 'activeadmin/inherited_resources'
+
+# refer https://github.com/activeadmin/activeadmin/issues/3926
+gem 'execjs'
+
+# Windows does not include zoneinfo files, so bundle the tzinfo-data gem
+# gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+gem 'breadcrumbs_on_rails'
+gem 'decent_exposure', '3.0.0'
+gem 'local_time'
+gem 'sidekiq-cron', '~> 0.4.0'
+
+## For API
+gem 'active_model_serializers'
+gem 'nested_form'
+gem 'jquery-validation-rails'
+
+## File Upload
+gem 'mini_magick'
+gem 'carrierwave'
+gem 'pg'
+gem 'httparty'
+gem 'pg_search'
+gem 'merit'
+gem 'facebook-messenger'
+
+# Exception Notification - To get email while generating any error on server.
+gem 'exception_notification'
+gem 'friendly_id', '~> 5.1.0' # Note: You MUST use 5.0.0 or greater for Rails 4.0+
+gem 'carrierwave-video'
+gem 'rabl'

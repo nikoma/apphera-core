@@ -1,0 +1,39 @@
+// -------------------------------------------
+// Theme utilities & helper class
+// -------------------------------------------
+
+// Border helpers
+// -------------------------------------------
+.border-white {
+  border: 1px solid transparent;
+  border-color: white !important;   
+}
+
+
+// Border colours
+// -------------------------------------------
+$as-colours: $as-theme-colours;
+@if $as-theme-colours-extended-options == true {
+  // Include social brands
+  $as-colours: $as-theme-colours-extended;
+}
+
+@each $name, $value in $as-colours {
+  .border-#{$name} {
+    border: 1px solid transparent;
+    border-color: $value !important;
+  }
+}
+
+.border-w-2 {
+  border-width: 2px;
+}
+.border-w-3 {
+  border-width: 3px;
+}
+.border-w-4 {
+  border-width: 4px;
+}
+.border-w-5 {
+  border-width: 5px;
+}

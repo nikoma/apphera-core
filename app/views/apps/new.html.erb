@@ -1,0 +1,22 @@
+<div class="row wrapper border-bottom white-bg page-heading">
+  <div class="col-sm-4">
+    <h2>Add New Apps</h2>
+    <%= render_breadcrumbs %>
+  </div>
+  <div class="col-sm-8 text-right">
+    <p class='add-record text-right'>
+      <%= link_to apps_url, data: {disable_with: "<i class='fa fa-spinner fa-spin'></i> Loading...".html_safe} do %>
+        <i class="fa fa-list"></i> List Apps
+      <% end %>
+    </p>
+  </div>
+</div>
+<div class="wrapper wrapper-content animated fadeInRight">
+  <div class="row">
+    <div class="col-lg-8">
+      <%= render 'form' %>
+    </div>
+    
+    <div class="clearfix"></div>
+  </div>
+</div>

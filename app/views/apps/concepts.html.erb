@@ -1,0 +1,56 @@
+<div class="row wrapper border-bottom white-bg page-heading">
+  <div class="col-sm-4">
+    <h2>List Concepts</h2>
+    <%= render_breadcrumbs %>
+  </div>
+  <div class="col-sm-8 text-right">
+  </div>
+</div>
+<div class="wrapper wrapper-content animated fadeInRight">
+  <div class='row'>
+    <div class="ibox float-e-margins">
+      <div class="ibox-title">
+        <h5>List Concepts</h5>
+      </div>
+      <div class="ibox-content">
+        <% if @concepts.present? %>
+          <table class="table table-hover">
+
+            <thead>
+              <tr>
+                <th>Title</th>
+                <th>Body</th>
+                <th>Language</th>
+                <th>App</th>
+                <th>Points</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <% @concepts.each do |concept| %>
+                <tr>
+                  <td><%= concept.title %></td>
+                  <td class="col-sm-6"><%= concept.body %></td>
+                  <td><%= concept.try(:language).try(:country) %></td>
+                  <td><%= concept.try(:app).try(:name) %></td>
+                  <td>
+                    <% if concept.answers.present? %>
+                      <span class='badge badge-success'><%= concept.answers.where(user_id: current_user.id).sum(:points) %></span>
+                    <% else %>
+                      <%= link_to 'Quiz', quiz_concept_path(concept), class: 'btn btn-xs btn-default' %>
+                    <% end %>
+                    <%#= link_to concept, class: 'btn btn-xs btn-default' do %>
+                      <!-- <i class="fa fa-eye"></i> -->
+                    <%# end %>
+                  </td>
+                </tr>
+              <% end %>
+            </tbody>
+          </table>
+        <% else %>
+          <p>No Concepts Found </p>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

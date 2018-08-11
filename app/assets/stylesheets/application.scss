@@ -1,0 +1,50 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require bootstrap.css
+ *= require main/font-awesome.css
+ *= require main/animate.css
+ *= require main/style.css
+ *= require show-hint
+ *= require codemirror/codemirror
+ *= require codemirror/ambience
+ *= require font-awesome
+ *= require emoji
+ *= require bootstrap-social
+ *= require main/toastr.min.css
+ */
+
+@import "summernote";
+
+.add-record{
+	font-size: 15px;
+	margin: 37px 0 0px;
+}
+.error{
+	color: red;
+}
+.alert-alert {
+  background-color: #f2dede;
+  border-color: #eed3d7;
+  color: #b94a48;
+  text-align: left;
+}
+.newloginColumns{
+	max-width: 800px;
+  margin: 0 auto;
+  padding: 20px 20px 0px 20px;
+}
+.padding12{
+  padding: 12px;
+}
+.require_icn{
+	color: red;
+}

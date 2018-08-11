@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Music Homepage | AppStrap Bootstrap Theme by Themelize.me</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- @todo: fill with your company info or remove -->
+  <meta name="description" content="">
+  <meta name="author" content="Themelize.me">
+
+  <!-- Bootstrap v4.0.0-beta.3 CSS via CDN -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css">
+
+  <!-- Plugins required on all pages NOTE: Additional non-required plugins are loaded ondemand as of AppStrap 2.5 -->
+
+  <!-- Theme style -->
+  <link href="assets/css/theme-style.min.css" rel="stylesheet">
+
+  <!-- Red colour scheme -->
+  <link href="assets/css/colour-red.min.css" rel="stylesheet">
+
+  <!--Your custom colour override-->
+  <link href="#" id="colour-scheme" rel="stylesheet">
+
+  <!-- Your custom override -->
+  <link href="assets/css/custom-style.css" rel="stylesheet">
+
+
+
+  <!-- Optional: ICON SETS -->
+  <!-- Iconset: Font Awesome 4.7.0 via CDN -->
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <!-- Iconset: flag icons - http://lipis.github.io/flag-icon-css/ -->
+  <link href="assets/plugins/flag-icon-css/css/flag-icon.min.css" rel="stylesheet">
+  <!-- Iconset: ionicons - http://ionicons.com/ -->
+  <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet">
+  <!-- Iconset: Linearicons - https://linearicons.com/free -->
+  <link href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css" rel="stylesheet">
+
+
+  <!-- Le fav and touch icons - @todo: fill with your icons or remove, try https://realfavicongenerator.net -->
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicons/favicon-16x16.png">
+  <link rel="manifest" href="assets/favicons/manifest.json">
+  <link rel="shortcut icon" href="assets/favicons/favicon.ico">
+  <meta name="msapplication-config" content="assets/favicons/browserconfig.xml">
+  <meta name="theme-color" content="#ffffff">
+
+
+  <!-- Google fonts -->
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Rambla:400,700' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Calligraffitti' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,700' rel='stylesheet' type='text/css'>
+
+  <!--Plugin: Retina.js (high def image replacement) - @see: http://retinajs.com/-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/retina.js/1.3.0/retina.min.js"></script>
+</head>
+<!-- ======== @Region: body ======== -->
+
+<!-- ======== @Region: body ======== -->
+
+<body class="header-ontop page-index-music navbar-layout-default" data-colour-scheme="red">
+
+  <!-- @plugin: page loading indicator, delete to remove loader -->
+  <div class="page-loader" data-toggle="page-loader"></div>
+
+  <a id="#top" href="#content" class="sr-only">Skip to content</a>
+
+  <!-- ======== @Region: #header ======== -->
+  <div id="header">
+
+    <div data-toggle="sticky">
+
+      <!--Header & Branding region-->
+      <div class="header py-2 border-light border-op-2 header-transparent header-dark op-8 bg-dark bg-op-2 sticky-bg-op-8 sticky-op-9 sticky-border-op-1 sticky-bg-black sticky-py-lg-0">
+        <!-- all direct children of the .header-inner element will be vertically aligned with each other you can override all the behaviours using the flexbox utilities (flexbox.htm) All elements with .header-brand & .header-block-flex wrappers will automatically be aligned inline & vertically using flexbox, this can be overridden using the flexbox utilities (flexbox.htm) Use .header-block to stack elements within on small screen & "float" on larger screens use .order-first or/and .order-last classes to make an element show first or last within .header-inner or .headr-block elements -->
+        <div class="header-inner container">
+          <!--branding/logo -->
+          <div class="header-brand">
+            <a class="header-brand-text text-light" href="index.html" title="Home">
+              <h2 class="h3 my-0 font-weight-normal">
+                <span class="font-weight-bold">App</span>Strap
+              </h2>
+            </a>
+            <div class="header-divider d-none d-lg-block"></div>
+            <div class="header-slogan d-none d-lg-block text-uppercase text-light op-8">Music</div>
+          </div>
+          <!-- other header content -->
+          <div class="header-block order-12">
+
+            <!-- mobile collapse menu button - data-toggle="collapse" = default BS menu - data-toggle="jpanel-menu" = jPanel Menu - data-toggle="overlay" = Overlay Menu -->
+            <a href="#top" class="btn btn-icon btn-white order-12 d-lg-none" data-toggle="jpanel-menu" data-target=".navbar-main" data-direction="right"> <i class="fa fa-bars"></i> </a>
+          </div>
+
+          <div class="navbar navbar-expand-md navbar-static-top">
+            <!--everything within this div is collapsed on mobile-->
+            <div class="navbar-main collapse navbar-dark navbar-border-bottom-effect">
+              <!--main navigation-->
+              <ul class="nav navbar-nav container">
+
+                <li class="nav-item">
+                  <a href="#top" data-toggle="scroll-link" data-dimiss="jpanel-menu" class="nav-link"> <span class="nav-link-inner" data-title="Home">Home</span> </a>
+                </li>
+                <li class="nav-item">
+                  <a href="#concerts" data-toggle="scroll-link" data-dimiss="jpanel-menu" class="nav-link"> <span class="nav-link-inner" data-title="Concerts">Concerts</span> </a>
+                </li>
+                <li class="nav-item">
+                  <a href="#album" data-toggle="scroll-link" data-dimiss="jpanel-menu" class="nav-link"> <span class="nav-link-inner" data-title="Album">Album</span> </a>
+                </li>
+                <li class="nav-item">
+                  <a href="#bio" data-toggle="scroll-link" data-dimiss="jpanel-menu" class="nav-link"> <span class="nav-link-inner" data-title="Bio">Bio</span> </a>
+                </li>
+                <li class="nav-item">
+                  <a href="#video" data-toggle="scroll-link" data-dimiss="jpanel-menu" class="nav-link"> <span class="nav-link-inner" data-title="Video">Video</span> </a>
+                </li>
+                <li class="nav-item">
+                  <a href="#book" data-toggle="scroll-link" data-dimiss="jpanel-menu" class="nav-link"> <span class="nav-link-inner" data-title="Book">Book</span> </a>
+                </li>
+              </ul>
+            </div>
+            <!--/.navbar-collapse -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ======== @Region: #highlighted ======== -->
+  <div id="highlighted" class="bg-black pos-md-relative">
+    <!-- Image Banner: Use the the data-bg-img functionality to create a simple image banner Use spacer classes to make the banner larger with padding, allows for easy responsive changes too see: elements-ctas.htm To make the banner full height add the attributes: data-toggle="full-height" data-offset="#header" -->
+    <div class="overlay overlay-op-6 text-left" data-animate="fadeIn" data-toggle="backstretch" data-backstretch-target="self" data-backstretch-overlay=false data-backstretch-imgs="assets/img/index-music/banner-1.jpg,assets/img/index-music/banner-1.jpg,assets/img/index-event/banner-3.jpg">
+      <div data-toggle="full-height" class="py-lg-6 pt-lg-8 text-center text-white d-flex justify-content-center flex-column">
+        <h2 class="display-3 text-uppercase" data-animate="fadeInDown" data-animate-delay="0.6">
+          Music is my Escape
+        </h2>
+        <h4 class="font-weight-bold">
+          One good thing about music, when it hits you, you feel no pain.
+        </h4>
+        <p> Bob Marley </p>
+      </div>
+    </div>
+  </div>
+  <!--END highlighted-->
+
+  <!-- ======== @Region: #content ======== -->
+  <div id="content" class="p-0 bg-white">
+    <!-- concerts -->
+    <div id="concerts" class="py-4 py-lg-7">
+      <div class="container text-center">
+        <h2 class="h1 font-weight-bold mb-0 text-uppercase">
+          Next concerts
+        </h2>
+        <p class="text-uppercase"> get ready for the live show </p>
+        <div class="mt-5">
+          <div class="row d-md-flex align-items-md-center font-weight-bold">
+            <div class="col-md-3 p-md-2 d-flex align-items-center justify-content-md-center">
+              <span class="display-4 no-resize font-weight-bold mr-1">16</span>
+              <span>
+                  Feb 
+                  <br />
+                  2017
+                </span>
+            </div>
+            <div class="col-md-4 p-md-2 text-left"> The Observatory, Santa Ana, CA, US </div>
+            <div class="col-md-1 p-md-2 text-left"> 10pm </div>
+            <div class="col-md-4 py-2 p-md-2 text-md-center"> <a href="#" class="btn btn-rounded btn-primary btn-xlg d-block d-md-inline-block px-md-5 text-sm text-white text-uppercase"> Buy Tickets </a> </div>
+          </div>
+          <hr>
+          <div class="row d-md-flex align-items-md-center font-weight-bold op-4">
+            <div class="col-md-3 p-md-2 d-flex align-items-center justify-content-md-center">
+              <span class="display-4 no-resize font-weight-bold mr-1">17</span>
+              <span>
+                  Feb 
+                  <br />
+                  2017
+                </span>
+            </div>
+            <div class="col-md-4 p-md-2 text-left"> Chandarpur, California USA </div>
+            <div class="col-md-1 p-md-2 text-left"> 8pm </div>
+            <div class="col-md-4 py-2 p-md-2 text-md-center"> <span class="text-uppercase">Sold out</span> </div>
+          </div>
+          <hr>
+          <div class="row d-md-flex align-items-md-center font-weight-bold">
+            <div class="col-md-3 p-md-2 d-flex align-items-center justify-content-md-center">
+              <span class="display-4 no-resize font-weight-bold mr-1">18</span>
+              <span>
+                  Feb 
+                  <br />
+                  2017
+                </span>
+            </div>
+            <div class="col-md-4 p-md-2 text-left"> The Roxy Theatre, Los Angeles, CA, US </div>
+            <div class="col-md-1 p-md-2 text-left"> 7pm </div>
+            <div class="col-md-4 py-2 p-md-2 text-md-center"> <a href="#" class="btn btn-rounded btn-primary btn-xlg d-block d-md-inline-block px-md-5 text-sm text-white text-uppercase"> Buy Tickets </a> </div>
+          </div>
+          <hr>
+          <div class="row d-md-flex align-items-md-center font-weight-bold">
+            <div class="col-md-3 p-md-2 d-flex align-items-center justify-content-md-center">
+              <span class="display-4 no-resize font-weight-bold mr-1">18</span>
+              <span>
+                  Feb 
+                  <br />
+                  2017
+                </span>
+            </div>
+            <div class="col-md-4 p-md-2 text-left"> The Observatory, Santa Ana, CA </div>
+            <div class="col-md-1 p-md-2 text-left"> 9pm </div>
+            <div class="col-md-4 py-2 p-md-2 text-md-center"> <a href="#" class="btn btn-rounded btn-primary btn-xlg d-block d-md-inline-block px-md-5 text-sm text-white text-uppercase"> Buy Tickets </a> </div>
+          </div>
+          <hr>
+          <div class="row d-md-flex align-items-md-center font-weight-bold">
+            <div class="col-md-3 p-md-2 d-flex align-items-center justify-content-md-center">
+              <span class="display-4 no-resize font-weight-bold mr-1">18</span>
+              <span>
+                  Feb 
+                  <br />
+                  2017
+                </span>
+            </div>
+            <div class="col-md-4 p-md-2 text-left"> Rocktown society, WA, USA </div>
+            <div class="col-md-1 p-md-2 text-left"> 9pm </div>
+            <div class="col-md-4 py-2 p-md-2 text-md-center"> <a href="#" class="btn btn-rounded btn-primary btn-xlg d-block d-md-inline-block px-md-5 text-sm text-white text-uppercase"> Buy Tickets </a> </div>
+          </div>
+          <hr>
+        </div>
+      </div>
+    </div>
+    <div id="album" class="py-4 py-lg-7 bg-black text-white">
+      <div class="container">
+        <h2 class="h1 font-weight-bold mb-0 text-uppercase">
+          New Album Release
+        </h2>
+        <p class="text-uppercase">Listen and Download our new Album</p>
+        <div class="row">
+          <div class="col-md-5 mt-5">
+            <img class="w-100" src="assets/img/index-music/new-album.jpg" alt="">
+          </div>
+          <div class="col-md-7 mt-5">
+            <h2 class="h1 font-weight-light mb-2">
+              GOLAN
+              <br> The ocean of sparks
+            </h2>
+            <p class="op-6 text-sm"> <span class="mr-md-5 mr-2">Released: 26 Nov 2017</span> <span>#pop #chillout #goodvibes</span> </p>
+            <div class="mt-4">
+              <a href="" class="hover-scaleIn-parent text-decoration-none d-flex text-hover-red justify-content-between align-items-center text-white mb-1">
+                <div class="w-50 overlay-persist">
+                  <span class="track-counter mr-2"> 1 </span>
+                  <span class="pos-absolute pos-t pos-l hover-scaleIn"> <i class="ion-ios-play-outline icon-x"></i> </span> Laminaria (Free Download)
+                </div>
+                <div>2:45 </div>
+                <div class="d-flex"> <i class="ion-social-youtube icon-1x mx-2"></i> <i class="ion-android-cloud icon-1x mx-2"></i> </div>
+              </a>
+              <a href="" class="hover-scaleIn-parent text-decoration-none d-flex text-hover-red justify-content-between align-items-center text-white mb-1">
+                <div class="w-50 overlay-persist">
+                  <span class="track-counter mr-2"> 2 </span>
+                  <span class="pos-absolute pos-t pos-l hover-scaleIn"> <i class="ion-ios-play-outline icon-x"></i> </span> Lonely Nights EP
+                </div>
+                <div>2:45 </div>
+                <div class="d-flex"> <i class="ion-social-youtube icon-1x mx-2"></i> <i class="ion-android-cloud icon-1x mx-2"></i> </div>
+              </a>
+              <a href="" class="hover-scaleIn-parent text-decoration-none d-flex text-hover-red justify-content-between align-items-center text-white mb-1">
+                <div class="w-50 overlay-persist">
+                  <span class="track-counter mr-2"> 3 </span>
+                  <span class="pos-absolute pos-t pos-l hover-scaleIn"> <i class="ion-ios-play-outline icon-x"></i> </span> Promises (ViLLAGE Remix)
+                </div>
+                <div>3:21</div>
+                <div class="d-flex"> <i class="ion-social-youtube icon-1x mx-2"></i> <i class="ion-android-cloud icon-1x mx-2"></i> </div>
+              </a>
+              <a href="" class="hover-scaleIn-parent text-decoration-none d-flex text-hover-red justify-content-between align-items-center text-white mb-1">
+                <div class="w-50 overlay-persist">
+                  <span class="track-counter mr-2"> 4 </span>
+                  <span class="pos-absolute pos-t pos-l hover-scaleIn"> <i class="ion-ios-play-outline icon-x"></i> </span> Abel (Original Track)
+                </div>
+                <div>4:22</div>
+                <div class="d-flex"> <i class="ion-social-youtube icon-1x mx-2"></i> <i class="ion-android-cloud icon-1x mx-2"></i> </div>
+              </a>
+              <a href="" class="hover-scaleIn-parent text-decoration-none d-flex text-hover-red justify-content-between align-items-center text-white mb-1">
+                <div class="w-50 overlay-persist">
+                  <span class="track-counter mr-2"> 4 </span>
+                  <span class="pos-absolute pos-t pos-l hover-scaleIn"> <i class="ion-ios-play-outline icon-x"></i> </span> 5 Stop Story
+                </div>
+                <div>1:55</div>
+                <div class="d-flex"> <i class="ion-social-youtube icon-1x mx-2"></i> <i class="ion-android-cloud icon-1x mx-2"></i> </div>
+              </a>
+              <a href="" class="hover-scaleIn-parent text-decoration-none d-flex text-hover-red justify-content-between align-items-center text-white mb-1">
+                <div class="w-50 overlay-persist">
+                  <span class="track-counter mr-2"> 6 </span>
+                  <span class="pos-absolute pos-t pos-l hover-scaleIn"> <i class="ion-ios-play-outline icon-x"></i> </span> Surprise Of My Party
+                </div>
+                <div>4:44</div>
+                <div class="d-flex"> <i class="ion-social-youtube icon-1x mx-2"></i> <i class="ion-android-cloud icon-1x mx-2"></i> </div>
+              </a>
+              <a href="" class="hover-scaleIn-parent text-decoration-none d-flex text-hover-red justify-content-between align-items-center text-white mb-1">
+                <div class="w-50 overlay-persist">
+                  <span class="track-counter mr-2"> 7 </span>
+                  <span class="pos-absolute pos-t pos-l hover-scaleIn"> <i class="ion-ios-play-outline icon-x"></i> </span> Give Her Shadow
+                </div>
+                <div>2:18</div>
+                <div class="d-flex"> <i class="ion-social-youtube icon-1x mx-2"></i> <i class="ion-android-cloud icon-1x mx-2"></i> </div>
+              </a>
+            </div>
+            <div class="mt-sm-6">
+              <h4>
+                Listen on:
+              </h4>
+              <a href="" class="btn btn-rounded btn-primary text-white px-5 mr-2 mt-2 text-uppercase d-block d-md-inline-block">Itunes</a> <a href="" class="btn btn-rounded btn-primary text-white px-5 mr-2 mt-2 text-uppercase d-block d-md-inline-block">Amazon</a>              <a href="" class="btn btn-rounded btn-primary text-white px-5 mr-2 mt-2 text-uppercase d-block d-md-inline-block">Spotify</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="bio" class="py-4 py-lg-7">
+      <div class="container">
+        <h2 class="h1 font-weight-bold mb-0 text-uppercase">
+          Biography
+        </h2>
+        <p class="text-uppercase">Know us better</p>
+        <div class="row">
+          <div class="col-md-6 my-4">
+            <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+              irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
+          </div>
+          <div class="col-md-6 my-4">
+            <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+              irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-5 d-none d-lg-flex">
+            <div class="w-100 overlay overlay-gradient p-3 d-flex align-items-end" data-bg-img="assets/img/index-music/bio-1.jpg">
+              <h3 class="text-white text-uppercase w-100 display-3 mb-0">
+                We <i class="fa fa-heart"></i> Music
+              </h3>
+            </div>
+          </div>
+          <div class="col-md-7">
+            <div class="row">
+              <div class="col-md-6 mb-4">
+                <div class="card-effect card-effect-front-to-back">
+                  <img class="w-100" src="assets/img/index-music/bio-2.jpg" alt="">
+                  <div class="card-back rounded bg-dark bg-op-8 text-white flex-valign text-center p-3">
+                    <div>
+                      <h3>
+                        Karl
+                      </h3>
+                      <p> Guitar </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 mb-4">
+                <div class="card-effect card-effect-front-to-back">
+                  <img class="w-100" src="assets/img/index-music/bio-3.jpg" alt="">
+                  <div class="card-back rounded bg-dark bg-op-8 text-white flex-valign text-center p-3">
+                    <div>
+                      <h3>
+                        Joshua
+                      </h3>
+                      <p> Bass & Voice </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 mb-4 mb-md-0">
+                <div class="card-effect card-effect-front-to-back">
+                  <img class="w-100" src="assets/img/index-music/bio-4.jpg" alt="">
+                  <div class="card-back rounded bg-dark bg-op-8 text-white flex-valign text-center p-3">
+                    <div>
+                      <h3>
+                        Davey
+                      </h3>
+                      <p> Voice </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="card-effect card-effect-front-to-back">
+                  <img class="w-100" src="assets/img/index-music/bio-5.jpg" alt="">
+                  <div class="card-back rounded bg-dark bg-op-8 text-white flex-valign text-center p-3">
+                    <div>
+                      <h3>
+                        Rees
+                      </h3>
+                      <p> Drums </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Video -->
+    <div id="video" class="py-4 py-lg-7" data-bg-img="assets/img/index-music/feature-bg.jpg">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 text-center text-uppercase">
+            <h1>
+              Featured Video
+            </h1>
+            <p> Play and Enjoy </p>
+          </div>
+          <div class="col-lg-8 m-auto text-center my-4" data-toggle="magnific-popup" data-magnific-popup-settings='{"delegate": "a.video-link", "type": "iframe"}'>
+            <div class="card-effect card-effect-front-to-back m-auto">
+              <img class="w-100" src="assets/img/index-music/feature-video.jpg" alt="">
+              <a href="https://www.youtube.com/watch?v=UtAQdwMKMmU" class="video-link">
+                <div class="card-back rounded bg-dark bg-op-8 text-white flex-valign text-center p-5">
+                  <span class="pos-absolute pos-t pos-l mt-3 ml-3 text-white">Nevertheless 2:33</span>
+                  <div> <i class="ion-ios-play-outline icon-5x"></i> </div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="col-12 text-center mt-4"> <a href="" class="btn btn-outline-dark btn-lg btn-rounded border-w-2 py-3 px-5 text-sm font-weight-bold">VIEW ALL VIDEOS</a> </div>
+        </div>
+      </div>
+    </div>
+    <div id="book" class="py-4 py-lg-6">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 text-center">
+            <h2 class="h1">
+              BE SOCIAL
+            </h2>
+            <ul class="list-inline">
+              <li class="list-inline-item p-md-3">
+                <a href=""> <i class="fa fa-soundcloud icon-2x"></i> </a>
+              </li>
+              <li class="list-inline-item p-md-3">
+                <a href=""> <i class="fa fa-youtube icon-2x"></i> </a>
+              </li>
+              <li class="list-inline-item p-md-3">
+                <a href=""> <i class="fa fa-spotify icon-2x"></i> </a>
+              </li>
+              <li class="list-inline-item p-md-3">
+                <a href=""> <i class="fa fa-twitter icon-2x"></i> </a>
+              </li>
+              <li class="list-inline-item p-md-3">
+                <a href=""> <i class="fa fa-facebook-official icon-2x"></i> </a>
+              </li>
+            </ul>
+            <p class="font-weight-bold text-dark">Enquires to: <a class="text-dark" href="mailto:info@artistname.com">info@artistname.com</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- #Content -->
+
+  <!-- ======== @Region: #footer ======== -->
+  <footer id="footer" class="py-3 py-4">
+    <div class="container">
+      <div class="row">
+        <!--@todo: replace with company copyright details-->
+        <div class="col-md-4 d-md-flex justify-content-start align-items-center flex-row">
+          <p class="mb-0 text-sm">Copyright 2018 &copy; AppStrap</p>
+        </div>
+        <div class="col-md-4 d-md-flex justify-content-center align-items-center flex-row">
+          <!--@todo: replace with company social media details-->
+          <a href="#" class="text-white op-7 p-2"><i class="fa fa-twitter"></i></a>
+          <a href="#" class="text-white op-7 p-2"><i class="fa fa-facebook"></i></a>
+          <a href="#" class="text-white op-7 p-2"><i class="fa fa-linkedin"></i></a>
+          <a href="#" class="text-white op-7 p-2"><i class="fa fa-google-plus"></i></a>
+          <a href="#top" class="text-white op-7 p-2" title="Back to top"><i class="fa fa-chevron-up"></i></a>
+        </div>
+        <div class="col-md-4 d-md-flex justify-content-end align-items-center flex-row">
+          <ul class="list-inline footer-links mb-0 text-sm float-md-right">
+            <li class="list-inline-item"><a href="#">Terms</a></li>
+            <li class="list-inline-item"><a href="#">Privacy</a></li>
+            <li class="list-inline-item"><a href="#">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- Style switcher - demo only - @todo: remove in production -->
+  <div class="colour-switcher">
+    <a href="#" class="colour-switcher-toggle" data-toggle="class" data-target=".colour-switcher"> <i class="fa fa-paint-brush"></i> </a>
+    <h5 class="text-uppercase my-0">
+      Theme Colours
+    </h5>
+    <hr />
+    <div class="theme-colours"> <a href="#green" class="green active" data-toggle="tooltip" data-placement="right" data-original-title="Green (Default)">Green</a> <a href="#red" class="red" data-toggle="tooltip" data-placement="right" data-original-title="Red">Red</a> <a href="#blue"
+        class="blue" data-toggle="tooltip" data-placement="right" data-original-title="Blue">Blue</a> <a href="#purple" class="purple" data-toggle="tooltip" data-placement="right" data-original-title="Purple">Purple</a> <a href="#pink" class="pink" data-toggle="tooltip"
+        data-placement="right" data-original-title="Pink">Pink</a> <a href="#orange" class="orange" data-toggle="tooltip" data-placement="right" data-original-title="Orange">Orange</a> <a href="#lime" class="lime" data-toggle="tooltip" data-placement="right"
+        data-original-title="Lime">Lime</a> <a href="#blue-dark" class="blue-dark" data-toggle="tooltip" data-placement="right" data-original-title="Blue-dark">Blue-dark</a> <a href="#red-dark" class="red-dark" data-toggle="tooltip" data-placement="right"
+        data-original-title="Red-dark">Red-dark</a> <a href="#brown" class="brown" data-toggle="tooltip" data-placement="right" data-original-title="Brown">Brown</a> <a href="#cyan-dark" class="cyan-dark" data-toggle="tooltip" data-placement="right" data-original-title="Cyan-dark">Cyan-dark</a>      <a href="#yellow" class="yellow" data-toggle="tooltip" data-placement="right" data-original-title="Yellow">Yellow</a> <a href="#slate" class="slate" data-toggle="tooltip" data-placement="right" data-original-title="Slate">Slate</a> <a href="#olive"
+        class="olive" data-toggle="tooltip" data-placement="right" data-original-title="Olive">Olive</a> <a href="#teal" class="teal" data-toggle="tooltip" data-placement="right" data-original-title="Teal">Teal</a> <a href="#green-bright" class="green-bright"
+        data-toggle="tooltip" data-placement="right" data-original-title="Green-bright">Green-bright</a> </div>
+    <hr />
+    <p class="text-xs text-muted">Cookies are NOT enabled so colour selection is not persistent.</p>
+    <p class="text-xs my-0"><a href="index.html">Back to main homepage</a></p>
+    <p class="text-xs my-0"><a href="intro.html">Back to intro page</a></p>
+  </div>
+  <!--Hidden elements - excluded from jPanel Menu on mobile-->
+  <div class="hidden-elements jpanel-menu-exclude"></div>
+
+
+  <!--jQuery 3.2.1 via CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <!-- Popper 1.12.3 via CDN, needed for Bootstrap Tooltips & Popovers -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"></script>
+
+  <!-- Bootstrap v4.0.0-beta.3 JS via CDN -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js"></script>
+
+
+  <!-- JS plugins required on all pages NOTE: Additional non-required plugins are loaded ondemand as of AppStrap 2.5 To disable this and load plugin assets manually simple add data-plugins-manual=true to the body tag -->
+
+  <!--Custom scripts & AppStrap API integration -->
+  <script src="assets/js/custom-script.js"></script>
+  <!--AppStrap scripts mainly used to trigger libraries/plugins -->
+  <script src="assets/js/script.min.js"></script>
+</body>
+
+</html>

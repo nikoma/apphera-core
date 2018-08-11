@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>EQBotics</title>
+    <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag    'frontpage', media: 'all' %>
+    <%= stylesheet_link_tag params[:controller] if ::Rails.application.assets.find_asset("#{params[:controller]}.css") rescue nil %>
+    <%= javascript_include_tag 'frontpage' %>
+  </head>
+  <body id="page-top" class="landing-page no-skin-config <%= controller.controller_name %>">
+    <div id="wrapper" class="<%= params[:controller] %>.<%= params[:action] %>">
+      <%= yield %>
+    </div>
+    <%= javascript_include_tag params[:controller] if ::Rails.application.assets.find_asset("#{params[:controller]}.js") rescue nil %>
+    <%= yield :javascript %>
+  </body>
+</html>

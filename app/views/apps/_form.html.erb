@@ -1,0 +1,103 @@
+<div class="ibox float-e-margins">
+  <div class="ibox-title">
+    <h5>Form</h5>
+  </div>
+  <div class="ibox-content">
+    <%= form_with(model: app, local: true, html: {class: 'form-horizontal'}) do |f| %>
+      <div class="form-group">
+        <%= f.label :name, 'Name&nbsp;<span class="require_icn">*</span>'.html_safe, class: 'control-label col-lg-2' %>
+        <div class="col-lg-10">
+          <%= f.text_field :name, class: 'form-control', placeholder: 'Name' %>
+          <div class='error'><%= display_error_messages app.errors, [:name] %></div>
+        </div>
+      </div>
+      <div class="form-group">
+        <%= f.label :title, class: 'control-label col-lg-2' %>
+        <div class="col-lg-10">
+          <%= f.text_field :title, class: 'form-control', placeholder: 'Become the most awesome something' %>
+          <div class='error'><%= display_error_messages app.errors, [:title] %></div>
+        </div>
+      </div>
+      <div class="form-group">
+        <%= f.label :category_id, class: 'col-lg-2 control-label' %>
+        <div class="col-lg-10">
+          <%= f.select :category_id, options_for_select(Category.order(:id).map{|t| [t.name, t.id]}, f.object.category_id), {include_blank: true}, {class: 'form-control'}  %>
+          <div class='error'><%= display_error_messages app.errors, [:category, :category_id] %></div>
+        </div>
+      </div>
+      
+      <div class="form-group">
+        <%= f.label :app_id, class: 'control-label col-lg-2' %>
+        <div class="col-lg-10">
+          <%= f.text_field :app_id, class: 'form-control', placeholder: 'App Id' %>
+          <div class='error'><%= display_error_messages app.errors, [:app_id] %></div>
+        </div>
+      </div>
+      <div class="form-group">
+        <%= f.label :description, class: 'control-label col-lg-2' %>
+        <div class="col-lg-10">
+          <%= f.text_field :description, class: 'form-control', placeholder: 'Description' %>
+          <div class='error'><%= display_error_messages app.errors, [:description] %></div>
+        </div>
+      </div>
+      <div class="form-group">
+        <%= f.label :is_hawk, class: 'control-label col-lg-2' %>
+        <div class="col-lg-10">
+          <%= f.check_box :is_hawk, class: 'form-control', placeholder: 'is_hawk' %>
+          <div class='error'><%= display_error_messages app.errors, [:is_hawk] %></div>
+        </div>
+      </div>
+      <div class="form-group">
+        <%= f.label :coming_soon, class: 'control-label col-lg-2' %>
+        <div class="col-lg-10">
+          <%= f.check_box :coming_soon, class: 'form-control', placeholder: 'is_hawk' %>
+          <div class='error'><%= display_error_messages app.errors, [:coming_soon] %></div>
+        </div>
+      </div>
+      <div class="form-group">
+        <%= f.label :commercial, class: 'control-label col-lg-2' %>
+        <div class="col-lg-10">
+          <%= f.check_box :commercial, class: 'form-control', placeholder: 'is_hawk' %>
+          <div class='error'><%= display_error_messages app.errors, [:commercial] %></div>
+        </div>
+      </div>
+      <div class="form-group">
+        <%= f.label :public, class: 'control-label col-lg-2' %>
+        <div class="col-lg-10">
+          <%= f.check_box :public, class: 'form-control', placeholder: 'public' %>
+          <div class='error'><%= display_error_messages app.errors, [:public] %></div>
+        </div>
+      </div>
+     
+      <div class="form-group">
+        <%= f.label :image, class: 'col-lg-2 control-label' %>
+        <div class="col-lg-10">
+          <%= f.file_field :image, class: 'form-control', accept: 'image/png,image/gif,image/jpeg' %>
+          <div class='error'><%= display_error_messages app.errors, [:image] %></div>
+          <% if !f.object.new_record? %>
+            <% if app.image? %>
+              <br>
+              <%= link_to f.object.image.url, target: '_blank' do %>
+                <%= image_tag(app.image.url, class: 'img-responsive img-thumbnail') %>
+              <% end %>
+            <% end %>
+          <% end %>
+        </div>
+      </div>
+      <div class="form-group">
+        <%= f.label :password, class: 'control-label col-lg-2' %>
+        <div class="col-lg-10">
+          <%= f.text_field :password, class: 'form-control', placeholder: 'Password' %>
+          <div class='error'><%= display_error_messages app.errors, [:password] %></div>
+        </div>
+      </div>
+      <div class="hr-line-dashed"></div>
+      <div class="form-group">
+        <div class="col-lg-offset-2 col-lg-10">
+          <%= f.submit class: 'btn btn-sm btn-white', data: {disable_with: 'Please Wait...'} %>
+          <%= link_to 'Cancel', apps_url, class: 'btn btn-sm btn-danger', data: {disable_with: 'Please Wait...'} %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Header Collapse Menu | AppStrap Bootstrap Theme by Themelize.me</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- @todo: fill with your company info or remove -->
+  <meta name="description" content="">
+  <meta name="author" content="Themelize.me">
+
+  <!-- Bootstrap v4.0.0-beta.3 CSS via CDN -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css">
+
+  <!-- Plugins required on all pages NOTE: Additional non-required plugins are loaded ondemand as of AppStrap 2.5 -->
+
+  <!-- Theme style -->
+  <link href="assets/css/theme-style.min.css" rel="stylesheet">
+
+  <!--Your custom colour override-->
+  <link href="#" id="colour-scheme" rel="stylesheet">
+
+  <!-- Your custom override -->
+  <link href="assets/css/custom-style.css" rel="stylesheet">
+
+
+
+  <!-- Optional: ICON SETS -->
+  <!-- Iconset: Font Awesome 4.7.0 via CDN -->
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <!-- Iconset: flag icons - http://lipis.github.io/flag-icon-css/ -->
+  <link href="assets/plugins/flag-icon-css/css/flag-icon.min.css" rel="stylesheet">
+  <!-- Iconset: ionicons - http://ionicons.com/ -->
+  <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet">
+  <!-- Iconset: Linearicons - https://linearicons.com/free -->
+  <link href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css" rel="stylesheet">
+
+
+  <!-- Le fav and touch icons - @todo: fill with your icons or remove, try https://realfavicongenerator.net -->
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicons/favicon-16x16.png">
+  <link rel="manifest" href="assets/favicons/manifest.json">
+  <link rel="shortcut icon" href="assets/favicons/favicon.ico">
+  <meta name="msapplication-config" content="assets/favicons/browserconfig.xml">
+  <meta name="theme-color" content="#ffffff">
+
+
+  <!-- Google fonts -->
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Rambla:400,700' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Calligraffitti' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,700' rel='stylesheet' type='text/css'>
+
+  <!--Plugin: Retina.js (high def image replacement) - @see: http://retinajs.com/-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/retina.js/1.3.0/retina.min.js"></script>
+</head>
+
+<!-- ======== @Region: body ======== -->
+
+<body class="page header-navbar-after-content page-header-collapse-menu navbar-layout-default">
+
+  <!-- @plugin: page loading indicator, delete to remove loader -->
+  <div class="page-loader" data-toggle="page-loader"></div>
+
+  <a href="#content" id="top" class="sr-only">Skip to content</a>
+
+  <!-- ======== @Region: #header ======== -->
+  <div id="header">
+
+    <!--Hidden Header Region-->
+    <div class="header-hidden collapse">
+      <div class="header-hidden-inner container">
+        <div class="row">
+          <div class="col-sm-6">
+            <h3>
+              About Us
+            </h3>
+            <p>Making the web a prettier place one template at a time! We make beautiful, quality, responsive Drupal & web templates!</p>
+            <a href="about.html" class="btn btn-sm btn-primary">Find out more</a>
+          </div>
+          <div class="col-sm-6">
+            <!--@todo: replace with company contact details-->
+            <h3>
+              Contact Us
+            </h3>
+            <address>
+                <p>
+                  <abbr title="Phone"><i class="fa fa-phone"></i></abbr>
+                  019223 8092344
+                </p>
+                <p>
+                  <abbr title="Email"><i class="fa fa-envelope"></i></abbr>
+                  info@themelize.me
+                </p>
+                <p>
+                  <abbr title="Address"><i class="fa fa-home"></i></abbr>
+                  Sunshine House, Sunville. SUN12 8LU.
+                </p>
+              </address>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--Header upper region-->
+    <div class="header-upper">
+      <!--Show/hide trigger for #hidden-header -->
+      <div id="header-hidden-link">
+        <a href="#" title="Click me you'll get a surprise" class="show-hide" data-toggle="show-hide" data-target=".header-hidden"><i></i>Open</a>
+      </div>
+      <!-- all direct children of the .header-inner element will be vertically aligned with each other you can override all the behaviours using the flexbox utilities (flexbox.htm) All elements with .header-brand & .header-block-flex wrappers will automatically be aligned inline & vertically using flexbox, this can be overridden using the flexbox utilities (flexbox.htm) Use .header-block to stack elements within on small screen & "float" on larger screens use .order-first or/and .order-last classes to make an element show first or last within .header-inner or .headr-block elements -->
+      <div class="header-inner container">
+        <!--user menu-->
+        <div class="header-block-flex order-1 mr-auto">
+          <nav class="nav nav-sm header-block-flex">
+            <a class="nav-link d-md-none" href="login.html"><i class="fa fa-user"></i></a>
+            <a class="nav-link text-xs text-uppercase d-none d-md-block" href="#signup-modal" data-toggle="modal">Sign Up</a> <a class="nav-link text-xs text-uppercase d-none d-md-block" href="#login-modal" data-toggle="modal">Login</a>
+          </nav>
+          <div class="header-divider header-divider-sm"></div>
+          <!--language menu-->
+          <div class="dropdown dropdowns-no-carets">
+            <a href="#en" class="nav-link text-xs p-1 dropdown-toggle" data-toggle="dropdown"><i class="flag-icon flag-icon-gb"></i></a>
+            <div class="dropdown-menu dropdown-menu-mini dropdown-menu-primary">
+              <a href="#es" class="dropdown-item lang-es"><i class="flag-icon flag-icon-es"></i> Spanish</a>
+              <a href="#pt" class="dropdown-item lang-pt"><i class="flag-icon flag-icon-pt"></i> Portguese</a>
+              <a href="#cn" class="dropdown-item lang-cn"><i class="flag-icon flag-icon-cn"></i> Chinese</a>
+              <a href="#se" class="dropdown-item lang-se"><i class="flag-icon flag-icon-se"></i> Swedish</a>
+            </div>
+          </div>
+        </div>
+        <!--social media icons-->
+        <div class="nav nav-icons header-block order-12">
+          <!--@todo: replace with company social media details-->
+          <a href="#" class="nav-link"> <i class="fa fa-twitter-square icon-1x"></i> <span class="sr-only">Twitter</span> </a>
+          <a href="#" class="nav-link"> <i class="fa fa-facebook-square icon-1x"></i> <span class="sr-only">Facebook</span> </a>
+          <a href="#" class="nav-link"> <i class="fa fa-linkedin-square icon-1x"></i> <span class="sr-only">Linkedin</span> </a>
+          <a href="#" class="nav-link"> <i class="fa fa-google-plus-square icon-1x"></i> <span class="sr-only">Google plus</span> </a>
+        </div>
+      </div>
+    </div>
+    <div data-toggle="sticky">
+
+      <!--Header search region - hidden by default -->
+      <div class="header-search collapse" id="search">
+        <form class="search-form container">
+          <input type="text" name="search" class="form-control search" value="" placeholder="Search">
+          <button type="button" class="btn btn-link"><span class="sr-only">Search </span><i class="fa fa-search fa-flip-horizontal search-icon"></i></button>
+          <button type="button" class="btn btn-link close-btn" data-toggle="search-form-close"><span class="sr-only">Close </span><i class="fa fa-times search-icon"></i></button>
+        </form>
+      </div>
+
+      <!--Header & Branding region-->
+      <div class="header">
+        <!-- all direct children of the .header-inner element will be vertically aligned with each other you can override all the behaviours using the flexbox utilities (flexbox.htm) All elements with .header-brand & .header-block-flex wrappers will automatically be aligned inline & vertically using flexbox, this can be overridden using the flexbox utilities (flexbox.htm) Use .header-block to stack elements within on small screen & "float" on larger screens use .order-first or/and .order-last classes to make an element show first or last within .header-inner or .headr-block elements -->
+        <div class="header-inner container">
+          <!--branding/logo -->
+          <div class="header-brand">
+            <a class="header-brand-text" href="index.html" title="Home">
+              <h1 class="h2">
+                <span class="header-brand-text-alt">App</span>Strap<span class="header-brand-text-alt">.</span>
+              </h1>
+            </a>
+            <div class="header-divider d-none d-lg-block"></div>
+            <div class="header-slogan d-none d-lg-block">Bootstrap 4 Theme</div>
+          </div>
+          <!-- other header content -->
+          <div class="header-block order-12">
+
+            <!--Search trigger -->
+            <a href="#search" class="btn btn-lg btn-outline-primary btn-icon header-btn float-right order-11" data-toggle="search-form" data-target=".header-search"><i class="fa fa-search fa-flip-horizontal search-icon"></i></a>
+
+            <!-- mobile collapse menu button - data-toggle="collapse" = default BS menu - data-toggle="jpanel-menu" = jPanel Menu - data-toggle="overlay" = Overlay Menu -->
+            <a href="#top" class="btn btn-lg btn-outline-primary header-btn float-right" data-toggle="collapse" data-target=".header-navbar-after" data-direction="right"> Menu<i class="fa fa-bars pl-1"></i> </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Post-header content -->
+      <!-- Uses Bootstrap collapse functionality to show menu -->
+      <!-- .header-navbar-after content -->
+      <div class="header-navbar-after collapse bg-primary">
+        <div class="container py-3">
+          <h4 class="text-white">
+            Site Menu
+          </h4>
+          <div class="row">
+            <div class="col-md-3"> <a href="elements-alerts.html" class="d-block text-white">Alerts</a> <a href="elements-animation.html" class="d-block text-white">Animations</a> <a href="elements-badges.html" class="d-block text-white">Badges</a> <a href="elements-button-groups.html"
+                class="d-block text-white">Button Groups</a> <a href="elements-buttons.html" class="d-block text-white">Buttons</a> <a href="elements-cards.html" class="d-block text-white">Cards</a> <a href="elements-carousels.html" class="d-block text-white">Carousels</a>              <a href="elements-collapse.html" class="d-block text-white">Collapse / Accordions</a> <a href="elements-colour-utils.html" class="d-block text-white">Colours Utils</a> </div>
+            <div class="col-md-3"> <a href="elements-counters.html" class="d-block text-white">Counters</a> <a href="elements-ctas.html" class="d-block text-white">Call To Action Blocks</a> <a href="elements-dividers.html" class="d-block text-white">Dividers</a> <a href="elements-dropdowns.html"
+                class="d-block text-white">Dropdowns</a> <a href="elements-forms.html" class="d-block text-white">Forms</a> <a href="elements-forms-input-groups.html" class="d-block text-white">Forms Input Groups</a> <a href="elements-icons.html" class="d-block text-white">Icons</a>              <a href="elements-icons-flags.html" class="d-block text-white">Icons: Flags</a> <a href="elements-icons-fontawesome.html" class="d-block text-white">Icons: Font Awesome</a> </div>
+            <div class="col-md-3"> <a href="elements-icons-ionicons.html" class="d-block text-white">Icons: Ionicons</a> <a href="elements-icons-linearicons.html" class="d-block text-white">Icons: Linearicons</a> <a href="elements-list-groups.html" class="d-block text-white">List Groups</a>              <a href="elements-modals.html" class="d-block text-white">Modals</a> <a href="elements-modals-onload.html" class="d-block text-white">Modals Onload</a> <a href="elements-navs.html" class="d-block text-white">Navs</a> <a href="elements-navs-tabbable.html"
+                class="d-block text-white">Tabbable Navs</a> <a href="elements-overlays.html" class="d-block text-white">Overlays</a> <a href="elements-progressbars.html" class="d-block text-white">Progress Bars</a> </div>
+            <div class="col-md-3"> <a href="elements-social-media.html" class="d-block text-white">Social Media Branding</a> <a href="elements-spacers.html" class="d-block text-white">Spacers</a> <a href="elements-tables.html" class="d-block text-white">Tables</a> <a href="elements-tooltips-popovers.html"
+                class="d-block text-white">Tooltips & Popovers</a> <a href="elements-type-effect.html" class="d-block text-white">Type Effect</a> <a href="elements-typography.html" class="d-block text-white">Typography</a> <a href="elements-utils.html"
+                class="d-block text-white">Utilities</a> <a href="elements-video-blocks.html" class="d-block text-white">Video Blocks</a> </div>
+          </div>
+        </div>
+      </div>
+      <!-- End of .header-navbar-after content -->
+    </div>
+  </div>
+
+  <!-- ======== @Region: #content ======== -->
+  <div id="content">
+    <div class="container" id="about">
+      <div class="row">
+        <!-- sidebar -->
+        <div class="col-md-3">
+
+          <!-- Sections Menu-->
+          <div class="nav nav-section-menu">
+            <span class="nav-header">Header Options</span>
+            <a href="header-bottom.html" class="nav-link first">Header Bottom <i class="fa fa-angle-right"></i></a>
+            <a href="header-collapse-menu.html" class="nav-link active">Header Collapse Menu <i class="fa fa-angle-right"></i></a>
+            <a href="header-collapse-menu-responsive.html" class="nav-link">Header Responsive Collapse Menu <i class="fa fa-angle-right"></i></a>
+            <a href="header-compact.html" class="nav-link">Header Compact <i class="fa fa-angle-right"></i></a>
+            <a href="header-dark.html" class="nav-link">Header Dark <i class="fa fa-angle-right"></i></a>
+            <a href="header-elements.html" class="nav-link">Header Elements <i class="fa fa-angle-right"></i></a>
+            <a href="header-fullwidth.html" class="nav-link">Header Full Width <i class="fa fa-angle-right"></i></a>
+            <a href="header-nav-fullheight.html" class="nav-link">Header Nav Full Height <i class="fa fa-angle-right"></i></a>
+            <a href="header-nav-left.html" class="nav-link">Header Nav Left <i class="fa fa-angle-right"></i></a>
+            <a href="header-navbar-below.html" class="nav-link">Header Navbar Below <i class="fa fa-angle-right"></i></a>
+            <a href="header-offcanvas.html" class="nav-link">Header Off Canvas <i class="fa fa-angle-right"></i></a>
+            <a href="header-overlay-menu.html" class="nav-link">Header Overlay Menu <i class="fa fa-angle-right"></i></a>
+            <a href="header-overlay-menu-responsive.html" class="nav-link">Header Responsive Overlay Menu <i class="fa fa-angle-right"></i></a>
+            <a href="header-primary.html" class="nav-link">Header Primary <i class="fa fa-angle-right"></i></a>
+            <a href="header-translucent.html" class="nav-link">Header Translucent <i class="fa fa-angle-right"></i></a>
+            <a href="header-translucent-dark.html" class="nav-link">Header Translucent Dark <i class="fa fa-angle-right"></i></a>
+            <a href="header-translucent-primary.html" class="nav-link">Header Translucent Primary <i class="fa fa-angle-right"></i></a>
+            <a href="header-transparent.html" class="nav-link">Header Transparent <i class="fa fa-angle-right"></i></a>
+            <a href="header-transparent-dark.html" class="nav-link">Header Transparent Dark <i class="fa fa-angle-right"></i></a>
+            <a href="header-transparent-primary.html" class="nav-link">Header Transparent Primary <i class="fa fa-angle-right"></i></a>
+          </div>
+        </div>
+        <!--main content-->
+        <div class="col-md-9">
+          <h2 class="title-divider">
+            <span>Collapse Main Menu</span>
+            <small>Hide your main menu in a collapible wrapper.</small>
+          </h2>
+
+          <p>To add a persistent collapse main menu regardless of the screenwidth simply set/remove the following classes on the following elements:</p>
+          <ul class="list-group mb-1">
+            <li class="list-group-item">
+              <span class="badge badge-primary mr-2">1</span>
+              <code>.navbar-toggler</code> : remove any
+              <code>.d-none</code> classes so it shows at all screenwidths.
+            </li>
+            <li class="list-group-item">
+              <span class="badge badge-primary mr-2">2</span> Also ensure
+              <code>.navbar-toggler</code> has the following attributes set:
+              <code>data-toggle="collapse"</code> &
+              <code>data-target=".header-navbar-after"</code> .
+            </li>
+            <li class="list-group-item">
+              <span class="badge badge-primary mr-2">3</span> Within the
+              <code>.header</code> add a wrapper with the "target" class set above and add your menu content within that div:
+              <code>&lt;div class=&quot;header-navbar-after bg-primary collapse&quot;&gt;Menu content here.....&lt;/div&gt;</code> .
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ======== @Region: #content-below ======== -->
+  <div id="content-below">
+    <!-- Awesome features call to action -->
+    <div class="bg-primary text-white py-4">
+      <div class="container">
+        <div class="row text-center text-lg-left">
+          <div class="col-12 col-lg-7 py-2">
+            <h2 class="text-uppercase font-weight-bold mt-0 mb-2">
+              <span class="text-shadow">Awesome</span> <span class="text-primary-darkend">Features</span>
+            </h2>
+            <h5 class="text-faded">
+              99.9% Uptime <span class="text-primary-darkend font-weight-bold px-lg-1">/</span> Free Upgrades <span class="text-primary-darkend font-weight-bold px-lg-1">/</span> Fully Responsive <span class="text-primary-darkend font-weight-bold px-lg-1">/</span>              Bug Free
+            </h5>
+          </div>
+          <div class="col-12 col-lg-5 py-2 text-lg-right">
+            <a href="https://wrapbootstrap.com/theme/appstrap-responsive-website-template-WB0C6D0H4?ref=tme" class="btn btn-lg btn-primary btn-invert btn-rounded py-3 px-4">Get AppStrap Today<i class="fa fa-arrow-right ml-2"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ======== @Region: #footer ======== -->
+  <footer id="footer" class="p-0">
+    <div class="container pt-6 pb-5">
+      <div class="row">
+        <div class="col-md-4">
+          <!--@todo: replace with company contact details-->
+          <h4 class="text-uppercase text-white">
+            Contact Us
+          </h4>
+          <address>
+              <ul class="list-unstyled">
+                <li>
+                  <abbr title="Phone"><i class="fa fa-phone fa-fw"></i></abbr>
+                  019223 8092344
+                </li>
+                <li>
+                  <abbr title="Email"><i class="fa fa-envelope fa-fw"></i></abbr>
+                  info@appstraptheme.com
+                </li>
+                <li>
+                  <abbr title="Address"><i class="fa fa-home fa-fw"></i></abbr>
+                  Sunshine House, Sunville. SUN12 8LU.
+                </li>
+              </ul>
+            </address>
+        </div>
+
+        <div class="col-md-4">
+          <h4 class="text-uppercase text-white">
+            About Us
+          </h4>
+          <p>Making the web a prettier place one template at a time! We make beautiful, quality, responsive Drupal & web templates!</p>
+        </div>
+
+        <div class="col-md-4">
+          <h4 class="text-uppercase text-white">
+            Newsletter
+          </h4>
+          <p>Stay up to date with our latest news and product releases by signing up to our newsletter.</p>
+          <!--@todo: replace with mailchimp code-->
+          <form>
+            <div class="input-group">
+              <label class="sr-only" for="email-field">Email</label>
+              <input type="text" class="form-control" id="email-field" placeholder="Email">
+              <span class="input-group-btn">
+                  <button class="btn btn-primary" type="button">Go!</button>
+                </span>
+            </div>
+          </form>
+        </div>
+      </div>
+
+    </div>
+    <hr class="my-0 hr-blank op-2" />
+    <!--@todo: replace with company copyright details-->
+    <div class="bg-inverse-dark text-sm py-3">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <p class="mb-0">Site template by <a href="appstraptheme.com" class="footer-link">AppStrap</a> | Copyright 2018 &copy; AppStrap</p>
+          </div>
+          <div class="col-md-6">
+            <ul class="list-inline footer-links float-md-right mb-0">
+              <li class="list-inline-item"><a href="#">Terms</a></li>
+              <li class="list-inline-item"><a href="#">Privacy</a></li>
+              <li class="list-inline-item"><a href="#">Contact Us</a></li>
+            </ul>
+          </div>
+        </div>
+        <a href="#top" class="btn btn-icon btn-dark pos-fixed pos-b pos-r mr-3 mb-3 scroll-state-hidden" title="Back to top" data-scroll="scroll-state"><i class="fa fa-chevron-up"></i></a>
+      </div>
+    </div>
+  </footer>
+  <!-- Style switcher - demo only - @todo: remove in production -->
+  <div class="colour-switcher">
+    <a href="#" class="colour-switcher-toggle" data-toggle="class" data-target=".colour-switcher"> <i class="fa fa-paint-brush"></i> </a>
+    <h5 class="text-uppercase my-0">
+      Theme Colours
+    </h5>
+    <hr />
+    <div class="theme-colours"> <a href="#green" class="green active" data-toggle="tooltip" data-placement="right" data-original-title="Green (Default)">Green</a> <a href="#red" class="red" data-toggle="tooltip" data-placement="right" data-original-title="Red">Red</a> <a href="#blue"
+        class="blue" data-toggle="tooltip" data-placement="right" data-original-title="Blue">Blue</a> <a href="#purple" class="purple" data-toggle="tooltip" data-placement="right" data-original-title="Purple">Purple</a> <a href="#pink" class="pink" data-toggle="tooltip"
+        data-placement="right" data-original-title="Pink">Pink</a> <a href="#orange" class="orange" data-toggle="tooltip" data-placement="right" data-original-title="Orange">Orange</a> <a href="#lime" class="lime" data-toggle="tooltip" data-placement="right"
+        data-original-title="Lime">Lime</a> <a href="#blue-dark" class="blue-dark" data-toggle="tooltip" data-placement="right" data-original-title="Blue-dark">Blue-dark</a> <a href="#red-dark" class="red-dark" data-toggle="tooltip" data-placement="right"
+        data-original-title="Red-dark">Red-dark</a> <a href="#brown" class="brown" data-toggle="tooltip" data-placement="right" data-original-title="Brown">Brown</a> <a href="#cyan-dark" class="cyan-dark" data-toggle="tooltip" data-placement="right" data-original-title="Cyan-dark">Cyan-dark</a>      <a href="#yellow" class="yellow" data-toggle="tooltip" data-placement="right" data-original-title="Yellow">Yellow</a> <a href="#slate" class="slate" data-toggle="tooltip" data-placement="right" data-original-title="Slate">Slate</a> <a href="#olive"
+        class="olive" data-toggle="tooltip" data-placement="right" data-original-title="Olive">Olive</a> <a href="#teal" class="teal" data-toggle="tooltip" data-placement="right" data-original-title="Teal">Teal</a> <a href="#green-bright" class="green-bright"
+        data-toggle="tooltip" data-placement="right" data-original-title="Green-bright">Green-bright</a> </div>
+    <hr />
+    <p class="text-xs text-muted">Cookies are NOT enabled so colour selection is not persistent.</p>
+    <p class="text-xs my-0"><a href="index.html">Back to main homepage</a></p>
+    <p class="text-xs my-0"><a href="intro.html">Back to intro page</a></p>
+  </div>
+  <!--Hidden elements - excluded from jPanel Menu on mobile-->
+  <div class="hidden-elements jpanel-menu-exclude">
+    <!--@modal - signup modal-->
+    <div class="modal fade" id="signup-modal" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">
+              Sign Up
+            </h4>
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          </div>
+          <div class="modal-body">
+            <form action="signup.html">
+              <div class="form-group">
+                <h5>
+                  Price Plan
+                </h5>
+                <select class="form-control">
+                    <option>Basic</option>
+                    <option>Pro</option>
+                    <option>Pro +</option>
+                  </select>
+              </div>
+              <hr />
+
+              <h5>
+                Account Information
+              </h5>
+              <div class="form-group">
+                <label class="sr-only" for="signup-first-name">First Name</label>
+                <input type="text" class="form-control" id="signup-first-name" placeholder="First name">
+              </div>
+              <div class="form-group">
+                <label class="sr-only" for="signup-last-name">Last Name</label>
+                <input type="text" class="form-control" id="signup-last-name" placeholder="Last name">
+              </div>
+              <div class="form-group">
+                <label class="sr-only" for="signup-username">Userame</label>
+                <input type="text" class="form-control" id="signup-username" placeholder="Username">
+              </div>
+              <div class="form-group">
+                <label class="sr-only" for="signup-email">Email address</label>
+                <input type="email" class="form-control" id="signup-email" placeholder="Email address">
+              </div>
+              <div class="form-group">
+                <label class="sr-only" for="signup-password">Password</label>
+                <input type="password" class="form-control" id="signup-password" placeholder="Password">
+              </div>
+              <div class="form-check">
+                <label class="form-check-label">
+                    <input type="checkbox" value="term" class="form-check-input">
+                    I agree with the Terms and Conditions. 
+                  </label>
+              </div>
+              <hr />
+              <button class="btn btn-primary" type="submit">Sign up</button>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <small>Already signed up? <a href="login.html">Login here</a>.</small>
+          </div>
+        </div>
+        <!-- /.modal-content -->
+      </div>
+      <!-- /.modal-dialog -->
+    </div>
+    <!-- /.modal -->
+
+    <!--@modal - login modal-->
+    <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">
+              Login
+            </h4>
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          </div>
+          <div class="modal-body">
+            <form action="login.html">
+              <div class="form-group">
+                <label class="sr-only" for="login-email">Email</label>
+                <input type="email" id="login-email" class="form-control email" placeholder="Email">
+              </div>
+              <div class="form-group">
+                <label class="sr-only" for="login-password">Password</label>
+                <input type="password" id="login-password" class="form-control password" placeholder="Password">
+              </div>
+              <button type="button" class="btn btn-primary">Login</button>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <small>Not a member? <a href="#" class="signup">Sign up now!</a></small>
+            <br />
+            <small><a href="#">Forgotten password?</a></small>
+          </div>
+        </div>
+        <!-- /.modal-content -->
+      </div>
+      <!-- /.modal-dialog -->
+    </div>
+    <!-- /.modal -->
+  </div>
+
+
+  <!--jQuery 3.2.1 via CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <!-- Popper 1.12.3 via CDN, needed for Bootstrap Tooltips & Popovers -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"></script>
+
+  <!-- Bootstrap v4.0.0-beta.3 JS via CDN -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js"></script>
+
+
+  <!-- JS plugins required on all pages NOTE: Additional non-required plugins are loaded ondemand as of AppStrap 2.5 To disable this and load plugin assets manually simple add data-plugins-manual=true to the body tag -->
+
+  <!--Custom scripts & AppStrap API integration -->
+  <script src="assets/js/custom-script.js"></script>
+  <!--AppStrap scripts mainly used to trigger libraries/plugins -->
+  <script src="assets/js/script.min.js"></script>
+</body>
+
+</html>

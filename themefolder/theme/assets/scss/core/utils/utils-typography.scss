@@ -1,0 +1,236 @@
+// -------------------------------------------
+// Theme utilities & helper class
+// -------------------------------------------
+
+// Typography helpers
+// -------------------------------------------
+.text-xs {
+  font-size: 70% !important;
+}
+.text-sm {
+  font-size: 90% !important;
+}
+
+// Fonts
+.text-slab,
+.text-font-slab {
+  font-family: 'Roboto Slab', serif !important;
+}
+.text-alt,
+.text-font-alt {
+  font-family: "Roboto",Helvetica,Arial,sans-serif !important;
+}
+.text-font-base {
+  font-family: $font-family-base !important;
+}
+
+.text-shadow {
+  text-shadow: 1px 1px 1px lighten($gray-light, 80%);
+}
+
+.text-letter-spacing-sm {
+  letter-spacing: -2px;
+}
+.text-letter-spacing-xs {
+  letter-spacing: -4px;
+}
+.text-letter-spacing-normal {
+  letter-spacing: normal;
+}
+@include media-breakpoint-down(md) {
+  .text-letter-spacing-sm {
+    letter-spacing: 0;
+  }
+  .text-letter-spacing-xs {
+    letter-spacing: -2px;
+  }  
+}
+
+.text-normalcase {
+  text-transform: none !important;
+}
+
+.font-weight-bold {
+  font-weight: bold !important;
+}
+.font-weight-normal {
+  font-weight: normal !important;
+}
+.font-weight-light {
+  font-weight: 100 !important;
+}
+
+.img-padded {
+  background-color: #ffffff;
+  padding: .15rem;
+}
+
+// Font size helpers
+// @todo - redo these
+// -------------------------------------------
+$font-size-base-xs: floor(($font-size-base * 0.80));
+$font-size-base-sm: floor(($font-size-base * 0.90));
+$font-size-base-lg: floor(($font-size-base * 1.15));
+
+.font-xs-x1 {
+  font-size: floor(($font-size-base-xs * 1.2)) !important;
+}
+.font-xs-x2 {
+  font-size: floor(($font-size-base-xs * 2)) !important;
+}
+.font-xs-x3 {
+  font-size: floor(($font-size-base-xs * 3)) !important;
+}
+.font-xs-x4 {
+  font-size: floor(($font-size-base-xs * 4)) !important;
+}
+.font-xs-x5 {
+  font-size: floor(($font-size-base-xs * 5)) !important;
+}
+.font-xs-x6 {
+  font-size: floor(($font-size-base-xs * 6)) !important;
+}
+.font-xs-x7 {
+  font-size: floor(($font-size-base-xs * 7)) !important;
+}
+.font-xs-x8 {
+  font-size: floor(($font-size-base-xs * 8)) !important;
+}
+.font-xs-x9 {
+  font-size: floor(($font-size-base-xs * 9)) !important;
+}
+.font-xs-x10 {
+  font-size: floor(($font-size-base-xs * 10)) !important;
+}
+
+@include media-breakpoint-up(sm) {
+  .font-sm-x1 {
+    font-size: floor(($font-size-base-sm * 1.2)) !important;
+  }
+  .font-sm-x2 {
+    font-size: floor(($font-size-base-sm * 2)) !important;
+  }
+  .font-sm-x3 {
+    font-size: floor(($font-size-base-sm * 3)) !important;
+  }
+  .font-sm-x4 {
+    font-size: floor(($font-size-base-sm * 4)) !important;
+  }
+  .font-sm-x5 {
+    font-size: floor(($font-size-base-sm * 5)) !important;
+  }
+  .font-sm-x6 {
+    font-size: floor(($font-size-base-sm * 6)) !important;
+  }
+  .font-sm-x7 {
+    font-size: floor(($font-size-base-sm * 7)) !important;
+  }
+  .font-sm-x8 {
+    font-size: floor(($font-size-base-sm * 8)) !important;
+  }
+  .font-sm-x9 {
+    font-size: floor(($font-size-base-sm * 9)) !important;
+  }
+  .font-sm-x10 {
+    font-size: floor(($font-size-base-sm * 10)) !important;
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .font-md-x1 {
+    font-size: floor(($font-size-base * 1.2)) !important;
+  }
+  .font-md-x2 {
+    font-size: floor(($font-size-base * 2)) !important;
+  }
+  .font-md-x3 {
+    font-size: floor(($font-size-base * 3)) !important;
+  }
+  .font-md-x4 {
+    font-size: floor(($font-size-base * 4)) !important;
+  }
+  .font-md-x5 {
+    font-size: floor(($font-size-base * 5)) !important;
+  }
+  .font-md-x6 {
+    font-size: floor(($font-size-base * 6)) !important;
+  }
+  .font-md-x7 {
+    font-size: floor(($font-size-base * 7)) !important;
+  }
+  .font-md-x8 {
+    font-size: floor(($font-size-base * 8)) !important;
+  }
+  .font-md-x9 {
+    font-size: floor(($font-size-base * 9)) !important;
+  }
+  .font-md-x10 {
+    font-size: floor(($font-size-base * 10)) !important;
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .font-lg-x1 {
+    font-size: floor(($font-size-base-lg * 1.2)) !important;
+  }
+  .font-lg-x2 {
+    font-size: floor(($font-size-base-lg * 2)) !important;
+  }
+  .font-lg-x3 {
+    font-size: floor(($font-size-base-lg * 3)) !important;
+  }
+  .font-lg-x4 {
+    font-size: floor(($font-size-base-lg * 4)) !important;
+  }
+  .font-lg-x5 {
+    font-size: floor(($font-size-base-lg * 5)) !important;
+  }
+  .font-lg-x6 {
+    font-size: floor(($font-size-base-lg * 6)) !important;
+  }
+  .font-lg-x7 {
+    font-size: floor(($font-size-base-lg * 7)) !important;
+  }
+  .font-lg-x8 {
+    font-size: floor(($font-size-base-lg * 8)) !important;
+  }
+  .font-lg-x9 {
+    font-size: floor(($font-size-base-lg * 9)) !important;
+  }
+  .font-lg-x10 {
+    font-size: floor(($font-size-base-lg * 10)) !important;
+  }    
+}
+
+// Lists
+// -------------------------------------------
+ul.list-lg {
+  font-size: 110%;
+  
+  li {
+    padding: 0.6em;
+  }
+}
+
+ul.list-sm {
+  font-size: 80%;
+  
+  li {
+    padding: 0.25em;
+  }
+}
+
+.list-bordered {
+  padding: 0;
+  margin: 0;
+  
+  > li {
+    list-style: none;
+    margin: 0;
+    padding: 0.5em;
+    border-bottom: 1px solid rgba(#cccccc, 60%/100.0%);
+  }
+}
+
+// Links
+// -------------------------------------------

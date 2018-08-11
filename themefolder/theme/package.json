@@ -1,0 +1,46 @@
+{
+  "name": "appstrap",
+  "version": "3.0.12",
+  "description": "AppStrap Theme Bootstrap 4 theme",
+  "main": "index.html",
+  "devDependencies": {
+    "gulp": "latest",
+    "gulp-autoprefixer": "^4.1.0",
+    "gulp-bless": "^4.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-connect": "latest",
+    "gulp-cssmin": "^0.2.0",
+    "gulp-ignore": "^2.0.2",
+    "gulp-imagemin": "^4.1.0",
+    "gulp-jsbeautifier": "^2.1.2",
+    "gulp-jshint": "^2.1.0",
+    "gulp-notify": "^3.1.0",
+    "gulp-purifycss": "^0.2.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-rtlcss": "^1.0.0",
+    "gulp-sass": "^3.1.0",
+    "gulp-uglify": "^3.0.0",
+    "gulp-util": "^3.0.8",
+    "jshint": "latest"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Themelize.me Ltd",
+  "url": "http://themelize.me",
+  "copyright": "Copyright 2017 Themelize.me",
+  "dependencies": {
+    "bootstrap": "v4.0.0-beta.3",
+    "flag-icon-css": "^2.8.0",
+    "fontawesome": "^4.7.2",
+    "gulp-file": "^0.4.0",
+    "gulp-file-assets": "^2.2.3",
+    "gulp-html-assets": "^0.0.14",
+    "ionicons": "^3.0.0",
+    "jquery": "3.2.1",
+    "linearicons": "^1.0.1",
+    "map-stream": "^0.0.7",
+    "popper.js": "^1.12.9",
+    "retinajs": "^2.0.0"
+  }
+}

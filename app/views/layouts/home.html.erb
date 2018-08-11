@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>EQbotics</title>
+    <!-- CSS -->
+    <%= csrf_meta_tags %>
+    <%= javascript_include_tag 'home_page', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag params[:controller] if ::Rails.application.assets.find_asset("#{params[:controller]}.css") rescue nil %>
+    <%= stylesheet_link_tag    'home_page', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Raleway:400,700'>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src='https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js'></script>
+      <script src='https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js'></script>
+    <![endif]-->
+    <!-- Favicon and touch icons -->
+    <link rel='shortcut icon' href='/assets/home/ico/favicon.png'>
+    <link rel='apple-touch-icon-precomposed' sizes='144x144' href='/assets/home/ico/apple-touch-icon-144-precomposed.png'>
+    <link rel='apple-touch-icon-precomposed' sizes='114x114' href='/assets/home/ico/apple-touch-icon-114-precomposed.png'>
+    <link rel='apple-touch-icon-precomposed' sizes='72x72' href='/assets/home/ico/apple-touch-icon-72-precomposed.png'>
+    <link rel='apple-touch-icon-precomposed' href='/assets/home/ico/apple-touch-icon-57-precomposed.png'>
+  </head>
+  <body>
+    <!-- Top menu -->
+    <%= render '/layouts/home/header' %>
+    <% unless flash.empty? %>
+      <script type="text/javascript">
+        <% flash.each do |f| %>
+          <% type = f[0].to_s.gsub('alert', 'error').gsub('notice', 'success') %>
+          toastr['<%= type %>']('<%= f[1] %>');
+        <% end %>
+      </script>
+    <% end %>
+    <div class="container" style="margin-top: 4%;">
+      <%= yield %>
+    </div>
+    <!-- Footer -->
+    <%= render '/layouts/home/footer' %>
+    <!-- MODAL: Terms and Conditions -->
+    <%#= render '/layouts/home/modal_popup' %>
+    <%= yield :javascript %>
+    <!--[if lt IE 10]>
+      <script src='/assets/home/placeholder.js'></script>
+    <![endif]-->
+  </body>
+</html>

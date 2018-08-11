@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <title>EQBotics - Automated employee training</title>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge' />
+
+    <!-- @todo: fill with your company info or remove -->
+    <meta name='description' content='Training your employees to improve emotional intelligence'>
+    <meta name='author' content='Nikolai Manek'>
+    <meta property="og:title" content="EQBotics - From awareness to action" />
+    <meta property="og:image" content="http://ia.media-imdb.com/images/rock.jpg" />
+    <%= stylesheet_link_tag 'new_frontpage' %>
+
+    <link href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet'>
+    <link href='https://cdn.linearicons.com/free/1.0.0/icon-font.min.css' rel='stylesheet'>
+
+
+    <!-- Le fav and touch icons - @todo: fill with your icons or remove, try https://realfavicongenerator.net -->
+    <link rel='apple-touch-icon' sizes='180x180' href='assets/favicons/apple-touch-icon.png'>
+    <link rel='icon' type='image/png' sizes='32x32' href='assets/favicons/favicon-32x32.png'>
+    <link rel='icon' type='image/png' sizes='16x16' href='assets/favicons/favicon-16x16.png'>
+    <link rel='manifest' href='assets/favicons/manifest.json'>
+    <link rel='shortcut icon' href='assets/favicons/favicon.ico'>
+    <meta name='msapplication-config' content='assets/favicons/browserconfig.xml'>
+    <meta name='theme-color' content='#ffffff'>
+
+    <!-- JS plugins required on all pages NOTE: Additional non-required plugins are loaded ondemand as of AppStrap 2.5 To disable this and load plugin assets manually simple add data-plugins-manual=true to the body tag -->
+    <%= javascript_include_tag 'new_frontpage' %>
+
+    <!-- Google fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Rambla:400,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Calligraffitti' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,700' rel='stylesheet' type='text/css'>
+    <%= csrf_meta_tags %>
+  </head>
+
+  <!-- ======== @Region: body ======== -->
+
+  <body class='page page-onepager header-ontop header-compact-sticky page-index-onepager-image navbar-layout-default'>
+    <%= render '/layouts/new_frontpage/header' %>
+    <% unless flash.empty? %>
+      <script type="text/javascript">
+        <% flash.each do |f| %>
+          <% type = f[0].to_s.gsub('alert', 'error').gsub('notice', 'success') %>
+          toastr['<%= type %>']('<%= f[1] %>');
+        <% end %>
+      </script>
+    <% end %>
+    <%= render '/layouts/new_frontpage/highlighted' %>
+    <%= render '/layouts/new_frontpage/content' %>
+    <%= render '/layouts/new_frontpage/footer' %>
+
+    <!--Hidden elements - excluded from jPanel Menu on mobile-->
+    <div class='hidden-elements jpanel-menu-exclude'>
+      <!--@modal - signup modal-->
+      <div class='modal fade' id='signup-modal' tabindex='-1' role='dialog' aria-hidden='true'>
+        <div class='modal-dialog'>
+          <div class='modal-content'>
+            <div class='modal-header'>
+              <h4 class='modal-title'>
+                Sign Up
+              </h4>
+              <button type='button' class='close' data-dismiss='modal' aria-hidden='true'>&times;</button>
+            </div>
+            <div class='modal-body'>
+              <form action='signup.html'>
+                <div class='form-group'>
+                  <h5>
+                    Price Plan
+                  </h5>
+                  <select class='form-control'>
+                      <option>Basic</option>
+                      <option>Pro</option>
+                      <option>Pro +</option>
+                    </select>
+                </div>
+                <hr />
+
+                <h5>
+                  Account Information
+                </h5>
+                <div class='form-group'>
+                  <label class='sr-only' for='signup-first-name'>First Name</label>
+                  <input type='text' class='form-control' id='signup-first-name' placeholder='First name'>
+                </div>
+                <div class='form-group'>
+                  <label class='sr-only' for='signup-last-name'>Last Name</label>
+                  <input type='text' class='form-control' id='signup-last-name' placeholder='Last name'>
+                </div>
+                <div class='form-group'>
+                  <label class='sr-only' for='signup-username'>Userame</label>
+                  <input type='text' class='form-control' id='signup-username' placeholder='Username'>
+                </div>
+                <div class='form-group'>
+                  <label class='sr-only' for='signup-email'>Email address</label>
+                  <input type='email' class='form-control' id='signup-email' placeholder='Email address'>
+                </div>
+                <div class='form-group'>
+                  <label class='sr-only' for='signup-password'>Password</label>
+                  <input type='password' class='form-control' id='signup-password' placeholder='Password'>
+                </div>
+                <div class='form-check'>
+                  <label class='form-check-label'>
+                      <input type='checkbox' value='term' class='form-check-input'>
+                      I agree with the Terms and Conditions.
+                    </label>
+                </div>
+                <hr />
+                <button class='btn btn-primary' type='submit'>Sign up</button>
+              </form>
+            </div>
+            <div class='modal-footer'>
+              <small>Already signed up? <a href='login.html'>Login here</a>.</small>
+            </div>
+          </div>
+          <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+      </div>
+      <!-- /.modal -->
+
+      <!--@modal - login modal-->
+      <div class='modal fade' id='login-modal' tabindex='-1' role='dialog' aria-hidden='true'>
+        <div class='modal-dialog'>
+          <div class='modal-content'>
+            <div class='modal-header'>
+              <h4 class='modal-title'>
+                Login
+              </h4>
+              <button type='button' class='close' data-dismiss='modal' aria-hidden='true'>&times;</button>
+            </div>
+            <div class='modal-body'>
+              <form action='login.html'>
+                <div class='form-group'>
+                  <label class='sr-only' for='login-email'>Email</label>
+                  <input type='email' id='login-email' class='form-control email' placeholder='Email'>
+                </div>
+                <div class='form-group'>
+                  <label class='sr-only' for='login-password'>Password</label>
+                  <input type='password' id='login-password' class='form-control password' placeholder='Password'>
+                </div>
+                <button type='button' class='btn btn-primary'>Login</button>
+              </form>
+            </div>
+            <div class='modal-footer'>
+              <small>Not a member? <a href='#' class='signup'>Sign up now!</a></small>
+              <br />
+              <small><a href='#'>Forgotten password?</a></small>
+            </div>
+          </div>
+          <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+      </div>
+      <!-- /.modal -->
+    </div>
+  </body>
+</html>

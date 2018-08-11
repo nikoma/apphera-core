@@ -1,0 +1,1827 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Grids | AppStrap Bootstrap Theme by Themelize.me</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- @todo: fill with your company info or remove -->
+  <meta name="description" content="">
+  <meta name="author" content="Themelize.me">
+
+  <!-- Bootstrap v4.0.0-beta.3 CSS via CDN -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css">
+
+  <!-- Plugins required on all pages NOTE: Additional non-required plugins are loaded ondemand as of AppStrap 2.5 -->
+
+  <!-- Theme style -->
+  <link href="assets/css/theme-style.min.css" rel="stylesheet">
+
+  <!--Your custom colour override-->
+  <link href="#" id="colour-scheme" rel="stylesheet">
+
+  <!-- Your custom override -->
+  <link href="assets/css/custom-style.css" rel="stylesheet">
+
+
+
+  <!-- Optional: ICON SETS -->
+  <!-- Iconset: Font Awesome 4.7.0 via CDN -->
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <!-- Iconset: flag icons - http://lipis.github.io/flag-icon-css/ -->
+  <link href="assets/plugins/flag-icon-css/css/flag-icon.min.css" rel="stylesheet">
+  <!-- Iconset: ionicons - http://ionicons.com/ -->
+  <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet">
+  <!-- Iconset: Linearicons - https://linearicons.com/free -->
+  <link href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css" rel="stylesheet">
+
+
+  <!-- Le fav and touch icons - @todo: fill with your icons or remove, try https://realfavicongenerator.net -->
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicons/favicon-16x16.png">
+  <link rel="manifest" href="assets/favicons/manifest.json">
+  <link rel="shortcut icon" href="assets/favicons/favicon.ico">
+  <meta name="msapplication-config" content="assets/favicons/browserconfig.xml">
+  <meta name="theme-color" content="#ffffff">
+
+
+  <!-- Google fonts -->
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Rambla:400,700' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Calligraffitti' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,700' rel='stylesheet' type='text/css'>
+
+  <!--Plugin: Retina.js (high def image replacement) - @see: http://retinajs.com/-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/retina.js/1.3.0/retina.min.js"></script>
+</head>
+
+<!-- ======== @Region: body ======== -->
+
+<body class="page page-grid navbar-layout-default">
+
+  <!-- @plugin: page loading indicator, delete to remove loader -->
+  <div class="page-loader" data-toggle="page-loader"></div>
+
+  <a href="#content" id="top" class="sr-only">Skip to content</a>
+
+  <!-- ======== @Region: #header ======== -->
+  <div id="header">
+    <!--Branding & Navigation Region-->
+
+    <!--Hidden Header Region-->
+    <div class="header-hidden collapse">
+      <div class="header-hidden-inner container">
+        <div class="row">
+          <div class="col-sm-6">
+            <h3>
+              About Us
+            </h3>
+            <p>Making the web a prettier place one template at a time! We make beautiful, quality, responsive Drupal & web templates!</p>
+            <a href="about.html" class="btn btn-sm btn-primary">Find out more</a>
+          </div>
+          <div class="col-sm-6">
+            <!--@todo: replace with company contact details-->
+            <h3>
+              Contact Us
+            </h3>
+            <address>
+                <p>
+                  <abbr title="Phone"><i class="fa fa-phone"></i></abbr>
+                  019223 8092344
+                </p>
+                <p>
+                  <abbr title="Email"><i class="fa fa-envelope"></i></abbr>
+                  info@themelize.me
+                </p>
+                <p>
+                  <abbr title="Address"><i class="fa fa-home"></i></abbr>
+                  Sunshine House, Sunville. SUN12 8LU.
+                </p>
+              </address>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--Header upper region-->
+    <div class="header-upper">
+      <!--Show/hide trigger for #hidden-header -->
+      <div id="header-hidden-link">
+        <a href="#" title="Click me you'll get a surprise" class="show-hide" data-toggle="show-hide" data-target=".header-hidden"><i></i>Open</a>
+      </div>
+      <!-- all direct children of the .header-inner element will be vertically aligned with each other you can override all the behaviours using the flexbox utilities (flexbox.htm) All elements with .header-brand & .header-block-flex wrappers will automatically be aligned inline & vertically using flexbox, this can be overridden using the flexbox utilities (flexbox.htm) Use .header-block to stack elements within on small screen & "float" on larger screens use .order-first or/and .order-last classes to make an element show first or last within .header-inner or .headr-block elements -->
+      <div class="header-inner container">
+        <!--user menu-->
+        <div class="header-block-flex order-1 mr-auto">
+          <nav class="nav nav-sm header-block-flex">
+            <a class="nav-link d-md-none" href="login.html"><i class="fa fa-user"></i></a>
+            <a class="nav-link text-xs text-uppercase d-none d-md-block" href="#signup-modal" data-toggle="modal">Sign Up</a> <a class="nav-link text-xs text-uppercase d-none d-md-block" href="#login-modal" data-toggle="modal">Login</a>
+          </nav>
+          <div class="header-divider header-divider-sm"></div>
+          <!--language menu-->
+          <div class="dropdown dropdowns-no-carets">
+            <a href="#en" class="nav-link text-xs p-1 dropdown-toggle" data-toggle="dropdown"><i class="flag-icon flag-icon-gb"></i></a>
+            <div class="dropdown-menu dropdown-menu-mini dropdown-menu-primary">
+              <a href="#es" class="dropdown-item lang-es"><i class="flag-icon flag-icon-es"></i> Spanish</a>
+              <a href="#pt" class="dropdown-item lang-pt"><i class="flag-icon flag-icon-pt"></i> Portguese</a>
+              <a href="#cn" class="dropdown-item lang-cn"><i class="flag-icon flag-icon-cn"></i> Chinese</a>
+              <a href="#se" class="dropdown-item lang-se"><i class="flag-icon flag-icon-se"></i> Swedish</a>
+            </div>
+          </div>
+        </div>
+        <!--social media icons-->
+        <div class="nav nav-icons header-block order-12">
+          <!--@todo: replace with company social media details-->
+          <a href="#" class="nav-link"> <i class="fa fa-twitter-square icon-1x"></i> <span class="sr-only">Twitter</span> </a>
+          <a href="#" class="nav-link"> <i class="fa fa-facebook-square icon-1x"></i> <span class="sr-only">Facebook</span> </a>
+          <a href="#" class="nav-link"> <i class="fa fa-linkedin-square icon-1x"></i> <span class="sr-only">Linkedin</span> </a>
+          <a href="#" class="nav-link"> <i class="fa fa-google-plus-square icon-1x"></i> <span class="sr-only">Google plus</span> </a>
+        </div>
+      </div>
+    </div>
+    <div data-toggle="sticky">
+
+      <!--Header search region - hidden by default -->
+      <div class="header-search collapse" id="search">
+        <form class="search-form container">
+          <input type="text" name="search" class="form-control search" value="" placeholder="Search">
+          <button type="button" class="btn btn-link"><span class="sr-only">Search </span><i class="fa fa-search fa-flip-horizontal search-icon"></i></button>
+          <button type="button" class="btn btn-link close-btn" data-toggle="search-form-close"><span class="sr-only">Close </span><i class="fa fa-times search-icon"></i></button>
+        </form>
+      </div>
+
+      <!--Header & Branding region-->
+      <div class="header">
+        <!-- all direct children of the .header-inner element will be vertically aligned with each other you can override all the behaviours using the flexbox utilities (flexbox.htm) All elements with .header-brand & .header-block-flex wrappers will automatically be aligned inline & vertically using flexbox, this can be overridden using the flexbox utilities (flexbox.htm) Use .header-block to stack elements within on small screen & "float" on larger screens use .order-first or/and .order-last classes to make an element show first or last within .header-inner or .headr-block elements -->
+        <div class="header-inner container">
+          <!--branding/logo -->
+          <div class="header-brand">
+            <a class="header-brand-text" href="index.html" title="Home">
+              <h1 class="h2">
+                <span class="header-brand-text-alt">App</span>Strap<span class="header-brand-text-alt">.</span>
+              </h1>
+            </a>
+            <div class="header-divider d-none d-lg-block"></div>
+            <div class="header-slogan d-none d-lg-block">Bootstrap 4 Theme</div>
+          </div>
+          <!-- other header content -->
+          <div class="header-block order-12">
+
+            <!--Search trigger -->
+            <a href="#search" class="btn btn-icon btn-link header-btn float-right order-11" data-toggle="search-form" data-target=".header-search"><i class="fa fa-search fa-flip-horizontal search-icon"></i></a>
+
+            <!-- mobile collapse menu button - data-toggle="collapse" = default BS menu - data-toggle="jpanel-menu" = jPanel Menu - data-toggle="overlay" = Overlay Menu -->
+            <a href="#top" class="btn btn-link btn-icon header-btn float-right d-lg-none" data-toggle="jpanel-menu" data-target=".navbar-main" data-direction="right"> <i class="fa fa-bars"></i> </a>
+          </div>
+
+          <div class="navbar navbar-expand-md navbar-static-top">
+            <!--everything within this div is collapsed on mobile-->
+            <div class="navbar-main collapse">
+              <!--main navigation-->
+              <ul class="nav navbar-nav float-lg-right dropdown-effect-fade">
+
+                <!-- Homepages -->
+                <li class="nav-item dropdown dropdown-mega-menu">
+                  <a href="#" class="nav-link dropdown-toggle" id="indexs-drop" data-toggle="dropdown" data-hover="dropdown"> <i class="fa fa-home nav-link-icon"></i> <span class="d-none">Home</span> </a>
+                  <!-- Dropdown Menu - mega menu-->
+                  <div class="dropdown-menu">
+                    <div class="row">
+                      <div class="col-lg-6">
+                        <h4 class="dropdown-header d-none d-lg-block mt-0">
+                          Default Homepages
+                        </h4>
+                        <div class="row">
+                          <div class="col-lg-6"> <a href="intro.html" class="dropdown-item">Intro</a> <a href="index.html" class="dropdown-item">Homepage (default)</a> <a href="index-static.html" class="dropdown-item">Homepage No Slider</a> <a href="index-boxed.html" class="dropdown-item">Homepage Boxed</a>                            <a href="index-promo-header.html" class="dropdown-item">Promo Header</a> <a href="index-coming-soon.html" class="dropdown-item">Coming Soon</a> </div>
+                          <div class="col-lg-6"> <a href="index-coming-soon-newsletter.html" class="dropdown-item">Coming Soon with newsletter</a> <a href="index-onepager.html" class="dropdown-item">One Pager Slideshow</a> <a href="index-onepager-image.html" class="dropdown-item">One Pager Image</a>                            <a href="index-onepager-image-full-height.html" class="dropdown-item">One Pager Image Full Height</a> <a href="index-onepager-bg-slideshow.html" class="dropdown-item">One Pager Background Slideshow</a> </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-6">
+                        <h4 class="dropdown-header d-none d-lg-block mt-0">
+                          Industry/Niche Homepages
+                        </h4>
+                        <div class="row">
+                          <div class="col-lg-6"> <a href="demo-travel-blog.html" class="dropdown-item">Travel Blog</a> <a href="index-app-landing.html" class="dropdown-item">App Landing Page</a> <a href="index-music.html" class="dropdown-item">Music Homepage</a> <a href="index-magazine.html"
+                              class="dropdown-item">Magazine Homepage</a> <a href="index-event.html" class="dropdown-item">Event Homepage</a> <a href="index-gym.html" class="dropdown-item">Gym Homepage</a> </div>
+                          <div class="col-lg-6"> <a href="index-jobs.html" class="dropdown-item">Jobs Homepage</a> <a href="index-corporate.html" class="dropdown-item">Corporate Homepage</a> <a href="index-restaurant.html" class="dropdown-item">Restaurant Homepage</a> <a href="index-photographer.html"
+                              class="dropdown-item">Photographer Homepage</a> <a href="index-freelancer-portfolio.html" class="dropdown-item">Freelancer Homepage</a> <a href="shop.html" class="dropdown-item">Shop Homepage</a> </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+
+                <!-- Pages -->
+                <li class="nav-item dropdown">
+                  <a href="#" class="nav-link dropdown-toggle" id="pages-drop" data-toggle="dropdown" data-hover="dropdown">Pages</a>
+                  <!-- Menu -->
+                  <div class="dropdown-menu">
+                    <div class="dropdown dropdown-submenu">
+                      <a href="about.html" class="dropdown-item dropdown-toggle" id="about-drop" data-toggle="dropdown" data-hover="dropdown" data-close-others="false">About</a>
+                      <!-- Dropdown Menu -->
+                      <div class="dropdown-menu" role="menu" aria-labelledby="about-drop"> <a href="about.html" class="dropdown-item">About Us Basic</a> <a href="about-extended.html" class="dropdown-item">About Us Extended</a> <a href="about-me.html" class="dropdown-item">About Me</a> <a href="team.html" class="dropdown-item">Team List</a>                        <a href="team-grid.html" class="dropdown-item">Team Grid</a> <a href="team-member.html" class="dropdown-item">Team Member</a> <a href="contact.html" class="dropdown-item">Contact</a> <a href="contact.php" class="dropdown-item">Contact (PHP)</a>                        </div>
+                    </div>
+                    <div class="dropdown dropdown-submenu">
+                      <a href="blog.html" class="dropdown-item dropdown-toggle" id="blog-drop" data-toggle="dropdown" data-hover="dropdown" data-close-others="false">Blog</a>
+                      <!-- Dropdown Menu -->
+                      <div class="dropdown-menu"> <a href="blog.html" class="dropdown-item">Blog List Right Sidebar</a> <a href="blog-leftbar.html" class="dropdown-item">Blog List Left Sidebar</a> <a href="blog-timeline.html" class="dropdown-item">Blog List Timeline</a> <a href="blog-grid.html"
+                          class="dropdown-item">Blog List Grid</a> <a href="blog-post.html" class="dropdown-item">Blog Post</a> <a href="blog-post-video.html" class="dropdown-item">Blog Post With Video</a> <a href="blog-post-slideshow.html" class="dropdown-item">Blog Post With Slideshow</a>                        <a href="blog-post-audio.html" class="dropdown-item">Blog Post With Audio Clip</a> </div>
+                    </div>
+                    <div class="dropdown dropdown-submenu">
+                      <a href="pricing.html" class="dropdown-item dropdown-toggle" id="pricing-drop" data-toggle="dropdown" data-hover="dropdown" data-close-others="false">Pricing</a>
+                      <!-- pricing pages -->
+                      <div class="dropdown-menu"> <a href="pricing.html" class="dropdown-item">Pricing Plans</a> <a href="pricing-tables.html" class="dropdown-item">Comparison Tables</a> </div>
+                    </div>
+                    <div class="dropdown dropdown-submenu">
+                      <a href="timeline.html" class="dropdown-item dropdown-toggle" id="timeline-drop" data-toggle="dropdown" data-hover="dropdown" data-close-others="false">Timeline</a>
+                      <!-- timelines -->
+                      <div class="dropdown-menu" role="menu" aria-labelledby="timeline-drop"> <a href="timeline.html" class="dropdown-item">Timeline Default</a> <a href="timeline-left.html" class="dropdown-item">Timeline Left</a> <a href="timeline-right.html" class="dropdown-item">Timeline Right</a> <a href="timeline-stacked.html"
+                          class="dropdown-item">Timeline Stacked</a> </div>
+                    </div>
+                    <a href="customers.html" class="dropdown-item">Customers</a> <a href="features.html" class="dropdown-item">Features/Services</a> <a href="login.html" class="dropdown-item">Login</a> <a href="signup.html" class="dropdown-item">Sign Up</a>                    <a href="starter.html" class="dropdown-item">Starter Snippets</a> <a href="404.html" class="dropdown-item">404 Error</a>
+                  </div>
+                </li>
+
+                <!-- Features -->
+                <li class="nav-item dropdown active">
+                  <a href="#" class="nav-link dropdown-toggle" id="more-drop" data-toggle="dropdown" data-hover="dropdown">Features</a>
+                  <!-- Dropdown Menu -->
+                  <div class="dropdown-menu">
+                    <div class="dropdown dropdown-submenu dropdown-menu-left">
+                      <a href="headers.html" class="dropdown-item dropdown-toggle" id="headers-drop" data-toggle="dropdown" data-hover="dropdown" data-close-others="false">Header Variations (19)</a>
+                      <!-- Header variations -->
+                      <div class="dropdown-menu" role="menu" aria-labelledby="headers-drop"> <a href="header-elements.html" class="dropdown-item">Header Elements</a> <a href="header-offcanvas.html" class="dropdown-item">Header Off Canvas</a> <a href="header-collapse-menu.html" class="dropdown-item">Header Collapse Menu</a>                        <a href="header-overlay-menu-responsive.html" class="dropdown-item">Header Responsive Overlay Menu</a> <a href="header-overlay-menu.html" class="dropdown-item">Header Overlay Menu</a> <a href="header-collapse-menu-responsive.html"
+                          class="dropdown-item">Header Responsive Collapse Menu</a> <a href="header-fullwidth.html" class="dropdown-item">Header Full Width</a> <a href="header-navbar-below.html" class="dropdown-item">Header Navbar Below</a> <a href="header-compact.html"
+                          class="dropdown-item">Header Compact</a> <a href="header-dark.html" class="dropdown-item">Header Dark</a> <a href="header-primary.html" class="dropdown-item">Header Primary</a> <a href="header-transparent.html" class="dropdown-item">Header Transparent</a>                        <a href="header-transparent-dark.html" class="dropdown-item">Header Transparent Dark</a> <a href="header-transparent-primary.html" class="dropdown-item">Header Transparent Primary</a> <a href="header-translucent.html" class="dropdown-item">Header Translucent</a>                        <a href="header-translucent-dark.html" class="dropdown-item">Header Translucent Dark</a> <a href="header-translucent-primary.html" class="dropdown-item">Header Translucent Primary</a> <a href="header-nav-left.html" class="dropdown-item">Header Nav Left</a>                        <a href="header-nav-fullheight.html" class="dropdown-item">Header Nav Full Height</a> <a href="header-bottom.html" class="dropdown-item">Header Bottom</a> </div>
+                    </div>
+                    <div class="dropdown dropdown-submenu dropdown-menu-left">
+                      <a href="headers.html" class="dropdown-item dropdown-toggle" id="footers-drop" data-toggle="dropdown" data-hover="dropdown" data-close-others="false">Footer Variations (5)</a>
+                      <!-- Header variations -->
+                      <div class="dropdown-menu" role="menu" aria-labelledby="footers-drop"> <a href="footer-light.html" class="dropdown-item">Footer Light</a> <a href="footer-compact.html" class="dropdown-item">Footer Compact</a> <a href="footer-menus.html" class="dropdown-item">Footer Menus</a> <a href="footer-compact-light.html"
+                          class="dropdown-item">Footer Compact Light</a> <a href="footer-menus-light.html" class="dropdown-item">Footer Menus Light</a> </div>
+                    </div>
+                    <div class="dropdown dropdown-submenu dropdown-menu-left">
+                      <a href="sliders.html" class="dropdown-item dropdown-toggle" id="slider-drop" data-toggle="dropdown" data-hover="dropdown" data-close-others="false">Sliders</a>
+                      <!-- Sliders -->
+                      <div class="dropdown-menu">
+                        <!--Slider Revolution -->
+                        <h4 class="dropdown-header">
+                          Slider Revolution
+                        </h4>
+                        <a href="slider-revolution-default.html" class="dropdown-item">Default</a> <a href="slider-revolution-full.html" class="dropdown-item">Full Width</a> <a href="slider-revolution-behind.html" class="dropdown-item">Behind Navbar</a>                        <a href="slider-revolution-boxed.html" class="dropdown-item">Boxed</a>
+                        <!--Backstretch Slider-->
+                        <h4 class="dropdown-header">
+                          Backstretch
+                        </h4>
+                        <a href="backstretch.html" class="dropdown-item">Background Slideshow</a> <a href="backstretch-boxed.html" class="dropdown-item">Boxed Background Slideshow</a>
+                        <!--Flexslider-->
+                        <h4 class="dropdown-header">
+                          Flexslider
+                        </h4>
+                        <a href="flexslider-default.html" class="dropdown-item">Default</a> <a href="flexslider-full.html" class="dropdown-item">Full Width</a> <a href="flexslider-behind.html" class="dropdown-item">Behind Navbar</a> <a href="flexslider-boxed.html"
+                          class="dropdown-item">Boxed</a>
+                      </div>
+                    </div>
+                    <a href="grid.html" class="dropdown-item active">Grid System</a> <a href="flexbox.html" class="dropdown-item">Flexbox!</a> <a href="colours.html" class="dropdown-item">Theme Colours</a>
+                  </div>
+                </li>
+
+                <!-- Shop megamenu -->
+                <li class="nav-item dropdown dropdown-mega-menu dropdown-mega-menu-75">
+                  <a href="#" class="nav-link dropdown-toggle" id="shop-drop" data-toggle="dropdown" data-hover="dropdown">Shop</a>
+                  <!-- Dropdown Menu - mega menu-->
+                  <div class="dropdown-menu dropdown-menu-right">
+                    <div class="row">
+                      <div class="col-lg-6">
+                        <h3 class="dropdown-header mt-0 pt-0">
+                          Pages
+                        </h3>
+                        <a href="shop.html" class="dropdown-item">Shop Homepage</a> <a href="shop-cart.html" class="dropdown-item">Cart</a> <a href="shop-checkout.html" class="dropdown-item">Checkout</a> <a href="shop-confirmation.html" class="dropdown-item">Confirmation</a>                        <a href="shop-grid.html" class="dropdown-item">Products Grid</a> <a href="shop-list.html" class="dropdown-item">Products List</a> <a href="shop-product.html" class="dropdown-item">Product View</a>
+                      </div>
+                      <div class="col-lg-6 d-none d-lg-block">
+                        <h3 class="dropdown-header mt-0 pt-0">
+                          Widget <span class="badge badge-primary text-uppercase">Hot</span>
+                        </h3>
+                        <div class="dropdown-widget">
+                          <!-- Shop product carousel Uses Owl Carousel plugin All options here are customisable from the data-owl-carousel-settings="{OBJECT}" item via data- attributes: http://www.owlgraphic.com/owlcarousel/#customizing ie. data-settings="{"items": "4", "lazyLoad":"true", "navigation":"true"}" -->
+                          <div class="products-carousel owl-nav-over" data-toggle="owl-carousel" data-owl-carousel-settings='{"items": 1,"responsive":{"0":{"items":1,"nav":true, "dots":false}}}'>
+                            <a href="#">
+                                <img src="assets/img/shop/jacket-1.jpg" alt="Item 1 image" class="lazyOwl img-fluid" />
+                              </a>
+                            <a href="#">
+                                <img src="assets/img/shop/jacket-2.jpg" alt="Item 2 image" class="lazyOwl img-fluid" />
+                              </a>
+                            <a href="#">
+                                <img src="assets/img/shop/jacket-3.jpg" alt="Item 3 image" class="lazyOwl img-fluid" />
+                              </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+
+                <!-- Elements/shortcodes -->
+                <li class="nav-item dropdown dropdown-mega-menu">
+                  <a href="#" class="nav-link dropdown-toggle" id="elements-drop" data-toggle="dropdown" data-hover="dropdown">Elements</a>
+                  <!-- Dropdown Menu - mega menu-->
+                  <div class="dropdown-menu">
+                    <h4 class="dropdown-header d-none d-lg-block mt-0">
+                      35 pages of elements/snippets <i class="new-tag">Updated!</i>
+                    </h4>
+                    <div class="row">
+                      <div class="col-lg-3"> <a href="elements-alerts.html" class="dropdown-item">Alerts</a> <a href="elements-animation.html" class="dropdown-item">Animations</a> <a href="elements-badges.html" class="dropdown-item">Badges</a> <a href="elements-button-groups.html"
+                          class="dropdown-item">Button Groups</a> <a href="elements-buttons.html" class="dropdown-item">Buttons</a> <a href="elements-cards.html" class="dropdown-item">Cards</a> <a href="elements-carousels.html" class="dropdown-item">Carousels</a>                        <a href="elements-collapse.html" class="dropdown-item">Collapse / Accordions</a> <a href="elements-colour-utils.html" class="dropdown-item">Colours Utils</a> </div>
+                      <div class="col-lg-3"> <a href="elements-counters.html" class="dropdown-item">Counters</a> <a href="elements-ctas.html" class="dropdown-item">Call To Action Blocks</a> <a href="elements-dividers.html" class="dropdown-item">Dividers</a> <a href="elements-dropdowns.html"
+                          class="dropdown-item">Dropdowns</a> <a href="elements-forms.html" class="dropdown-item">Forms</a> <a href="elements-forms-input-groups.html" class="dropdown-item">Forms Input Groups</a> <a href="elements-icons.html" class="dropdown-item">Icons</a>                        <a href="elements-icons-flags.html" class="dropdown-item">Icons: Flags</a> <a href="elements-icons-fontawesome.html" class="dropdown-item">Icons: Font Awesome</a> </div>
+                      <div class="col-lg-3"> <a href="elements-icons-ionicons.html" class="dropdown-item">Icons: Ionicons</a> <a href="elements-icons-linearicons.html" class="dropdown-item">Icons: Linearicons</a> <a href="elements-list-groups.html" class="dropdown-item">List Groups</a>                        <a href="elements-modals.html" class="dropdown-item">Modals</a> <a href="elements-modals-onload.html" class="dropdown-item">Modals Onload</a> <a href="elements-navs.html" class="dropdown-item">Navs</a> <a href="elements-navs-tabbable.html"
+                          class="dropdown-item">Tabbable Navs</a> <a href="elements-overlays.html" class="dropdown-item">Overlays</a> <a href="elements-progressbars.html" class="dropdown-item">Progress Bars</a> </div>
+                      <div class="col-lg-3"> <a href="elements-social-media.html" class="dropdown-item">Social Media Branding</a> <a href="elements-spacers.html" class="dropdown-item">Spacers</a> <a href="elements-tables.html" class="dropdown-item">Tables</a> <a href="elements-tooltips-popovers.html"
+                          class="dropdown-item">Tooltips & Popovers</a> <a href="elements-type-effect.html" class="dropdown-item">Type Effect</a> <a href="elements-typography.html" class="dropdown-item">Typography</a> <a href="elements-utils.html" class="dropdown-item">Utilities</a>                        <a href="elements-video-blocks.html" class="dropdown-item">Video Blocks</a> </div>
+                    </div>
+                  </div>
+                </li>
+
+                <!-- Mega menu example -->
+                <li class="nav-item dropdown dropdown-persist dropdown-mega-menu dropdown-mega-menu-50">
+                  <a href="#" class="nav-link dropdown-toggle" id="megamenu-drop" data-toggle="dropdown" data-hover="dropdown">Mega Menu</a>
+                  <!-- Dropdown Menu - Mega Menu -->
+                  <div class="dropdown-menu dropdown-menu-right">
+                    <!-- Nav tabs -->
+                    <ul class="nav nav-pills nav-pills-border-bottom-inside flex-column flex-lg-row" role="tablist">
+                      <li class="nav-item"> <a class="nav-link p-3 active text-center font-weight-bold" data-toggle="tab" data-target=".menu-tab-1" role="tab">Mega Menu Tab 1</a> </li>
+                      <li class="nav-item"> <a class="nav-link p-3 text-center font-weight-bold" data-toggle="tab" data-target=".menu-tab-2" role="tab">Mega Menu Tab 2</a> </li>
+                    </ul>
+                    <!-- Tab panes -->
+                    <div class="tab-content py-3">
+                      <div class="tab-pane active show menu-tab-1" role="tabpanel">
+                        <div class="row text-center">
+                          <div class="col-lg-4 py-2">
+                            <i class="fa fa-tachometer icon-5x text-primary" data-animate="fadeIn" data-animate-delay="0.1"></i>
+                            <h5 class="mt-2">
+                              Fully Optimized
+                            </h5>
+                            <p>Brevitas causa distineo lucidus nunc oppeto qui typicus valetudo veniam.</p>
+                          </div>
+                          <div class="col-lg-4 py-2">
+                            <i class="fa fa-wrench icon-5x text-primary" data-animate="fadeIn" data-animate-delay="0.2"></i>
+                            <h5 class="mt-2">
+                              Free Support
+                            </h5>
+                            <p>Comis consequat erat os proprius veniam.</p>
+                          </div>
+                          <div class="col-lg-4 py-2">
+                            <i class="fa fa-rocket icon-5x text-primary" data-animate="fadeIn" data-animate-delay="0.3"></i>
+                            <h5 class="mt-2">
+                              Free Upgrades
+                            </h5>
+                            <p>Capto cogo immitto natu neque nulla qui.</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="tab-pane menu-tab-2" role="tabpanel">
+                        <div class="row text-center">
+                          <div class="col-lg-4 py-2">
+                            <i class="fa fa-line-chart icon-5x text-primary" data-animate="fadeIn" data-animate-delay="0.4"></i>
+                            <h5 class="mt-2">
+                              99.9% Uptime
+                            </h5>
+                            <p>Eu ille interdico premo utinam verto.</p>
+                          </div>
+                          <div class="col-lg-4 py-2">
+                            <i class="fa fa-smile-o icon-5x text-primary" data-animate="fadeIn" data-animate-delay="0.5"></i>
+                            <h5 class="mt-2">
+                              Multiuser
+                            </h5>
+                            <p>Immitto natu nostrud olim quidne.</p>
+                          </div>
+                          <div class="col-lg-4 py-2">
+                            <i class="fa fa-plug icon-5x text-primary" data-animate="fadeIn" data-animate-delay="0.6"></i>
+                            <h5 class="mt-2">
+                              Plug n play
+                            </h5>
+                            <p>Eligo nostrud praesent quia rusticus vero.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <!--/.navbar-collapse -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ======== @Region: #content ======== -->
+  <div id="content">
+    <div class="container">
+      <h2 class="title-divider">
+        <span>Grid System:</span>
+      </h2>
+
+      <!--@Element: Grids-->
+
+      <h3>
+        Basics
+      </h3>
+      <p>AppStrap includes the powerful mobile-first 12 column flexbox-powered grid system from Bootstrap plus a few extras.</p>
+      <p>The grid system allows you to alyout content on your pages and alter the layout based on the screenwidth of the page/browser.</p>
+
+
+      <hr class="my-5" />
+
+
+      <h3>
+        Mobile-first
+      </h3>
+      <p>Mobile-first means that you consider your default layout to be mobile/small screens and then you progressively enhance it up as the screenwidth increases. This is the approach Bootstrap adopted since version 3 although some media queries do go against
+        this where it makes sense.</p>
+
+
+      <hr class="my-5" />
+
+
+      <h3>
+        Flexbox
+      </h3>
+      <p>Since Bootstrap 4 Alplha 6 Bootstrap has Flexbox support by default which makes use of the powerful CSS flexbile box layout module opening up a whole new world of grid power!</p>
+      <p>Internet Explorer 9 (and below) does not support Flexbox at all but fortunately AppStrap provides built in fallbacks so your AppStrap based sites will look great in Internet Explorer 9 anyway.</p>
+      <p>
+        You can also choose to "opt out" of using Flexbox with AppStrap by simply adding the following line of code after all the other CSS files are included within the
+        <code>head</code> tags: <a data-toggle="collapse" href="#code-block-1" class="code-block-link">View code example</a>
+        <pre class="collapse" id="code-block-1"><code>&lt;link href=&quot;assets/css/no-flexbox.css&quot; rel=&quot;stylesheet&quot;&gt;</code></pre> This will override the Bootstrap Flexbox elements and core AppStrap elements so they use display block & floats instead, magic!
+      </p>
+
+
+      <hr class="my-5" />
+
+
+      <h3>
+        Grid Structure
+      </h3>
+      <p>
+        Basic struction of a grid is:
+        <code>.container|.container-fluid</code> >
+        <code>.row</code> >
+        <code>.col|col-BREAKPOINT-(1-12)|col-(1-12)</code>
+      </p>
+      <h4>
+        Containers
+      </h4>
+      <p>
+        <code>.container|.container-fluid</code> are wrappers that center the content on the page,
+        <code>.container</code> has fixed pixel widths which vary with the screensize and
+        <code>.container-fluid</code> stretches full width of the screen.
+      </p>
+      <h4 class="mt-4">
+        Rows
+      </h4>
+      <p>
+        <code>.row</code> applies the Flexbox properties which should be applied to the
+        <code>.col|col-BREAKPOINT-(1-12)|col-(1-12)</code> elements within it. By default it sets them to show as "rows" aligned side by side.
+      </p>
+      <h4 class="mt-4">
+        Columns
+      </h4>
+      <p>
+        <code>.col|col-BREAKPOINT-(1-12)|col-(1-12)</code> elements determine the percentage width to give a column within the grid and at which "breakpoint" that width should be set from.
+      </p>
+      <p>Grid columns without a set width will automatically layout with equal widths. For example, four instances of .col-sm will each automatically be 25% wide for small breakpoints.</p>
+      <p>Column classes indicate the number of columns you want to use out of the possible 12 per row. So, if you want three equal-width columns, you can use .col-sm-4. 12 is considered "full width".</p>
+      <p>If more than 12 columns are placed within a single row, each group of extra columns will, as one unit, wrap onto a new line.</p>
+
+
+      <hr class="my-5" />
+
+
+      <h3 id="breakpoints">
+        Breakpoints
+      </h3>
+      <p>Breakpoints are the point at which the screenwidth increases or decreases from one recognised point to the next. In AppStrap there are 5 breakpoints you can work with: all breakpoints (extra small), small, medium, large, and extra large.</p>
+      <p>
+        Breakpoints are based on minimum widths, meaning they apply to that one tier and all those above it For example:
+        <code>.col-sm-4</code> would apply to small, medium, large, and extra large devices OR
+        <code>.col-md-6</code> would apply to medium, large & extra large screens only.
+      </p>
+      <p>
+        You can also mix and match breakpoints so for example your layout might allow 1 column up to medium screens, then 2 columns for medium and 4 columns for large and above screens. ie
+        <code>class="col-12 col-md-6 col-lg-3"</code>
+      </p>
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Breakpoint</th>
+            <th>Shortname</th>
+            <th>Description</th>
+            <th>Media queries</th>
+            <th>Column Class Examples</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1. Extra Small (default)</th>
+            <td>(blank)</td>
+            <td>Extra small devices (portrait phones, less than 576px)</td>
+            <td>No media query since this is the default in Bootstrap</td>
+            <td>
+              <code>.col-(1-12)</code>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">2. Small</th>
+            <td>
+              <code>sm</code>
+            </td>
+            <td>Small devices (landscape phones, 576px and up)</td>
+            <td>
+              <code>@media (min-width: 576px) {}</code>
+            </td>
+            <td>
+              <code>.col-sm-(1-12)</code>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">3. Medium</th>
+            <td>
+              <code>md</code>
+            </td>
+            <td>Medium devices (tablets, 768px and up)</td>
+            <td>
+              up:
+              <code>@media (min-width: 768px) {}</code>
+              <br /> down:
+              <code>@media (max-width: 767px) {}</code>
+            </td>
+            <td>
+              <code>.col-md-(1-12)</code>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">4. Large</th>
+            <td>
+              <code>lg</code>
+            </td>
+            <td>Large devices (desktops, 992px and up)</td>
+            <td>
+              <code>@media (min-width: 992px) {}</code>
+            </td>
+            <td>
+              <code>.col-lg-(1-12)</code>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">5. Extra Large</th>
+            <td>
+              <code>xl</code>
+            </td>
+            <td>Extra large devices (large desktops, 1200px and up)</td>
+            <td>
+              <code>@media (min-width: 1200px) {}</code>
+            </td>
+            <td>
+              <code>.col-xl-(1-12)</code>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+
+      <hr class="my-5" />
+
+
+      <h3>
+        Auto Column Widths
+      </h3>
+      <p>
+        With the power of Flexbox you can simply use any number of
+        <code>.col</code> elements within a
+        <code>.row</code> element and every column will automatically be made the same width.
+      </p>
+      <a data-toggle="collapse" href="#code-block-2" class="code-block-link">View code example</a>
+      <pre class="collapse" id="code-block-2"><code>&lt;div class=&quot;container&quot;&gt;
+  &lt;div class=&quot;row&quot;&gt;
+    &lt;div class=&quot;col&quot;&gt;
+      1 of 2
+    &lt;/div&gt;
+    &lt;div class=&quot;col&quot;&gt;
+      1 of 2
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;row&quot;&gt;
+    &lt;div class=&quot;col&quot;&gt;
+      1 of 3
+    &lt;/div&gt;
+    &lt;div class=&quot;col&quot;&gt;
+      1 of 3
+    &lt;/div&gt;
+    &lt;div class=&quot;col&quot;&gt;
+      1 of 3
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+      <div class="grid-demo">
+        <div class="container">
+          <div class="row">
+            <div class="col"> 1 of 2 </div>
+            <div class="col"> 1 of 2 </div>
+          </div>
+          <div class="row">
+            <div class="col"> 1 of 3 </div>
+            <div class="col"> 1 of 3 </div>
+            <div class="col"> 1 of 3 </div>
+          </div>
+        </div>
+      </div>
+      <h4 class="mt-5">
+        Setting one column width
+      </h4>
+      <p>You can even set the width of one column and Flexbox will automatically resize the other columns around it.</p>
+      <a data-toggle="collapse" href="#code-block-3" class="code-block-link">View code example</a>
+      <pre class="collapse" id="code-block-3"><code>&lt;div class=&quot;container&quot;&gt;
+  &lt;div class=&quot;row&quot;&gt;
+    &lt;div class=&quot;col&quot;&gt;
+      1 of 3
+    &lt;/div&gt;
+    &lt;div class=&quot;col-6&quot;&gt;
+      2 of 3 (wider)
+    &lt;/div&gt;
+    &lt;div class=&quot;col&quot;&gt;
+      3 of 3
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;row&quot;&gt;
+    &lt;div class=&quot;col&quot;&gt;
+      1 of 3
+    &lt;/div&gt;
+    &lt;div class=&quot;col-5&quot;&gt;
+      2 of 3 (wider)
+    &lt;/div&gt;
+    &lt;div class=&quot;col&quot;&gt;
+      3 of 3
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+      <div class="grid-demo">
+        <div class="container">
+          <div class="row">
+            <div class="col"> 1 of 3 </div>
+            <div class="col-6"> 2 of 3 (wider) </div>
+            <div class="col"> 3 of 3 </div>
+          </div>
+          <div class="row">
+            <div class="col"> 1 of 3 </div>
+            <div class="col-5"> 2 of 3 (wider) </div>
+            <div class="col"> 3 of 3 </div>
+          </div>
+        </div>
+      </div>
+      <h4 class="mt-5">
+        Variable width content
+      </h4>
+      <p>
+        Using the
+        <code>col-{breakpoint}-auto</code> classes you can set fixed width columns on one breakpoint and then reset them to their nature width on another breakpoint.
+      </p>
+      <a data-toggle="collapse" href="#code-block-4" class="code-block-link">View code example</a>
+      <pre class="collapse" id="code-block-4"><code>&lt;div class=&quot;container&quot;&gt;
+  &lt;div class=&quot;row justify-content-md-center&quot;&gt;
+    &lt;div class=&quot;col col-lg-2&quot;&gt;
+      1 of 3
+    &lt;/div&gt;
+    &lt;div class=&quot;col-12 col-md-auto&quot;&gt;
+      Variable width content
+    &lt;/div&gt;
+    &lt;div class=&quot;col col-lg-2&quot;&gt;
+      3 of 3
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;row&quot;&gt;
+    &lt;div class=&quot;col&quot;&gt;
+      1 of 3
+    &lt;/div&gt;
+    &lt;div class=&quot;col-12 col-md-auto&quot;&gt;
+      Variable width content
+    &lt;/div&gt;
+    &lt;div class=&quot;col col-lg-2&quot;&gt;
+      3 of 3
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+      <div class="grid-demo">
+        <div class="container">
+          <div class="row justify-content-md-center">
+            <div class="col col-lg-2"> 1 of 3 </div>
+            <div class="col-12 col-md-auto"> Variable width content </div>
+            <div class="col col-lg-2"> 3 of 3 </div>
+          </div>
+          <div class="row">
+            <div class="col"> 1 of 3 </div>
+            <div class="col-12 col-md-auto"> Variable width content </div>
+            <div class="col col-lg-2"> 3 of 3 </div>
+          </div>
+        </div>
+      </div>
+      <h4 class="mt-5">
+        Equal-width multi-row
+      </h4>
+      <p>
+        Create equal-width columns that span multiple rows by inserting a
+        <code>.w-100</code> where you want the columns to break to a new line.
+      </p>
+      <a data-toggle="collapse" href="#code-block-5" class="code-block-link">View code example</a>
+      <pre class="collapse" id="code-block-5"><code>&lt;div class=&quot;container&quot;&gt;
+  &lt;div class=&quot;row&quot;&gt;
+    &lt;div class=&quot;col&quot;&gt;col&lt;/div&gt;
+    &lt;div class=&quot;col&quot;&gt;col&lt;/div&gt;
+    &lt;div class=&quot;w-100&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;col&quot;&gt;col&lt;/div&gt;
+    &lt;div class=&quot;col&quot;&gt;col&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+      <div class="grid-demo">
+        <div class="container">
+          <div class="row">
+            <div class="col">col</div>
+            <div class="col">col</div>
+            <div class="w-100"></div>
+            <div class="col">col</div>
+            <div class="col">col</div>
+          </div>
+        </div>
+      </div>
+
+
+      <hr class="my-5" />
+
+
+      <h3>
+        Responsive Layouts
+      </h3>
+      <h4>
+        All breakpoints
+      </h4>
+      <p>
+        For grid layouts that are the same from the smallest of devices to the largest, use the
+        <code>.col</code> and
+        <code>.col-*</code> classes.
+      </p>
+      <a data-toggle="collapse" href="#code-block-6" class="code-block-link">View code example</a>
+      <pre class="collapse" id="code-block-6"><code>&lt;div class=&quot;container&quot;&gt;
+  &lt;div class=&quot;row mb-3&quot;&gt;
+    &lt;div class=&quot;col&quot;&gt;col&lt;/div&gt;
+    &lt;div class=&quot;col&quot;&gt;col&lt;/div&gt;
+    &lt;div class=&quot;col&quot;&gt;col&lt;/div&gt;
+    &lt;div class=&quot;col&quot;&gt;col&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;row mb-3&quot;&gt;
+    &lt;div class=&quot;col&quot;&gt;col&lt;/div&gt;
+    &lt;div class=&quot;col&quot;&gt;col&lt;/div&gt;
+    &lt;div class=&quot;col&quot;&gt;col&lt;/div&gt;
+    &lt;div class=&quot;col-6&quot;&gt;col-6&lt;/div&gt;
+  &lt;/div&gt;      
+  &lt;div class=&quot;row&quot;&gt;
+    &lt;div class=&quot;col-8&quot;&gt;col-8&lt;/div&gt;
+    &lt;div class=&quot;col-4&quot;&gt;col-4&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+      <div class="grid-demo">
+        <div class="container">
+          <div class="row mb-3">
+            <div class="col">col</div>
+            <div class="col">col</div>
+            <div class="col">col</div>
+            <div class="col">col</div>
+          </div>
+          <div class="row mb-3">
+            <div class="col">col</div>
+            <div class="col">col</div>
+            <div class="col">col</div>
+            <div class="col-6">col-6</div>
+          </div>
+          <div class="row">
+            <div class="col-8">col-8</div>
+            <div class="col-4">col-4</div>
+          </div>
+        </div>
+      </div>
+      <h4 class="mt-5">
+        Stacked to horizontal
+      </h4>
+      <p>
+        Using a single set of
+        <code>.col-sm-*</code> classes, you can create a basic grid system that starts out stacked on extra small devices before becoming horizontal on desktop (medium) devices.
+      </p>
+      <a data-toggle="collapse" href="#code-block-7" class="code-block-link">View code example</a>
+      <pre class="collapse" id="code-block-7"><code>&lt;div class=&quot;container&quot;&gt;
+  &lt;div class=&quot;row&quot;&gt;
+    &lt;div class=&quot;col-sm-8&quot;&gt;col-sm-8&lt;/div&gt;
+    &lt;div class=&quot;col-sm-4&quot;&gt;col-sm-4&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;row&quot;&gt;
+    &lt;div class=&quot;col-sm&quot;&gt;col-sm&lt;/div&gt;
+    &lt;div class=&quot;col-sm&quot;&gt;col-sm&lt;/div&gt;
+    &lt;div class=&quot;col-sm&quot;&gt;col-sm&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+      <div class="grid-demo">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-8">col-sm-8</div>
+            <div class="col-sm-4">col-sm-4</div>
+          </div>
+          <div class="row">
+            <div class="col-sm">col-sm</div>
+            <div class="col-sm">col-sm</div>
+            <div class="col-sm">col-sm</div>
+          </div>
+        </div>
+      </div>
+      <h4 class="mt-5">
+        Mix it up!
+      </h4>
+      <p>
+        Combine
+        <code>.col-BREAKPOINT-*</code> classes on the same columns to create varying layouts per breakpoint.
+      </p>
+      <a data-toggle="collapse" href="#code-block-8" class="code-block-link">View code example</a>
+      <pre class="collapse" id="code-block-8"><code>&lt;div class=&quot;container&quot;&gt;
+  &lt;!-- Stack the columns on mobile by making one full-width and the other half-width --&gt;
+  &lt;div class=&quot;row&quot;&gt;
+    &lt;div class=&quot;col col-md-8&quot;&gt;.col .col-md-8&lt;/div&gt;
+    &lt;div class=&quot;col-6 col-md-4&quot;&gt;.col-6 .col-md-4&lt;/div&gt;
+  &lt;/div&gt;
+  
+  &lt;!-- 3 equal columns on mobile,  1 wide &amp; 2 small from medium up--&gt;
+  &lt;div class=&quot;row&quot;&gt;
+    &lt;div class=&quot;col col-md-8&quot;&gt;.col-6 .col-md-8&lt;/div&gt;
+    &lt;div class=&quot;col col-md-2&quot;&gt;.col-6 .col-md-2&lt;/div&gt;
+    &lt;div class=&quot;col col-md-2&quot;&gt;.col-6 .col-md-2&lt;/div&gt;
+  &lt;/div&gt;
+  
+  &lt;!-- Columns are always 50% wide, on mobile and desktop --&gt;
+  &lt;div class=&quot;row&quot;&gt;
+    &lt;div class=&quot;col-6&quot;&gt;.col-6&lt;/div&gt;
+    &lt;div class=&quot;col-6&quot;&gt;.col-6&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+      <div class="grid-demo">
+        <div class="container">
+          <!-- Stack the columns on mobile by making one full-width and the other half-width -->
+          <div class="row">
+            <div class="col col-md-8">.col .col-md-8</div>
+            <div class="col-6 col-md-4">.col-6 .col-md-4</div>
+          </div>
+          <!-- 3 equal columns on mobile, 1 wide & 2 small from medium up-->
+          <div class="row">
+            <div class="col col-md-8">.col-6 .col-md-8</div>
+            <div class="col col-md-2">.col-6 .col-md-2</div>
+            <div class="col col-md-2">.col-6 .col-md-2</div>
+          </div>
+          <!-- Columns are always 50% wide, on mobile and desktop -->
+          <div class="row">
+            <div class="col-6">.col-6</div>
+            <div class="col-6">.col-6</div>
+          </div>
+        </div>
+      </div>
+
+
+      <hr class="my-5" />
+
+
+      <h3>
+        Alignment
+      </h3>
+      <h4>
+        Vertical Alignment/Tools
+      </h4>
+      <p>
+        The following classes applied to any
+        <code>.row</code> elements allows you to control the vertical alignment of columns in a grid.
+      </p>
+      <ol>
+        <li class="mb-3">
+          <code>.align-items-start</code> and
+          <code>align-items-BREAKPOINT-start</code> :
+          <br /> aligns columns to the top ("start").
+        </li>
+        <li class="mb-3">
+          <code>.align-items-end</code> and
+          <code>align-items-BREAKPOINT-end</code> :
+          <br /> aligns columns to the bottom ("end").
+        </li>
+        <li class="mb-3">
+          <code>.align-items-center</code> and
+          <code>align-items-BREAKPOINT-center</code> :
+          <br /> aligns columns to the middle ("center").
+        </li>
+        <li class="mb-3">
+          <code>.align-items-stretch</code> and
+          <code>align-items-BREAKPOINT-stretch</code> :
+          <br /> stretches column to the full height of their row container.
+        </li>
+      </ol>
+      <p>
+        You can also align single columns using the
+        <code>.align-self-start|end|center|stretch</code> and
+        <code>.align-self-BREAKPOINT-start|end|center|stretch</code> classes directly on the column elements.
+      </p>
+      <a data-toggle="collapse" href="#code-block-9" class="code-block-link">View code example</a>
+      <pre class="collapse" id="code-block-9"><code>&lt;div class=&quot;container&quot;&gt;
+  &lt;div class=&quot;row align-items-start&quot; style=&quot;height: 10rem;&quot;&gt;
+    &lt;div class=&quot;col&quot;&gt;
+      Align top
+    &lt;/div&gt;
+    &lt;div class=&quot;col&quot;&gt;
+      Align top
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;row align-items-center&quot; style=&quot;height: 10rem;&quot;&gt;
+    &lt;div class=&quot;col&quot;&gt;
+      Align center
+    &lt;/div&gt;
+    &lt;div class=&quot;col&quot;&gt;
+      Align center
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;row align-items-end&quot; style=&quot;height: 10rem;&quot;&gt;
+    &lt;div class=&quot;col&quot;&gt;
+      Align bottom
+    &lt;/div&gt;
+    &lt;div class=&quot;col&quot;&gt;
+      Align bottom
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;row align-items-stretch&quot; style=&quot;height: 10rem;&quot;&gt;
+    &lt;div class=&quot;col&quot;&gt;
+      Stretch full height
+    &lt;/div&gt;
+    &lt;div class=&quot;col&quot;&gt;
+      Stretch full height
+    &lt;/div&gt;
+  &lt;/div&gt;
+  
+  &lt;div class=&quot;row&quot; style=&quot;height: 10rem;&quot;&gt;
+    &lt;div class=&quot;col align-self-start&quot;&gt;
+      Single column top
+    &lt;/div&gt;
+    &lt;div class=&quot;col align-self-center&quot;&gt;
+      Single column middle
+    &lt;/div&gt;
+    &lt;div class=&quot;col align-self-end&quot;&gt;
+      Single column bottom
+    &lt;/div&gt;    
+  &lt;/div&gt;  
+&lt;/div&gt;</code></pre>
+      <div class="grid-demo">
+        <div class="container">
+          <div class="row align-items-start" style="height: 10rem;">
+            <div class="col"> Align top </div>
+            <div class="col"> Align top </div>
+          </div>
+          <div class="row align-items-center" style="height: 10rem;">
+            <div class="col"> Align center </div>
+            <div class="col"> Align center </div>
+          </div>
+          <div class="row align-items-end" style="height: 10rem;">
+            <div class="col"> Align bottom </div>
+            <div class="col"> Align bottom </div>
+          </div>
+          <div class="row align-items-stretch" style="height: 10rem;">
+            <div class="col"> Stretch full height </div>
+            <div class="col"> Stretch full height </div>
+          </div>
+          <div class="row" style="height: 10rem;">
+            <div class="col align-self-start"> Single column top </div>
+            <div class="col align-self-center"> Single column middle </div>
+            <div class="col align-self-end"> Single column bottom </div>
+          </div>
+        </div>
+      </div>
+      <h4 class="mt-5">
+        Horizontal Alignment/Tools
+      </h4>
+      <p>
+        The following classes applied to any
+        <code>.row</code> elements allows you to control the horizontal alignment of columns in a grid.
+      </p>
+      <ol>
+        <li class="mb-3">
+          <code>.justify-content-start</code> and
+          <code>justify-content-BREAKPOINT-start</code> :
+          <br /> aligns columns to the left ("start").
+        </li>
+        <li class="mb-3">
+          <code>.justify-content-end</code> and
+          <code>justify-content-BREAKPOINT-end</code> :
+          <br /> aligns columns to the right ("end").
+        </li>
+        <li class="mb-3">
+          <code>.justify-content-center</code> and
+          <code>justify-content-BREAKPOINT-center</code> :
+          <br /> aligns columns to the center ("center").
+        </li>
+        <li class="mb-3">
+          <code>.justify-content-around</code> and
+          <code>justify-content-BREAKPOINT-around</code> :
+          <br /> centers columns and distributes them evenly.
+        </li>
+        <li class="mb-3">
+          <code>.justify-content-between</code> and
+          <code>justify-content-BREAKPOINT-between</code> :
+          <br /> stretches columns to the full width of their row container and distributes them evenly.
+        </li>
+      </ol>
+      <a data-toggle="collapse" href="#code-block-10" class="code-block-link">View code example</a>
+      <pre class="collapse" id="code-block-10"><code>&lt;div class=&quot;container&quot;&gt;
+  &lt;div class=&quot;row justify-content-start&quot;&gt;
+    &lt;div class=&quot;col-4&quot;&gt;
+      Align left
+    &lt;/div&gt;
+    &lt;div class=&quot;col-4&quot;&gt;
+      Align left
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;row justify-content-center&quot;&gt;
+    &lt;div class=&quot;col-4&quot;&gt;
+      Align center
+    &lt;/div&gt;
+    &lt;div class=&quot;col-4&quot;&gt;
+      Align center
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;row justify-content-end&quot;&gt;
+    &lt;div class=&quot;col-4&quot;&gt;
+      Align right
+    &lt;/div&gt;
+    &lt;div class=&quot;col-4&quot;&gt;
+      Align right
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;row justify-content-around&quot;&gt;
+    &lt;div class=&quot;col-4&quot;&gt;
+      Align even center
+    &lt;/div&gt;
+    &lt;div class=&quot;col-4&quot;&gt;
+      Align even center
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;row justify-content-between&quot;&gt;
+    &lt;div class=&quot;col-4&quot;&gt;
+      Align even stretch
+    &lt;/div&gt;
+    &lt;div class=&quot;col-4&quot;&gt;
+      Align even stretch
+    &lt;/div&gt;
+  &lt;/div&gt;  
+&lt;/div&gt;</code></pre>
+      <div class="grid-demo">
+        <div class="container">
+          <div class="row justify-content-start">
+            <div class="col-4"> Align left </div>
+            <div class="col-4"> Align left </div>
+          </div>
+          <div class="row justify-content-center">
+            <div class="col-4"> Align center </div>
+            <div class="col-4"> Align center </div>
+          </div>
+          <div class="row justify-content-end">
+            <div class="col-4"> Align right </div>
+            <div class="col-4"> Align right </div>
+          </div>
+          <div class="row justify-content-around">
+            <div class="col-4"> Align even center </div>
+            <div class="col-4"> Align even center </div>
+          </div>
+          <div class="row justify-content-between">
+            <div class="col-4"> Align even stretch </div>
+            <div class="col-4"> Align even stretch </div>
+          </div>
+        </div>
+      </div>
+
+
+      <hr class="my-5" />
+
+
+      <h3>
+        No gutters
+      </h3>
+      <p>
+        By default columns have horizontal padding to add space or "gutters" between columns, you can remove this by adding the
+        <code>.no-gutters</code> class to
+        <code>.row</code> elements.
+      </p>
+      <a data-toggle="collapse" href="#code-block-11" class="code-block-link">View code example</a>
+      <pre class="collapse" id="code-block-11"><code>&lt;div class=&quot;container&quot;&gt;
+  &lt;div class=&quot;row mb-3&quot;&gt;
+    &lt;div class=&quot;col&quot;&gt;
+      &lt;div class=&quot;bg-light p-2&quot;&gt;Gutters&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;col&quot;&gt;
+      &lt;div class=&quot;bg-light p-2&quot;&gt;Gutters&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;row no-gutters&quot;&gt;
+    &lt;div class=&quot;col&quot;&gt;
+      &lt;div class=&quot;bg-light p-2&quot;&gt;No Gutters&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;col&quot;&gt;
+      &lt;div class=&quot;bg-light p-2&quot;&gt;No Gutters&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+      <div class="container">
+        <div class="row mb-3">
+          <div class="col">
+            <div class="bg-light p-2">Gutters</div>
+          </div>
+          <div class="col">
+            <div class="bg-light p-2">Gutters</div>
+          </div>
+        </div>
+        <div class="row no-gutters">
+          <div class="col">
+            <div class="bg-light p-2">No Gutters</div>
+          </div>
+          <div class="col">
+            <div class="bg-light p-2">No Gutters</div>
+          </div>
+        </div>
+      </div>
+
+
+      <hr class="my-5" />
+
+
+      <h3>
+        Column Ordering
+      </h3>
+      <h4>
+        Flex order
+      </h4>
+      <p>
+        If you're using Flexbox you can reorder columns without moving them in your code by using these classes:
+        <code>.order-(1-12)</code>
+      </p>
+      <p>
+        All classes are also responsive:
+        <code>.order-BREAKPOINT-(1-12)</code> so you can change the order per breakpoint too.
+      </p>
+      <a data-toggle="collapse" href="#code-block-12" class="code-block-link">View code example</a>
+      <pre class="collapse" id="code-block-12"><code>&lt;div class=&quot;container&quot;&gt;
+  &lt;div class=&quot;row&quot;&gt;
+    &lt;div class=&quot;col&quot;&gt;
+      First, but unordered
+    &lt;/div&gt;
+    &lt;div class=&quot;col order-12&quot;&gt;
+      Second, but last
+    &lt;/div&gt;
+    &lt;div class=&quot;col order-1&quot;&gt;
+      Third, but first
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+      <div class="grid-demo">
+        <div class="container">
+          <div class="row">
+            <div class="col"> First, but unordered </div>
+            <div class="col order-12"> Second, but last </div>
+            <div class="col order-1"> Third, but first </div>
+          </div>
+        </div>
+      </div>
+      <h4 class="mt-5">
+        Offsetting columns
+      </h4>
+      <p>
+        Move columns to the right using
+        <code>.m(r|l)-auto</code> classes.
+      </p>
+      <a data-toggle="collapse" href="#code-block-13" class="code-block-link">View code example</a>
+      <pre class="collapse" id="code-block-13"><code>&lt;div class=&quot;container&quot;&gt;&lt;div class=&quot;row&quot;&gt;
+  &lt;div class=&quot;col-md-4&quot;&gt;.col-md-4&lt;/div&gt;
+  &lt;div class=&quot;col-md-4 ml-auto&quot;&gt;.col-md-4 .ml-auto&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;row&quot;&gt;
+  &lt;div class=&quot;col-md-3 ml-md-auto&quot;&gt;.col-md-3 .ml-md-auto&lt;/div&gt;
+  &lt;div class=&quot;col-md-3 ml-md-auto&quot;&gt;.col-md-3 .ml-md-auto&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;row&quot;&gt;
+  &lt;div class=&quot;col-auto mr-auto&quot;&gt;.col-auto .mr-auto&lt;/div&gt;
+  &lt;div class=&quot;col-auto&quot;&gt;.col-auto&lt;/div&gt;
+&lt;/div&gt;&lt;/div&gt;</code></pre>
+      <div class="grid-demo">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4">.col-md-4</div>
+            <div class="col-md-4 ml-auto">.col-md-4 .ml-auto</div>
+          </div>
+          <div class="row">
+            <div class="col-md-3 ml-md-auto">.col-md-3 .ml-md-auto</div>
+            <div class="col-md-3 ml-md-auto">.col-md-3 .ml-md-auto</div>
+          </div>
+          <div class="row">
+            <div class="col-auto mr-auto">.col-auto .mr-auto</div>
+            <div class="col-auto">.col-auto</div>
+          </div>
+        </div>
+      </div>
+
+
+      <hr class="my-5" />
+
+
+      <h3>
+        Grid Nesting
+      </h3>
+      <p>
+        You can "nest" grids within grids by following the
+        <code>.row</code> >
+        <code>.col</code> structure.
+      </p>
+      <a data-toggle="collapse" href="#code-block-14" class="code-block-link">View code example</a>
+      <pre class="collapse" id="code-block-14"><code>&lt;div class=&quot;container&quot;&gt;
+  &lt;!-- level 1 --&gt;
+  &lt;div class=&quot;row&quot;&gt;
+    &lt;div class=&quot;col-sm-9&quot;&gt;
+      Level 1: .col-sm-9
+      
+      &lt;!-- level 2 --&gt;
+      &lt;div class=&quot;row&quot;&gt;
+        &lt;div class=&quot;col-8 col-sm-6&quot;&gt;
+          Level 2: .col-8 .col-sm-6
+          
+          &lt;!-- level 3 --&gt;
+          &lt;div class=&quot;row&quot;&gt;
+            &lt;div class=&quot;col-6&quot;&gt;
+              Level 3: .col-6
+            &lt;/div&gt;
+            &lt;div class=&quot;col-6&quot;&gt;
+              Level 3: .col-6
+            &lt;/div&gt;
+          &lt;/div&gt;          
+        &lt;/div&gt;
+        &lt;div class=&quot;col-4 col-sm-6&quot;&gt;
+          Level 2: .col-4 .col-sm-6
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+      <div class="grid-demo">
+        <div class="container">
+          <!-- level 1 -->
+          <div class="row">
+            <div class="col-sm-9">
+              Level 1: .col-sm-9
+              <!-- level 2 -->
+              <div class="row">
+                <div class="col-8 col-sm-6">
+                  Level 2: .col-8 .col-sm-6
+                  <!-- level 3 -->
+                  <div class="row">
+                    <div class="col-6"> Level 3: .col-6 </div>
+                    <div class="col-6"> Level 3: .col-6 </div>
+                  </div>
+                </div>
+                <div class="col-4 col-sm-6"> Level 2: .col-4 .col-sm-6 </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <hr class="my-5" />
+
+
+      <h3>
+        Grid Styles
+      </h3>
+      <p>Here are some misc. grid style classes you can use to style grids.</p>
+      <h4 class="mt-5">
+        .grid-inner-borders-dotted
+      </h4>
+      <a data-toggle="collapse" href="#code-block-15" class="code-block-link">View code example</a>
+      <pre class="collapse" id="code-block-15"><code>&lt;div class=&quot;row grid-inner-borders-dotted&quot;&gt;&lt;!-- @LINEBREAK --&gt;
+  &lt;!--Feedback 1--&gt;
+  &lt;div class=&quot;col-lg-4 d-lg-flex&quot;&gt;
+    &lt;blockquote class=&quot;d-lg-flex blockquote blockquote-bubble mb-0&quot;&gt;
+    &lt;p class=&quot;blockquote-bubble-content&quot;&gt;Antehabeo augue causa diam interdico olim patria tincidunt vulputate.&lt;/p&gt;
+    &lt;footer class=&quot;blockquote-footer&quot;&gt;
+      &lt;img src=&quot;assets/img/team/jimi.jpg&quot; alt=&quot;Jimi Bloggs&quot; class=&quot;img-circle mr-1&quot;&gt;
+      Someone famous in 
+      &lt;cite title=&quot;Source Title&quot;&gt;Source Title&lt;/cite&gt;
+    &lt;/footer&gt;
+  &lt;/blockquote&gt;
+  &lt;/div&gt;&lt;!-- @LINEBREAK --&gt;
+  &lt;!--Feedback 2--&gt;
+  &lt;div class=&quot;col-lg-4 d-lg-flex&quot;&gt;
+    &lt;blockquote class=&quot;d-lg-flex blockquote blockquote-bubble mb-0&quot;&gt;
+    &lt;p class=&quot;blockquote-bubble-content&quot;&gt;Abluo et exputo molior nostrud nunc pertineo ulciscor virtus.&lt;/p&gt;
+    &lt;footer class=&quot;blockquote-footer&quot;&gt;
+      &lt;img src=&quot;assets/img/team/jimi.jpg&quot; alt=&quot;Jimi Bloggs&quot; class=&quot;img-circle mr-1&quot;&gt;
+      Someone famous in 
+      &lt;cite title=&quot;Source Title&quot;&gt;Source Title&lt;/cite&gt;
+    &lt;/footer&gt;
+  &lt;/blockquote&gt;
+  &lt;/div&gt;&lt;!-- @LINEBREAK --&gt;
+  &lt;!--Feedback 3--&gt;
+  &lt;div class=&quot;col-lg-4 d-lg-flex&quot;&gt;
+    &lt;blockquote class=&quot;d-lg-flex blockquote blockquote-bubble mb-0&quot;&gt;
+    &lt;p class=&quot;blockquote-bubble-content&quot;&gt;Ea feugiat gilvus pagus plaga sagaciter similis.&lt;/p&gt;
+    &lt;footer class=&quot;blockquote-footer&quot;&gt;
+      &lt;img src=&quot;assets/img/team/jimi.jpg&quot; alt=&quot;Jimi Bloggs&quot; class=&quot;img-circle mr-1&quot;&gt;
+      Someone famous in 
+      &lt;cite title=&quot;Source Title&quot;&gt;Source Title&lt;/cite&gt;
+    &lt;/footer&gt;
+  &lt;/blockquote&gt;
+  &lt;/div&gt;&lt;!-- @LINEBREAK --&gt;
+  &lt;!--Feedback 4--&gt;
+  &lt;div class=&quot;col-lg-4 d-lg-flex&quot;&gt;
+    &lt;blockquote class=&quot;d-lg-flex blockquote blockquote-bubble mb-0&quot;&gt;
+    &lt;p class=&quot;blockquote-bubble-content&quot;&gt;Abico appellatio conventio exerci genitus ille iustum laoreet obruo tincidunt.&lt;/p&gt;
+    &lt;footer class=&quot;blockquote-footer&quot;&gt;
+      &lt;img src=&quot;assets/img/team/jimi.jpg&quot; alt=&quot;Jimi Bloggs&quot; class=&quot;img-circle mr-1&quot;&gt;
+      Someone famous in 
+      &lt;cite title=&quot;Source Title&quot;&gt;Source Title&lt;/cite&gt;
+    &lt;/footer&gt;
+  &lt;/blockquote&gt;
+  &lt;/div&gt;&lt;!-- @LINEBREAK --&gt;
+  &lt;!--Feedback 5--&gt;
+  &lt;div class=&quot;col-lg-4 d-lg-flex&quot;&gt;
+    &lt;blockquote class=&quot;d-lg-flex blockquote blockquote-bubble mb-0&quot;&gt;
+    &lt;p class=&quot;blockquote-bubble-content&quot;&gt;Aliquip virtus zelus. Luctus plaga probo.&lt;/p&gt;
+    &lt;footer class=&quot;blockquote-footer&quot;&gt;
+      &lt;img src=&quot;assets/img/team/jimi.jpg&quot; alt=&quot;Jimi Bloggs&quot; class=&quot;img-circle mr-1&quot;&gt;
+      Someone famous in 
+      &lt;cite title=&quot;Source Title&quot;&gt;Source Title&lt;/cite&gt;
+    &lt;/footer&gt;
+  &lt;/blockquote&gt;
+  &lt;/div&gt;&lt;!-- @LINEBREAK --&gt;
+  &lt;!--Feedback 6--&gt;
+  &lt;div class=&quot;col-lg-4 d-lg-flex&quot;&gt;
+    &lt;blockquote class=&quot;d-lg-flex blockquote blockquote-bubble mb-0&quot;&gt;
+    &lt;p class=&quot;blockquote-bubble-content&quot;&gt;Eum fere pala quidne roto tincidunt typicus.&lt;/p&gt;
+    &lt;footer class=&quot;blockquote-footer&quot;&gt;
+      &lt;img src=&quot;assets/img/team/jimi.jpg&quot; alt=&quot;Jimi Bloggs&quot; class=&quot;img-circle mr-1&quot;&gt;
+      Someone famous in 
+      &lt;cite title=&quot;Source Title&quot;&gt;Source Title&lt;/cite&gt;
+    &lt;/footer&gt;
+  &lt;/blockquote&gt;
+  &lt;/div&gt;&lt;/div&gt;</code></pre>
+      <div class="row grid-inner-borders-dotted">
+
+        <!--Feedback 1-->
+        <div class="col-lg-4 d-lg-flex">
+          <blockquote class="d-lg-flex blockquote blockquote-bubble mb-0">
+            <p class="blockquote-bubble-content">Antehabeo augue causa diam interdico olim patria tincidunt vulputate.</p>
+            <footer class="blockquote-footer">
+              <img src="assets/img/team/jimi.jpg" alt="Jimi Bloggs" class="img-circle mr-1"> Someone famous in
+              <cite title="Source Title">Source Title</cite>
+            </footer>
+          </blockquote>
+        </div>
+
+        <!--Feedback 2-->
+        <div class="col-lg-4 d-lg-flex">
+          <blockquote class="d-lg-flex blockquote blockquote-bubble mb-0">
+            <p class="blockquote-bubble-content">Abluo et exputo molior nostrud nunc pertineo ulciscor virtus.</p>
+            <footer class="blockquote-footer">
+              <img src="assets/img/team/jimi.jpg" alt="Jimi Bloggs" class="img-circle mr-1"> Someone famous in
+              <cite title="Source Title">Source Title</cite>
+            </footer>
+          </blockquote>
+        </div>
+
+        <!--Feedback 3-->
+        <div class="col-lg-4 d-lg-flex">
+          <blockquote class="d-lg-flex blockquote blockquote-bubble mb-0">
+            <p class="blockquote-bubble-content">Ea feugiat gilvus pagus plaga sagaciter similis.</p>
+            <footer class="blockquote-footer">
+              <img src="assets/img/team/jimi.jpg" alt="Jimi Bloggs" class="img-circle mr-1"> Someone famous in
+              <cite title="Source Title">Source Title</cite>
+            </footer>
+          </blockquote>
+        </div>
+
+        <!--Feedback 4-->
+        <div class="col-lg-4 d-lg-flex">
+          <blockquote class="d-lg-flex blockquote blockquote-bubble mb-0">
+            <p class="blockquote-bubble-content">Abico appellatio conventio exerci genitus ille iustum laoreet obruo tincidunt.</p>
+            <footer class="blockquote-footer">
+              <img src="assets/img/team/jimi.jpg" alt="Jimi Bloggs" class="img-circle mr-1"> Someone famous in
+              <cite title="Source Title">Source Title</cite>
+            </footer>
+          </blockquote>
+        </div>
+
+        <!--Feedback 5-->
+        <div class="col-lg-4 d-lg-flex">
+          <blockquote class="d-lg-flex blockquote blockquote-bubble mb-0">
+            <p class="blockquote-bubble-content">Aliquip virtus zelus. Luctus plaga probo.</p>
+            <footer class="blockquote-footer">
+              <img src="assets/img/team/jimi.jpg" alt="Jimi Bloggs" class="img-circle mr-1"> Someone famous in
+              <cite title="Source Title">Source Title</cite>
+            </footer>
+          </blockquote>
+        </div>
+
+        <!--Feedback 6-->
+        <div class="col-lg-4 d-lg-flex">
+          <blockquote class="d-lg-flex blockquote blockquote-bubble mb-0">
+            <p class="blockquote-bubble-content">Eum fere pala quidne roto tincidunt typicus.</p>
+            <footer class="blockquote-footer">
+              <img src="assets/img/team/jimi.jpg" alt="Jimi Bloggs" class="img-circle mr-1"> Someone famous in
+              <cite title="Source Title">Source Title</cite>
+            </footer>
+          </blockquote>
+        </div>
+      </div>
+      <h4 class="mt-5">
+        .grid-inner-borders-solid
+      </h4>
+      <a data-toggle="collapse" href="#code-block-16" class="code-block-link">View code example</a>
+      <pre class="collapse" id="code-block-16"><code>&lt;div class=&quot;row grid-inner-borders-solid&quot;&gt;&lt;!-- @LINEBREAK --&gt;
+  &lt;!--Feedback 1--&gt;
+  &lt;div class=&quot;col-lg-4 d-lg-flex&quot;&gt;
+    &lt;blockquote class=&quot;d-lg-flex blockquote blockquote-bubble mb-0&quot;&gt;
+    &lt;p class=&quot;blockquote-bubble-content&quot;&gt;Antehabeo augue causa diam interdico olim patria tincidunt vulputate.&lt;/p&gt;
+    &lt;footer class=&quot;blockquote-footer&quot;&gt;
+      &lt;img src=&quot;assets/img/team/jimi.jpg&quot; alt=&quot;Jimi Bloggs&quot; class=&quot;img-circle mr-1&quot;&gt;
+      Someone famous in 
+      &lt;cite title=&quot;Source Title&quot;&gt;Source Title&lt;/cite&gt;
+    &lt;/footer&gt;
+  &lt;/blockquote&gt;
+  &lt;/div&gt;&lt;!-- @LINEBREAK --&gt;
+  &lt;!--Feedback 2--&gt;
+  &lt;div class=&quot;col-lg-4 d-lg-flex&quot;&gt;
+    &lt;blockquote class=&quot;d-lg-flex blockquote blockquote-bubble mb-0&quot;&gt;
+    &lt;p class=&quot;blockquote-bubble-content&quot;&gt;Abluo et exputo molior nostrud nunc pertineo ulciscor virtus.&lt;/p&gt;
+    &lt;footer class=&quot;blockquote-footer&quot;&gt;
+      &lt;img src=&quot;assets/img/team/jimi.jpg&quot; alt=&quot;Jimi Bloggs&quot; class=&quot;img-circle mr-1&quot;&gt;
+      Someone famous in 
+      &lt;cite title=&quot;Source Title&quot;&gt;Source Title&lt;/cite&gt;
+    &lt;/footer&gt;
+  &lt;/blockquote&gt;
+  &lt;/div&gt;&lt;!-- @LINEBREAK --&gt;
+  &lt;!--Feedback 3--&gt;
+  &lt;div class=&quot;col-lg-4 d-lg-flex&quot;&gt;
+    &lt;blockquote class=&quot;d-lg-flex blockquote blockquote-bubble mb-0&quot;&gt;
+    &lt;p class=&quot;blockquote-bubble-content&quot;&gt;Ea feugiat gilvus pagus plaga sagaciter similis.&lt;/p&gt;
+    &lt;footer class=&quot;blockquote-footer&quot;&gt;
+      &lt;img src=&quot;assets/img/team/jimi.jpg&quot; alt=&quot;Jimi Bloggs&quot; class=&quot;img-circle mr-1&quot;&gt;
+      Someone famous in 
+      &lt;cite title=&quot;Source Title&quot;&gt;Source Title&lt;/cite&gt;
+    &lt;/footer&gt;
+  &lt;/blockquote&gt;
+  &lt;/div&gt;&lt;!-- @LINEBREAK --&gt;
+  &lt;!--Feedback 4--&gt;
+  &lt;div class=&quot;col-lg-4 d-lg-flex&quot;&gt;
+    &lt;blockquote class=&quot;d-lg-flex blockquote blockquote-bubble mb-0&quot;&gt;
+    &lt;p class=&quot;blockquote-bubble-content&quot;&gt;Abico appellatio conventio exerci genitus ille iustum laoreet obruo tincidunt.&lt;/p&gt;
+    &lt;footer class=&quot;blockquote-footer&quot;&gt;
+      &lt;img src=&quot;assets/img/team/jimi.jpg&quot; alt=&quot;Jimi Bloggs&quot; class=&quot;img-circle mr-1&quot;&gt;
+      Someone famous in 
+      &lt;cite title=&quot;Source Title&quot;&gt;Source Title&lt;/cite&gt;
+    &lt;/footer&gt;
+  &lt;/blockquote&gt;
+  &lt;/div&gt;&lt;!-- @LINEBREAK --&gt;
+  &lt;!--Feedback 5--&gt;
+  &lt;div class=&quot;col-lg-4 d-lg-flex&quot;&gt;
+    &lt;blockquote class=&quot;d-lg-flex blockquote blockquote-bubble mb-0&quot;&gt;
+    &lt;p class=&quot;blockquote-bubble-content&quot;&gt;Aliquip virtus zelus. Luctus plaga probo.&lt;/p&gt;
+    &lt;footer class=&quot;blockquote-footer&quot;&gt;
+      &lt;img src=&quot;assets/img/team/jimi.jpg&quot; alt=&quot;Jimi Bloggs&quot; class=&quot;img-circle mr-1&quot;&gt;
+      Someone famous in 
+      &lt;cite title=&quot;Source Title&quot;&gt;Source Title&lt;/cite&gt;
+    &lt;/footer&gt;
+  &lt;/blockquote&gt;
+  &lt;/div&gt;&lt;!-- @LINEBREAK --&gt;
+  &lt;!--Feedback 6--&gt;
+  &lt;div class=&quot;col-lg-4 d-lg-flex&quot;&gt;
+    &lt;blockquote class=&quot;d-lg-flex blockquote blockquote-bubble mb-0&quot;&gt;
+    &lt;p class=&quot;blockquote-bubble-content&quot;&gt;Eum fere pala quidne roto tincidunt typicus.&lt;/p&gt;
+    &lt;footer class=&quot;blockquote-footer&quot;&gt;
+      &lt;img src=&quot;assets/img/team/jimi.jpg&quot; alt=&quot;Jimi Bloggs&quot; class=&quot;img-circle mr-1&quot;&gt;
+      Someone famous in 
+      &lt;cite title=&quot;Source Title&quot;&gt;Source Title&lt;/cite&gt;
+    &lt;/footer&gt;
+  &lt;/blockquote&gt;
+  &lt;/div&gt;&lt;/div&gt;</code></pre>
+      <div class="row grid-inner-borders-solid">
+
+        <!--Feedback 1-->
+        <div class="col-lg-4 d-lg-flex">
+          <blockquote class="d-lg-flex blockquote blockquote-bubble mb-0">
+            <p class="blockquote-bubble-content">Antehabeo augue causa diam interdico olim patria tincidunt vulputate.</p>
+            <footer class="blockquote-footer">
+              <img src="assets/img/team/jimi.jpg" alt="Jimi Bloggs" class="img-circle mr-1"> Someone famous in
+              <cite title="Source Title">Source Title</cite>
+            </footer>
+          </blockquote>
+        </div>
+
+        <!--Feedback 2-->
+        <div class="col-lg-4 d-lg-flex">
+          <blockquote class="d-lg-flex blockquote blockquote-bubble mb-0">
+            <p class="blockquote-bubble-content">Abluo et exputo molior nostrud nunc pertineo ulciscor virtus.</p>
+            <footer class="blockquote-footer">
+              <img src="assets/img/team/jimi.jpg" alt="Jimi Bloggs" class="img-circle mr-1"> Someone famous in
+              <cite title="Source Title">Source Title</cite>
+            </footer>
+          </blockquote>
+        </div>
+
+        <!--Feedback 3-->
+        <div class="col-lg-4 d-lg-flex">
+          <blockquote class="d-lg-flex blockquote blockquote-bubble mb-0">
+            <p class="blockquote-bubble-content">Ea feugiat gilvus pagus plaga sagaciter similis.</p>
+            <footer class="blockquote-footer">
+              <img src="assets/img/team/jimi.jpg" alt="Jimi Bloggs" class="img-circle mr-1"> Someone famous in
+              <cite title="Source Title">Source Title</cite>
+            </footer>
+          </blockquote>
+        </div>
+
+        <!--Feedback 4-->
+        <div class="col-lg-4 d-lg-flex">
+          <blockquote class="d-lg-flex blockquote blockquote-bubble mb-0">
+            <p class="blockquote-bubble-content">Abico appellatio conventio exerci genitus ille iustum laoreet obruo tincidunt.</p>
+            <footer class="blockquote-footer">
+              <img src="assets/img/team/jimi.jpg" alt="Jimi Bloggs" class="img-circle mr-1"> Someone famous in
+              <cite title="Source Title">Source Title</cite>
+            </footer>
+          </blockquote>
+        </div>
+
+        <!--Feedback 5-->
+        <div class="col-lg-4 d-lg-flex">
+          <blockquote class="d-lg-flex blockquote blockquote-bubble mb-0">
+            <p class="blockquote-bubble-content">Aliquip virtus zelus. Luctus plaga probo.</p>
+            <footer class="blockquote-footer">
+              <img src="assets/img/team/jimi.jpg" alt="Jimi Bloggs" class="img-circle mr-1"> Someone famous in
+              <cite title="Source Title">Source Title</cite>
+            </footer>
+          </blockquote>
+        </div>
+
+        <!--Feedback 6-->
+        <div class="col-lg-4 d-lg-flex">
+          <blockquote class="d-lg-flex blockquote blockquote-bubble mb-0">
+            <p class="blockquote-bubble-content">Eum fere pala quidne roto tincidunt typicus.</p>
+            <footer class="blockquote-footer">
+              <img src="assets/img/team/jimi.jpg" alt="Jimi Bloggs" class="img-circle mr-1"> Someone famous in
+              <cite title="Source Title">Source Title</cite>
+            </footer>
+          </blockquote>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ======== @Region: #content-below ======== -->
+  <div id="content-below">
+    <!-- Awesome features call to action -->
+    <div class="bg-primary text-white py-4">
+      <div class="container">
+        <div class="row text-center text-lg-left">
+          <div class="col-12 col-lg-7 py-2">
+            <h2 class="text-uppercase font-weight-bold mt-0 mb-2">
+              <span class="text-shadow">Awesome</span> <span class="text-primary-darkend">Features</span>
+            </h2>
+            <h5 class="text-faded">
+              99.9% Uptime <span class="text-primary-darkend font-weight-bold px-lg-1">/</span> Free Upgrades <span class="text-primary-darkend font-weight-bold px-lg-1">/</span> Fully Responsive <span class="text-primary-darkend font-weight-bold px-lg-1">/</span>              Bug Free
+            </h5>
+          </div>
+          <div class="col-12 col-lg-5 py-2 text-lg-right">
+            <a href="https://wrapbootstrap.com/theme/appstrap-responsive-website-template-WB0C6D0H4?ref=tme" class="btn btn-lg btn-primary btn-invert btn-rounded py-3 px-4">Get AppStrap Today<i class="fa fa-arrow-right ml-2"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ======== @Region: #footer ======== -->
+  <footer id="footer" class="p-0">
+    <div class="container pt-6 pb-5">
+      <div class="row">
+        <div class="col-md-4">
+          <!--@todo: replace with company contact details-->
+          <h4 class="text-uppercase text-white">
+            Contact Us
+          </h4>
+          <address>
+              <ul class="list-unstyled">
+                <li>
+                  <abbr title="Phone"><i class="fa fa-phone fa-fw"></i></abbr>
+                  019223 8092344
+                </li>
+                <li>
+                  <abbr title="Email"><i class="fa fa-envelope fa-fw"></i></abbr>
+                  info@appstraptheme.com
+                </li>
+                <li>
+                  <abbr title="Address"><i class="fa fa-home fa-fw"></i></abbr>
+                  Sunshine House, Sunville. SUN12 8LU.
+                </li>
+              </ul>
+            </address>
+        </div>
+
+        <div class="col-md-4">
+          <h4 class="text-uppercase text-white">
+            About Us
+          </h4>
+          <p>Making the web a prettier place one template at a time! We make beautiful, quality, responsive Drupal & web templates!</p>
+        </div>
+
+        <div class="col-md-4">
+          <h4 class="text-uppercase text-white">
+            Newsletter
+          </h4>
+          <p>Stay up to date with our latest news and product releases by signing up to our newsletter.</p>
+          <!--@todo: replace with mailchimp code-->
+          <form>
+            <div class="input-group">
+              <label class="sr-only" for="email-field">Email</label>
+              <input type="text" class="form-control" id="email-field" placeholder="Email">
+              <span class="input-group-btn">
+                  <button class="btn btn-primary" type="button">Go!</button>
+                </span>
+            </div>
+          </form>
+        </div>
+      </div>
+
+    </div>
+    <hr class="my-0 hr-blank op-2" />
+    <!--@todo: replace with company copyright details-->
+    <div class="bg-inverse-dark text-sm py-3">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <p class="mb-0">Site template by <a href="appstraptheme.com" class="footer-link">AppStrap</a> | Copyright 2018 &copy; AppStrap</p>
+          </div>
+          <div class="col-md-6">
+            <ul class="list-inline footer-links float-md-right mb-0">
+              <li class="list-inline-item"><a href="#">Terms</a></li>
+              <li class="list-inline-item"><a href="#">Privacy</a></li>
+              <li class="list-inline-item"><a href="#">Contact Us</a></li>
+            </ul>
+          </div>
+        </div>
+        <a href="#top" class="btn btn-icon btn-dark pos-fixed pos-b pos-r mr-3 mb-3 scroll-state-hidden" title="Back to top" data-scroll="scroll-state"><i class="fa fa-chevron-up"></i></a>
+      </div>
+    </div>
+  </footer>
+  <!-- Style switcher - demo only - @todo: remove in production -->
+  <div class="colour-switcher">
+    <a href="#" class="colour-switcher-toggle" data-toggle="class" data-target=".colour-switcher"> <i class="fa fa-paint-brush"></i> </a>
+    <h5 class="text-uppercase my-0">
+      Theme Colours
+    </h5>
+    <hr />
+    <div class="theme-colours"> <a href="#green" class="green active" data-toggle="tooltip" data-placement="right" data-original-title="Green (Default)">Green</a> <a href="#red" class="red" data-toggle="tooltip" data-placement="right" data-original-title="Red">Red</a> <a href="#blue"
+        class="blue" data-toggle="tooltip" data-placement="right" data-original-title="Blue">Blue</a> <a href="#purple" class="purple" data-toggle="tooltip" data-placement="right" data-original-title="Purple">Purple</a> <a href="#pink" class="pink" data-toggle="tooltip"
+        data-placement="right" data-original-title="Pink">Pink</a> <a href="#orange" class="orange" data-toggle="tooltip" data-placement="right" data-original-title="Orange">Orange</a> <a href="#lime" class="lime" data-toggle="tooltip" data-placement="right"
+        data-original-title="Lime">Lime</a> <a href="#blue-dark" class="blue-dark" data-toggle="tooltip" data-placement="right" data-original-title="Blue-dark">Blue-dark</a> <a href="#red-dark" class="red-dark" data-toggle="tooltip" data-placement="right"
+        data-original-title="Red-dark">Red-dark</a> <a href="#brown" class="brown" data-toggle="tooltip" data-placement="right" data-original-title="Brown">Brown</a> <a href="#cyan-dark" class="cyan-dark" data-toggle="tooltip" data-placement="right" data-original-title="Cyan-dark">Cyan-dark</a>      <a href="#yellow" class="yellow" data-toggle="tooltip" data-placement="right" data-original-title="Yellow">Yellow</a> <a href="#slate" class="slate" data-toggle="tooltip" data-placement="right" data-original-title="Slate">Slate</a> <a href="#olive"
+        class="olive" data-toggle="tooltip" data-placement="right" data-original-title="Olive">Olive</a> <a href="#teal" class="teal" data-toggle="tooltip" data-placement="right" data-original-title="Teal">Teal</a> <a href="#green-bright" class="green-bright"
+        data-toggle="tooltip" data-placement="right" data-original-title="Green-bright">Green-bright</a> </div>
+    <hr />
+    <p class="text-xs text-muted">Cookies are NOT enabled so colour selection is not persistent.</p>
+    <p class="text-xs my-0"><a href="index.html">Back to main homepage</a></p>
+    <p class="text-xs my-0"><a href="intro.html">Back to intro page</a></p>
+  </div>
+  <!--Hidden elements - excluded from jPanel Menu on mobile-->
+  <div class="hidden-elements jpanel-menu-exclude">
+    <!--@modal - signup modal-->
+    <div class="modal fade" id="signup-modal" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">
+              Sign Up
+            </h4>
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          </div>
+          <div class="modal-body">
+            <form action="signup.html">
+              <div class="form-group">
+                <h5>
+                  Price Plan
+                </h5>
+                <select class="form-control">
+                    <option>Basic</option>
+                    <option>Pro</option>
+                    <option>Pro +</option>
+                  </select>
+              </div>
+              <hr />
+
+              <h5>
+                Account Information
+              </h5>
+              <div class="form-group">
+                <label class="sr-only" for="signup-first-name">First Name</label>
+                <input type="text" class="form-control" id="signup-first-name" placeholder="First name">
+              </div>
+              <div class="form-group">
+                <label class="sr-only" for="signup-last-name">Last Name</label>
+                <input type="text" class="form-control" id="signup-last-name" placeholder="Last name">
+              </div>
+              <div class="form-group">
+                <label class="sr-only" for="signup-username">Userame</label>
+                <input type="text" class="form-control" id="signup-username" placeholder="Username">
+              </div>
+              <div class="form-group">
+                <label class="sr-only" for="signup-email">Email address</label>
+                <input type="email" class="form-control" id="signup-email" placeholder="Email address">
+              </div>
+              <div class="form-group">
+                <label class="sr-only" for="signup-password">Password</label>
+                <input type="password" class="form-control" id="signup-password" placeholder="Password">
+              </div>
+              <div class="form-check">
+                <label class="form-check-label">
+                    <input type="checkbox" value="term" class="form-check-input">
+                    I agree with the Terms and Conditions. 
+                  </label>
+              </div>
+              <hr />
+              <button class="btn btn-primary" type="submit">Sign up</button>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <small>Already signed up? <a href="login.html">Login here</a>.</small>
+          </div>
+        </div>
+        <!-- /.modal-content -->
+      </div>
+      <!-- /.modal-dialog -->
+    </div>
+    <!-- /.modal -->
+
+    <!--@modal - login modal-->
+    <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">
+              Login
+            </h4>
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          </div>
+          <div class="modal-body">
+            <form action="login.html">
+              <div class="form-group">
+                <label class="sr-only" for="login-email">Email</label>
+                <input type="email" id="login-email" class="form-control email" placeholder="Email">
+              </div>
+              <div class="form-group">
+                <label class="sr-only" for="login-password">Password</label>
+                <input type="password" id="login-password" class="form-control password" placeholder="Password">
+              </div>
+              <button type="button" class="btn btn-primary">Login</button>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <small>Not a member? <a href="#" class="signup">Sign up now!</a></small>
+            <br />
+            <small><a href="#">Forgotten password?</a></small>
+          </div>
+        </div>
+        <!-- /.modal-content -->
+      </div>
+      <!-- /.modal-dialog -->
+    </div>
+    <!-- /.modal -->
+  </div>
+
+
+  <!--jQuery 3.2.1 via CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <!-- Popper 1.12.3 via CDN, needed for Bootstrap Tooltips & Popovers -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"></script>
+
+  <!-- Bootstrap v4.0.0-beta.3 JS via CDN -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js"></script>
+
+
+  <!-- JS plugins required on all pages NOTE: Additional non-required plugins are loaded ondemand as of AppStrap 2.5 To disable this and load plugin assets manually simple add data-plugins-manual=true to the body tag -->
+
+  <!--Custom scripts & AppStrap API integration -->
+  <script src="assets/js/custom-script.js"></script>
+  <!--AppStrap scripts mainly used to trigger libraries/plugins -->
+  <script src="assets/js/script.min.js"></script>
+</body>
+
+</html>

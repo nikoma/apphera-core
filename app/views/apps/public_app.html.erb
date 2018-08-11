@@ -1,0 +1,36 @@
+<div class="row wrapper border-bottom white-bg page-heading">
+  <div class="col-sm-4">
+    <h2>Public Apps</h2>
+    <%= render_breadcrumbs %>
+  </div>
+</div>
+<div class="wrapper wrapper-content animated fadeInRight">
+        <div class="row">
+        <% @public_apps.each do |app| %>
+          
+            <div class="col-lg-3">
+                <div class="contact-box center-version">
+
+                    <a href="https://www.eqbotics.com/public_quiz_concept/<%= app.id %>">
+
+                        <img alt="image" class="img-circle" src="https://www.eqbotics.com<%= app.badge.img.url %>">
+
+
+                        <h3 class="m-b-xs"><strong><%= app.title %></strong></h3>
+
+                        <div class="font-bold"><%= app.description %></div>
+                        <address class="m-t-md">
+                            <strong>Get the Badge named:</strong><br>
+                           <%= app.badge.title %><br>
+                            
+                        </address>
+
+                    </a>
+                    
+
+                </div>
+
+            </div>
+<% end %>
+
+</div></div>

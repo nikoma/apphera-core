@@ -1,0 +1,55 @@
+<div class="row wrapper border-bottom white-bg page-heading">
+  <div class="col-sm-4">
+    <h2>View App</h2>
+    <%= render_breadcrumbs %>
+  </div>
+  <div class="col-sm-8 text-right">
+    <p class='add-record text-right'>
+      <%= link_to apps_url, data: {disable_with: "<i class='fa fa-spinner fa-spin'></i> Loading...".html_safe} do %>
+        <i class="fa fa-list"></i> List App
+      <% end %>
+    </p>
+  </div>
+</div>
+
+<div class="wrapper wrapper-content animated fadeInRight">
+  <div class='row'>
+    <div class='col-lg-12'>
+      <div class='ibox float-e-margins'>
+        <div class='ibox-content'>
+          <div class='table-responsive'>
+            <% if app %>
+  			      <%= link_to new_app_path, data: {disable_with: "<i class='fa fa-spinner fa-spin'></i> Loading...".html_safe} do %>
+  			        <i class="fa fa-plus"></i> Add App
+  			      <% end %>
+  			      &nbsp;&nbsp;
+  			      <%= link_to edit_app_path(app), data: {disable_with: "<i class='fa fa-spinner fa-spin'></i> Loading...".html_safe} do %>
+  			        <i class="fa fa-pencil"></i> Edit App
+  			      <% end %>
+
+              <table class='table table-bordered table-hover'>
+                <tr>
+                  <td class="col-lg-3">ID</td>
+                  <td><%= app.id %></td>
+                </tr>
+                <tr>
+                  <td class="col-lg-3">Name</td>
+                  <td><%= app.name %></td>
+                </tr>
+                <tr>
+                  <td class="col-lg-3">Created At</td>
+                  <td><%= local_time(app.created_at) %></td>
+                </tr>
+                <tr>
+                  <td class="col-lg-3">Updated At</td>
+                  <td><%= local_time(app.updated_at) %></td>
+                </tr>
+              <% end %>
+            </table>
+
+         	</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

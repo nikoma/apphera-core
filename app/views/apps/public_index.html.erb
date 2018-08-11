@@ -1,0 +1,32 @@
+<div class="row wrapper border-bottom white-bg page-heading">
+  <div class="col-sm-4">
+    <h2>Apps</h2>
+  </div>
+</div>
+<div class="wrapper wrapper-content animated fadeInRight">
+  <div class="row">
+    <% @apps.each do |app| %>
+      <div class="col-lg-3">
+        <div class="contact-box center-version">
+          <a href="#">
+            <% if app.image.present? %>
+              <%= image_tag(app.image_url, class: 'img-circle') %>
+            <% else %>
+              <img src="https://placeholdit.co//i/200x200?fc=111111&text=No%20Image%20Found", class='img-circle'>
+            <% end %>
+            <h3 class="m-b-xs"><strong><%= app.name %></strong></h3>
+            <div class="font-bold"><%= app.title %></div>
+            <address class="m-t-md">
+              <strong><%= app.description %></strong>
+            </address>
+          </a>
+          <div class="contact-box-footer">
+            <div class="m-t-xs btn-group">
+              <a class="btn btn-xs btn-white"><i class="fa fa-thumbs-up"></i>YES! I am in!</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

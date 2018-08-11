@@ -1,0 +1,46 @@
+<div class="row wrapper border-bottom white-bg page-heading">
+  <div class="col-sm-4">
+    <h2>Concept</h2>
+    <%= render_breadcrumbs %>
+  </div>
+  
+</div>
+
+<div class="wrapper wrapper-content animated fadeInRight">
+  <div class='row'>
+    <div class="ibox float-e-margins">
+      <div class="ibox-title">
+        <h5>List Concepts</h5>
+      </div>
+      <div class="ibox-content">
+        <% if @concepts.present? %>
+          <table class="table table-hover">
+
+            <thead>
+              <tr>
+                <th>Title</th>
+                <th>Language</th>
+                <th>App</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <% @concepts.each do |concept| %>
+                <tr>
+                  <td><a href="factsheets/<%= concept.slug %>"><%= concept.title %></a></td>
+                  <td><%= concept.try(:language).try(:country)  %></td>
+                  <td><%= concept.try(:app).try(:name)  %></td>
+                 
+                  </td>
+                </tr>
+              <% end %>
+            </tbody>
+
+          </table>
+        <% else %>
+          <p>No Concepts Found </p>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

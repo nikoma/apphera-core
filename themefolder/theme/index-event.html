@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Event Homepage | AppStrap Bootstrap Theme by Themelize.me</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- @todo: fill with your company info or remove -->
+  <meta name="description" content="">
+  <meta name="author" content="Themelize.me">
+
+  <!-- Bootstrap v4.0.0-beta.3 CSS via CDN -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css">
+
+  <!-- Plugins required on all pages NOTE: Additional non-required plugins are loaded ondemand as of AppStrap 2.5 -->
+
+  <!-- Theme style -->
+  <link href="assets/css/theme-style.min.css" rel="stylesheet">
+
+  <!-- Purple colour scheme -->
+  <link href="assets/css/colour-purple.min.css" rel="stylesheet">
+
+  <!--Your custom colour override-->
+  <link href="#" id="colour-scheme" rel="stylesheet">
+
+  <!-- Your custom override -->
+  <link href="assets/css/custom-style.css" rel="stylesheet">
+
+
+
+  <!-- Optional: ICON SETS -->
+  <!-- Iconset: Font Awesome 4.7.0 via CDN -->
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <!-- Iconset: flag icons - http://lipis.github.io/flag-icon-css/ -->
+  <link href="assets/plugins/flag-icon-css/css/flag-icon.min.css" rel="stylesheet">
+  <!-- Iconset: ionicons - http://ionicons.com/ -->
+  <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet">
+  <!-- Iconset: Linearicons - https://linearicons.com/free -->
+  <link href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css" rel="stylesheet">
+
+
+  <!-- Le fav and touch icons - @todo: fill with your icons or remove, try https://realfavicongenerator.net -->
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicons/favicon-16x16.png">
+  <link rel="manifest" href="assets/favicons/manifest.json">
+  <link rel="shortcut icon" href="assets/favicons/favicon.ico">
+  <meta name="msapplication-config" content="assets/favicons/browserconfig.xml">
+  <meta name="theme-color" content="#ffffff">
+
+
+  <!-- Google fonts -->
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Rambla:400,700' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Calligraffitti' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,700' rel='stylesheet' type='text/css'>
+
+  <!--Plugin: Retina.js (high def image replacement) - @see: http://retinajs.com/-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/retina.js/1.3.0/retina.min.js"></script>
+</head>
+
+<!-- ======== @Region: body ======== -->
+
+<body class="page header-ontop header-compact-sticky page-index-event navbar-layout-default" data-colour-scheme="pink">
+
+  <!-- @plugin: page loading indicator, delete to remove loader -->
+  <div class="page-loader" data-toggle="page-loader"></div>
+
+  <a id="#top" href="#content" class="sr-only">Skip to content</a>
+
+  <!-- ======== @Region: #header ======== -->
+  <div id="header">
+
+    <div data-toggle="sticky">
+
+      <!--Header & Branding region-->
+      <div class="header header-dark bg-dark bg-op-1 border-primary border-op-4 sticky-bg-dark sticky-bg-op-9">
+        <!-- all direct children of the .header-inner element will be vertically aligned with each other you can override all the behaviours using the flexbox utilities (flexbox.htm) All elements with .header-brand & .header-block-flex wrappers will automatically be aligned inline & vertically using flexbox, this can be overridden using the flexbox utilities (flexbox.htm) Use .header-block to stack elements within on small screen & "float" on larger screens use .order-first or/and .order-last classes to make an element show first or last within .header-inner or .headr-block elements -->
+        <div class="header-inner container">
+          <!--branding/logo -->
+          <div class="header-brand">
+            <a class="header-brand-text" href="index.html" title="Home">
+              <h1 class="h2">
+                <span class="header-brand-text-alt">App</span>Strap<span class="header-brand-text-alt">.</span>
+              </h1>
+            </a>
+            <div class="header-divider d-none d-lg-block"></div>
+            <div class="header-slogan d-none d-lg-block">Event Theme</div>
+          </div>
+          <!-- other header content -->
+          <div class="header-block d-flex order-12 align-items-center">
+
+            <!-- mobile collapse menu button - data-toggle="collapse" = default BS menu - data-toggle="jpanel-menu" = jPanel Menu - data-toggle="overlay" = Overlay Menu -->
+            <a href="#top" class="btn btn-icon btn-white ml-2 order-12 d-lg-none" data-toggle="jpanel-menu" data-target=".navbar-main" data-direction="right"> <i class="fa fa-bars"></i> </a>
+            <a href="#pricing" data-toggle="scroll-link" class="btn btn-primary btn-sm text-uppercase font-weight-bold px-lg-3 py-lg-2 ml-lg-3">Register <span class="d-none d-lg-inline-block">Now</span></a>
+          </div>
+
+          <div class="navbar navbar-expand-md navbar-static-top">
+            <!--everything within this div is collapsed on mobile-->
+            <div class="navbar-main collapse">
+              <!--main navigation-->
+              <ul class="nav navbar-nav navbar-dark">
+
+                <li class="nav-item">
+                  <a href="#speakers" data-toggle="scroll-link" data-dimiss="jpanel-menu" class="nav-link link-effect-slideup"> <span class="nav-link-inner" data-title="Speakers">Speakers</span> </a>
+                </li>
+                <li class="nav-item">
+                  <a href="#about" data-toggle="scroll-link" data-dimiss="jpanel-menu" class="nav-link link-effect-slideup"> <span class="nav-link-inner" data-title="About">About</span> </a>
+                </li>
+                <li class="nav-item">
+                  <a href="#venue" data-toggle="scroll-link" data-dimiss="jpanel-menu" class="nav-link link-effect-slideup"> <span class="nav-link-inner" data-title="Venue">Venue</span> </a>
+                </li>
+                <li class="nav-item">
+                  <a href="#schedule" data-toggle="scroll-link" data-dimiss="jpanel-menu" class="nav-link link-effect-slideup"> <span class="nav-link-inner" data-title="Schedule">Schedule</span> </a>
+                </li>
+                <li class="nav-item">
+                  <a href="#gallery" data-toggle="scroll-link" data-dimiss="jpanel-menu" class="nav-link link-effect-slideup"> <span class="nav-link-inner" data-title="Gallery">Gallery</span> </a>
+                </li>
+              </ul>
+            </div>
+            <!--/.navbar-collapse -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ======== @Region: #highlighted ======== -->
+  <div id="highlighted" class="bg-black">
+    <!-- Image Banner: Use the the data-bg-img functionality to create a simple image banner Use spacer classes to make the banner larger with padding, allows for easy responsive changes too see: elements-ctas.htm To make the banner full height add the attributes: data-toggle="full-height" data-offset="#header" -->
+    <div class="overlay overlay-op-6 text-left" data-animate="fadeIn" data-toggle="backstretch" data-backstretch-target="self" data-backstretch-overlay=false data-backstretch-imgs="assets/img/index-event/banner-1.jpg,assets/img/index-event/banner-2.jpg,assets/img/index-event/banner-3.jpg">
+      <div data-toggle="full-height" data-scroll="scrollax" class="container px-3 py-5 py-lg-7 flex-valign-b" data-animate="fadeIn" data-animate-delay="0.4">
+        <h2 class="display-4 text-white font-weight-bold text-letter-spacing-xs text-uppercase mt-lg-7">
+          UIConf 2017
+        </h2>
+        <h4 class="text-grey font-weight-normal op-9">
+          An exquisite web conference that inspires and entertains.
+          <br />
+          <span class="text-sm text-white">November 13th - 15th 2017.</span>
+          </h3>
+          <div class="mt-4"> <a href="#pricing" class="btn btn-primary font-weight-bold" data-toggle="scroll-link" data-animate="fadeIn" data-animate-delay="0.6">Reserve Your Seat</a> </div>
+      </div>
+    </div>
+  </div>
+  <!-- Countdown -->
+  <div class="bg-primary py-4">
+    <div class="container text-white d-lg-flex justify-content-center">
+      <h3 class="my-lg-0 mr-lg-3 font-weight-normal">
+        Just <span class="countdown font-weight-bold" data-countdown="2018/11/13 09:00:01" data-countdown-format="%-D %!D:day,days;"></span> to go!
+        </h2>
+        <a href="#" class="btn btn-primary btn-invert btn-shadow font-weight-bold">Reserve Your Seat</a>
+
+    </div>
+  </div>
+
+  <!-- ======== @Region: #content ======== -->
+  <div id="content" class="p-0 bg-white">
+    <!-- Speakers -->
+    <div id="speakers" class="py-4 py-lg-7 bg-light">
+      <div class="container">
+        <h2 class="text-uppercase text-letter-spacing-xs my-0 text-primary font-weight-bold">
+          Key Speakers
+        </h2>
+        <p class="text-sm text-dark mt-0 mb-5">Listen. Learn. Get inspired from our special speakers.</p>
+        <div class="row">
+          <div class="col-6 col-lg-3 d-flex">
+            <div class="card mb-3 border-0 flex-ew">
+              <div class="card-effect card-effect-front-to-back">
+                <img class="card-img-top img-fluid" src="assets/img/index-event/speaker-1.jpg" alt="Bruce Lawson">
+                <div class="card-back rounded bg-dark bg-op-8 text-white flex-valign text-center p-3">
+                  <div>
+                    <a href="#" class="text-white">
+<i class="ion-social-twitter icon-1x icon-sq"></i> </a>
+                    <a href="#" class="text-white">
+<i class="ion-social-instagram icon-1x icon-sq"></i> </a>
+                  </div>
+                </div>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title mb-1">
+                  Bruce Lawson
+                </h5>
+                <p class="card-text text-uppercase text-dark text-xs">Developer / <span class="text-primary">Digital Ocean</span></p>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-lg-3 d-flex">
+            <div class="card mb-3 border-0 flex-ew">
+              <div class="card-effect card-effect-front-to-back">
+                <img class="card-img-top img-fluid" src="assets/img/index-event/speaker-2.jpg" alt="Jesscia Lawrence">
+                <div class="card-back rounded bg-dark bg-op-8 text-white flex-valign text-center p-3">
+                  <div>
+                    <a href="#" class="text-white">
+<i class="ion-social-twitter icon-1x icon-sq"></i> </a>
+                    <a href="#" class="text-white">
+<i class="ion-social-linkedin icon-1x icon-sq"></i> </a>
+                  </div>
+                </div>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title mb-1">
+                  Jesscia Lawrence
+                </h5>
+                <p class="card-text text-uppercase text-dark text-xs">Javascript Dev. / <span class="text-primary">Amazon</span></p>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-lg-3 d-flex">
+            <div class="card mb-3 border-0 flex-ew">
+              <div class="card-effect card-effect-front-to-back">
+                <img class="card-img-top img-fluid" src="assets/img/index-event/speaker-3.jpg" alt="Vitaly Friedmann">
+                <div class="card-back rounded bg-dark bg-op-8 text-white flex-valign text-center p-3">
+                  <div>
+                    <a href="#" class="text-white">
+<i class="ion-social-twitter icon-1x icon-sq"></i> </a>
+                    <a href="#" class="text-white">
+<i class="ion-social-instagram icon-1x icon-sq"></i> </a>
+                    <a href="#" class="text-white">
+<i class="ion-social-facebook icon-1x icon-sq"></i> </a>
+                  </div>
+                </div>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title mb-1">
+                  Vitaly Friedmann
+                </h5>
+                <p class="card-text text-uppercase text-dark text-xs">UX Designer / <span class="text-primary">Booking.com</span></p>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-lg-3 d-flex">
+            <div class="card mb-3 border-0 flex-ew">
+              <div class="card-effect card-effect-front-to-back">
+                <img class="card-img-top img-fluid" src="assets/img/index-event/speaker-4.jpg" alt="Anthony Jonas">
+                <div class="card-back rounded bg-dark bg-op-8 text-white flex-valign text-center p-3">
+                  <div>
+                    <a href="#" class="text-white">
+<i class="ion-social-twitter icon-1x icon-sq"></i> </a>
+                    <a href="#" class="text-white">
+<i class="ion-social-instagram icon-1x icon-sq"></i> </a>
+                  </div>
+                </div>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title mb-1">
+                  Anthony Jonas
+                </h5>
+                <p class="card-text text-uppercase text-dark text-xs">Founder / <span class="text-primary">AJ Prod.</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- About/Whos it for -->
+    <div id="about" class="bg-white">
+      <div class="container py-7">
+        <h2 class="text-uppercase text-letter-spacing-xs my-0 text-primary font-weight-bold">
+          Who is this Conference for
+        </h2>
+        <p class="text-sm text-dark mt-0 mb-5">Everyone is welcome.</p>
+        <div class="row">
+          <div class="col-lg-3">
+            <i class="lnr lnr-graduation-hat d-block text-dark icon-5x op-8 mb-3"></i>
+            <h5 class="text-dark op-9">
+              College Graduates
+            </h5>
+            <p class="text-sm text-dark op-8">Camur ludus quis vereor voco.</p>
+          </div>
+          <div class="col-lg-3">
+            <i class="lnr lnr-camera d-block text-dark icon-5x op-8 mb-3"></i>
+            <h5 class="text-dark op-9">
+              Photographers
+            </h5>
+            <p class="text-sm text-dark op-8">Accumsan imputo natu nimis nutus quidem.</p>
+          </div>
+          <div class="col-lg-3">
+            <i class="lnr lnr-briefcase d-block text-dark icon-5x op-8 mb-3"></i>
+            <h5 class="text-dark op-9">
+              Business People
+            </h5>
+            <p class="text-sm text-dark op-8">Abico hos lenis refoveo. Neque oppeto si. Nisl pala ymo.</p>
+          </div>
+          <div class="col-lg-3">
+            <i class="lnr lnr-users d-block text-dark icon-5x op-8 mb-3"></i>
+            <h5 class="text-dark op-9">
+              Support Assistant
+            </h5>
+            <p class="text-sm text-dark op-8">Abluo amet conventio exputo incassum molior occuro pala paulatim.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Venue -->
+    <div id="venue" class="bg-black overlay overlay-op-8 py-6" data-toggle="backstretch" data-backstretch-target="self" data-backstretch-overlay=false data-backstretch-imgs="assets/img/index-event/venue-1.jpg,assets/img/index-event/venue-2.jpg,assets/img/index-event/venue-3.jpg">
+      <div class="container">
+        <h2 class="text-uppercase text-letter-spacing-xs my-0 text-white font-weight-bold">
+          Venue
+        </h2>
+        <p class="text-sm text-white op-6 mt-0 mb-5">Classy location in the heart of the city.</p>
+        <div class="row text-white">
+          <div class="col-lg-6">
+            <p>UI Conf 2017 will be taking place at Koko Club London, very central location on London Street, the city's most famous thoroughfare which runs, much as it has for more than three centuries, from Piata Victoriei in the north of the city all
+              the way down to Piata Natiunilor Unite and the Dambovita river.</p>
+          </div>
+          <div class="col-lg-3 text-center">
+            <i class="lnr lnr-map-marker d-block icon-3x mb-3"></i>
+            <p>
+              Main Principal Conference
+              <br /> 10th Street 14580 London UK
+            </p>
+          </div>
+          <div class="col-lg-3 text-center">
+            <i class="lnr lnr-phone-handset d-block icon-3x mb-3"></i>
+            <p>
+              09-800 555-3312
+              <br /> 09-800 555-3319
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- schedule -->
+    <div id="schedule" class="bg-white">
+      <div class="container py-7">
+        <h2 class="text-uppercase text-letter-spacing-xs my-0 text-primary font-weight-bold">
+          Schedule
+        </h2>
+        <p class="text-sm text-dark mt-0 mb-5">There's time and place for everything.</p>
+        <!-- Days -->
+        <div class="row">
+          <div class="col-lg-4 mb-3" id="Friday, Nov 13th">
+            <h4 class="mt-0 mb-3 text-dark op-8 font-weight-bold">
+              Friday, Nov 13th
+            </h4>
+            <ul class="list-timeline list-timeline-primary">
+              <li class="list-timeline-item p-0 pb-3 pb-lg-4 d-flex flex-wrap flex-column">
+                <p class="my-0 text-dark flex-fw text-sm text-uppercase"><span class="text-inverse op-8">09:00 - 10:00</span> - Registration</p>
+              </li>
+              <li class="list-timeline-item show p-0 pb-3 pb-lg-4 d-flex flex-wrap flex-column" data-toggle="collapse" data-target="#day-1-item-2">
+                <p class="my-0 text-dark flex-fw text-sm text-uppercase"><span class="text-primary font-weight-bold op-8" data-animate="flash" data-animate-infinite="1" data-animate-duration="3.5">Now</span> - Anthony Jonas</p>
+                <p class="my-0 collapse flex-fw text-uppercase text-xs text-dark op-8 show" id="day-1-item-2"> Talk: Release cycles / <span class="text-primary">Room 19</span> </p>
+              </li>
+              <li class="list-timeline-item p-0 pb-3 pb-lg-4 d-flex flex-wrap flex-column">
+                <p class="my-0 text-dark flex-fw text-sm text-uppercase"><span class="text-inverse op-8">12:00 - 13:00</span> - Lunch Break</p>
+              </li>
+              <li class="list-timeline-item p-0 pb-3 pb-lg-4 d-flex flex-wrap flex-column" data-toggle="collapse" data-target="#day-1-item-4">
+                <p class="my-0 text-dark flex-fw text-sm text-uppercase"><span class="text-inverse op-8">13:00 - 15:00</span> - Bruce Lawson</p>
+                <p class="my-0 collapse flex-fw text-uppercase text-xs text-dark op-8" id="day-1-item-4"> Talk: DB management / <span class="text-primary">Room 31</span> </p>
+              </li>
+              <li class="list-timeline-item p-0 pb-3 pb-lg-4 d-flex flex-wrap flex-column">
+                <p class="my-0 text-dark flex-fw text-sm text-uppercase"><span class="text-inverse op-8">15:00 - 16:00</span> - Coffee Break</p>
+              </li>
+              <li class="list-timeline-item p-0 pb-3 pb-lg-4 d-flex flex-wrap flex-column" data-toggle="collapse" data-target="#day-1-item-6">
+                <p class="my-0 text-dark flex-fw text-sm text-uppercase"><span class="text-inverse op-8">16:00 - 18:00</span> - Vitaly Friedmann</p>
+                <p class="my-0 collapse flex-fw text-uppercase text-xs text-dark op-8" id="day-1-item-6"> Talk: Wireframing / <span class="text-primary">Room 19</span> </p>
+              </li>
+              <li class="list-timeline-item p-0 pb-3 d-flex flex-wrap flex-column">
+                <p class="my-0 text-dark flex-fw text-sm text-uppercase"><span class="text-inverse op-8">18:00 - 23:00</span> - After conference</p>
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-4 mb-3" id="Saturday, Nov 14th">
+            <h4 class="mt-0 mb-3 text-dark op-8 font-weight-bold">
+              Saturday, Nov 14th
+            </h4>
+            <ul class="list-timeline list-timeline-primary">
+              <li class="list-timeline-item p-0 pb-3 pb-lg-4 d-flex flex-wrap flex-column">
+                <p class="my-0 text-dark flex-fw text-sm text-uppercase"><span class="text-inverse op-8">09:00 - 10:00</span> - Registration</p>
+              </li>
+              <li class="list-timeline-item p-0 pb-3 pb-lg-4 d-flex flex-wrap flex-column" data-toggle="collapse" data-target="#day-2-item-2">
+                <p class="my-0 text-dark flex-fw text-sm text-uppercase"><span class="text-inverse op-8">10:00 - 12:00</span> - Anthony Jonas</p>
+                <p class="my-0 collapse flex-fw text-uppercase text-xs text-dark op-8" id="day-2-item-2"> Talk: OpenData / <span class="text-primary">Room 31</span> </p>
+              </li>
+              <li class="list-timeline-item p-0 pb-3 pb-lg-4 d-flex flex-wrap flex-column">
+                <p class="my-0 text-dark flex-fw text-sm text-uppercase"><span class="text-inverse op-8">12:00 - 13:00</span> - Lunch Break</p>
+              </li>
+              <li class="list-timeline-item p-0 pb-3 pb-lg-4 d-flex flex-wrap flex-column" data-toggle="collapse" data-target="#day-2-item-4">
+                <p class="my-0 text-dark flex-fw text-sm text-uppercase"><span class="text-inverse op-8">13:00 - 15:00</span> - Jesscia Lawrence</p>
+                <p class="my-0 collapse flex-fw text-uppercase text-xs text-dark op-8" id="day-2-item-4"> Talk: NodeJs for newbies / <span class="text-primary">Room 112</span> </p>
+              </li>
+              <li class="list-timeline-item p-0 pb-3 pb-lg-4 d-flex flex-wrap flex-column">
+                <p class="my-0 text-dark flex-fw text-sm text-uppercase"><span class="text-inverse op-8">15:00 - 16:00</span> - Coffee Break</p>
+              </li>
+              <li class="list-timeline-item p-0 pb-3 pb-lg-4 d-flex flex-wrap flex-column" data-toggle="collapse" data-target="#day-2-item-6">
+                <p class="my-0 text-dark flex-fw text-sm text-uppercase"><span class="text-inverse op-8">16:00 - 18:00</span> - Vitaly Friedmann</p>
+                <p class="my-0 collapse flex-fw text-uppercase text-xs text-dark op-8" id="day-2-item-6"> Talk: Mobile design / <span class="text-primary">Room 31</span> </p>
+              </li>
+              <li class="list-timeline-item p-0 pb-3 d-flex flex-wrap flex-column">
+                <p class="my-0 text-dark flex-fw text-sm text-uppercase"><span class="text-inverse op-8">18:00 - 23:00</span> - After conference</p>
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-4 mb-3" id="Sunday, Nov 15th">
+            <h4 class="mt-0 mb-3 text-dark op-8 font-weight-bold">
+              Sunday, Nov 15th
+            </h4>
+            <ul class="list-timeline list-timeline-primary">
+              <li class="list-timeline-item p-0 pb-3 pb-lg-4 d-flex flex-wrap flex-column">
+                <p class="my-0 text-dark flex-fw text-sm text-uppercase"><span class="text-inverse op-8">09:00 - 10:00</span> - Registration</p>
+              </li>
+              <li class="list-timeline-item p-0 pb-3 pb-lg-4 d-flex flex-wrap flex-column" data-toggle="collapse" data-target="#day-3-item-2">
+                <p class="my-0 text-dark flex-fw text-sm text-uppercase"><span class="text-inverse op-8">10:00 - 12:00</span> - Anthony Jonas</p>
+                <p class="my-0 collapse flex-fw text-uppercase text-xs text-dark op-8" id="day-3-item-2"> Talk: Release cycles / <span class="text-primary">Room 19</span> </p>
+              </li>
+              <li class="list-timeline-item p-0 pb-3 pb-lg-4 d-flex flex-wrap flex-column">
+                <p class="my-0 text-dark flex-fw text-sm text-uppercase"><span class="text-inverse op-8">12:00 - 13:00</span> - Lunch Break</p>
+              </li>
+              <li class="list-timeline-item p-0 pb-3 pb-lg-4 d-flex flex-wrap flex-column" data-toggle="collapse" data-target="#day-3-item-4">
+                <p class="my-0 text-dark flex-fw text-sm text-uppercase"><span class="text-inverse op-8">13:00 - 15:00</span> - Anthony Jonas</p>
+                <p class="my-0 collapse flex-fw text-uppercase text-xs text-dark op-8" id="day-3-item-4"> Talk: Release cycles / <span class="text-primary">Room 19</span> </p>
+              </li>
+              <li class="list-timeline-item p-0 pb-3 pb-lg-4 d-flex flex-wrap flex-column">
+                <p class="my-0 text-dark flex-fw text-sm text-uppercase"><span class="text-inverse op-8">15:00 - 16:00</span> - Coffee Break</p>
+              </li>
+              <li class="list-timeline-item p-0 pb-3 pb-lg-4 d-flex flex-wrap flex-column" data-toggle="collapse" data-target="#day-3-item-6">
+                <p class="my-0 text-dark flex-fw text-sm text-uppercase"><span class="text-inverse op-8">16:00 - 18:00</span> - Vitaly Friedmann</p>
+                <p class="my-0 collapse flex-fw text-uppercase text-xs text-dark op-8" id="day-3-item-6"> Talk: Mobile design / <span class="text-primary">Room 31</span> </p>
+              </li>
+              <li class="list-timeline-item p-0 pb-3 d-flex flex-wrap flex-column">
+                <p class="my-0 text-dark flex-fw text-sm text-uppercase"><span class="text-inverse op-8">18:00 - 23:00</span> - After conference</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Gallery -->
+    <div id="gallery" class="bg-grey">
+      <div class="container py-7">
+        <h2 class="text-uppercase text-letter-spacing-xs my-0 text-primary font-weight-bold">
+          Gallery
+        </h2>
+        <p class="text-sm text-dark mt-0 mb-5">Shots from last years event.</p>
+        <div class="row no-gutters" data-toggle="magnific-popup" data-magnific-popup-settings='{"delegate": "a.gallery-trigger", "gallery":{"enabled":true}}'>
+          <div class="col-6 col-lg-3">
+            <div class="card-effect card-effect-front-to-back">
+              <img data-src="https://unsplash.it/300/200?image=1048" data-toggle="blazy" alt="Photo 1048" class="img-fluid" />
+              <div class="card-back rounded bg-dark bg-op-8 flex-valign text-center p-3">
+                <a href="https://unsplash.it/1000/667?image=1048" class="text-white gallery-trigger"> <i class="ion-ios-search-strong icon-1x"></i> </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-lg-3">
+            <div class="card-effect card-effect-front-to-back">
+              <img data-src="https://unsplash.it/300/200?image=1033" data-toggle="blazy" alt="Photo 1033" class="img-fluid" />
+              <div class="card-back rounded bg-dark bg-op-8 flex-valign text-center p-3">
+                <a href="https://unsplash.it/1180/787?image=1033" class="text-white gallery-trigger"> <i class="ion-ios-search-strong icon-1x"></i> </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-lg-3">
+            <div class="card-effect card-effect-front-to-back">
+              <img data-src="https://unsplash.it/300/200?image=1031" data-toggle="blazy" alt="Photo 1031" class="img-fluid" />
+              <div class="card-back rounded bg-dark bg-op-8 flex-valign text-center p-3">
+                <a href="https://unsplash.it/1048/699?image=1031" class="text-white gallery-trigger"> <i class="ion-ios-search-strong icon-1x"></i> </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-lg-3">
+            <div class="card-effect card-effect-front-to-back">
+              <img data-src="https://unsplash.it/300/200?image=899" data-toggle="blazy" alt="Photo 899" class="img-fluid" />
+              <div class="card-back rounded bg-dark bg-op-8 flex-valign text-center p-3">
+                <a href="https://unsplash.it/1087/725?image=899" class="text-white gallery-trigger"> <i class="ion-ios-search-strong icon-1x"></i> </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-lg-3">
+            <div class="card-effect card-effect-front-to-back">
+              <img data-src="https://unsplash.it/300/200?image=635" data-toggle="blazy" alt="Photo 635" class="img-fluid" />
+              <div class="card-back rounded bg-dark bg-op-8 flex-valign text-center p-3">
+                <a href="https://unsplash.it/1032/688?image=635" class="text-white gallery-trigger"> <i class="ion-ios-search-strong icon-1x"></i> </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-lg-3">
+            <div class="card-effect card-effect-front-to-back">
+              <img data-src="https://unsplash.it/300/200?image=590" data-toggle="blazy" alt="Photo 590" class="img-fluid" />
+              <div class="card-back rounded bg-dark bg-op-8 flex-valign text-center p-3">
+                <a href="https://unsplash.it/1013/675?image=590" class="text-white gallery-trigger"> <i class="ion-ios-search-strong icon-1x"></i> </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-lg-3">
+            <div class="card-effect card-effect-front-to-back">
+              <img data-src="https://unsplash.it/300/200?image=395" data-toggle="blazy" alt="Photo 395" class="img-fluid" />
+              <div class="card-back rounded bg-dark bg-op-8 flex-valign text-center p-3">
+                <a href="https://unsplash.it/1067/711?image=395" class="text-white gallery-trigger"> <i class="ion-ios-search-strong icon-1x"></i> </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-lg-3">
+            <div class="card-effect card-effect-front-to-back">
+              <img data-src="https://unsplash.it/300/200?image=378" data-toggle="blazy" alt="Photo 378" class="img-fluid" />
+              <div class="card-back rounded bg-dark bg-op-8 flex-valign text-center p-3">
+                <a href="https://unsplash.it/1027/685?image=378" class="text-white gallery-trigger"> <i class="ion-ios-search-strong icon-1x"></i> </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr class="my-0" />
+    <!-- Pricing/join -->
+    <div id="pricing" class="bg-light">
+      <div class="container py-7">
+        <h2 class="text-uppercase text-letter-spacing-xs my-0 text-primary font-weight-bold">
+          Pricing
+        </h2>
+        <p class="text-sm text-dark mt-0 mb-3">Affordable for every wallet.</p>
+        <!-- Mouthly / yearly price -->
+        <div class="nav nav-pills nav-pills-border-bottom-inside nav-pills-border-lg flex-row d-inline-flex" role="tablist"> <a href="#" class="nav-link text-uppercase font-weight-bold px-4 active" id="price-monthly" data-toggle="class" data-target='{"#price-monthly":{"actions":{"add":"active"}}, "#price-yearly":{"actions":{"remove":"active"}}, ".price-early-bird":{"actions":{"remove":"d-none"}},".price-standard":{"actions":{"add":"d-none"}}}'>Early Bird</a>          <a href="#" class="nav-link text-uppercase font-weight-bold px-4" id="price-yearly" data-toggle="class" data-target='{"#price-monthly":{"actions":{"remove":"active"}}, "#price-yearly":{"actions":{"add":"active"}}, ".price-early-bird":{"actions":{"add":"d-none"}},".price-standard":{"actions":{"remove":"d-none"}}}'>Standard</a>          </div>
+        <!-- Pricing stack -->
+        <div class="row pricing-stack mt-3">
+          <div class="col-md-4 d-flex">
+            <div class="card border-0 text-center flex-ew">
+              <div class="bg-primary py-4 text-white">
+                <h4 class="my-0">
+                  Conference
+                </h4>
+                <h2 class="price-digits display-4 price-early-bird font-weight-bold my-0">
+                  $199
+                </h2>
+                <h2 class="price-digits display-4 price-early-bird font-weight-bold price-standard d-none my-0">
+                  $298
+                </h2>
+                <span class="price-extra d-block text-sm">per person</span>
+              </div>
+              <div class="card-body">
+                <p class="text-sm mt-0 mb-4 text-grey-dark op-8">Come and be part of the most important web event in London, on the weekend of 13-15 November. A full day of inspiring and technical talks delivered by worldwide respected web professionals.</p>
+                <a href="#" class="btn btn-primary px-5 font-weight-bold text-uppercase">Buy Ticket</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 d-flex">
+            <div class="card border-0 text-center flex-ew" id="pricing-pro">
+              <div class="bg-primary py-4 text-white">
+                <h4 class="my-0">
+                  Workshops
+                </h4>
+                <h2 class="price-digits display-4 price-early-bird font-weight-bold my-0">
+                  $299
+                </h2>
+                <h2 class="price-digits display-4 price-early-bird font-weight-bold price-standard d-none my-0">
+                  $448
+                </h2>
+                <span class="price-extra d-block text-sm">per person</span>
+              </div>
+              <div class="card-body">
+                <p class="text-sm mt-0 mb-4 text-grey-dark op-8">Come and be part of the most important web event in London, on the weekend of 13-15 November. A full day of inspiring and technical talks delivered by worldwide respected web professionals.</p>
+                <a href="#" class="btn btn-primary px-5 font-weight-bold text-uppercase">Buy Ticket</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 d-flex">
+            <div class="card border-0 text-center flex-ew">
+              <div class="bg-primary py-4 text-white">
+                <h4 class="my-0">
+                  Conference + Workshops
+                </h4>
+                <h2 class="price-digits display-4 price-early-bird font-weight-bold my-0">
+                  $399
+                </h2>
+                <h2 class="price-digits display-4 price-early-bird font-weight-bold price-standard d-none my-0">
+                  $598
+                </h2>
+                <span class="price-extra d-block text-sm">per person</span>
+              </div>
+              <div class="card-body">
+                <p class="text-sm mt-0 mb-4 text-grey-dark op-8">Come and be part of the most important web event in London, on the weekend of 13-15 November. A full day of inspiring and technical talks delivered by worldwide respected web professionals.</p>
+                <a href="#" class="btn btn-primary px-5 font-weight-bold text-uppercase">Buy Ticket</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr class="my-0" />
+    <!-- Early bird MDR -->
+    <div class="alert rounded-0 w-100 w-lg-30 mb-0 mb-lg-4 mr-lg-4 p-2 p-lg-4 pos-fixed pos-zindex-20 pos-b pos-lg-r scroll-state-hidden bg-dark bg-op-9 text-center" data-scroll="scroll-state" data-scroll-amount="500" data-scroll-setting='{"effectIn":"fadeInUp", "effectOut":"fadeOutDown", "effectDuration":"0.3"}'>
+      <a href="#" data-dismiss="alert" aria-label="Close" class="pos-absolute pos-r pos-t text-white op-7"><i class="ion-ios-close-empty icon-1x icon-sq"></i></a>
+      <p class="d-block mr-lg-3 text-white text-uppercase my-0 font-weight-bold">Early bird catches the worm!</p>
+      <p class="d-block text-sm text-white op-8 my-0">Early bird tickets just $19 until August 19th</p>
+      <a href="#pricing" data-toggle="scroll-link" class="mt-3 btn btn-sm btn-secondary border-0 px-3 font-weight-bold text-uppercase">Sign Up Now!</a>
+    </div>
+    <!-- Sponsors -->
+    <div id="sponsors" class="pos-relative">
+      <div class="container py-5">
+        <h2 class="text-uppercase text-letter-spacing-xs my-0 text-primary font-weight-bold">
+          Sponsors
+        </h2>
+        <p class="text-sm text-dark mt-0 mb-5">Making the event happen.</p>
+        <!-- Logos carousel Uses Owl Carousel plugin All options here are customisable from the data-owl-carousel-settings="{OBJECT}" item via data- attributes: http://www.owlgraphic.com/owlcarousel/#customizing ie. data-settings="{"items": "4", "lazyLoad":"true", "navigation":"true"}" -->
+        <div class="owl-dots-center" data-toggle="owl-carousel" data-owl-carousel-settings='{"responsive":{"0":{"items":2}, "600":{"items":3}, "1040":{"items":4}}, "margin":10, "lazyLoad":true, "nav":false, "dots":true}'>
+          <a href="#">
+              <img data-src="assets/img/customers/customer-1.png" alt="Item 1 image" class="owl-lazy img-fluid" />
+            </a>
+          <a href="#">
+              <img data-src="assets/img/customers/customer-2.png" alt="Item 2 image" class="owl-lazy img-fluid" />
+            </a>
+          <a href="#">
+              <img data-src="assets/img/customers/customer-3.png" alt="Item 3 image" class="owl-lazy img-fluid" />
+            </a>
+          <a href="#">
+              <img data-src="assets/img/customers/customer-4.png" alt="Item 4 image" class="owl-lazy img-fluid" />
+            </a>
+          <a href="#">
+              <img data-src="assets/img/customers/customer-5.png" alt="Item 5 image" class="owl-lazy img-fluid" />
+            </a>
+          <a href="#">
+              <img data-src="assets/img/customers/customer-6.png" alt="Item 6 image" class="owl-lazy img-fluid" />
+            </a>
+          <a href="#">
+              <img data-src="assets/img/customers/customer-7.png" alt="Item 7 image" class="owl-lazy img-fluid" />
+            </a>
+          <a href="#">
+              <img data-src="assets/img/customers/customer-8.png" alt="Item 8 image" class="owl-lazy img-fluid" />
+            </a>
+          <a href="#">
+              <img data-src="assets/img/customers/customer-9.png" alt="Item 9 image" class="owl-lazy img-fluid" />
+            </a>
+          <a href="#">
+              <img data-src="assets/img/customers/customer-10.png" alt="Item 10 image" class="owl-lazy img-fluid" />
+            </a>
+          <a href="#">
+              <img data-src="assets/img/customers/customer-11.png" alt="Item 11 image" class="owl-lazy img-fluid" />
+            </a>
+          <a href="#">
+              <img data-src="assets/img/customers/customer-12.png" alt="Item 12 image" class="owl-lazy img-fluid" />
+            </a>
+          <a href="#">
+              <img data-src="assets/img/customers/customer-13.png" alt="Item 13 image" class="owl-lazy img-fluid" />
+            </a>
+          <a href="#">
+              <img data-src="assets/img/customers/customer-14.png" alt="Item 14 image" class="owl-lazy img-fluid" />
+            </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- #Content -->
+
+  <!-- ======== @Region: #footer ======== -->
+  <footer id="footer" class="py-3 py-4">
+    <div class="container">
+      <div class="row">
+        <!--@todo: replace with company copyright details-->
+        <div class="col-md-4 d-md-flex justify-content-start align-items-center flex-row">
+          <p class="mb-0 text-sm">Copyright 2018 &copy; AppStrap</p>
+        </div>
+        <div class="col-md-4 d-md-flex justify-content-center align-items-center flex-row">
+          <!--@todo: replace with company social media details-->
+          <a href="#" class="text-white op-7 p-2"><i class="fa fa-twitter"></i></a>
+          <a href="#" class="text-white op-7 p-2"><i class="fa fa-facebook"></i></a>
+          <a href="#" class="text-white op-7 p-2"><i class="fa fa-linkedin"></i></a>
+          <a href="#" class="text-white op-7 p-2"><i class="fa fa-google-plus"></i></a>
+          <a href="#top" class="text-white op-7 p-2" title="Back to top"><i class="fa fa-chevron-up"></i></a>
+        </div>
+        <div class="col-md-4 d-md-flex justify-content-end align-items-center flex-row">
+          <ul class="list-inline footer-links mb-0 text-sm float-md-right">
+            <li class="list-inline-item"><a href="#">Terms</a></li>
+            <li class="list-inline-item"><a href="#">Privacy</a></li>
+            <li class="list-inline-item"><a href="#">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- Style switcher - demo only - @todo: remove in production -->
+  <div class="colour-switcher">
+    <a href="#" class="colour-switcher-toggle" data-toggle="class" data-target=".colour-switcher"> <i class="fa fa-paint-brush"></i> </a>
+    <h5 class="text-uppercase my-0">
+      Theme Colours
+    </h5>
+    <hr />
+    <div class="theme-colours"> <a href="#green" class="green active" data-toggle="tooltip" data-placement="right" data-original-title="Green (Default)">Green</a> <a href="#red" class="red" data-toggle="tooltip" data-placement="right" data-original-title="Red">Red</a> <a href="#blue"
+        class="blue" data-toggle="tooltip" data-placement="right" data-original-title="Blue">Blue</a> <a href="#purple" class="purple" data-toggle="tooltip" data-placement="right" data-original-title="Purple">Purple</a> <a href="#pink" class="pink" data-toggle="tooltip"
+        data-placement="right" data-original-title="Pink">Pink</a> <a href="#orange" class="orange" data-toggle="tooltip" data-placement="right" data-original-title="Orange">Orange</a> <a href="#lime" class="lime" data-toggle="tooltip" data-placement="right"
+        data-original-title="Lime">Lime</a> <a href="#blue-dark" class="blue-dark" data-toggle="tooltip" data-placement="right" data-original-title="Blue-dark">Blue-dark</a> <a href="#red-dark" class="red-dark" data-toggle="tooltip" data-placement="right"
+        data-original-title="Red-dark">Red-dark</a> <a href="#brown" class="brown" data-toggle="tooltip" data-placement="right" data-original-title="Brown">Brown</a> <a href="#cyan-dark" class="cyan-dark" data-toggle="tooltip" data-placement="right" data-original-title="Cyan-dark">Cyan-dark</a>      <a href="#yellow" class="yellow" data-toggle="tooltip" data-placement="right" data-original-title="Yellow">Yellow</a> <a href="#slate" class="slate" data-toggle="tooltip" data-placement="right" data-original-title="Slate">Slate</a> <a href="#olive"
+        class="olive" data-toggle="tooltip" data-placement="right" data-original-title="Olive">Olive</a> <a href="#teal" class="teal" data-toggle="tooltip" data-placement="right" data-original-title="Teal">Teal</a> <a href="#green-bright" class="green-bright"
+        data-toggle="tooltip" data-placement="right" data-original-title="Green-bright">Green-bright</a> </div>
+    <hr />
+    <p class="text-xs text-muted">Cookies are NOT enabled so colour selection is not persistent.</p>
+    <p class="text-xs my-0"><a href="index.html">Back to main homepage</a></p>
+    <p class="text-xs my-0"><a href="intro.html">Back to intro page</a></p>
+  </div>
+  <!--Hidden elements - excluded from jPanel Menu on mobile-->
+  <div class="hidden-elements jpanel-menu-exclude"></div>
+
+
+  <!--jQuery 3.2.1 via CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <!-- Popper 1.12.3 via CDN, needed for Bootstrap Tooltips & Popovers -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"></script>
+
+  <!-- Bootstrap v4.0.0-beta.3 JS via CDN -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js"></script>
+
+
+  <!-- JS plugins required on all pages NOTE: Additional non-required plugins are loaded ondemand as of AppStrap 2.5 To disable this and load plugin assets manually simple add data-plugins-manual=true to the body tag -->
+
+  <!--Custom scripts & AppStrap API integration -->
+  <script src="assets/js/custom-script.js"></script>
+  <!--AppStrap scripts mainly used to trigger libraries/plugins -->
+  <script src="assets/js/script.min.js"></script>
+</body>
+
+</html>

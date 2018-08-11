@@ -1,0 +1,26 @@
+//
+// Progress bars
+// --------------------------------------------------
+.progress {
+  border-radius: 1px;
+}
+.progress-bar {
+  padding: 5px;
+  height: 1.5rem;
+  @extend %flex-d-flex;
+  @extend %flex-align-items-center;
+  align-items: center!important;
+  @include transition(width 1.2s ease);
+}
+
+.progress-bar-sm {
+  height: 2px;
+  padding: 0;
+}
+.progress-bar-lg {
+  height: 2.8rem;
+}
+
+.progress-bar[data-toggle="progress-bar-animated-progress"] {
+  width: 0 !important;
+}

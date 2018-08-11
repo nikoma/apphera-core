@@ -1,0 +1,119 @@
+
+@media (min-width: 992px) and (max-width: 1199px) {
+	
+	.top-content { padding: 140px 0 90px 0; }
+	
+	.more-features-box-text { margin-top: 30px; padding-left: 0; padding-right: 0; }
+	.more-features-box-text:first-child { margin-top: 0; }
+	
+	.great-support-box-text { padding-left: 0; }
+	.great-support-box-text:first-child { margin-top: 0; }
+	
+	.testimonial-list .testimonial-image { width: 20%; }
+	.testimonial-list .testimonial-text { width: 80%; }
+	
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+	
+	.top-content { padding: 140px 0 70px 0; }
+
+	.section-description p { padding: 0; }
+	
+	.more-features-box { float: none; width: auto; }
+	.more-features-box:last-child { margin-top: 50px; }
+	.more-features-box-text { margin-top: 30px; padding-left: 0; padding-right: 0; text-align: center; }
+	.more-features-box-text:first-child { margin-top: 0; }
+	.more-features-box-text-icon { float: none; display: inline-block; }
+	.more-features-box-text h3 { float: none; width: auto; margin-top: 20px; }
+	.more-features-box-text-description { float: none; width: auto; }
+	
+	.great-support-box { float: none; width: auto; }
+	.great-support-box:last-child { margin-top: 50px; }
+	.great-support-box-text { margin-top: 30px; padding-left: 0; text-align: center; }
+	.great-support-box-text:first-child { margin-top: 0; }
+	
+	.pricing-box-features li { padding-left: 10px; padding-right: 10px; }
+	.pricing-box-sign-up { padding-top: 20px; padding-bottom: 20px; }
+	
+	.testimonial-list .testimonial-image { width: 25%; }
+	.testimonial-list .testimonial-text { width: 75%; }
+			
+	.footer-contact-info i { padding-right: 5px; }
+	.footer-social a { margin-right: 15px; }
+	.footer-social i { font-size: 22px; }
+	.footer-menu li { margin-left: 15px; }
+
+}
+
+@media (max-width: 767px) {
+	
+	.navbar { padding-top: 0; background: #444; }
+	.navbar>.container .navbar-brand, .navbar>.container-fluid .navbar-brand { margin-left: 15px; }
+	.navbar-collapse { border: 0; }
+	.navbar-inverse .navbar-toggle { border-color: transparent; }
+	.navbar-inverse ul.navbar-nav li a.btn-link-3 { margin: 10px; }
+	
+	.section-description p { padding: 0; }
+	
+	.top-content { padding: 40px 0 70px 0; }
+	.top-content .text { padding-top: 40px; padding-bottom: 50px; }
+    
+    .video-box { text-align: center; }
+    .video-box-right { padding-top: 60px; }
+    
+    .more-features-box:last-child { margin-top: 50px; }
+    .more-features-box-text { margin-top: 30px; padding-left: 0; padding-right: 0; text-align: center; }
+	.more-features-box-text:first-child { margin-top: 0; }
+	.more-features-box-text-icon { float: none; display: inline-block; }
+	.more-features-box-text h3 { float: none; width: auto; margin-top: 20px; }
+	.more-features-box-text-description { float: none; width: auto; }
+	
+	.great-support-box:last-child { margin-top: 50px; }
+	.great-support-box-text { margin-top: 30px; padding-left: 0; text-align: center; }
+	.great-support-box-text:first-child { margin-top: 0; }
+	
+	.pricing-box { padding-bottom: 50px; }
+    .pricing-box:last-child { padding-bottom: 0; }
+    .pricing-box-features li { padding-left: 10px; padding-right: 10px; }
+	.pricing-box-sign-up { padding-top: 20px; padding-bottom: 20px; }
+	
+	.testimonial-list .testimonial-image { float: none; width: auto; text-align: center; }
+	.testimonial-list .testimonial-text { float: none; width: auto; margin-top: 30px; text-align: center; }
+	.testimonial-list .nav-tabs { margin-top: 20px; text-align: center; }
+    
+    footer { text-align: center; }
+    .footer-contact-info, .footer-social { padding-top: 30px; }
+    .footer-contact-info i { padding-right: 5px; }
+    .footer-social a { margin: 0 10px; }
+    .footer-copyright { margin-top: 40px; }
+    .footer-menu { margin-top: 0; padding-top: 20px; border: 0; text-align: center; }
+    .footer-menu li { margin: 0 10px; }
+
+}
+
+@media (max-width: 415px) {
+	
+	h1, h2 { font-size: 32px; }
+	
+	.c-form-1-top-right { font-size: 40px; line-height: 90px; }
+
+}
+
+
+/* Retina-ize images/icons */
+
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (   min--moz-device-pixel-ratio: 2),
+only screen and (     -o-min-device-pixel-ratio: 2/1),
+only screen and (        min-device-pixel-ratio: 2),
+only screen and (                min-resolution: 192dpi),
+only screen and (                min-resolution: 2dppx) {
+	
+	/* logo */
+    .navbar-brand {
+    	background-image: url(../img/logo@2x.png) !important; background-repeat: no-repeat !important; background-size: 90px 40px !important;
+    }
+	
+}

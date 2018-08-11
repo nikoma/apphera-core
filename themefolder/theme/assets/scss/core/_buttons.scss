@@ -1,0 +1,201 @@
+//
+// Buttons
+// --------------------------------------------------
+.btn {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.35;
+  border-radius: 2px;
+  border-width: 1px;
+  border-style: solid;
+  
+  span.caret {
+    display: inline-block;
+  }
+  
+  &.font-weight-bold {
+    font-weight: bold;
+  }
+  &.font-weight-normal {
+    font-weight: normal;
+  }
+  
+  &.focus,
+  &:focus {
+    @include box-shadow(none);
+  }
+}
+
+.btn-icon.btn {
+  font-size: 20px;
+  text-align: center;
+  line-height: 1;
+  padding: 0;
+  height: 38px;
+  width: 38px;
+  line-height: 34px;
+  border-radius: 2px;
+  
+  &.btn-sm {
+    height: 30px;
+    width: 30px;
+    line-height: 24px;
+    font-size: 18px;
+    padding: 0;
+  }
+  &.btn-lg {
+    height: 46px;
+    width: 46px;
+    line-height: 38px;
+    font-size: 24px;
+    padding: 0;
+  }
+  &.btn-xlg {
+    height: 60px;
+    width: 60px;
+    line-height: 54px;
+    font-size: 28px;
+    padding: 0;
+  }
+  
+  &.btn-sm.btn-rounded {
+    font-size: 16px;
+    line-height: 22px;
+  }
+}
+.input-group-rounded {
+  .btn-icon.btn {
+    line-height: 20px;
+  }  
+}
+
+// Button Sizes
+// --------------------------------------------------
+.btn-xlg,
+.btn-xl {
+  // line-height: ensure even-numbered height of button next to large input
+  @include button-size(15px, 30px, $font-size-lg*1.2, $font-size-lg*1.2, 2px);
+  word-wrap: break-word;
+}
+.btn-sm {
+  font-size: 12px;
+  line-height: 1.5;
+  padding: $btn-padding-y-sm $btn-padding-x-sm;
+}
+.btn-lg {
+  font-size: 18px;
+  padding: $btn-padding-y-lg $btn-padding-x-lg;
+}
+
+// Button & Input Groups
+// --------------------------------------------------
+.btn-group-lg>.btn, .btn-lg,
+.btn-group-sm>.btn, .btn-sm,
+.input-group-addon,
+.input-group-addon.form-control-lg,
+.input-group-lg > .input-group-addon,
+.input-group-lg > .input-group-btn > .input-group-addon.btn,
+.form-control-lg,
+.input-group-lg>.form-control,
+.input-group-lg>.input-group-addon,
+.input-group-lg>.input-group-btn>.btn {
+  border-radius: 2px;
+}
+
+
+.input-group-lg > .input-group-btn > .btn-icon.btn {
+  height: 51px !important;
+  width: 51px !important;
+}
+
+.input-group-btn:not(:last-child) > .btn,
+.input-group-btn:not(:last-child) > .btn-group {
+  margin-right: -2px;
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;  
+}
+
+
+// Specials
+// --------------------------------------------------
+.btn-shadow {
+  box-shadow: rgba(23,43,99,.70) 0 10px 18px;
+}
+
+
+
+// Rounded
+// --------------------------------------------------
+.btn.btn-rounded-sm {
+  @include border-radius(.25rem);
+}
+
+.btn.btn-rounded,
+.btn-group-lg > .btn.btn-rounded,
+.btn-group-sm > .btn.btn-rounded {
+  @include border-radius(30px);
+}
+.btn.btn-rounded.btn-icon {
+  @include border-radius(100%);
+}
+
+// Link btns
+// --------------------------------------------------
+.btn-link {
+  @include appstrap-button-link-variant(lighten($gray-light, 20%), transparent, transparent);
+  
+  &:focus,
+  &.focus,
+  &:hover {
+    color: $gray-light;
+    text-decoration: none;
+  }
+
+  &:active,
+  &.active,
+  .show > .dropdown-toggle &,
+  .open > .dropdown-toggle & {
+    color: $gray-light;
+
+    &:hover,
+    &:focus,
+    &.focus {
+      color: $gray-light;
+    }
+  }  
+}
+
+
+// Extra theme colours
+// -------------------------------------------
+$as-colours: $as-theme-colours;
+@if $as-theme-colours-extended-options == true {
+  // Include social brands
+  $as-colours: $as-theme-colours-extended;
+}
+
+@each $name, $value in $as-colours {
+  .btn-#{$name} {
+    @include button-variant($value, $value);
+  }
+  .btn-outline-#{$name} {
+    @if $name == 'light' {
+      @include button-outline-variant($value, $gray-700);
+    } @else {
+      @include button-outline-variant($value, white);
+    }
+  }
+  .btn-#{$name}.btn-invert {
+    background-color: darken($value, 10%);
+    
+    &:hover,
+    &:focus {
+      background-color: $value;
+    }
+  }
+  .btn-#{$name}.btn-link {
+    @include appstrap-button-variant($value, transparent, transparent); 
+  }  
+}
+
+// Hover effects

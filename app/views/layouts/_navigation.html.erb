@@ -1,0 +1,74 @@
+<nav class="navbar-default navbar-static-side" role="navigation">
+  <div class="sidebar-collapse">
+    <ul class="nav metismenu" id="side-menu">
+      <li class="nav-header">
+        <div class="dropdown profile-element">
+          <span>
+            <%= gravatar_for current_user rescue nil %>
+          </span>
+          <a data-toggle="dropdown" class="dropdown-toggle" href="javascript:void(0)">
+            <span class="clear">
+              <span class="block m-t-xs">
+                <strong class="font-bold"><%= current_user.organization_name %></strong>
+              </span>
+              <span class="text-muted text-xs block"><%= current_user.name %><b class="caret"></b></span>
+            </span>
+          </a>
+          <ul class="dropdown-menu animated fadeInRight m-t-xs">
+            <li><%= link_to 'My Profile', edit_user_registration_url %></li>
+            <% if current_user.organization_id? && !current_user.invited_by_id? %>
+              <li><%= link_to 'My Organization', edit_organization_url(current_user.organization_id) %></li>
+            <% end %>
+            <% if current_user.company_id? && !current_user.invited_by_id? %>
+              <li><%= link_to 'My Company', edit_company_url(current_user.company) %></li>
+            <% end %>
+            <li class="divider"></li>
+            <li><%= link_to 'Logout', destroy_user_session_path, method: :delete %></li>
+          </ul>
+        </div>
+        <div class="logo-element">EQB</div>
+      </li>
+      <li class="<%= is_active_controller('home') %>">
+        <%= link_to dashboard_path do %>
+          <i class="fa fa-home"></i> <span class="nav-label" data-i18n="nav.widgets">Home</span>
+        <% end %>
+      </li>
+      <li class="<%= is_active_controller('home') %>">
+        <%= link_to edit_user_registration_path do %>
+          <i class="fa fa-star"></i> <span class="nav-label" data-i18n="nav.widgets">Edit Profile</span>
+        <% end %>
+      </li>
+     
+
+     <!-- <li class="<%= is_active_controller('answers') %>">
+        <%= link_to answers_path do %>
+          <i class="fa fa-home"></i> <span class="nav-label" data-i18n="nav.widgets">Answers</span>
+        <% end %>
+      </li> -->
+     <!--   <li class="<%#= is_active_controller('results') %>">
+          <%#= link_to results_path do %>
+            <i class="fa fa-home"></i> <span class="nav-label" data-i18n="nav.widgets">Results</span>
+          <%# end %>
+        </li> -->
+
+      <!-- <%# if current_user.is_admin? %>
+      #   <li class="<%#= is_active_controller('country_codes') %>">
+      #   #  <%#= link_to country_codes_path do %>
+      #       <i class="fa fa-home"></i> <span class="nav-label" data-i18n="nav.widgets">Country Codes</span>
+      #   #  <%# end %>
+      #   </li>
+      #   #<%# end %>
+        <li class="<%#= is_active_controller('knowledge_items') %>">
+          <%#= link_to knowledge_items_path do %>
+            <i class="fa fa-home"></i> <span class="nav-label" data-i18n="nav.widgets">Knowledge Item</span>
+          <%# end %>
+        </li>
+
+        <li class="<%#= is_active_controller('news_items') %>">
+          <%#= link_to news_items_path do %>
+            <i class="fa fa-home"></i> <span class="nav-label" data-i18n="nav.widgets">News Items</span>
+          <%# end %>
+        </li> -->
+    </ul>
+  </div>
+</nav>

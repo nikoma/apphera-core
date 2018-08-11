@@ -1,0 +1,58 @@
+<div class='top-content'>
+  <div class='container'>
+    <div class='row'>
+      <div class='col-sm-7 text wow fadeInLeft'>
+        <h1>Bots that train your employees, partners and customers</h1>
+        <div class='description'>
+          <p class='medium-paragraph'>
+            Making learning fun and engaging.
+          </p>
+        </div>
+        <div class='top-buttons'>
+          <!-- <a class='btn btn-link-1 scroll-link' href='#pricing'>Our Prices <i class='fa fa-angle-right'></i></a> -->
+          <a class='btn btn-link-2 scroll-link' href='#features'>Learn More <i class='fa fa-lightbulb-o'></i></a>
+        </div>
+      </div>
+
+      <div class='col-sm-5 c-form-1-box wow fadeInUp'>
+        <div class='c-form-1-top'>
+          <div class='c-form-1-top-left'>
+            <h3>Contact Us</h3>
+            <p>Fill in the form below to contact us:</p>
+          </div>
+          <div class='c-form-1-top-right'>
+            <i class='fa fa-envelope'></i>
+          </div>
+        </div>
+        <div class='c-form-1-bottom'>
+          <%= form_with(model: Contact.new, local: true, class: 'contact-form') do |f| %>
+
+            <div class='form-group'>
+              <%= f.label :name, class: 'sr-only' %>
+              <%= f.text_field :name, placeholder: 'Name...', class: 'c-form-1-name form-control' %>
+            </div>
+
+            <div class='form-group'>
+              <%= f.label :email, class: 'sr-only', for: 'c-form-1-email' %>
+              <%= f.text_field :email, placeholder: 'Email...', class: 'c-form-1-email form-control' %>
+            </div>
+
+            <div class='form-group'>
+              <%= f.label :subject, class: 'sr-only', for: 'c-form-1-subject' %>
+              <%= f.text_field :subject, placeholder: 'Subject....', class: 'c-form-1-subject form-control' %>
+            </div>
+
+            <div class='form-group'>
+              <%= f.label :message, class: 'sr-only', for: 'c-form-1-message' %>
+              <%= f.text_area :message, placeholder: 'Message....', class: 'c-form-1-message form-control' %>
+            </div>
+
+            <%= button_tag "Send Message", class: 'btn', type: 'submit', data: {disable_with: 'Sending Message...'} %>
+          <% end %>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

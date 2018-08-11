@@ -1,0 +1,56 @@
+<% concept = @concept %>
+
+<div class="row wrapper border-bottom white-bg page-heading">
+  <div class="col-sm-4">
+    <h2>Public Quiz for - <%= @app.name %></h2>
+    <%#= render_breadcrumbs %>
+  </div>
+</div>
+
+<div class="wrapper wrapper-content animated fadeInRight">
+  <div class='row'>
+    <div class='col-lg-2'></div>
+
+    <div class='col-lg-8'>
+      <div class='ibox float-e-margins'>
+        <div class='ibox-content'>
+          <div class='table-responsive'>
+            <h2><b><%= concept.try(:title) %> (<%= @concept_number%>/<%= @app_concepts_count%>)</b></h2>
+            <% if concept.image? %>
+              <%= link_to concept.image.url, target: '_blank' do %>
+                <%= image_tag(concept.image.url, class: 'img-responsive img-thumbnail') %>
+              <% end %>
+            <% end %>
+            <div>
+              <h4>Description</h4>
+              <%= concept.body.html_safe %>
+            </div>
+            <div>
+              <h2><strong>Quiz</strong></h2>
+            </div>
+            <div>
+              <h4>Question</h4>
+              <%= concept.question %>
+            </div>
+            <%= form_tag submit_public_quiz_concept_path(concept), method: :post do %>
+            <%= hidden_field_tag 'app_id', params[:app_id] %>
+              <%# ['answer1', 'answer2', 'answer3', 'answer4'].each_with_index do |ans, index| %>
+              <% ['answer1', 'answer2', 'answer3', 'answer4'].each_with_index do |ans, index| %>
+                <div>
+                  <%= radio_button_tag 'correct_answer', ans, index == 0 ? true : false %>
+                  <%= concept.send(ans.to_sym) %>
+                </div>
+              <% end %>
+              <hr>
+              <div>
+                <%= submit_tag 'Submit Your Answer', class: 'btn btn-primary' %>
+              </div>
+            <% end %>
+         	</div>
+        </div>
+      </div>
+    </div>
+
+    <div class='col-lg-2'></div>
+  </div>
+</div>
