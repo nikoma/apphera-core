@@ -84,3 +84,4 @@ gem 'exception_notification'
 gem 'friendly_id', '~> 5.1.0' # Note: You MUST use 5.0.0 or greater for Rails 4.0+
 gem 'carrierwave-video'
 gem 'rabl'
+gem 'clean_pagination'

@@ -129,6 +129,7 @@ GEM
       streamio-ffmpeg
     case_transform (0.2)
       activesupport
+    clean_pagination (1.0.0)
     code_analyzer (0.4.8)
       sexp_processor
     codeclimate-engine-rb (0.4.1)
@@ -478,6 +479,7 @@ DEPENDENCIES
   capistrano-rails (~> 1.2)
   carrierwave
   carrierwave-video
+  clean_pagination
   coffee-rails
   decent_exposure (= 3.0.0)
   devise
