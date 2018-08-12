@@ -1,0 +1,2 @@
+module FacebookUsersHelper
+end

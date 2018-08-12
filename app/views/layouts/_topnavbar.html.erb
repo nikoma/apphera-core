@@ -7,16 +7,7 @@
     </div>
     <ul class="nav navbar-top-links navbar-left">
       <li class="padding12">
-        <%- apps = App.my_apps(current_user) %>
-        <% if controller.controller_name == 'knowledge_items' %>
-          <%= select_tag 'app_id', options_for_select(apps.map{|t| [t.name, t.id]}, params[:app_id] ), {include_blank: 'Select App', class: 'form-control', onchange: "update_app_id( $(this).val(), 'knowledge_items' )"} %>
-        <% elsif controller.controller_name == 'news_items' %>
-          <%= select_tag 'app_id', options_for_select(apps.map{|t| [t.name, t.id]}, params[:app_id] ), {include_blank: 'Select App', class: 'form-control', onchange: "update_app_id( $(this).val(), 'news_items' )"} %>
-        <% elsif controller.controller_name == 'concepts' %>
-          <%= select_tag 'app_id', options_for_select(apps.map{|t| [t.name, t.id]}, params[:app_id] ), {include_blank: 'Select App', class: 'form-control', onchange: "search_app_id( $(this).val(), 'concepts' )"} %>
-        <% elsif controller.controller_name == 'prompts' %>
-          <%= select_tag 'app_id', options_for_select(apps.map{|t| [t.name, t.id]}, params[:app_id] ), {include_blank: 'Select App', class: 'form-control', onchange: "search_app_id( $(this).val(), 'prompts' )"} %>
-        <% end %>
+      
       </li>
     </ul>
     <ul class="nav navbar-top-links navbar-right">

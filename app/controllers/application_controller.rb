@@ -1,14 +1,14 @@
 class ApplicationController < ActionController::Base
   # Prevent CSRF attacks by raising an exception.
   # For APIs, you may want to use :null_session instead.
-  HTTP_OK = 200
-  HTTP_CREATED = 201
-  HTTP_BAD_REQUEST = 400
-  HTTP_UNAUTHORIZED = 401
-  HTTP_NOT_FOUND = 404
-  HTTP_METHOD_NOT_ALLOWED = 405
-  HTTP_INTERNAL_SERVER_ERROR = 500
-  include CleanPagination
+  # HTTP_OK = 200
+  # HTTP_CREATED = 201
+  # HTTP_BAD_REQUEST = 400
+  # HTTP_UNAUTHORIZED = 401
+  # HTTP_NOT_FOUND = 404
+  # HTTP_METHOD_NOT_ALLOWED = 405
+  # HTTP_INTERNAL_SERVER_ERROR = 500
+  # include CleanPagination
 
   protect_from_forgery with: :exception
 

@@ -1,6 +1,6 @@
 class ProviderSlug < ActiveRecord::Base
   after_create :schedule_crawler
-  attr_accessible :organization_id, :slug, :bad, :content_provider_id
+  #attr_accessible :organization_id, :slug, :bad, :content_provider_id
   belongs_to :content_provider
   belongs_to :organization
   validates_uniqueness_of :slug

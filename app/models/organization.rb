@@ -8,9 +8,9 @@ class Organization < ActiveRecord::Base
   #include Tire::Model::Search
   #include Tire::Model::Callbacks
   after_create :create_schedule
-  attr_accessible :name, :street, :latitude, :city, :longitude, :country_code_id, :state, :street2, :postalcode, :category, :phone1, :phone2, :url, :facebook, :twitter, :category_id, :reviewers_list, :account_id, :city_id
+  #attr_accessible :name, :street, :latitude, :city, :longitude, :country_code_id, :state, :street2, :postalcode, :category, :phone1, :phone2, :url, :facebook, :twitter, :category_id, :reviewers_list, :account_id, :city_id
   belongs_to :account
-  belongs_to :country_codes
+  # belongs_to :country_codes
   belongs_to :category
   #belongs_to :city
   has_many :task_results
@@ -28,7 +28,7 @@ class Organization < ActiveRecord::Base
   has_many :history_items
   has_many :organization_links
   has_many :provider_slugs
-  has_many :items
+  #has_many :items
   has_many :uptime_monitors
   has_many :facebook_page_credentials
   has_and_belongs_to_many :keywords

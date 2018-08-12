@@ -17,7 +17,7 @@ class Account < ActiveRecord::Base
   #has_and_belongs_to_many :resellers
   #has_many :keywords, :through => :organizations
   has_and_belongs_to_many :keywords
-  attr_accessible :name, :firstname, :lastname, :phone, :organizations, :account_type_id, :country_code_id, :postalcode, :street, :street1, :state, :web, :city, :country_id, :api_partner_id
+  #attr_accessible :name, :firstname, :lastname, :phone, :organizations, :account_type_id, :country_code_id, :postalcode, :street, :street1, :state, :web, :city, :country_id, :api_partner_id
 
   validates :name, :presence => true
 

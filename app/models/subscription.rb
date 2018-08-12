@@ -4,5 +4,5 @@ class Subscription < ActiveRecord::Base
   belongs_to :user
   validates_presence_of :plan_id
 
-  attr_accessible :plan_id, :user_id, :updated_at
+  #attr_accessible :plan_id, :user_id, :updated_at
 end

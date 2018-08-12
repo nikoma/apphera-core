@@ -1,5 +1,5 @@
 class SlugUrl < ActiveRecord::Base
-  attr_accessible :content_provider_id, :slug
+  #attr_accessible :content_provider_id, :slug
 
   #define_index do
   #    indexes slug

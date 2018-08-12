@@ -9,7 +9,7 @@ class Reseller < ActiveRecord::Base
   validates :name, :presence => true
   validates :email, :uniqueness => true, :presence => true
   validates :phone, :presence => true, :uniqueness => true
-  attr_accessible :company, :first_name, :name, :street, :city, :sub_domain, :logo, :state, :postalcode, :email, :phone, :website, :twitter, :facebook, :country_code_id
+  #attr_accessible :company, :first_name, :name, :street, :city, :sub_domain, :logo, :state, :postalcode, :email, :phone, :website, :twitter, :facebook, :country_code_id
   accepts_nested_attributes_for :users
 
 

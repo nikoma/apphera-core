@@ -12,7 +12,7 @@ class Review < ActiveRecord::Base
   belongs_to :reviewer
   validates_uniqueness_of :review_provider_id
   validates :organization_id, :presence => true
-  attr_accessible :organization_id, :reviewer, :reviewer_slug, :body, :rating, :processed, :reviewer_id, :title, :review_provider_id, :review_url, :content_provider_id, :review_date
+  #attr_accessible :organization_id, :reviewer, :reviewer_slug, :body, :rating, :processed, :reviewer_id, :title, :review_provider_id, :review_url, :content_provider_id, :review_date
 
   pg_search_scope :search, against: [:body, :rating, :title],
                   using: {tsearch: {dictionary: "english"}},

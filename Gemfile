@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2'
 # Use Puma as the app server
-gem 'puma', '~> 3.0'
+#gem 'puma', '~> 3.0'
 # Use SCSS for stylesheets
 gem 'sass-rails'
 # Use Uglifier as compressor for JavaScript assets
@@ -86,4 +86,4 @@ gem 'carrierwave-video'
 gem 'rabl'
 gem 'clean_pagination'
 gem 'devise-token_authenticatable'
-
+gem 'geocoder'

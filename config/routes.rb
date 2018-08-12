@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
 
- 
+  devise_for :admin_users, ActiveAdmin::Devise.config
+  ActiveAdmin.routes(self)
+  root to: 'home#index'
   get 'privacy' => 'home#privacy'
   
   
@@ -21,9 +23,6 @@ Rails.application.routes.draw do
       post :register
     end
   end
-  #root 'home#index'
-  root 'home#external'
-  get '/home' => 'home#home', as: :home
 
   post 'file/receive' => 'file#receive'
   get '/dashboard' => 'home#dashboard', as: :dashboard
@@ -33,7 +32,7 @@ Rails.application.routes.draw do
     namespace :v1 do
       # match "/404" => "errors#not_found"
       # match "/500" => "errors#exception"
-      root to: 'dash#index', default: {format: 'html'}
+      #root to: 'dash#index', default: {format: 'html'}
       get 'items/:account_id' => 'items#account_items'
       resources :accounts
       resources :users

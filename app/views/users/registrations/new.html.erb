@@ -1,26 +1,15 @@
 <div class="middle-box text-center loginscreen   animated fadeInDown">
   <div>
-  <% if request.host.include? "hawkmatrix" %>
 
-    <div><h1 class="logo-name">HawkMatrix</h1></div>
-    <h3>Register for your test account here.</h3>
-    <% else %>
-    <div><h1 class="logo-name">EQBotics</h1></div>
-    <h3>Register for a free account and earn cool badges!</h3>
-    <% end %>
+   
+    <div><h1 class="logo-name">AppHera</h1></div>
+    <h3>Register. This page should be hidden in your intranet </h3>
     <p>Create free account.</p>
 
     <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
 
       
-      <div class="form-group">
-        <%= f.text_field :firstname, autofocus: true, class: 'form-control', placeholder: 'First name' %>
-        <div class='error'><%= display_error_messages resource.errors, [:firstname] %></div>
-      </div>
-      <div class="form-group">
-      <%= f.text_field :lastname, autofocus: true, class: 'form-control', placeholder: 'Last name' %>
-      <div class='error'><%= display_error_messages resource.errors, [:lastname] %></div>
-    </div>
+  
     <div class="form-group">
         <%= f.email_field :email, autofocus: true, class: 'form-control', placeholder: 'Email Address' %>
         <div class='error'><%= display_error_messages resource.errors, [:email] %></div>

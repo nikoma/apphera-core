@@ -1,6 +1,6 @@
 class Schedule < ActiveRecord::Base
   after_save :reschedule_crawler
-  attr_accessible :name, :organization_id, :sequence_id, :in_progress, :scheduled, :description, :created_at, :updated_at, :payload
+  #attr_accessible :name, :organization_id, :sequence_id, :in_progress, :scheduled, :description, :created_at, :updated_at, :payload
   belongs_to :organization
   belongs_to :sequence
   has_one :job_observer

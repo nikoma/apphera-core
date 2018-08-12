@@ -3,7 +3,7 @@ class ApiPartner < ActiveRecord::Base
   has_many :analytics_ranges
   has_many :named_queries, :through => :accounts
   has_one :twitter_app_credential
-  attr_accessible :name, :token, :partner_token, :callback_url
+  #attr_accessible :name, :token, :partner_token, :callback_url
   after_create :add_token
   after_commit :flush_cache
 

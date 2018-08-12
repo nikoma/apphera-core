@@ -1,6 +1,6 @@
 class FacebookItem < ActiveRecord::Base
   belongs_to :keyword
-  attr_accessible :keyword_id, :body, :sentiment
+  #attr_accessible :keyword_id, :body, :sentiment
   before_save :predict
 
   def predict

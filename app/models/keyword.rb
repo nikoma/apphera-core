@@ -9,7 +9,7 @@ class Keyword < ActiveRecord::Base
   has_many :youtube_videos
   has_many :news_items
   has_many :keyword_aggregates
-  attr_accessible :name, :tracks
+  #attr_accessible :name, :tracks
   validates :name, :length => {:in => 3..80}
 
   # TODO: 'organization with id 99' made only sense in 9+ million apphera system

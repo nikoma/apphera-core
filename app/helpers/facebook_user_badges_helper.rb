@@ -1,0 +1,2 @@
+module FacebookUserBadgesHelper
+end

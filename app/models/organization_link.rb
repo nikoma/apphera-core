@@ -2,7 +2,7 @@ class OrganizationLink < ActiveRecord::Base
 
   after_create :extract_slugs
 
-  attr_accessible :bing_display_url, :bing_id, :description, :organization_id, :title, :url
+  #attr_accessible :bing_display_url, :bing_id, :description, :organization_id, :title, :url
   belongs_to :organization
   validates_uniqueness_of :bing_id
 

@@ -22,98 +22,18 @@
           </div>
           <div class="col-xs-8 text-right">
             <span> Profile Views Last 30 days </span>
-            <h2 class="font-bold"><%= @pageviews %></h2>
+           # <h2 class="font-bold"><%= @pageviews %></h2>
           </div>
         </div>
       </div>
     </div>
-
-  <%= link_to public_app_path do %>
-    <div class="col-lg-3">
-      <div class="widget style1 lazur-bg">
-        <div class="row">
-          <div class="col-xs-4">
-            <i class="fa fa-envelope-o fa-5x"></i>
-          </div>
-          <div class="col-xs-8 text-right">
-            <span>Public Apps</span>
-            <h2 class='font-bold'><%= @public_apps_count %></h2>
-            <%#= link_to "".html_safe,  %>
-          </div>
-        </div>
-      </div>
-    </div>
-      <div class="col-lg-3">
-        <div class="widget style1 navy-bg">
-          <div class="row">
-            <div class="col-xs-4 text-center">
-              <i class="fa fa-smile-o fa-5x"></i>
-            </div>
-            <div class="col-xs-8 text-right">
-              <span> Badges </span>
-              <h2 class='font-bold'><%= @badges_count %></h2>
-            </div>
-          </div>
-        </div>
-      </div>
-
-   
 
   
-  </div>
-<% end %>
-<% if @badges_count < 1 %>
-<h2><b>To get started click on the 'public apps' envelope and select an app, to get your first badge or make some pledge.</a></b></h2>
-<% end %>
-<% if @badges_count > 0 %>
-<h2><b>Share your accomplishments with your friends! This is your public link to your badges: <a href="https://www.eqbotics.com/graduates/<%= current_user.slug %>">https://www.eqbotics.com/graduates/<%= current_user.slug %></a></b></h2>
-<!-- Load Facebook SDK for JavaScript -->
-  <div id="fb-root"></div>
-  <script>(function(d, s, id) {
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) return;
-    js = d.createElement(s); js.id = id;
-    js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1";
-    fjs.parentNode.insertBefore(js, fjs);
-  }(document, 'script', 'facebook-jssdk'));</script>
 
-  <!-- Your share button code -->
-  <div class="fb-share-button" 
-    data-href="https://www.eqbotics.com/graduates/<%= current_user.slug %>" 
-    data-layout="button_count">
-  </div>
 
-<% end %>
 
 <h2>My Badges </h2>
-<div class="wrapper wrapper-content animated fadeInRight">
-        <div class="row">
-        <% @my_badges.each do |badge| %>
-          <% app = badge.app %>
-            <div class="col-lg-3">
-                <div class="contact-box center-version">
 
-                    <a href="https://www.eqbotics.com/public_quiz_concept/<%= app.id %>">
-
-                        <img alt="image" class="img-circle" src="https://www.eqbotics.com<%= app.badge.img.url %>">
-
-
-                        <h3 class="m-b-xs"><strong><%= app.title %></strong></h3>
-
-                        <div class="font-bold"><%= app.description %></div>
-                        <address class="m-t-md">
-                            <strong>Get the Badge named:</strong><br>
-                           <%= app.badge.title %><br>
-                            
-                        </address>
-
-                    </a>
-                    
-
-                </div>
-
-            </div>
-<% end %>
 
 </div></div>
 
