@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2014_10_21_023445) do
+ActiveRecord::Schema.define(version: 2018_08_17_231835) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -122,19 +122,6 @@ ActiveRecord::Schema.define(version: 2014_10_21_023445) do
     t.integer "fs_checkins_count"
     t.integer "fs_users_count"
     t.integer "fs_tip_count"
-  end
-
-  create_table "rankings", :force => true do |t|
-    t.integer  "rank"
-    t.integer "market_id"
-    t.integer  "content_provider_id"
-    t.integer  "organization_id"
-    t.integer  "keyword_id"
-    t.datetime "created_at",          :null => false
-    t.datetime "updated_at",          :null => false
-    t.string   "url"
-    t.string   "name"
-    t.string   "token"
   end
 
   create_table "analytics_ranges", id: :serial, force: :cascade do |t|
@@ -606,17 +593,17 @@ ActiveRecord::Schema.define(version: 2014_10_21_023445) do
     t.datetime "updated_at", null: false
   end
 
-  # create_table "layer", primary_key: ["topology_id", "layer_id"], force: :cascade do |t|
-  #   t.integer "topology_id", null: false
-  #   t.integer "layer_id", null: false
-  #   t.string "schema_name", null: false
-  #   t.string "table_name", null: false
-  #   t.string "feature_column", null: false
-  #   t.integer "feature_type", null: false
-  #   t.integer "level", default: 0, null: false
-  #   t.integer "child_id"
-  #   t.index ["schema_name", "table_name", "feature_column"], name: "layer_schema_name_table_name_feature_column_key", unique: true
-  # end
+  create_table "layer", primary_key: ["topology_id", "layer_id"], force: :cascade do |t|
+    t.integer "topology_id", null: false
+    t.integer "layer_id", null: false
+    t.string "schema_name", null: false
+    t.string "table_name", null: false
+    t.string "feature_column", null: false
+    t.integer "feature_type", null: false
+    t.integer "level", default: 0, null: false
+    t.integer "child_id"
+    t.index ["schema_name", "table_name", "feature_column"], name: "layer_schema_name_table_name_feature_column_key", unique: true
+  end
 
   create_table "likes", id: :serial, force: :cascade do |t|
     t.integer "count"
@@ -714,6 +701,14 @@ ActiveRecord::Schema.define(version: 2014_10_21_023445) do
     t.index ["url"], name: "index_organization_links_on_url"
   end
 
+  create_table "organization_webservers", force: :cascade do |t|
+    t.string "server_type"
+    t.integer "organization_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["organization_id"], name: "index_organization_webservers_on_organization_id"
+  end
+
   create_table "organizations", id: :serial, force: :cascade do |t|
     t.string "name", limit: 255
     t.string "street", limit: 255
@@ -762,6 +757,18 @@ ActiveRecord::Schema.define(version: 2014_10_21_023445) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["name"], name: "index_plans_on_name"
+  end
+
+  create_table "posts", force: :cascade do |t|
+    t.integer "organization_id"
+    t.string "title"
+    t.string "author"
+    t.datetime "published"
+    t.string "synopsis"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "url"
+    t.index ["organization_id"], name: "index_posts_on_organization_id"
   end
 
   create_table "provider_slugs", id: :serial, force: :cascade do |t|
@@ -979,12 +986,12 @@ ActiveRecord::Schema.define(version: 2014_10_21_023445) do
     t.index ["updated_at"], name: "index_sessions_on_updated_at"
   end
 
-  # create_table "spatial_ref_sys", primary_key: "srid", id: :integer, default: nil, force: :cascade do |t|
-  #   t.string "auth_name", limit: 256
-  #   t.integer "auth_srid"
-  #   t.string "srtext", limit: 2048
-  #   t.string "proj4text", limit: 2048
-  # end
+  create_table "spatial_ref_sys", primary_key: "srid", id: :integer, default: nil, force: :cascade do |t|
+    t.string "auth_name", limit: 256
+    t.integer "auth_srid"
+    t.string "srtext", limit: 2048
+    t.string "proj4text", limit: 2048
+  end
 
   create_table "subscriptions", id: :serial, force: :cascade do |t|
     t.integer "user_id"
@@ -1050,13 +1057,13 @@ ActiveRecord::Schema.define(version: 2014_10_21_023445) do
     t.datetime "updated_at", null: false
   end
 
-  # create_table "topology", id: :serial, force: :cascade do |t|
-  #   t.string "name", null: false
-  #   t.integer "srid", null: false
-  #   t.float "precision", null: false
-  #   t.boolean "hasz", default: false, null: false
-  #   t.index ["name"], name: "topology_name_key", unique: true
-  # end
+  create_table "topology", id: :serial, force: :cascade do |t|
+    t.string "name", null: false
+    t.integer "srid", null: false
+    t.float "precision", null: false
+    t.boolean "hasz", default: false, null: false
+    t.index ["name"], name: "topology_name_key", unique: true
+  end
 
   create_table "tracks", id: :serial, force: :cascade do |t|
     t.string "name", limit: 255
@@ -1262,4 +1269,5 @@ ActiveRecord::Schema.define(version: 2014_10_21_023445) do
     t.index ["video_id"], name: "index_youtube_videos_on_video_id"
   end
 
+  add_foreign_key "layer", "topology", name: "layer_topology_id_fkey"
 end

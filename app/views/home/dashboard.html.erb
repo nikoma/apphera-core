@@ -1,40 +1,220 @@
-
-<div class="row wrapper border-bottom white-bg page-heading">
-  <div class="col-lg-9">
-    <h2>System Overview</h2>
-    <ol class="breadcrumb">
-      <li>
-        Home
-      </li>
-      <li class="active">
-        <strong>Dashboard</strong>
-      </li>
-    </ol>
-  </div>
-</div>
-<div class="wrapper wrapper-content animated fadeInLeft">
-  <div class="row">
-    <div class="col-lg-3">
-      <div class="widget style1">
+ <div class="wrapper wrapper-content">
         <div class="row">
-          <div class="col-xs-4 text-center">
-            <i class="fa fa-envelope fa-5x"></i>
-          </div>
-          <div class="col-xs-8 text-right">
-            <span> Profile Views Last 30 days </span>
-           # <h2 class="font-bold"><%= @pageviews %></h2>
-          </div>
+                    <div class="col-lg-3">
+                        <div class="ibox ">
+                            <div class="ibox-title">
+                                <span class="label label-success float-right">Monthly</span>
+                                <h5>Mentions</h5>
+                            </div>
+                            <div class="ibox-content">
+                                <h1 class="no-margins">1,354</h1>
+                                <div class="stat-percent font-bold text-success">Positive 91% <i class="fa fa-bolt"></i></div>
+                                <small>Total Mentions</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="ibox ">
+                            <div class="ibox-title">
+                                <span class="label label-info float-right">Monthly</span>
+                                <h5>Reviews</h5>
+                            </div>
+                            <div class="ibox-content">
+                                <h1 class="no-margins">214</h1>
+                                <div class="stat-percent font-bold text-info">Positive 98% <i class="fa fa-level-up"></i></div>
+                                <small>Total Reviews</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="ibox ">
+                            <div class="ibox-title">
+                                <span class="label label-primary float-right">Monthly</span>
+                                <h5>Link Activity</h5>
+                            </div>
+                            <div class="ibox-content">
+                                <h1 class="no-margins">106,120</h1>
+                                <div class="stat-percent font-bold text-navy">Bounce 7% <i class="fa fa-level-down"></i></div>
+                                <small>Total Clicks</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="ibox ">
+                            <div class="ibox-title">
+                                <span class="label label-primary float-right">Monthly</span>
+                                <h5>Blog Posts</h5>
+                            </div>
+                            <div class="ibox-content">
+                                <h1 class="no-margins">19</h1>
+                                <div class="stat-percent font-bold text-danger">Positive 98% <i class="fa fa-level-down"></i></div>
+                                <small>Total Blog Posts</small>
+                            </div>
+                        </div>
+            </div>
         </div>
-      </div>
-    </div>
+        <div class="row">
+                    <div class="col-lg-12">
+                        <div class="ibox ">
+                            <div class="ibox-title">
+                                <h5>Review Distribution Total</h5>
+                              
+<%= pie_chart({"Positive" => 71, "Neutral" => 19, "Negative" => 10}) %>
+                              
+                            </div>
+                          
+                        </div>
+                    </div>
 
-  
+
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="ibox ">
+                            <div class="ibox-title">
+                                <h5>Newest Mentions</h5>
+                                <div class="ibox-tools">
+                                    <a class="collapse-link">
+                                        <i class="fa fa-chevron-up"></i>
+                                    </a>
+                                    <a class="close-link">
+                                        <i class="fa fa-times"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="ibox-content ibox-heading">
+                                <h3><i class="fa fa-envelope-o"></i> New Mentions</h3>
+                                <small><i class="fa fa-tim"></i> You have 122 new tweets, 11 reviews and 3 video comments.</small>
+                            </div>
+                            <div class="ibox-content">
+                                <div class="feed-activity-list">
+
+                                    <div class="feed-element">
+                                        <div>
+                                            <small class="float-right text-navy">1m ago</small>
+                                            <strong>Tom Steiger</strong>
+                                            <div>AppHera is really cool! I can predict bookings with 90% accuracy! BOAH!</div>
+                                            <small class="text-muted">Today 5:60 pm - 08.11.2018</small>
+                                        </div>
+                                    </div>
+
+                                    <div class="feed-element">
+                                        <div>
+                                            <small class="float-right">5m ago</small>
+                                            <strong>Petra Fenner</strong>
+                                            <div>App HERA! I love the name! Goddess of marriage :) </div>
+                                            <small class="text-muted">Yesterday 8:48 pm - 08.10.2018</small>
+                                        </div>
+                                    </div>
+                              
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-8">
+
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="ibox ">
+                                    <div class="ibox-title">
+                                        <h5>Scheduled Tasks</h5>
+                                        <div class="ibox-tools">
+                                            <a class="collapse-link">
+                                                <i class="fa fa-chevron-up"></i>
+                                            </a>
+                                            <a class="close-link">
+                                                <i class="fa fa-times"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="ibox-content table-responsive">
+                                        <table class="table table-hover no-margins">
+                                            <thead>
+                                            <tr>
+                                                <th>Status</th>
+                                                <th>Date</th>
+                                                <th>Activity</th>
+                                                <th>Value</th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            <tr>
+                                                <td><small>Pending...</small></td>
+                                                <td><i class="fa fa-clock-o"></i> 11:20pm</td>
+                                                <td>Check Links</td>
+                                                <td class="text-navy"> <i class="fa fa-level-up"></i> 24% </td>
+                                            </tr>
+                                            <tr>
+                                                <td><span class="label label-warning">Canceled</span> </td>
+                                                <td><i class="fa fa-clock-o"></i> 10:40am</td>
+                                                <td>YouTube Comments</td>
+                                                <td class="text-navy"> <i class="fa fa-level-up"></i> 0% </td>
+                                            </tr>
+                                            <tr>
+                                                <td><small>Running...</small> </td>
+                                                <td><i class="fa fa-clock-o"></i> 01:30pm</td>
+                                                <td>Get Reviews</td>
+                                                <td class="text-navy"> <i class="fa fa-level-up"></i> 54% </td>
+                                            </tr>
+                                           <tr>
+                                                <td><small>Running...</small> </td>
+                                                <td><i class="fa fa-clock-o"></i> 01:30pm</td>
+                                                <td>Get Blog Posts</td>
+                                                <td class="text-navy"> <i class="fa fa-level-up"></i> 94% </td>
+                                            </tr>
+                                          
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="ibox ">
+                                    <div class="ibox-title">
+                                        <h5>AppHera Recommendation Engine</h5>
+                                        <div class="ibox-tools">
+                                            <a class="collapse-link">
+                                                <i class="fa fa-chevron-up"></i>
+                                            </a>
+                                            <a class="close-link">
+                                                <i class="fa fa-times"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="ibox-content">
+                                        <ul class="todo-list m-t small-list">
+                                            <li>
+                                                <a href="#" class="check-link"><i class="fa fa-check-square"></i> </a>
+                                                <span class="m-l-xs todo-completed">Improve loadtimes of landing page LINK</span>
+
+                                            </li>
+                                            <li>
+                                                <a href="#" class="check-link"><i class="fa fa-square-o"></i> </a>
+                                                <span class="m-l-xs">React to 3 negative reviews.</span>
+
+                                            </li>
+                                            <li>
+                                                <a href="#" class="check-link"><i class="fa fa-square-o"></i> </a>
+                                                <span class="m-l-xs">Correct 2 listings</span>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="check-link"><i class="fa fa-square-o"></i> </a>
+                                                <span class="m-l-xs">Create new blog content</span>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="check-link"><i class="fa fa-check-square"></i> </a>
+                                                <span class="m-l-xs todo-completed">Correct 43 typos</span>
+                                            </li>
+                                            
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                       
+
+                    </div>
 
 
-
-<h2>My Badges </h2>
-
-
-</div></div>
-
-</div></div>
+                </div>
+                </div>

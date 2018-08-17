@@ -6,56 +6,73 @@
           <span>
             <%= gravatar_for current_user rescue nil %>
           </span>
-          <a data-toggle="dropdown" class="dropdown-toggle" href="javascript:void(0)">
-            <span class="clear">
-              <span class="block m-t-xs">
-                <strong class="font-bold"><%= current_user.name %></strong>
-              </span>
-              <span class="text-muted text-xs block"><%= current_user.name %><b class="caret"></b></span>
-            </span>
-          </a>
+         
          
         </div>
         <div class="logo-element">AH</div>
       </li>
       <li class="<%= is_active_controller('home') %>">
         <%= link_to dashboard_path do %>
-          <i class="fa fa-home"></i> <span class="nav-label" data-i18n="nav.widgets">Home</span>
+          <i class="fa fa-home"></i> <span class="nav-label" data-i18n="nav.widgets">Dashboard</span>
         <% end %>
       </li>
       <li class="<%= is_active_controller('something') %>">
         <%= link_to edit_user_registration_path do %>
-          <i class="fa fa-star"></i> <span class="nav-label" data-i18n="nav.widgets">Edit Profile</span>
+          <i class="fa fa-envelope"></i> <span class="nav-label" data-i18n="nav.widgets">Campaigns</span>
         <% end %>
       </li>
       <li class="<%= is_active_controller('something') %>">
-      <%= link_to edit_user_registration_path do %>
-        <i class="fa fa-star"></i> <span class="nav-label" data-i18n="nav.widgets">Edit Profile</span>
-      <% end %>
-    </li>
-    <li class="<%= is_active_controller('something') %>">
-    <%= link_to edit_user_registration_path do %>
-      <i class="fa fa-star"></i> <span class="nav-label" data-i18n="nav.widgets">Edit Profile</span>
-    <% end %>
-  </li>
-  <li class="<%= is_active_controller('something') %>">
-  <%= link_to edit_user_registration_path do %>
-    <i class="fa fa-star"></i> <span class="nav-label" data-i18n="nav.widgets">Edit Profile</span>
-  <% end %>
-</li>
-<li class="<%= is_active_controller('something') %>">
-<%= link_to edit_user_registration_path do %>
-  <i class="fa fa-star"></i> <span class="nav-label" data-i18n="nav.widgets">Edit Profile</span>
-<% end %>
-</li>
-<li class="<%= is_active_controller('something') %>">
-<%= link_to edit_user_registration_path do %>
-  <i class="fa fa-star"></i> <span class="nav-label" data-i18n="nav.widgets">Edit Profile</span>
-<% end %>
-</li>
-
-</div>
-
+        <%= link_to edit_user_registration_path do %>
+          <i class="fa fa-key"></i> <span class="nav-label" data-i18n="nav.widgets">Keywords</span>
+        <% end %>
+      </li>
+      <li class="<%= is_active_controller('something') %>">
+        <%= link_to edit_user_registration_path do %>
+          <i class="fa fa-check"></i> <span class="nav-label" data-i18n="nav.widgets">Reviews</span>
+        <% end %>
+      </li>
+      <li class="<%= is_active_controller('something') %>">
+        <%= link_to edit_user_registration_path do %>
+          <i class="fa fa-group"></i> <span class="nav-label" data-i18n="nav.widgets">Reviewers</span>
+        <% end %>
+      </li>
+      <li class="<%= is_active_controller('something') %>">
+        <%= link_to edit_user_registration_path do %>
+          <i class="fa fa-twitter"></i> <span class="nav-label" data-i18n="nav.widgets">Twitter</span>
+        <% end %>
+      </li>
+      <li class="<%= is_active_controller('something') %>">
+        <%= link_to edit_user_registration_path do %>
+          <i class="fa fa-youtube"></i> <span class="nav-label" data-i18n="nav.widgets">Youtube</span>
+        <% end %>
+      </li>
+      <li class="<%= is_active_controller('something') %>">
+        <%= link_to edit_user_registration_path do %>
+          <i class="fa fa-pencil"></i> <span class="nav-label" data-i18n="nav.widgets">Blogs</span>
+        <% end %>
+      </li>
+      <li class="<%= is_active_controller('something') %>">
+        <%= link_to edit_user_registration_path do %>
+          <i class="fa fa-list"></i> <span class="nav-label" data-i18n="nav.widgets">Search Ranks</span>
+        <% end %>
+      </li>
+      <li class="<%= is_active_controller('something') %>">
+        <%= link_to edit_user_registration_path do %>
+          <i class="fa fa-search"></i> <span class="nav-label" data-i18n="nav.widgets">SEO</span>
+        <% end %>
+      </li>
+       <li class="<%= is_active_controller('something') %>">
+        <%= link_to edit_user_registration_path do %>
+          <i class="fa fa-plus"></i> <span class="nav-label" data-i18n="nav.widgets">Emotions</span>
+        <% end %>
+      </li>
+      <li class="<%= is_active_controller('something') %>">
+        <%= link_to edit_user_registration_path do %>
+          <i class="fa fa-cogs"></i> <span class="nav-label" data-i18n="nav.widgets">Settings</span>
+        <% end %>
+      </li>
     
+
+   </div>
   </div>
 </nav>

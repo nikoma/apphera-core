@@ -30,8 +30,9 @@
 //= require jquery_nested_form
 //= require jquery.validate
 //= require jquery.validate.additional-methods
+//= require Chart.bundle
+//= require chartkick
 
-//= require knowledge_items.js
 
 $(document).on('load', function() {
   $('.summernote').summernote();

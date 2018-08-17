@@ -25,9 +25,11 @@ class Organization < ActiveRecord::Base
   has_many :schedules
   has_many :likes
   has_many :listings
+  has_many :organization_webservers
   has_many :history_items
   has_many :organization_links
   has_many :provider_slugs
+  has_many :posts
   #has_many :items
   has_many :uptime_monitors
   has_many :facebook_page_credentials
@@ -79,7 +81,6 @@ class Organization < ActiveRecord::Base
     Schedule.create!(name: "aggregate", organization_id: self.id, sequence_id: 5, in_progress: false, scheduled: DateTime.now + 30.minutes)
   end
 
-
   def self.paginate(options = {})
     page(options[:page]).per(options[:per_page])
   end
@@ -106,7 +107,7 @@ class Organization < ActiveRecord::Base
   #end
 
   def lat_lon
-    [latitude.to_s, longitude.to_s].join(',')
+    [latitude.to_s, longitude.to_s].join(",")
   end
 
   #def self.comps(cat_id, lat_lon, distance)
@@ -134,16 +135,15 @@ class Organization < ActiveRecord::Base
   #  :lat_lon => [latitude, longitude]
   #  end.results.collect(&:id))
 
-
   #def to_indexed_json
   #  to_json(methods: ['lat_lon'])
   #end
   def existing?(organization)
     @organization = organization
     name_ = @organization.name
-    name_part = name_[0..name_.length-4]
+    name_part = name_[0..name_.length - 4]
     street_ = @organization.street
-    street_part = street_[0..street_.length-4]
+    street_part = street_[0..street_.length - 4]
     city_part = @organization.city
     postal_part = @organization.postalcode
     @existing_org = Organization.where("postalcode = ? and name ilike ? and street ilike ? and city = ?", postal_part, name_part + "%", street_part + "%", city_part).first
@@ -161,19 +161,13 @@ class Organization < ActiveRecord::Base
     end
   end
 
-
   def address
     "#{self.street}, #{self.city}, #{self.country.name}"
   end
 
   private
+
   def gmaps4rails_address
     "#{self.street}, #{self.city}, #{self.country.name}"
   end
-
-
 end
-
-
-  
-
