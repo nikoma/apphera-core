@@ -2,7 +2,7 @@ class Organization < ActiveRecord::Base
   has_paper_trail :ignore => [:reviewers_list]
   #reverse_geocoded_by :latitude, :longitude
   geocoded_by :address
-  after_validation :geocode
+  #after_validation :geocode
   #before_create :check_existing
   serialize :reviewers_list
   #include Tire::Model::Search
