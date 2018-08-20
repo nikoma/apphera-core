@@ -8,16 +8,12 @@ class EmailWorker
   def perform(id)
     b = Organization.where(id: id).first
     puts "this is for business # #{b.id}"
-    if b.url
-      url = b.url
-    else
-      url = b.web
-    end
+    url = b.url
     email = MagicClass.get_email(url)
     description = MagicClass.get_description(url)
     b.email = email
     b.url = url
-    b.description = description
+    #b.description = description
     if email.include? "["
       puts "dud"
     else
