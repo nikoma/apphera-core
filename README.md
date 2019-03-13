@@ -6,12 +6,9 @@ Apphera is the premiere suite of social media monitoring and engagement tools. I
 
 The API returns by default JSON only, therefore calls to .json are not needed.
 
-For installation service, database seeds & custom development please contact us at https://www.apphera.com or send me an email at manek -> at <- manek.com
+For installation service, database seeds & custom development please contact us at https://www.manek.com or send me an email at manek -> at <- manek.com
 
 
-
-## Feature List at:
-https://www.apphera.com/
 
 
 ## Licensing
